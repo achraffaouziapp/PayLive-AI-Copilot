@@ -1,0 +1,366 @@
+extraction_batch_id,source_file_name,extracted_at,comment_id,live_id,customer_id,platform,username,comment_text,commented_at,comment_language,manual_intent_label,extracted_product_keyword,data_quality_status
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00002,LIVE0027,CUS0034,tiktok,lina_5060,Dispo en noir taille L ?,2026-03-28 09:46:01,,other,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00002,LIVE0005,CUS0062,tiktok,shop_4183,Je prend le rouge en meduim,2026-01-09 17:03:59,en,achat,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00003,LIVE0026,CUS0050,tiktok,nora_7501,Je veux 2 pièces,2026/04/25,ar,price_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00004,,CUS0001,tiktok,sarah_4930,Coucou,2026/03/10,FR,achat,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00005,LIVE0024,CUS0021,TikTok,nora_732,Réserve-moi le bleu,2026-02-18 07:15:29,,purchase_intent,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00006,LIVE0003,CUS9999,ig,livefan_3991,Je prends le sac noir,2026/01/27,fr,achat,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00007,LIVE0004,CUS0019,ig,shop_5977,Je prends le sac noir,2026/01/30,FR,other,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00008,LIVE0017,CUS0040,instagram,nora_7501,Je prends le sac noir,invalid_date,ar,complaint,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00009,LIVE0013,CUS0056,ig,lina_5121,Prix ?,13/03/2026 18:56,,other,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00010,LIVE0026,CUS0025,ig,,Je prends le sac noir,2026-02-23 13:09:19,ar,stock_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00011,LIVE0028,CUS0073,ig,adam_4282,Mets-moi de côté le pull beige,2026-03-01 01:35:26,ar,payment_question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00012,LIVE0025,CUS0013,ig,nora_732,,24/03/2026 02:59,,purchase_intent,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00013,LIVE0015,CUS0063,instagram,mode_1399,Je veux le même que le précédent,2026-01-10 06:51:48,en,payment_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00014,LIVE0017,CUS0079,tik tok,shop_4509,Je prends le sac noir,2026/01/16,ar,complaint,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00015,LIVE0021,CUS0035,TikTok,lina_5698,,01/03/2026 17:41,fr,question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00016,LIVE0025,CUS0042,insta,adam_1170,Je prends le sac noir,2026/04/18,en,purchase_intent,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00017,LIVE0028,CUS0039,instagram,livefan_9048,Disponible en rouge ?,2026-03-12 18:37:46,,payment_question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00018,LIVE0018,CUS0064,insta,adam_3477,Comment payer ?,2026/03/12,ar,stock_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00019,LIVE0004,CUS0069,tiktok,livefan_2306,Prix ?,2026-04-03 17:31:11,,stock_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00020,LIVE0011,CUS0002,instagram,shop_1679,Coucou,22/03/2026 07:04,fr,question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00021,LIVE0028,CUS0002,tiktok,client_2895,Tu as la taille medium ?,2026/03/04,ar,purchase_intent,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00022,LIVE0013,CUS0015,tiktok,client_2895,Je veux 2 pièces,2026-04-15 22:43:27,en,complaint,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00023,LIVE0006,CUS0049,insta,adam_3477,Je prends le sac noir,2026/02/15,en,complaint,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00024,LIVE0003,CUS0013,insta,livefan_8280,Mets-moi de côté le pull beige,2026/04/16,,purchase_intent,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00025,LIVE0033,CUS0057,TikTok,shop_1412,Réserve-moi le bleu,2026/01/02,fr,payment_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00026,LIVE0032,CUS0036,tiktok,livefan_2306,Tu as la taille medium ?,2026/04/26,FR,purchase_intent,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00027,LIVE0011,CUS0052,tiktok,sarah_4930,Comment payer ?,2026/04/29,en,achat,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00028,LIVE0010,CUS0012,ig,sarah_7471,Prix ?,2026-04-25 17:21:24,,payment_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00029,LIVE0027,CUS0043,tiktok,sarah_7972,Tu as la taille medium ?,10/01/2026 10:38,,payment_question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00030,LIVE0026,CUS0012,ig,shop_5977,Je prends le sac noir,2026/03/12,fr,price_question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00031,LIVE0011,CUS0051,TikTok,shop_2891,Réserve-moi le bleu,2026-01-20 12:45:50,fr,complaint,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00032,LIVE0006,CUS0025,insta,lina_1385,Je prend le rouge en meduim,2026-02-16 08:06:08,fr,price_question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00033,LIVE0022,CUS0051,tiktok,shop_5977,Je prend le rouge en meduim,12/03/2026 02:38,fr,payment_question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00034,LIVE0012,CUS0019,TikTok,sarah_4930,Tu as la taille medium ?,08/03/2026 05:43,en,price_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00035,LIVE0032,CUS0011,TikTok,shop_3662,Je prends le sac noir,2026/02/25,,payment_question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00036,LIVE0027,CUS0044,ig,livefan_8280,Disponible en rouge ?,14/01/2026 04:19,ar,achat,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00037,LIVE0021,CUS0043,ig,livefan_9048,,16/04/2026 20:38,en,achat,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00038,LIVE0033,CUS0075,instagram,adam_7628,Mets-moi de côté le pull beige,07/02/2026 23:44,,other,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00039,LIVE0013,CUS0072,tiktok,sarah_7715,C’est trop cher,30/04/2026 18:12,ar,price_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00040,LIVE0010,CUS0040,instagram,shop_3662,Je veux 2 pièces,2026/04/19,,achat,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00041,LIVE0027,CUS0070,ig,client_9579,Prix ?,27/02/2026 19:30,FR,price_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00042,LIVE0024,CUS0023,ig,adam_1170,Mets-moi de côté le pull beige,09/04/2026 07:42,,price_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00043,LIVE0035,CUS0073,ig,livefan_7352,Je prends le sac noir,13/01/2026 08:14,ar,achat,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00044,LIVE0034,CUS0021,TikTok,livefan_1992,,2026-04-09 21:37:44,ar,achat,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00045,LIVE0021,CUS0045,insta,mode_8948,,15/01/2026 23:09,,price_question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00046,LIVE0005,CUS0040,tiktok,adam_946,Je prends la robe rouge en M,03/04/2026 22:28,fr,stock_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00047,LIVE0012,CUS0044,ig,nora_6399,Coucou,2026-02-01 16:11:35,,stock_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00048,LIVE0002,CUS0080,instagram,lina_1385,Je prend le rouge en meduim,23/03/2026 21:27,fr,payment_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00049,LIVE0005,CUS0075,tiktok,livefan_7626,Comment payer ?,05/02/2026 22:51,ar,payment_question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00050,LIVE0033,CUS0069,TikTok,mode_3148,Mets-moi de côté le pull beige,2026/01/15,,price_question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00051,LIVE0021,CUS0080,ig,sarah_838,Je veux 2 pièces,15/02/2026 14:39,fr,payment_question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00052,LIVE0011,CUS0067,insta,client_9579,Je veux 2 pièces,2026/01/15,,achat,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00053,LIVE0013,CUS0073,instagram,mode_9936,Je veux le même que le précédent,2026-03-04 20:34:44,en,other,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00054,LIVE0024,CUS0002,insta,adam_4282,C’est trop cher,27/02/2026 19:03,FR,question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00055,LIVE0030,CUS0064,instagram,sarah_838,Je prends la robe rouge en M,2026-03-29 15:26:45,ar,purchase_intent,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00056,LIVE0031,CUS0074,insta,adam_480,Réserve-moi le bleu,2026/01/29,fr,complaint,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00057,LIVE0003,CUS0058,ig,lina_5060,Je prend le rouge en meduim,2026-03-11 11:34:52,en,complaint,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00058,LIVE0006,CUS0058,tiktok,client_4075,C’est trop cher,2026/01/05,FR,other,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00059,LIVE0012,CUS0080,instagram,mode_8948,C’est trop cher,2026-04-01 19:40:27,FR,other,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00060,LIVE0022,CUS0039,TikTok,livefan_7352,Tu as la taille medium ?,2026/02/05,fr,stock_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00061,LIVE0019,CUS0018,instagram,livefan_3654,Je veux 2 pièces,2026/04/11,ar,payment_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00062,LIVE0011,CUS0075,TikTok,client_4075,Je prend le rouge en meduim,18/04/2026 21:25,,price_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00063,LIVE0019,CUS0049,insta,mode_9936,Disponible en rouge ?,2026/04/12,fr,price_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00064,LIVE0024,CUS0010,ig,shop_4509,C’est trop cher,28/02/2026 20:42,en,question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00065,LIVE0010,CUS0074,insta,shop_5095,Prix ?,2026-02-11 09:21:35,fr,question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00066,LIVE0001,CUS0056,instagram,shop_9495,Je veux le même que le précédent,2026-01-16 05:28:29,ar,price_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00067,LIVE0012,CUS0007,insta,client_4075,Je veux le même que le précédent,2026/02/16,en,achat,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00068,LIVE0015,CUS0063,tiktok,shop_9495,Je prends le sac noir,2026/01/12,,purchase_intent,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00069,LIVE0029,CUS0018,insta,livefan_2306,Je prends le sac noir,31/03/2026 10:52,fr,price_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00070,LIVE0010,CUS0050,instagram,sarah_9074,Je veux 2 pièces,2026-02-10 11:56:19,FR,purchase_intent,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00071,LIVE0015,CUS0021,insta,mode_4504,Coucou,2026-03-25 05:28:22,fr,price_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00072,LIVE0026,CUS0046,insta,nora_6663,Je veux 2 pièces,2026-04-07 03:37:46,ar,price_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00073,LIVE0020,CUS0004,TikTok,mode_8948,C’est trop cher,2026/03/12,,complaint,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00074,LIVE0009,CUS0032,insta,sarah_7972,Dispo en noir taille L ?,2026/01/07,fr,other,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00075,LIVE0028,CUS0048,ig,sarah_9074,,2026-01-17 12:55:53,fr,price_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00076,LIVE0004,CUS0052,ig,shop_4183,Je prend le rouge en meduim,03/02/2026 06:02,,price_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00077,LIVE0019,CUS0012,TikTok,sarah_838,C’est trop cher,2026-03-10 17:39:09,FR,other,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00078,LIVE0005,CUS0041,insta,client_4075,Prix ?,2026-03-17 20:48:53,fr,achat,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00079,LIVE0021,CUS0024,tiktok,mode_4352,Je veux 2 pièces,2026/02/28,fr,stock_question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00080,LIVE0018,CUS0023,TikTok,shop_9495,Tu as la taille medium ?,2026/02/14,fr,purchase_intent,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00081,LIVE0005,CUS0035,ig,client_4075,Dispo en noir taille L ?,14/04/2026 13:17,,other,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00082,LIVE0012,CUS0034,tiktok,livefan_7352,Réserve-moi le bleu,2026-03-05 18:10:23,FR,purchase_intent,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00083,LIVE0032,CUS0048,insta,sarah_1210,Comment payer ?,2026-04-20 00:15:02,FR,achat,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00084,LIVE0022,CUS0036,tiktok,livefan_7352,Je paye maintenant,2026-02-11 07:26:58,FR,purchase_intent,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00085,LIVE0005,CUS0061,TikTok,mode_3153,Disponible en rouge ?,2026-01-29 16:02:25,FR,question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00086,LIVE0021,CUS0033,insta,sarah_7488,,2026-02-17 06:18:36,FR,payment_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00087,LIVE0024,CUS0002,TikTok,sarah_7972,Mets-moi de côté le pull beige,2026/01/01,ar,price_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00088,LIVE0004,CUS0020,TikTok,livefan_7896,Prix ?,2026-03-09 07:26:31,FR,achat,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00089,LIVE0006,CUS0076,tiktok,shop_1679,Je veux 2 pièces,2026/04/25,,price_question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00090,LIVE0010,CUS0032,TikTok,nora_5763,Disponible en rouge ?,14/03/2026 01:27,ar,other,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00091,LIVE0010,CUS0076,tiktok,sarah_1210,Réserve-moi le bleu,2026-02-04 07:04:12,,question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00092,LIVE0015,CUS0059,TikTok,sarah_7715,Tu as la taille medium ?,2026-02-22 03:34:22,fr,stock_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00093,LIVE0003,CUS0029,TikTok,nora_7501,Dispo en noir taille L ?,2026/03/29,en,other,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00094,LIVE0018,CUS0024,tiktok,sarah_2277,Coucou,2026/03/07,FR,payment_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00095,LIVE0010,CUS0017,tiktok,adam_6949,Je prends le sac noir,2026-03-01 03:51:50,en,achat,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00096,LIVE0018,CUS0011,tiktok,sarah_1003,C’est trop cher,2026/03/29,,stock_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00097,LIVE0031,CUS0007,instagram,livefan_7352,Je prend le rouge en meduim,2026/04/26,,question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00098,LIVE0024,CUS0029,instagram,adam_5149,Tu as la taille medium ?,18/02/2026 21:27,en,purchase_intent,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00099,LIVE0020,CUS0065,insta,adam_480,,2026-03-21 19:15:41,fr,complaint,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00100,LIVE0035,CUS0033,ig,,Mets-moi de côté le pull beige,2026/01/18,ar,question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00101,LIVE0034,CUS0043,insta,nora_2935,Comment payer ?,2026-04-11 15:22:58,ar,payment_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00102,LIVE0032,CUS0069,TikTok,adam_7763,Je prends le sac noir,2026-04-25 08:03:51,fr,payment_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00103,LIVE0004,CUS0030,ig,livefan_7383,Je paye maintenant,2026-01-31 08:34:52,en,payment_question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00104,LIVE0002,CUS0047,ig,shop_1412,Je veux 2 pièces,2026/02/10,en,question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00105,LIVE0006,CUS0008,instagram,sarah_3190,Je prends le sac noir,2026-02-09 05:31:02,FR,question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00106,LIVE0010,CUS0045,instagram,adam_7628,Prix ?,2026-02-12 19:12:51,en,stock_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00107,LIVE0005,CUS0049,insta,livefan_4448,Réserve-moi le bleu,15/01/2026 16:55,ar,other,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00108,LIVE0033,CUS0042,instagram,nora_5586,Je paye maintenant,2026-01-21 23:27:50,FR,stock_question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00109,LIVE0010,CUS0024,tiktok,livefan_7352,Mets-moi de côté le pull beige,2026/02/09,fr,stock_question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00110,LIVE0007,CUS0065,instagram,mode_1399,Dispo en noir taille L ?,2026-02-10 19:14:40,ar,other,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00111,LIVE0023,CUS0059,tiktok,nora_5763,C’est trop cher,2026-03-23 02:52:45,fr,other,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00112,LIVE0004,CUS0051,insta,client_9579,Comment payer ?,11/04/2026 03:46,,achat,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00113,LIVE0032,CUS0075,instagram,shop_6064,Coucou,2026-03-11 12:06:53,fr,complaint,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00114,LIVE0023,CUS0023,insta,shop_6064,Dispo en noir taille L ?,2026/02/10,fr,other,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00115,LIVE0029,CUS0023,ig,livefan_3605,Comment payer ?,2026-03-20 15:45:01,fr,other,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00116,LIVE0018,CUS0038,TikTok,client_4075,Réserve-moi le bleu,2026-01-25 13:44:35,,question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00117,LIVE0006,CUS0039,ig,livefan_1884,C’est trop cher,2026-01-07 11:00:27,fr,payment_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00118,LIVE0009,CUS0041,insta,lina_518,,2026/03/23,ar,price_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00119,LIVE0026,CUS0049,instagram,lina_1385,Prix ?,11/03/2026 12:11,,question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00120,LIVE0011,CUS0014,tiktok,sarah_7471,Je prend le rouge en meduim,2026/01/29,en,purchase_intent,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00121,LIVE0032,CUS0075,instagram,lina_518,Je veux le même que le précédent,2026-02-19 16:26:34,,purchase_intent,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00122,LIVE0011,CUS0017,insta,sarah_9074,Comment payer ?,2026-03-15 16:51:36,en,stock_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00123,LIVE0014,CUS0020,ig,nora_5763,Disponible en rouge ?,2026/02/24,fr,price_question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00124,LIVE0019,CUS0068,insta,mode_4352,Je prend le rouge en meduim,2026-03-13 12:35:20,,stock_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00125,LIVE0007,CUS0015,ig,nora_7464,Je veux le même que le précédent,2026/03/14,ar,achat,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00126,LIVE0032,CUS0005,instagram,adam_5149,Mets-moi de côté le pull beige,2026-02-19 20:31:36,FR,achat,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00127,LIVE0004,CUS0062,TikTok,sarah_7488,Je prends la robe rouge en M,20/02/2026 10:44,ar,complaint,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00128,LIVE0007,CUS0031,instagram,sarah_4930,Coucou,18/04/2026 15:54,ar,achat,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00129,LIVE0015,CUS0054,insta,lina_6892,Je paye maintenant,2026-03-24 02:12:28,FR,stock_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00130,LIVE0010,CUS0069,ig,livefan_1992,Comment payer ?,2026-02-09 22:32:25,en,purchase_intent,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00131,LIVE0025,CUS0027,TikTok,sarah_7488,Coucou,2026/01/05,,price_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00132,LIVE0030,CUS0024,insta,livefan_4448,Je paye maintenant,04/01/2026 07:23,en,complaint,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00133,LIVE0002,CUS0051,tiktok,shop_6064,C’est trop cher,2026-04-17 22:05:18,en,payment_question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00134,LIVE0001,CUS0062,instagram,sarah_9074,Comment payer ?,2026/03/25,fr,payment_question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00135,LIVE0019,CUS0056,insta,sarah_7471,Coucou,19/03/2026 09:45,en,question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00136,LIVE0027,CUS0076,tiktok,sarah_7972,Je paye maintenant,2026/03/28,FR,complaint,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00137,LIVE0023,CUS0037,TikTok,adam_5149,Tu as la taille medium ?,2026/03/29,ar,payment_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00138,LIVE0027,CUS0042,instagram,livefan_1992,,08/03/2026 07:57,ar,achat,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00139,LIVE0014,CUS0045,instagram,livefan_7626,,2026/02/19,ar,complaint,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00140,LIVE0013,CUS0039,tiktok,lina_518,Je veux 2 pièces,2026/01/22,ar,stock_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00141,LIVE0016,CUS0047,instagram,mode_3153,Je prend le rouge en meduim,26/04/2026 10:41,ar,complaint,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00142,LIVE0032,CUS0007,ig,adam_7763,Dispo en noir taille L ?,07/02/2026 14:54,en,price_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00143,LIVE0028,CUS0007,instagram,adam_4282,C’est trop cher,29/03/2026 12:33,,question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00144,LIVE0006,CUS0064,TikTok,client_4075,Comment payer ?,10/02/2026 22:11,fr,purchase_intent,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00145,LIVE0012,CUS0075,instagram,mode_9936,Dispo en noir taille L ?,2026-02-05 06:48:49,FR,achat,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00146,LIVE0026,CUS0001,tiktok,livefan_7626,C’est trop cher,2026/02/24,ar,purchase_intent,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00147,LIVE0001,CUS0033,instagram,sarah_7471,Je veux le même que le précédent,2026-04-07 16:12:01,fr,achat,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00148,LIVE0003,CUS0040,TikTok,adam_3477,Disponible en rouge ?,17/03/2026 09:10,en,other,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00149,LIVE0027,CUS0003,instagram,sarah_5804,Je veux 2 pièces,2026-02-15 06:10:58,fr,stock_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00150,LIVE0003,CUS0050,TikTok,livefan_7626,Prix ?,2026/02/16,fr,price_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00151,LIVE0009,CUS0055,insta,livefan_8280,Réserve-moi le bleu,2026/04/18,ar,question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00152,LIVE0001,CUS0040,insta,nora_7501,Réserve-moi le bleu,2026/01/20,FR,complaint,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00153,LIVE0007,CUS0067,ig,sarah_3054,Je veux le même que le précédent,2026-03-19 22:08:26,fr,question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00154,LIVE0035,CUS0027,TikTok,client_6688,Je veux le même que le précédent,2026-03-19 06:49:16,fr,question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00155,LIVE0001,CUS0002,tiktok,adam_946,,2026-03-30 15:21:15,fr,price_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00156,LIVE0016,CUS0060,TikTok,nora_5763,Coucou,2026-04-03 03:57:16,fr,stock_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00157,LIVE0022,CUS0056,tiktok,nora_7464,Prix ?,2026-01-06 09:23:51,en,stock_question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00158,LIVE0006,CUS0049,TikTok,nora_8290,Réserve-moi le bleu,15/02/2026 14:39,,question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00159,LIVE0032,CUS0055,instagram,adam_946,Je veux 2 pièces,2026/04/17,fr,stock_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00160,LIVE0030,CUS0025,ig,livefan_8280,Je paye maintenant,2026/02/23,fr,stock_question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00161,LIVE0028,CUS0058,tiktok,sarah_1003,Tu as la taille medium ?,2026/04/28,ar,purchase_intent,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00162,LIVE0016,CUS0045,ig,lina_6892,Réserve-moi le bleu,22/04/2026 21:33,en,question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00163,LIVE0011,CUS0073,ig,livefan_3991,Je prends la robe rouge en M,2026/03/26,en,question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00164,LIVE0033,CUS0043,instagram,mode_1399,Tu as la taille medium ?,2026-03-05 05:04:48,FR,payment_question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00165,LIVE0017,CUS0012,insta,client_2714,Coucou,2026-03-24 12:25:52,,question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00166,LIVE0002,CUS0015,insta,client_6688,Prix ?,2026/01/16,FR,purchase_intent,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00167,LIVE0021,CUS0067,ig,mode_8948,Coucou,12/01/2026 19:39,ar,purchase_intent,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00168,LIVE0032,CUS0048,insta,adam_946,Réserve-moi le bleu,2026/01/29,en,purchase_intent,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00169,LIVE0035,CUS0049,tiktok,adam_1170,Comment payer ?,15/02/2026 20:51,en,achat,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00170,LIVE0009,CUS0052,instagram,adam_3477,C’est trop cher,2026/02/02,ar,price_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00171,LIVE0009,CUS0059,insta,nora_7501,Je veux 2 pièces,23/02/2026 01:59,fr,purchase_intent,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00172,LIVE0032,CUS0067,instagram,adam_7763,Comment payer ?,2026/04/30,en,price_question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00173,LIVE0022,CUS0066,insta,client_9579,Je prends le sac noir,26/03/2026 19:38,,other,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00174,LIVE0034,CUS0040,ig,nora_6663,C’est trop cher,2026-02-27 04:08:26,en,complaint,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00175,LIVE0013,CUS0066,ig,sarah_7972,Disponible en rouge ?,2026/02/14,fr,other,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00176,LIVE0028,CUS0070,TikTok,nora_6399,Je prends la robe rouge en M,2026/03/03,fr,purchase_intent,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00177,LIVE0014,CUS0036,instagram,shop_4183,Tu as la taille medium ?,2026-01-19 01:42:03,fr,complaint,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00178,LIVE0030,CUS0015,ig,nora_5586,Je prends le sac noir,2026/04/07,FR,achat,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00179,LIVE0004,CUS0050,insta,client_9579,Disponible en rouge ?,2026/03/07,fr,purchase_intent,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00180,LIVE0030,CUS0030,TikTok,livefan_4448,C’est trop cher,2026/02/02,en,complaint,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00181,LIVE0013,CUS0067,tiktok,livefan_8280,Prix ?,23/01/2026 21:04,ar,complaint,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00182,LIVE0001,CUS0044,insta,sarah_1210,Prix ?,2026-01-21 18:54:16,ar,purchase_intent,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00183,LIVE0021,CUS0064,ig,adam_480,Je paye maintenant,2026-04-30 20:39:53,ar,payment_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00184,LIVE0012,CUS0055,ig,livefan_7626,Mets-moi de côté le pull beige,2026-03-08 02:50:32,ar,payment_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00185,LIVE0020,CUS0029,ig,client_2895,,2026/03/26,fr,price_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00186,LIVE0017,CUS0006,TikTok,livefan_8280,Réserve-moi le bleu,14/02/2026 14:15,ar,complaint,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00187,LIVE0025,CUS0067,ig,lina_1385,,2026-04-27 16:52:49,ar,payment_question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00188,LIVE0001,CUS0010,instagram,client_4075,C’est trop cher,2026/03/07,,price_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00189,LIVE0029,CUS0011,instagram,livefan_1992,Coucou,2026/03/10,ar,purchase_intent,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00190,LIVE0018,CUS0073,tiktok,livefan_7352,Je prends le sac noir,10/01/2026 01:11,,achat,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00191,LIVE0002,CUS0051,tiktok,livefan_7626,Je prends la robe rouge en M,2026/03/22,FR,price_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00192,LIVE0005,CUS0047,ig,mode_3121,Je veux le même que le précédent,2026/04/06,ar,price_question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00193,LIVE0002,CUS0062,instagram,livefan_7626,Je prends le sac noir,2026-04-08 14:24:25,,complaint,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00194,LIVE0025,CUS0002,ig,nora_5586,Je veux 2 pièces,2026-01-19 09:43:56,fr,purchase_intent,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00195,LIVE0006,CUS0041,instagram,sarah_7471,C’est trop cher,18/03/2026 12:34,FR,stock_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00196,LIVE0018,CUS0026,tiktok,nora_8290,Prix ?,2026/01/24,,price_question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00197,LIVE0014,CUS0076,insta,mode_1399,Je paye maintenant,2026-03-27 02:16:06,en,price_question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00198,LIVE0022,CUS0064,insta,mode_1399,Je veux le même que le précédent,2026/03/21,FR,stock_question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00199,LIVE0029,CUS0023,tiktok,nora_6663,Je prends le sac noir,2026-03-14 11:51:20,,complaint,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00200,LIVE0023,CUS0063,insta,lina_1385,Je paye maintenant,16/02/2026 04:43,,price_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00201,LIVE0019,CUS0019,ig,livefan_9048,Tu as la taille medium ?,2026/03/24,fr,price_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00202,LIVE0027,CUS0077,instagram,shop_127,Tu as la taille medium ?,2026/04/19,FR,question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00203,LIVE0016,CUS0077,TikTok,adam_4282,Coucou,2026/04/10,FR,price_question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00204,LIVE0017,CUS0080,instagram,lina_5698,Je veux 2 pièces,16/02/2026 16:00,en,stock_question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00205,LIVE0032,CUS0047,tiktok,sarah_5804,,2026-03-14 21:55:09,fr,complaint,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00206,LIVE0035,CUS0048,insta,lina_518,Coucou,2026-01-30 01:42:13,fr,other,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00207,LIVE0019,CUS0035,ig,sarah_4579,Comment payer ?,01/04/2026 16:40,,other,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00208,LIVE0026,CUS0030,ig,sarah_2277,Je paye maintenant,25/03/2026 02:33,,question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00209,LIVE0030,CUS0023,instagram,livefan_2306,Tu as la taille medium ?,2026-01-01 16:56:08,en,stock_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00210,LIVE0009,CUS0031,insta,mode_1399,Réserve-moi le bleu,16/02/2026 19:45,,question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00211,LIVE0028,CUS0003,instagram,adam_1170,Je veux 2 pièces,2026/03/17,FR,stock_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00212,LIVE0011,CUS0008,instagram,nora_5763,Comment payer ?,2026/03/22,,purchase_intent,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00213,LIVE0006,CUS0029,insta,sarah_3190,,04/04/2026 21:52,en,payment_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00214,LIVE0013,CUS0067,TikTok,lina_9096,Disponible en rouge ?,22/02/2026 19:09,FR,price_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00215,LIVE0002,CUS0027,ig,shop_1679,Je prend le rouge en meduim,2026-02-18 12:08:06,FR,price_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00216,LIVE0034,CUS0017,tiktok,livefan_1884,Je veux 2 pièces,2026/03/02,FR,purchase_intent,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00217,LIVE0028,CUS0049,tiktok,client_2895,Je prend le rouge en meduim,2026-03-28 20:27:33,,achat,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00218,LIVE0007,CUS0056,instagram,shop_3662,,2026-03-17 23:58:48,fr,complaint,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00219,LIVE0014,CUS0001,tiktok,livefan_7352,Réserve-moi le bleu,2026/04/23,fr,achat,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00220,LIVE0028,CUS0048,tiktok,sarah_1210,Je prend le rouge en meduim,2026/01/27,FR,complaint,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00221,LIVE0025,CUS0080,TikTok,shop_4509,C’est trop cher,20/04/2026 17:27,FR,question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00222,LIVE0018,CUS0041,ig,sarah_7471,Mets-moi de côté le pull beige,2026/02/17,en,price_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00223,LIVE0012,CUS0014,instagram,lina_5698,Mets-moi de côté le pull beige,30/01/2026 14:50,FR,purchase_intent,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00224,LIVE0006,CUS0020,insta,mode_3148,Je prend le rouge en meduim,2026-02-19 20:00:51,fr,complaint,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00225,LIVE0026,CUS0053,ig,livefan_3654,Je veux le même que le précédent,2026/02/17,FR,purchase_intent,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00226,LIVE0030,CUS0002,instagram,nora_7501,Je veux le même que le précédent,2026-04-15 05:40:31,fr,payment_question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00227,LIVE0017,CUS0001,instagram,livefan_7896,Tu as la taille medium ?,22/01/2026 21:02,ar,achat,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00228,LIVE0005,CUS0013,ig,shop_4183,Je paye maintenant,17/03/2026 06:33,ar,payment_question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00229,LIVE0001,CUS0035,instagram,client_6688,Réserve-moi le bleu,2026/01/25,fr,complaint,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00230,LIVE0018,CUS0058,insta,shop_1412,,2026-01-15 16:16:56,ar,question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00231,LIVE0032,CUS0016,TikTok,sarah_1003,Mets-moi de côté le pull beige,2026/02/28,en,payment_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00232,LIVE0001,CUS0035,instagram,shop_4183,Dispo en noir taille L ?,10/02/2026 13:22,ar,price_question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00233,LIVE0024,CUS0029,ig,nora_2935,Comment payer ?,2026/04/30,en,question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00234,LIVE0018,CUS0028,instagram,livefan_9048,Je prends le sac noir,2026/01/26,ar,stock_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00235,LIVE0033,CUS0080,tiktok,sarah_4579,Prix ?,14/01/2026 03:58,ar,other,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00236,LIVE0033,CUS0025,ig,adam_5149,Mets-moi de côté le pull beige,2026-04-25 18:55:17,FR,stock_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00237,LIVE0003,CUS0066,TikTok,shop_4509,Comment payer ?,09/03/2026 13:30,fr,question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00238,LIVE0015,CUS0050,ig,nora_7464,Disponible en rouge ?,30/03/2026 00:00,FR,complaint,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00239,LIVE0032,CUS0080,TikTok,shop_2891,Comment payer ?,12/03/2026 08:15,,payment_question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00240,LIVE0027,CUS0037,insta,nora_8290,Je veux 2 pièces,2026/03/31,en,price_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00241,LIVE0026,CUS0027,instagram,sarah_1210,,2026-02-04 07:35:27,en,achat,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00242,LIVE0022,CUS0064,TikTok,shop_3662,Prix ?,18/01/2026 20:33,fr,stock_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00243,LIVE0007,CUS0059,TikTok,nora_5763,Je paye maintenant,28/01/2026 08:30,FR,complaint,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00244,LIVE0014,CUS0075,ig,livefan_3654,Comment payer ?,03/01/2026 13:07,ar,other,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00245,LIVE0030,CUS0012,insta,mode_4504,Je veux le même que le précédent,07/03/2026 15:49,en,stock_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00246,LIVE0027,CUS0011,tiktok,shop_6064,Disponible en rouge ?,2026-04-14 10:26:40,ar,other,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00247,LIVE0027,CUS0036,insta,shop_2891,Coucou,07/02/2026 22:17,en,stock_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00248,LIVE0018,CUS0012,instagram,lina_9096,Mets-moi de côté le pull beige,2026-01-03 04:46:15,fr,price_question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00249,LIVE0027,CUS0069,tiktok,mode_3121,Tu as la taille medium ?,2026/03/12,en,price_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00250,LIVE0017,CUS0038,insta,client_4075,Je veux 2 pièces,2026-04-30 12:19:14,FR,stock_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00251,LIVE0022,CUS0062,insta,sarah_4579,Tu as la taille medium ?,2026/01/05,,stock_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00252,LIVE0031,CUS0074,insta,client_2895,Je veux le même que le précédent,11/03/2026 05:37,,payment_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00253,LIVE0028,CUS0035,instagram,sarah_4930,Je prends la robe rouge en M,2026-01-12 14:19:23,FR,stock_question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00254,LIVE0033,CUS0063,TikTok,mode_4352,Je prend le rouge en meduim,06/02/2026 15:34,FR,payment_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00255,LIVE0028,CUS0073,insta,shop_4509,Je prends le sac noir,2026-01-01 17:23:12,,achat,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00256,LIVE0017,CUS0068,ig,nora_2935,Je veux le même que le précédent,2026/02/03,FR,complaint,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00257,LIVE0020,CUS0016,insta,livefan_1690,Coucou,25/01/2026 02:11,FR,question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00258,LIVE0002,CUS0025,tiktok,shop_4183,Tu as la taille medium ?,2026-02-11 00:09:03,,purchase_intent,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00259,LIVE0015,CUS0045,insta,mode_3153,,12/01/2026 04:00,,purchase_intent,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00260,LIVE0027,CUS0011,ig,lina_518,Comment payer ?,2026-01-11 04:03:17,ar,achat,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00261,LIVE0017,CUS0051,insta,livefan_3654,Prix ?,2026-01-02 03:49:45,,price_question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00262,LIVE0021,CUS0043,instagram,client_4075,Prix ?,2026/03/27,FR,price_question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00263,LIVE0025,CUS0007,instagram,adam_946,Je prends le sac noir,2026/03/03,,other,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00264,LIVE0027,CUS0033,tiktok,adam_1170,,2026/01/22,FR,stock_question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00265,LIVE0033,CUS0013,ig,shop_5095,Prix ?,2026-04-09 02:15:10,ar,stock_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00266,LIVE0016,CUS0042,ig,sarah_9074,Je paye maintenant,10/03/2026 03:08,en,purchase_intent,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00267,LIVE0018,CUS0006,insta,client_2714,Je veux le même que le précédent,2026/02/18,,payment_question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00268,LIVE0031,CUS0037,ig,adam_480,Comment payer ?,2026-01-24 17:22:20,FR,stock_question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00269,LIVE0031,CUS0001,ig,livefan_8280,Comment payer ?,2026-02-07 08:34:23,FR,other,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00270,LIVE0005,CUS0070,insta,nora_732,,2026/03/21,en,complaint,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00271,LIVE0007,CUS0068,tiktok,adam_1170,Je veux 2 pièces,2026-02-22 20:20:07,fr,payment_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00272,LIVE0026,CUS0064,ig,livefan_1690,Tu as la taille medium ?,2026-03-04 06:06:02,ar,payment_question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00273,LIVE0015,CUS0064,tiktok,sarah_7715,Prix ?,02/04/2026 02:00,FR,achat,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00274,LIVE0019,CUS0069,tiktok,livefan_2306,Je veux le même que le précédent,2026-02-17 22:03:52,en,price_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00275,LIVE0014,CUS0026,ig,nora_7501,Je prends le sac noir,2026/04/03,en,achat,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00276,LIVE0031,CUS0056,tiktok,lina_9096,Comment payer ?,2026/01/14,,other,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00277,LIVE0024,CUS0042,ig,adam_7628,Je paye maintenant,21/01/2026 17:38,,other,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00278,LIVE0026,CUS0072,TikTok,shop_2891,Coucou,31/01/2026 18:34,,purchase_intent,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00279,LIVE0035,CUS0019,TikTok,sarah_7972,Je veux le même que le précédent,2026-01-05 09:38:01,en,other,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00280,LIVE0034,CUS0073,ig,livefan_7352,Je veux 2 pièces,2026-04-09 22:52:17,fr,question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00281,LIVE0017,CUS0031,TikTok,sarah_4930,Dispo en noir taille L ?,2026/01/20,,payment_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00282,LIVE0032,CUS0024,insta,livefan_7352,Réserve-moi le bleu,2026/01/10,ar,purchase_intent,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00283,LIVE0004,CUS0044,TikTok,livefan_3605,Je prend le rouge en meduim,2026-04-14 18:24:05,en,purchase_intent,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00284,LIVE0021,CUS0069,tiktok,nora_6663,Je veux 2 pièces,10/04/2026 20:24,FR,payment_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00285,LIVE0030,CUS0078,ig,shop_1679,Dispo en noir taille L ?,2026-01-07 21:46:25,,complaint,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00286,LIVE0006,CUS0062,ig,livefan_3991,Mets-moi de côté le pull beige,20/02/2026 04:08,fr,achat,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00287,LIVE0010,CUS0063,ig,livefan_9048,,25/02/2026 22:08,FR,payment_question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00288,LIVE0017,CUS0011,TikTok,livefan_3605,Disponible en rouge ?,2026/03/20,FR,price_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00289,LIVE0024,CUS0026,TikTok,sarah_7471,Je prends la robe rouge en M,27/03/2026 13:27,en,other,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00290,LIVE0030,CUS0006,instagram,livefan_9048,Je paye maintenant,2026-04-16 14:39:09,fr,price_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00291,LIVE0011,CUS0038,tiktok,shop_5095,Réserve-moi le bleu,07/01/2026 07:39,,question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00292,LIVE0015,CUS0028,ig,lina_6892,Tu as la taille medium ?,2026/02/12,,stock_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00293,LIVE0035,CUS0006,TikTok,lina_9096,Prix ?,31/03/2026 21:01,en,complaint,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00294,LIVE0026,CUS0036,TikTok,mode_3121,Je prends la robe rouge en M,01/03/2026 20:00,,payment_question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00295,LIVE0022,CUS0064,ig,livefan_7626,Dispo en noir taille L ?,2026-03-07 22:06:57,en,question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00296,LIVE0017,CUS0069,TikTok,mode_1399,,29/04/2026 22:01,en,purchase_intent,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00297,LIVE0021,CUS0032,ig,adam_5149,Prix ?,2026/03/29,ar,achat,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00298,LIVE0011,CUS0045,insta,nora_7501,Je veux 2 pièces,2026-01-04 17:17:14,,payment_question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00299,LIVE0021,CUS0079,TikTok,lina_1385,Je veux 2 pièces,2026-01-31 18:09:27,en,payment_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00300,LIVE0035,CUS0019,insta,nora_7501,Comment payer ?,18/01/2026 09:44,fr,price_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00301,LIVE0022,CUS0054,insta,sarah_4930,Coucou,2026/02/10,ar,stock_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00302,LIVE0002,CUS0080,ig,nora_2935,Je prends le sac noir,2026/01/25,en,payment_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00303,LIVE0032,CUS0019,ig,sarah_3190,,2026/01/04,ar,stock_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00304,LIVE0012,CUS0026,instagram,shop_127,Je prend le rouge en meduim,2026-02-19 15:30:08,ar,achat,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00305,LIVE0015,CUS0010,instagram,client_2714,,2026/04/06,ar,question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00306,LIVE0026,CUS0042,insta,mode_4504,Prix ?,2026/02/24,fr,question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00307,LIVE0035,CUS0070,insta,adam_1170,Mets-moi de côté le pull beige,2026/04/16,fr,payment_question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00308,LIVE0020,CUS0061,instagram,nora_6399,Je veux le même que le précédent,2026/02/26,fr,stock_question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00309,LIVE0034,CUS0016,instagram,adam_7763,Je veux 2 pièces,17/04/2026 20:28,,other,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00310,LIVE0014,CUS0060,tiktok,shop_3662,Disponible en rouge ?,2026/01/04,en,price_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00311,LIVE0025,CUS0012,ig,livefan_7383,Comment payer ?,15/01/2026 22:28,FR,achat,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00312,LIVE0011,CUS0022,instagram,sarah_9074,Prix ?,09/04/2026 05:58,ar,complaint,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00313,LIVE0013,CUS0017,instagram,livefan_9048,Je prends la robe rouge en M,2026/04/09,ar,purchase_intent,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00314,LIVE0001,CUS0079,insta,client_4075,C’est trop cher,2026/03/05,,question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00315,LIVE0001,CUS0033,ig,adam_5149,C’est trop cher,2026-02-26 02:38:38,en,stock_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00316,LIVE0003,CUS0075,ig,sarah_4930,Disponible en rouge ?,2026-03-25 11:02:09,fr,price_question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00317,LIVE0013,CUS0060,ig,shop_2891,Prix ?,2026-01-23 05:43:18,ar,other,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00318,LIVE0029,CUS0072,tiktok,shop_5977,,2026-04-25 12:52:04,fr,complaint,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00319,LIVE0015,CUS0080,tiktok,mode_3121,Dispo en noir taille L ?,09/03/2026 13:33,FR,complaint,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00320,LIVE0024,CUS0018,ig,shop_1412,,2026/03/19,,question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00321,LIVE0020,CUS0026,tiktok,sarah_3054,Je prends la robe rouge en M,24/01/2026 19:14,fr,payment_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00322,LIVE0023,CUS0046,ig,sarah_7972,C’est trop cher,2026-03-20 13:26:02,en,complaint,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00323,LIVE0034,CUS0072,TikTok,sarah_7972,Réserve-moi le bleu,2026/04/12,ar,other,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00324,LIVE0013,CUS0026,TikTok,shop_5095,,03/04/2026 18:39,fr,stock_question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00325,LIVE0023,CUS0061,insta,adam_6949,Je veux le même que le précédent,2026/01/20,ar,purchase_intent,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00326,LIVE0024,CUS0010,instagram,adam_5149,Je prends la robe rouge en M,15/03/2026 21:21,,stock_question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00327,LIVE0009,CUS0041,TikTok,shop_127,Tu as la taille medium ?,19/03/2026 12:11,fr,question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00328,LIVE0015,CUS0069,TikTok,sarah_9074,Réserve-moi le bleu,17/02/2026 14:53,fr,payment_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00329,LIVE0032,CUS0066,instagram,nora_732,Disponible en rouge ?,26/02/2026 16:01,FR,complaint,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00330,LIVE0007,CUS0068,instagram,mode_8948,Prix ?,11/02/2026 04:49,,price_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00331,LIVE0006,CUS0044,insta,adam_1170,Réserve-moi le bleu,2026/02/09,ar,purchase_intent,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00332,LIVE0015,CUS0043,instagram,nora_732,Je veux le même que le précédent,08/04/2026 09:40,FR,other,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00333,LIVE0011,CUS0022,TikTok,adam_946,Je prends la robe rouge en M,2026/02/26,FR,price_question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00334,LIVE0019,CUS0020,TikTok,livefan_7352,Je prends le sac noir,2026-03-11 11:35:20,fr,complaint,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00335,LIVE0004,CUS0018,tiktok,lina_518,Prix ?,2026-04-25 10:34:28,,purchase_intent,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00336,LIVE0030,CUS0080,TikTok,mode_3153,Disponible en rouge ?,2026-02-24 12:11:45,FR,price_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00337,LIVE0006,CUS0061,tiktok,adam_3477,Je veux le même que le précédent,2026/04/08,,question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00338,LIVE0018,CUS0048,insta,nora_8290,Disponible en rouge ?,29/01/2026 04:55,,question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00339,LIVE0032,CUS0061,instagram,shop_4183,Je paye maintenant,2026/01/09,FR,stock_question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00340,LIVE0007,CUS0043,ig,livefan_3654,Dispo en noir taille L ?,14/01/2026 12:52,FR,question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00341,LIVE0017,CUS0072,instagram,livefan_1884,Mets-moi de côté le pull beige,2026-03-17 13:15:39,ar,payment_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00342,LIVE0029,CUS0074,TikTok,sarah_4579,Je prends le sac noir,2026-03-30 18:27:50,fr,question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00343,LIVE0007,CUS0058,instagram,mode_3153,Mets-moi de côté le pull beige,2026-03-17 19:29:20,FR,price_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00344,LIVE0026,CUS0043,insta,sarah_9074,Prix ?,2026-04-15 19:49:52,en,stock_question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00345,LIVE0011,CUS0021,insta,livefan_7626,Je veux le même que le précédent,26/04/2026 20:51,FR,question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00346,LIVE0021,CUS0074,TikTok,livefan_3605,Je paye maintenant,2026-01-27 21:56:20,FR,purchase_intent,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00347,LIVE0020,CUS0008,TikTok,adam_480,Prix ?,2026-03-07 12:54:08,FR,other,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00348,LIVE0017,CUS0057,ig,shop_4509,Disponible en rouge ?,2026/04/21,,achat,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00349,LIVE0013,CUS0062,instagram,nora_732,Mets-moi de côté le pull beige,25/02/2026 17:13,,stock_question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00350,LIVE0001,CUS0011,tiktok,nora_7501,,2026/04/22,,stock_question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00158,LIVE0006,CUS0049,TikTok,nora_8290,Réserve-moi le bleu,15/02/2026 14:39,,question,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00342,LIVE0029,CUS0074,TikTok,sarah_4579,Je prends le sac noir,2026-03-30 18:27:50,fr,question,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00316,LIVE0003,CUS0075,ig,sarah_4930,Disponible en rouge ?,2026-03-25 11:02:09,fr,price_question,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00235,LIVE0033,CUS0080,tiktok,sarah_4579,Prix ?,14/01/2026 03:58,ar,other,jean,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00156,LIVE0016,CUS0060,TikTok,nora_5763,Coucou,2026-04-03 03:57:16,fr,stock_question,unknown,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00275,LIVE0014,CUS0026,ig,nora_7501,Je prends le sac noir,2026/04/03,en,achat,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00305,LIVE0015,CUS0010,instagram,client_2714,,2026/04/06,ar,question,sac,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00228,LIVE0005,CUS0013,ig,shop_4183,Je paye maintenant,17/03/2026 06:33,ar,payment_question,veste,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00279,LIVE0035,CUS0019,TikTok,sarah_7972,Je veux le même que le précédent,2026-01-05 09:38:01,en,other,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00186,LIVE0017,CUS0006,TikTok,livefan_8280,Réserve-moi le bleu,14/02/2026 14:15,ar,complaint,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00076,LIVE0004,CUS0052,ig,shop_4183,Je prend le rouge en meduim,03/02/2026 06:02,,price_question,,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00125,LIVE0007,CUS0015,ig,nora_7464,Je veux le même que le précédent,2026/03/14,ar,achat,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00169,LIVE0035,CUS0049,tiktok,adam_1170,Comment payer ?,15/02/2026 20:51,en,achat,robe,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00127,LIVE0004,CUS0062,TikTok,sarah_7488,Je prends la robe rouge en M,20/02/2026 10:44,ar,complaint,pull,raw
+FILE_BATCH_20260704_004410,live_comments_raw.csv,2026-07-04 00:44:10,COM00174,LIVE0034,CUS0040,ig,nora_6663,C’est trop cher,2026-02-27 04:08:26,en,complaint,,raw

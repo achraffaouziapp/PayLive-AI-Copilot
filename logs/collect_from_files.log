@@ -1,0 +1,14 @@
+2026-07-04 00:44:10,940 | INFO | Starting file extraction batch: FILE_BATCH_20260704_004410
+2026-07-04 00:44:10,945 | INFO | File sellers_raw.csv extracted successfully.
+2026-07-04 00:44:10,949 | INFO | File customers_raw.csv extracted successfully.
+2026-07-04 00:44:10,962 | INFO | File products_raw.csv extracted successfully.
+2026-07-04 00:44:10,965 | INFO | File live_sessions_raw.csv extracted successfully.
+2026-07-04 00:44:10,968 | INFO | File live_products_raw.csv extracted successfully.
+2026-07-04 00:44:10,974 | INFO | File live_comments_raw.csv extracted successfully.
+2026-07-04 00:44:10,980 | INFO | File carts_raw.csv extracted successfully.
+2026-07-04 00:44:10,985 | INFO | File cart_items_raw.csv extracted successfully.
+2026-07-04 00:44:10,989 | INFO | File orders_raw.csv extracted successfully.
+2026-07-04 00:44:10,994 | INFO | File payments_raw.csv extracted successfully.
+2026-07-04 00:44:10,998 | INFO | File stock_movements_raw.csv extracted successfully.
+2026-07-04 00:44:11,007 | INFO | File live_events_raw.csv extracted successfully.
+2026-07-04 00:44:11,015 | INFO | File extraction batch completed: FILE_BATCH_20260704_004410
