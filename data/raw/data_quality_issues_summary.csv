@@ -1,0 +1,8 @@
+file_name,injected_issues,purpose
+sellers_raw.csv,"invalid emails, duplicated seller_id, missing country, non-standard platform, invalid date",Test seller normalization and identifier quality.
+customers_raw.csv,"missing username, invalid emails, duplicated customer_id, non-standard platforms",Test customer data quality and pseudonymization logic.
+live_sessions_raw.csv,"non-existing seller_id, invalid date, end before start, missing currency, incorrect statuses",Test temporal and relational consistency of live sessions.
+products_raw.csv,"negative price, negative stock, missing category, duplicated product_id",Test product catalog cleaning.
+live_comments_raw.csv,"duplicates, empty text, missing live_id, invalid date, spelling mistakes, non-normalized labels",Prepare future AI analysis of purchase intentions.
+payments_raw.csv,"non-existing order, negative amount, successful payment without date, invalid currency, duplicated transaction reference",Test payment consistency checks.
+live_events_raw.csv,"duplicated events, non-existing live, invalid timestamp, unknown event type",Simulate a high-volume event log source.

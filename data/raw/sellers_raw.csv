@@ -1,0 +1,24 @@
+seller_id,shop_name,owner_first_name,owner_last_name,email,phone_number,country,main_platform,created_at,seller_status
+SEL0001,LiveShop_1,Sofia,Martin,sofia.martin.1@example.com,+33799058447,Maroc,instagram,2025-01-29 04:47:06,deleted
+SEL0002,LiveShop_2,Sofia,Petit,email_invalide,+33713258777,France,tiktok,2025-01-12 06:14:32,ok
+SEL0003,LiveShop_3,Lina,Petit,lina.petit.3@example.com,+33653375074,,Instagram,2025-03-31 17:26:14,actif
+SEL0004,LiveShop_4,Adam,Martin,adam.martin.4@example.com,+33642858220,,insta,2025-02-13 08:09:13,suspended
+SEL0005,LiveShop_5,Sofia,Martin,sofia.martin.5@example.com,+33701985959,France,TikTok,2025-02-14 19:16:51,active
+SEL0005,LiveShop_6,Sarah,Petit,sarah.petit.6@example.com,+33633507767,Espagne,tiktok,2025-03-12 09:53:40,ok
+SEL0007,LiveShop_7,Yanis,Petit,yanis.petit.7@example.com,+33651617074,,tiktok,2025-01-06 21:14:49,suspended
+SEL0008,LiveShop_8,Sofia,Benali,sofia.benali.8@example.com,+33627112365,Espagne,TikTok,invalid_date,inactive
+SEL0009,LiveShop_9,Yanis,Durand,yanis.durand.9@example.com,+33656239114,,TikTok,2025-03-31 21:41:04,ok
+SEL0010,LiveShop_10,Karim,Petit,karim.petit.10@example.com,,Belgique,instagram,2025-03-01 12:17:59,deleted
+SEL0011,LiveShop_11,Nora,Robert,nora.robert.11@example.com,+33687048983,France,instagram,2025-01-05 10:25:17,active
+SEL0012,LiveShop_12,Nora,Petit,nora.petit.12@example.com,+33792713644,Maroc,instagram,2025-03-25 15:25:56,deleted
+SEL0013,LiveShop_13,Sarah,Benali,sarah.benali.13@example.com,+33671103229,Belgique,instagram,2025-03-13 17:16:47,ok
+SEL0014,LiveShop_14,Emma,Petit,emma.petit.14@example.com,+33707213257,Maroc,instagram,2025-01-18 16:31:05,active
+SEL0015,LiveShop_15,Sofia,Benali,sofia.benali.15@example.com,+33768428764,Belgique,Instagram,2025-02-24 19:04:24,actif
+SEL0016,LiveShop_16,Sarah,Petit,sarah.petit.16@example.com,+33667488462,Allemagne,tiktok,2025-03-29 23:07:43,ok
+SEL0017,LiveShop_17,Adam,Robert,adam.robert.17@example.com,+33691315158,France,TikTok,2025-02-25 05:29:00,deleted
+SEL0018,LiveShop_18,Adam,Petit,adam.petit.18@example.com,+33647956499,Allemagne,tiktok,2025-03-22 09:53:40,ok
+SEL0019,LiveShop_19,Nora,Benali,nora.benali.19@example.com,+33700371734,Belgique,tik tok,2025-03-09 00:38:20,actif
+SEL0020,LiveShop_20,Lina,Martin,lina.martin.20@example.com,+33697436907,Maroc,instagram,2025-01-08 07:56:36,active
+SEL0001,LiveShop_1,Sofia,Martin,sofia.martin.1@example.com,+33799058447,Maroc,instagram,2025-01-29 04:47:06,deleted
+SEL0018,LiveShop_18,Adam,Petit,adam.petit.18@example.com,+33647956499,Allemagne,tiktok,2025-03-22 09:53:40,ok
+SEL0016,LiveShop_16,Sarah,Petit,sarah.petit.16@example.com,+33667488462,Allemagne,tiktok,2025-03-29 23:07:43,ok
