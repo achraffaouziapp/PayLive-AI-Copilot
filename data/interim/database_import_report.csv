@@ -1,0 +1,7 @@
+table_name,source_file_name,row_count,column_count,status
+legacy_sellers,sellers_raw.csv,23,10,imported
+legacy_customers,customers_raw.csv,85,6,imported
+legacy_live_sessions,live_sessions_raw.csv,38,11,imported
+legacy_carts,carts_raw.csv,126,8,imported
+legacy_orders,orders_raw.csv,95,9,imported
+legacy_payments,payments_raw.csv,102,9,imported
