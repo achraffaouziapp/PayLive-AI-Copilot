@@ -1,0 +1,14 @@
+file_name,row_count,column_count,primary_key,duplicate_rows,duplicate_primary_keys,missing_values,missing_rate_percent,invalid_dates,invalid_emails,negative_numeric_values,invalid_allowed_values
+cart_items_raw.csv,228,8,cart_item_id,8,9,46,2.52,0,0,1,0
+carts_raw.csv,126,8,cart_id,6,7,38,3.77,0,0,1,104
+customers_raw.csv,85,6,customer_id,5,6,38,7.45,1,1,0,58
+data_quality_issues_summary.csv,7,3,,0,0,0,0.0,0,0,0,0
+live_comments_raw.csv,365,11,comment_id,15,16,169,4.21,237,0,0,226
+live_events_raw.csv,1020,7,event_id,20,21,404,5.66,1,0,0,130
+live_products_raw.csv,125,7,live_product_id,5,5,0,0.0,0,0,1,0
+live_sessions_raw.csv,38,11,live_id,3,4,5,1.2,1,0,0,47
+orders_raw.csv,95,9,order_id,5,6,15,1.75,0,0,1,89
+payments_raw.csv,102,9,payment_id,7,8,53,5.77,0,0,1,92
+products_raw.csv,64,10,product_id,4,5,28,4.38,1,0,3,17
+sellers_raw.csv,23,10,seller_id,3,4,5,2.17,1,1,0,16
+stock_movements_raw.csv,166,7,stock_movement_id,6,7,32,2.75,1,0,40,65
