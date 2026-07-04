@@ -429,7 +429,26 @@ Ces limites sont acceptées car le projet reste une preuve de concept pédagogiq
 - ajouter une authentification plus avancée ;
 - préparer un déploiement cloud.
 
-## 22. Sources de veille
+## 22. Journal de veille technique et réglementaire
+
+Afin de rendre la veille traçable, les principales recherches effectuées pendant le Bloc 2 sont synthétisées dans le tableau suivant.
+
+| Date | Thématique | Source consultée | Information retenue | Impact sur le projet |
+|---|---|---|---|---|
+| 2026-07-04 | NLP et classification de texte | Documentation scikit-learn — TfidfVectorizer | TF-IDF permet de transformer des textes courts en vecteurs numériques exploitables par des modèles de classification | Utilisation de TF-IDF pour représenter les commentaires de live shopping |
+| 2026-07-04 | Modèle de classification | Documentation scikit-learn — LogisticRegression | La régression logistique est adaptée à une classification supervisée et permet d’obtenir des probabilités de prédiction | Choix du modèle baseline TF-IDF + Logistic Regression |
+| 2026-07-04 | Benchmark ML | Documentation scikit-learn — DummyClassifier, LinearSVC, RandomForestClassifier, MultinomialNB | Plusieurs modèles peuvent être comparés avec les mêmes jeux train, validation et test | Mise en place d’un benchmark interne pour justifier le modèle retenu |
+| 2026-07-04 | API IA | Documentation FastAPI | FastAPI permet de créer des routes REST documentées automatiquement avec OpenAPI | Intégration du modèle IA dans l’API existante |
+| 2026-07-04 | Sécurité API | Documentation FastAPI Security et OWASP API Security | Les routes sensibles doivent être protégées et les entrées doivent être validées | Protection des routes IA avec `X-API-Key` et validation Pydantic |
+| 2026-07-04 | Documentation API | OpenAPI Initiative | OpenAPI permet de standardiser la description des routes, entrées et sorties d’une API | Documentation automatique disponible via `/docs` et `/openapi.json` |
+| 2026-07-04 | RGPD et IA | CNIL — fiches pratiques IA | Les données utilisées pour un système IA doivent être limitées, documentées et sécurisées | Utilisation de données simulées, pseudonymisées et minimisées |
+| 2026-07-04 | Réglementation IA | EUR-Lex — AI Act | Un système IA doit être documenté, maîtrisé et ses limites doivent être explicitées | Ajout d’une documentation sur les limites du modèle et la traçabilité |
+| 2026-07-04 | Monitoring IA | Bonnes pratiques MLOps léger | Les prédictions doivent être suivies pour identifier les faibles confiances et les comportements anormaux | Création de `ai_predictions_log.csv` et `model_monitoring_report.csv` |
+| 2026-07-04 | Tests IA | Pytest et FastAPI TestClient | Les composants IA et API peuvent être testés automatiquement | Ajout des tests `test_ai_dataset.py`, `test_intent_model.py` et `test_ai_api.py` |
+
+Cette trace de veille permet de relier chaque information collectée à une décision concrète dans le projet.
+
+## 23. Sources de veille
 
 Sources utilisées :
 
@@ -457,7 +476,34 @@ Sources utilisées :
 - OWASP API Security Project  
   https://owasp.org/www-project-api-security/
 
-## 23. Conclusion
+## 24. Communication et exploitation de la veille
+
+Les résultats de la veille sont exploités directement dans les choix techniques du Bloc 2.
+
+Ils sont communiqués à travers :
+
+- la documentation du projet ;
+- le benchmark des modèles IA ;
+- les rapports d’entraînement et d’évaluation ;
+- la documentation API ;
+- les rapports de tests ;
+- le rapport de monitoring.
+
+La veille n’est donc pas seulement descriptive. Elle sert à justifier les décisions prises pendant la conception et l’intégration du service IA.
+
+Exemples de décisions issues de la veille :
+
+| Décision | Justification issue de la veille |
+|---|---|
+| utiliser TF-IDF + Logistic Regression | modèle simple, local, rapide et explicable |
+| comparer plusieurs modèles | nécessité de justifier objectivement le choix du modèle |
+| exposer le modèle avec FastAPI | cohérence avec l’architecture existante et documentation OpenAPI automatique |
+| protéger les routes IA | limitation des accès non autorisés |
+| journaliser les prédictions | besoin de traçabilité et de monitoring |
+| utiliser des données simulées | réduction des risques RGPD |
+| documenter les limites du modèle | transparence sur les capacités du système IA |  
+
+## 25. Conclusion
 
 La veille technique et réglementaire confirme que l’approche retenue est adaptée au projet.
 
