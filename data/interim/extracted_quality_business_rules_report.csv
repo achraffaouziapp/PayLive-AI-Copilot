@@ -1,0 +1,60 @@
+source_category,dataset_name,issue_type,severity,column_name,affected_rows_count,rule_description,recommendation
+raw,cart_items,duplicated_primary_key,critical,cart_item_id,18,Primary key values must be unique.,Deduplicate rows and keep one reliable version per identifier.
+raw,carts,duplicated_primary_key,critical,cart_id,14,Primary key values must be unique.,Deduplicate rows and keep one reliable version per identifier.
+raw,customers,duplicated_primary_key,critical,customer_id,12,Primary key values must be unique.,Deduplicate rows and keep one reliable version per identifier.
+raw,live_comments,duplicated_primary_key,critical,comment_id,32,Primary key values must be unique.,Deduplicate rows and keep one reliable version per identifier.
+raw,live_events,duplicated_primary_key,critical,event_id,42,Primary key values must be unique.,Deduplicate rows and keep one reliable version per identifier.
+raw,live_products,duplicated_primary_key,critical,live_product_id,10,Primary key values must be unique.,Deduplicate rows and keep one reliable version per identifier.
+raw,live_sessions,duplicated_primary_key,critical,live_id,8,Primary key values must be unique.,Deduplicate rows and keep one reliable version per identifier.
+raw,orders,duplicated_primary_key,critical,order_id,12,Primary key values must be unique.,Deduplicate rows and keep one reliable version per identifier.
+raw,payments,duplicated_primary_key,critical,payment_id,16,Primary key values must be unique.,Deduplicate rows and keep one reliable version per identifier.
+raw,products,duplicated_primary_key,critical,product_id,10,Primary key values must be unique.,Deduplicate rows and keep one reliable version per identifier.
+raw,sellers,duplicated_primary_key,critical,seller_id,8,Primary key values must be unique.,Deduplicate rows and keep one reliable version per identifier.
+raw,stock_movements,duplicated_primary_key,critical,stock_movement_id,14,Primary key values must be unique.,Deduplicate rows and keep one reliable version per identifier.
+raw,sellers,invalid_date_format,major,created_at,1,Date columns must contain parseable date or datetime values.,Standardize date formats during the cleaning phase.
+raw,customers,invalid_date_format,major,created_at,1,Date columns must contain parseable date or datetime values.,Standardize date formats during the cleaning phase.
+raw,products,invalid_date_format,major,created_at,1,Date columns must contain parseable date or datetime values.,Standardize date formats during the cleaning phase.
+raw,live_sessions,invalid_date_format,major,actual_start_at,1,Date columns must contain parseable date or datetime values.,Standardize date formats during the cleaning phase.
+raw,live_comments,invalid_date_format,major,commented_at,237,Date columns must contain parseable date or datetime values.,Standardize date formats during the cleaning phase.
+raw,stock_movements,invalid_date_format,major,created_at,1,Date columns must contain parseable date or datetime values.,Standardize date formats during the cleaning phase.
+raw,live_events,invalid_date_format,major,event_timestamp,1,Date columns must contain parseable date or datetime values.,Standardize date formats during the cleaning phase.
+raw,sellers,invalid_email_format,major,email,1,Email values must follow a valid email format.,Correct invalid emails or set them to null if they are unusable.
+raw,customers,invalid_email_format,major,email,1,Email values must follow a valid email format.,Correct invalid emails or set them to null if they are unusable.
+raw,products,negative_numeric_value,major,unit_price,2,This numeric column should not contain negative values in this business context.,Investigate negative values and correct or remove corrupted rows.
+raw,products,negative_numeric_value,major,stock_quantity,1,This numeric column should not contain negative values in this business context.,Investigate negative values and correct or remove corrupted rows.
+raw,live_products,negative_numeric_value,major,special_live_price,1,This numeric column should not contain negative values in this business context.,Investigate negative values and correct or remove corrupted rows.
+raw,cart_items,negative_numeric_value,major,quantity,1,This numeric column should not contain negative values in this business context.,Investigate negative values and correct or remove corrupted rows.
+raw,carts,negative_numeric_value,major,total_amount,1,This numeric column should not contain negative values in this business context.,Investigate negative values and correct or remove corrupted rows.
+raw,orders,negative_numeric_value,major,order_amount,1,This numeric column should not contain negative values in this business context.,Investigate negative values and correct or remove corrupted rows.
+raw,payments,negative_numeric_value,major,payment_amount,1,This numeric column should not contain negative values in this business context.,Investigate negative values and correct or remove corrupted rows.
+raw,stock_movements,negative_numeric_value,major,quantity_change,40,This numeric column should not contain negative values in this business context.,Investigate negative values and correct or remove corrupted rows.
+raw,carts,invalid_allowed_value,major,cart_status,69,Categorical values must belong to the authorized list.,Normalize categorical values during the cleaning phase.
+raw,customers,invalid_allowed_value,major,platform,34,Categorical values must belong to the authorized list.,Normalize categorical values during the cleaning phase.
+raw,live_comments,invalid_allowed_value,major,platform,158,Categorical values must belong to the authorized list.,Normalize categorical values during the cleaning phase.
+raw,live_comments,invalid_allowed_value,major,manual_intent_label,236,Categorical values must belong to the authorized list.,Normalize categorical values during the cleaning phase.
+raw,live_events,invalid_allowed_value,major,event_type,130,Categorical values must belong to the authorized list.,Normalize categorical values during the cleaning phase.
+raw,live_sessions,invalid_allowed_value,major,platform,8,Categorical values must belong to the authorized list.,Normalize categorical values during the cleaning phase.
+raw,live_sessions,invalid_allowed_value,major,live_status,12,Categorical values must belong to the authorized list.,Normalize categorical values during the cleaning phase.
+raw,orders,invalid_allowed_value,major,order_status,24,Categorical values must belong to the authorized list.,Normalize categorical values during the cleaning phase.
+raw,payments,invalid_allowed_value,major,payment_status,26,Categorical values must belong to the authorized list.,Normalize categorical values during the cleaning phase.
+raw,products,invalid_allowed_value,major,product_status,17,Categorical values must belong to the authorized list.,Normalize categorical values during the cleaning phase.
+raw,sellers,invalid_allowed_value,major,main_platform,2,Categorical values must belong to the authorized list.,Normalize categorical values during the cleaning phase.
+raw,sellers,invalid_allowed_value,major,seller_status,16,Categorical values must belong to the authorized list.,Normalize categorical values during the cleaning phase.
+raw,live_sessions,invalid_foreign_key_reference,critical,seller_id,1,live_sessions.seller_id must exist in sellers.seller_id.,"Remove corrupted rows, fix references, or create missing referenced entities."
+raw,live_products,invalid_foreign_key_reference,critical,live_id,2,live_products.live_id must exist in live_sessions.live_id.,"Remove corrupted rows, fix references, or create missing referenced entities."
+raw,live_products,invalid_foreign_key_reference,critical,product_id,1,live_products.product_id must exist in products.product_id.,"Remove corrupted rows, fix references, or create missing referenced entities."
+raw,live_comments,invalid_foreign_key_reference,critical,customer_id,1,live_comments.customer_id must exist in customers.customer_id.,"Remove corrupted rows, fix references, or create missing referenced entities."
+raw,carts,invalid_foreign_key_reference,critical,live_id,2,carts.live_id must exist in live_sessions.live_id.,"Remove corrupted rows, fix references, or create missing referenced entities."
+raw,cart_items,invalid_foreign_key_reference,critical,cart_id,1,cart_items.cart_id must exist in carts.cart_id.,"Remove corrupted rows, fix references, or create missing referenced entities."
+raw,cart_items,invalid_foreign_key_reference,critical,product_id,1,cart_items.product_id must exist in products.product_id.,"Remove corrupted rows, fix references, or create missing referenced entities."
+raw,orders,invalid_foreign_key_reference,critical,customer_id,1,orders.customer_id must exist in customers.customer_id.,"Remove corrupted rows, fix references, or create missing referenced entities."
+raw,payments,invalid_foreign_key_reference,critical,order_id,1,payments.order_id must exist in orders.order_id.,"Remove corrupted rows, fix references, or create missing referenced entities."
+raw,stock_movements,invalid_foreign_key_reference,critical,product_id,1,stock_movements.product_id must exist in products.product_id.,"Remove corrupted rows, fix references, or create missing referenced entities."
+raw,live_events,invalid_foreign_key_reference,critical,live_id,1,live_events.live_id must exist in live_sessions.live_id.,"Remove corrupted rows, fix references, or create missing referenced entities."
+raw,live_sessions,ended_at_before_actual_start_at,major,"actual_start_at, ended_at",1,The end date must not be earlier than the start date.,Correct inconsistent dates or remove corrupted rows.
+raw,carts,updated_at_before_created_at,major,"created_at, updated_at",1,The end date must not be earlier than the start date.,Correct inconsistent dates or remove corrupted rows.
+raw,orders,confirmed_at_before_created_at,major,"created_at, confirmed_at",1,The end date must not be earlier than the start date.,Correct inconsistent dates or remove corrupted rows.
+raw,cart_items,inconsistent_line_total,major,"quantity, unit_price, line_total",3,line_total should be equal to quantity multiplied by unit_price.,Recalculate line totals during the cleaning phase.
+raw,payments,payment_order_amount_mismatch,major,"payment_amount, order_amount",110,Payment amount should match the related order amount.,Investigate mismatches and decide which source is authoritative.
+raw,payments,payment_order_currency_mismatch,major,currency,75,Payment currency should match the related order currency.,Normalize and validate currency values during cleaning.
+raw,carts,cart_total_amount_mismatch,major,total_amount,107,Cart total amount should match the sum of cart item line totals.,Recalculate cart totals during the cleaning phase.

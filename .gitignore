@@ -1,3 +1,9 @@
 .venv
 
-data/raw/scraping_html/
+# Heavy generated raw files
+# data/raw/scraping_html/
+# data/raw/bigdata/
+# data/raw/legacy_database/
+
+# # Logs
+# logs/*.log
