@@ -24,5 +24,26 @@ services:
     depends_on:
       - postgres
 
+  api:
+    build: .
+    container_name: paylive_api
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: paylive_ai_copilot
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      API_KEY: paylive-dev-api-key
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    depends_on:
+      - postgres
+    command: python -m uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+
 volumes:
   postgres_data:
