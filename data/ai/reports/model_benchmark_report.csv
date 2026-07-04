@@ -1,0 +1,13 @@
+benchmark_date,model_name,model_family,description,eligible_for_final_selection,split_name,row_count,training_duration_seconds,prediction_duration_seconds,average_confidence_score,low_confidence_count,accuracy,macro_precision,macro_recall,macro_f1,weighted_precision,weighted_recall,weighted_f1
+2026-07-04 17:42:17,business_rules_baseline,rules,Rule-based baseline using business keywords.,False,validation,5,0.0,0.0002,0.66,1,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+2026-07-04 17:42:17,business_rules_baseline,rules,Rule-based baseline using business keywords.,False,test,5,0.0,0.0002,0.66,1,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+2026-07-04 17:42:17,dummy_most_frequent,baseline,Naive baseline predicting the most frequent class.,False,validation,5,0.0012,0.0007,1.0,0,0.4,0.1,0.25,0.1429,0.16,0.4,0.2286
+2026-07-04 17:42:17,dummy_most_frequent,baseline,Naive baseline predicting the most frequent class.,False,test,5,0.0012,0.0004,1.0,0,0.4,0.1333,0.3333,0.1905,0.16,0.4,0.2286
+2026-07-04 17:42:17,tfidf_logistic_regression,machine_learning,TF-IDF vectorizer with Logistic Regression.,True,validation,5,0.0302,0.0014,0.2813,5,0.8,0.625,0.75,0.6667,0.7,0.8,0.7333
+2026-07-04 17:42:17,tfidf_logistic_regression,machine_learning,TF-IDF vectorizer with Logistic Regression.,True,test,5,0.0302,0.002,0.259,5,0.8,0.5556,0.6667,0.6,0.6667,0.8,0.72
+2026-07-04 17:42:17,tfidf_linear_svm,machine_learning,TF-IDF vectorizer with Linear SVM.,True,validation,5,0.0049,0.0012,0.3258,5,0.6,0.4,0.4,0.4,0.6,0.6,0.6
+2026-07-04 17:42:17,tfidf_linear_svm,machine_learning,TF-IDF vectorizer with Linear SVM.,True,test,5,0.0049,0.0012,0.3122,5,0.8,0.5556,0.6667,0.6,0.6667,0.8,0.72
+2026-07-04 17:42:17,tfidf_multinomial_nb,machine_learning,TF-IDF vectorizer with Multinomial Naive Bayes.,True,validation,5,0.0034,0.0014,0.4902,4,0.4,0.1,0.25,0.1429,0.16,0.4,0.2286
+2026-07-04 17:42:17,tfidf_multinomial_nb,machine_learning,TF-IDF vectorizer with Multinomial Naive Bayes.,True,test,5,0.0034,0.0012,0.5544,2,0.4,0.1333,0.3333,0.1905,0.16,0.4,0.2286
+2026-07-04 17:42:17,tfidf_random_forest,machine_learning,TF-IDF vectorizer with Random Forest.,True,validation,5,0.3218,0.0861,0.459,4,0.2,0.0667,0.2,0.1,0.0667,0.2,0.1
+2026-07-04 17:42:17,tfidf_random_forest,machine_learning,TF-IDF vectorizer with Random Forest.,True,test,5,0.3218,0.0886,0.379,5,0.4,0.4,0.2,0.2667,0.8,0.4,0.5333

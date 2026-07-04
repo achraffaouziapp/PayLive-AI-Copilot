@@ -1,0 +1,2 @@
+selection_date,selection_metric,selected_model_name,selected_model_family,validation_accuracy,validation_macro_f1,validation_weighted_f1,decision,details
+2026-07-04 17:42:17,"validation weighted_f1, then macro_f1, then accuracy",tfidf_logistic_regression,machine_learning,0.8,0.6667,0.7333,Selected as best eligible ML model for API integration candidate.,Rules baseline and dummy baseline are excluded from final ML selection because they are not trained ML models.
