@@ -545,3 +545,12 @@ Caused by: java.net.SocketTimeoutException: Timed out while waiting for the Pyth
 2026-07-04 02:10:12,891 | INFO | Spark SQL query invalid_events_extract executed successfully with 1048 rows.
 2026-07-04 02:10:12,900 | INFO | Big data extraction batch completed successfully: BIGDATA_BATCH_20260704_020941
 2026-07-04 02:10:13,889 | INFO | Closing down clientserver connection
+2026-07-04 15:11:22,852 | INFO | Starting big data extraction batch: BIGDATA_BATCH_20260704_151122
+2026-07-04 15:11:30,225 | INFO | Partitioned Parquet source created with pandas/pyarrow at C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\bigdata\live_events_parquet with 8160 rows.
+2026-07-04 15:11:47,688 | INFO | Spark SQL query events_by_live executed successfully with 35 rows.
+2026-07-04 15:11:50,728 | INFO | Spark SQL query payment_funnel_by_live executed successfully with 35 rows.
+2026-07-04 15:11:53,634 | INFO | Spark SQL query api_errors_by_live executed successfully with 114 rows.
+2026-07-04 15:11:57,040 | INFO | Spark SQL query hourly_activity executed successfully with 973 rows.
+2026-07-04 15:12:01,113 | INFO | Spark SQL query invalid_events_extract executed successfully with 1048 rows.
+2026-07-04 15:12:01,123 | INFO | Big data extraction batch completed successfully: BIGDATA_BATCH_20260704_151122
+2026-07-04 15:12:02,143 | INFO | Closing down clientserver connection

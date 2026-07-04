@@ -45,3 +45,20 @@ CONTEXT:  COPY dataset_final_live_sales, line 2, column total_orders: "3.0"
 2026-07-04 13:04:05,949 | INFO | Imported 842 rows into core.live_events.
 2026-07-04 13:04:06,048 | INFO | Imported 33 rows into analytics.dataset_final_live_sales.
 2026-07-04 13:04:06,064 | INFO | Database import completed with status: success.
+2026-07-04 15:17:18,637 | INFO | Loaded environment variables from C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.env.
+2026-07-04 15:17:18,637 | INFO | Connecting to PostgreSQL database paylive_ai_copilot on localhost:5433.
+2026-07-04 15:17:19,180 | INFO | Target tables truncated successfully.
+2026-07-04 15:17:19,225 | INFO | Imported 19 rows into core.sellers.
+2026-07-04 15:17:19,249 | INFO | Imported 79 rows into core.customers.
+2026-07-04 15:17:19,332 | INFO | Imported 219 rows into core.products.
+2026-07-04 15:17:19,357 | INFO | Imported 33 rows into core.live_sessions.
+2026-07-04 15:17:19,382 | INFO | Imported 114 rows into core.live_products.
+2026-07-04 15:17:19,471 | INFO | Imported 308 rows into core.live_comments.
+2026-07-04 15:17:19,547 | INFO | Imported 117 rows into core.carts.
+2026-07-04 15:17:19,624 | INFO | Imported 213 rows into core.cart_items.
+2026-07-04 15:17:19,701 | INFO | Imported 84 rows into core.orders.
+2026-07-04 15:17:19,776 | INFO | Imported 88 rows into core.payments.
+2026-07-04 15:17:19,855 | INFO | Imported 152 rows into core.stock_movements.
+2026-07-04 15:17:19,964 | INFO | Imported 842 rows into core.live_events.
+2026-07-04 15:17:20,058 | INFO | Imported 33 rows into analytics.dataset_final_live_sales.
+2026-07-04 15:17:20,074 | INFO | Database import completed with status: success.

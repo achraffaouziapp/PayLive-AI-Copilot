@@ -11,3 +11,16 @@
 2026-07-04 01:18:12,063 | INFO | SQL query revenue_by_live executed successfully with 32 rows.
 2026-07-04 01:18:12,066 | INFO | SQL query incomplete_orders executed successfully with 35 rows.
 2026-07-04 01:18:12,076 | INFO | Database extraction batch completed successfully: DB_BATCH_20260704_011811
+2026-07-04 15:10:31,136 | INFO | Starting database extraction batch: DB_BATCH_20260704_151031
+2026-07-04 15:10:31,169 | INFO | Imported raw file sellers_raw.csv into table legacy_sellers with 23 rows.
+2026-07-04 15:10:31,187 | INFO | Imported raw file customers_raw.csv into table legacy_customers with 85 rows.
+2026-07-04 15:10:31,205 | INFO | Imported raw file live_sessions_raw.csv into table legacy_live_sessions with 38 rows.
+2026-07-04 15:10:31,223 | INFO | Imported raw file carts_raw.csv into table legacy_carts with 126 rows.
+2026-07-04 15:10:31,241 | INFO | Imported raw file orders_raw.csv into table legacy_orders with 95 rows.
+2026-07-04 15:10:31,261 | INFO | Imported raw file payments_raw.csv into table legacy_payments with 102 rows.
+2026-07-04 15:10:31,277 | INFO | SQL query legacy_sellers executed successfully with 23 rows.
+2026-07-04 15:10:31,282 | INFO | SQL query legacy_live_sessions executed successfully with 38 rows.
+2026-07-04 15:10:31,289 | INFO | SQL query paid_orders_with_payments executed successfully with 72 rows.
+2026-07-04 15:10:31,294 | INFO | SQL query revenue_by_live executed successfully with 32 rows.
+2026-07-04 15:10:31,299 | INFO | SQL query incomplete_orders executed successfully with 35 rows.
+2026-07-04 15:10:31,313 | INFO | Database extraction batch completed successfully: DB_BATCH_20260704_151031

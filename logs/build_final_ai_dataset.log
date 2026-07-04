@@ -51,3 +51,21 @@
 2026-07-04 13:03:42,171 | INFO | Saved final dataset quality report: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\final_dataset_quality_report.csv
 2026-07-04 13:03:42,171 | INFO | Saved final dataset aggregation report: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\final_dataset_aggregation_report.csv
 2026-07-04 13:03:42,171 | INFO | Final AI dataset aggregation completed successfully.
+2026-07-04 15:16:20,889 | INFO | Starting final AI dataset aggregation.
+2026-07-04 15:16:20,894 | INFO | Loaded dataset sellers with 19 rows and 12 columns.
+2026-07-04 15:16:20,896 | INFO | Loaded dataset customers with 79 rows and 8 columns.
+2026-07-04 15:16:20,901 | INFO | Loaded dataset products with 219 rows and 12 columns.
+2026-07-04 15:16:20,902 | INFO | Loaded dataset live_sessions with 33 rows and 13 columns.
+2026-07-04 15:16:20,904 | INFO | Loaded dataset live_products with 114 rows and 9 columns.
+2026-07-04 15:16:20,906 | INFO | Loaded dataset live_comments with 308 rows and 12 columns.
+2026-07-04 15:16:20,908 | INFO | Loaded dataset carts with 117 rows and 10 columns.
+2026-07-04 15:16:20,909 | INFO | Loaded dataset cart_items with 213 rows and 10 columns.
+2026-07-04 15:16:20,911 | INFO | Loaded dataset orders with 84 rows and 11 columns.
+2026-07-04 15:16:20,912 | INFO | Loaded dataset payments with 88 rows and 11 columns.
+2026-07-04 15:16:20,914 | INFO | Loaded dataset stock_movements with 152 rows and 9 columns.
+2026-07-04 15:16:20,917 | INFO | Loaded dataset live_events with 842 rows and 9 columns.
+2026-07-04 15:16:21,158 | INFO | Saved final AI dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\final\dataset_final_live_sales.csv
+2026-07-04 15:16:21,158 | INFO | Saved final dataset manifest: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\reports\final_dataset\final_dataset_manifest.csv
+2026-07-04 15:16:21,158 | INFO | Saved final dataset quality report: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\reports\final_dataset\final_dataset_quality_report.csv
+2026-07-04 15:16:21,158 | INFO | Saved final dataset aggregation report: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\reports\final_dataset\final_dataset_aggregation_report.csv
+2026-07-04 15:16:21,158 | INFO | Final AI dataset aggregation completed successfully.

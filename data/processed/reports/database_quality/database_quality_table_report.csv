@@ -1,0 +1,16 @@
+checked_at,schema_name,table_name,table_full_name,table_exists,row_count,column_count,primary_key_columns,missing_primary_key_rows,duplicate_primary_key_values,status,message
+2026-07-04 15:17:55,core,sellers,core.sellers,True,19,12,seller_id,0,0,success,Table quality checks passed.
+2026-07-04 15:17:55,core,customers,core.customers,True,79,8,customer_id,0,0,success,Table quality checks passed.
+2026-07-04 15:17:55,core,products,core.products,True,219,12,product_id,0,0,success,Table quality checks passed.
+2026-07-04 15:17:55,core,live_sessions,core.live_sessions,True,33,13,live_id,0,0,success,Table quality checks passed.
+2026-07-04 15:17:55,core,live_products,core.live_products,True,114,9,live_product_id,0,0,success,Table quality checks passed.
+2026-07-04 15:17:55,core,live_comments,core.live_comments,True,308,12,comment_id,0,0,success,Table quality checks passed.
+2026-07-04 15:17:55,core,carts,core.carts,True,117,10,cart_id,0,0,success,Table quality checks passed.
+2026-07-04 15:17:56,core,cart_items,core.cart_items,True,213,10,cart_item_id,0,0,success,Table quality checks passed.
+2026-07-04 15:17:56,core,orders,core.orders,True,84,11,order_id,0,0,success,Table quality checks passed.
+2026-07-04 15:17:56,core,payments,core.payments,True,88,11,payment_id,0,0,success,Table quality checks passed.
+2026-07-04 15:17:56,core,stock_movements,core.stock_movements,True,152,9,stock_movement_id,0,0,success,Table quality checks passed.
+2026-07-04 15:17:56,core,live_events,core.live_events,True,842,9,event_id,0,0,success,Table quality checks passed.
+2026-07-04 15:17:56,analytics,dataset_final_live_sales,analytics.dataset_final_live_sales,True,33,64,live_id,0,0,success,Table quality checks passed.
+2026-07-04 15:17:56,audit,import_batches,audit.import_batches,True,3,9,import_batch_id,0,0,success,Table quality checks passed.
+2026-07-04 15:17:56,audit,import_logs,audit.import_logs,True,39,10,import_log_id,0,0,success,Table quality checks passed.

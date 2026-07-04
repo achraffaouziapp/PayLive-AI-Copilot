@@ -126,3 +126,131 @@
 2026-07-04 01:04:37,073 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/the-natural-history-of-us-the-fine-art-of-pretending-2_941/index.html
 2026-07-04 01:04:37,401 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/the-natural-history-of-us-the-fine-art-of-pretending-2_941/index.html
 2026-07-04 01:04:38,843 | INFO | Scraping extraction batch completed successfully: SCRAPING_BATCH_20260704_010332
+2026-07-04 15:04:13,600 | INFO | Starting scraping extraction batch: SCRAPING_BATCH_20260704_150413
+2026-07-04 15:04:13,600 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/page-1.html
+2026-07-04 15:04:14,152 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/page-1.html
+2026-07-04 15:04:14,176 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html
+2026-07-04 15:04:14,390 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html
+2026-07-04 15:04:15,108 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html
+2026-07-04 15:04:15,324 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html
+2026-07-04 15:04:16,040 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/soumission_998/index.html
+2026-07-04 15:04:16,384 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/soumission_998/index.html
+2026-07-04 15:04:17,100 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/sharp-objects_997/index.html
+2026-07-04 15:04:17,437 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/sharp-objects_997/index.html
+2026-07-04 15:04:18,147 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html
+2026-07-04 15:04:18,471 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html
+2026-07-04 15:04:19,179 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/the-requiem-red_995/index.html
+2026-07-04 15:04:19,536 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/the-requiem-red_995/index.html
+2026-07-04 15:04:20,245 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html
+2026-07-04 15:04:20,582 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html
+2026-07-04 15:04:21,303 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html
+2026-07-04 15:04:21,651 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html
+2026-07-04 15:04:22,362 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html
+2026-07-04 15:04:22,726 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html
+2026-07-04 15:04:23,435 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/the-black-maria_991/index.html
+2026-07-04 15:04:23,763 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/the-black-maria_991/index.html
+2026-07-04 15:04:24,474 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/starving-hearts-triangular-trade-trilogy-1_990/index.html
+2026-07-04 15:04:24,814 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/starving-hearts-triangular-trade-trilogy-1_990/index.html
+2026-07-04 15:04:25,523 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/shakespeares-sonnets_989/index.html
+2026-07-04 15:04:25,843 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/shakespeares-sonnets_989/index.html
+2026-07-04 15:04:26,554 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/set-me-free_988/index.html
+2026-07-04 15:04:26,894 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/set-me-free_988/index.html
+2026-07-04 15:04:27,603 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/scott-pilgrims-precious-little-life-scott-pilgrim-1_987/index.html
+2026-07-04 15:04:27,960 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/scott-pilgrims-precious-little-life-scott-pilgrim-1_987/index.html
+2026-07-04 15:04:28,670 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/rip-it-up-and-start-again_986/index.html
+2026-07-04 15:04:29,020 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/rip-it-up-and-start-again_986/index.html
+2026-07-04 15:04:29,739 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/our-band-could-be-your-life-scenes-from-the-american-indie-underground-1981-1991_985/index.html
+2026-07-04 15:04:30,095 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/our-band-could-be-your-life-scenes-from-the-american-indie-underground-1981-1991_985/index.html
+2026-07-04 15:04:30,806 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/olio_984/index.html
+2026-07-04 15:04:31,158 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/olio_984/index.html
+2026-07-04 15:04:31,869 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/mesaerion-the-best-science-fiction-stories-1800-1849_983/index.html
+2026-07-04 15:04:32,216 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/mesaerion-the-best-science-fiction-stories-1800-1849_983/index.html
+2026-07-04 15:04:32,930 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/libertarianism-for-beginners_982/index.html
+2026-07-04 15:04:33,255 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/libertarianism-for-beginners_982/index.html
+2026-07-04 15:04:33,969 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/its-only-the-himalayas_981/index.html
+2026-07-04 15:04:34,313 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/its-only-the-himalayas_981/index.html
+2026-07-04 15:04:35,728 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/page-2.html
+2026-07-04 15:04:36,175 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/page-2.html
+2026-07-04 15:04:36,210 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/in-her-wake_980/index.html
+2026-07-04 15:04:36,524 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/in-her-wake_980/index.html
+2026-07-04 15:04:37,235 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/how-music-works_979/index.html
+2026-07-04 15:04:37,553 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/how-music-works_979/index.html
+2026-07-04 15:04:38,262 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/foolproof-preserving-a-guide-to-small-batch-jams-jellies-pickles-condiments-and-more-a-foolproof-guide-to-making-small-batch-jams-jellies-pickles-condiments-and-more_978/index.html
+2026-07-04 15:04:38,614 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/foolproof-preserving-a-guide-to-small-batch-jams-jellies-pickles-condiments-and-more-a-foolproof-guide-to-making-small-batch-jams-jellies-pickles-condiments-and-more_978/index.html
+2026-07-04 15:04:39,329 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/chase-me-paris-nights-2_977/index.html
+2026-07-04 15:04:39,648 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/chase-me-paris-nights-2_977/index.html
+2026-07-04 15:04:40,363 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/black-dust_976/index.html
+2026-07-04 15:04:40,699 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/black-dust_976/index.html
+2026-07-04 15:04:41,412 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/birdsong-a-story-in-pictures_975/index.html
+2026-07-04 15:04:41,737 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/birdsong-a-story-in-pictures_975/index.html
+2026-07-04 15:04:42,448 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/americas-cradle-of-quarterbacks-western-pennsylvanias-football-factory-from-johnny-unitas-to-joe-montana_974/index.html
+2026-07-04 15:04:42,777 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/americas-cradle-of-quarterbacks-western-pennsylvanias-football-factory-from-johnny-unitas-to-joe-montana_974/index.html
+2026-07-04 15:04:43,488 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/aladdin-and-his-wonderful-lamp_973/index.html
+2026-07-04 15:04:43,854 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/aladdin-and-his-wonderful-lamp_973/index.html
+2026-07-04 15:04:44,563 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/worlds-elsewhere-journeys-around-shakespeares-globe_972/index.html
+2026-07-04 15:04:44,989 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/worlds-elsewhere-journeys-around-shakespeares-globe_972/index.html
+2026-07-04 15:04:45,706 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/wall-and-piece_971/index.html
+2026-07-04 15:04:46,074 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/wall-and-piece_971/index.html
+2026-07-04 15:04:46,792 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/the-four-agreements-a-practical-guide-to-personal-freedom_970/index.html
+2026-07-04 15:04:47,137 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/the-four-agreements-a-practical-guide-to-personal-freedom_970/index.html
+2026-07-04 15:04:47,859 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/the-five-love-languages-how-to-express-heartfelt-commitment-to-your-mate_969/index.html
+2026-07-04 15:04:48,199 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/the-five-love-languages-how-to-express-heartfelt-commitment-to-your-mate_969/index.html
+2026-07-04 15:04:48,910 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/the-elephant-tree_968/index.html
+2026-07-04 15:04:49,247 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/the-elephant-tree_968/index.html
+2026-07-04 15:04:49,977 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/the-bear-and-the-piano_967/index.html
+2026-07-04 15:04:50,323 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/the-bear-and-the-piano_967/index.html
+2026-07-04 15:04:51,033 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/sophies-world_966/index.html
+2026-07-04 15:04:51,408 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/sophies-world_966/index.html
+2026-07-04 15:04:52,122 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/penny-maybe_965/index.html
+2026-07-04 15:04:52,491 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/penny-maybe_965/index.html
+2026-07-04 15:04:53,204 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/maude-1883-1993she-grew-up-with-the-country_964/index.html
+2026-07-04 15:04:53,565 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/maude-1883-1993she-grew-up-with-the-country_964/index.html
+2026-07-04 15:04:54,274 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/in-a-dark-dark-wood_963/index.html
+2026-07-04 15:04:54,607 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/in-a-dark-dark-wood_963/index.html
+2026-07-04 15:04:55,320 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/behind-closed-doors_962/index.html
+2026-07-04 15:04:55,667 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/behind-closed-doors_962/index.html
+2026-07-04 15:04:56,390 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/you-cant-bury-them-all-poems_961/index.html
+2026-07-04 15:04:56,723 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/you-cant-bury-them-all-poems_961/index.html
+2026-07-04 15:04:58,135 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/page-3.html
+2026-07-04 15:04:58,601 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/page-3.html
+2026-07-04 15:04:58,638 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/slow-states-of-collapse-poems_960/index.html
+2026-07-04 15:04:58,951 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/slow-states-of-collapse-poems_960/index.html
+2026-07-04 15:04:59,673 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/reasons-to-stay-alive_959/index.html
+2026-07-04 15:04:59,990 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/reasons-to-stay-alive_959/index.html
+2026-07-04 15:05:00,701 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/private-paris-private-10_958/index.html
+2026-07-04 15:05:01,056 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/private-paris-private-10_958/index.html
+2026-07-04 15:05:01,766 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/higherselfie-wake-up-your-life-free-your-soul-find-your-tribe_957/index.html
+2026-07-04 15:05:02,099 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/higherselfie-wake-up-your-life-free-your-soul-find-your-tribe_957/index.html
+2026-07-04 15:05:02,810 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/without-borders-wanderlove-1_956/index.html
+2026-07-04 15:05:03,168 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/without-borders-wanderlove-1_956/index.html
+2026-07-04 15:05:03,878 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/when-we-collided_955/index.html
+2026-07-04 15:05:04,247 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/when-we-collided_955/index.html
+2026-07-04 15:05:04,955 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/we-love-you-charlie-freeman_954/index.html
+2026-07-04 15:05:05,291 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/we-love-you-charlie-freeman_954/index.html
+2026-07-04 15:05:06,001 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/untitled-collection-sabbath-poems-2014_953/index.html
+2026-07-04 15:05:06,321 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/untitled-collection-sabbath-poems-2014_953/index.html
+2026-07-04 15:05:07,040 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/unseen-city-the-majesty-of-pigeons-the-discreet-charm-of-snails-other-wonders-of-the-urban-wilderness_952/index.html
+2026-07-04 15:05:07,371 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/unseen-city-the-majesty-of-pigeons-the-discreet-charm-of-snails-other-wonders-of-the-urban-wilderness_952/index.html
+2026-07-04 15:05:08,083 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/unicorn-tracks_951/index.html
+2026-07-04 15:05:08,427 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/unicorn-tracks_951/index.html
+2026-07-04 15:05:09,136 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/unbound-how-eight-technologies-made-us-human-transformed-society-and-brought-our-world-to-the-brink_950/index.html
+2026-07-04 15:05:09,468 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/unbound-how-eight-technologies-made-us-human-transformed-society-and-brought-our-world-to-the-brink_950/index.html
+2026-07-04 15:05:10,182 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/tsubasa-world-chronicle-2-tsubasa-world-chronicle-2_949/index.html
+2026-07-04 15:05:10,528 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/tsubasa-world-chronicle-2-tsubasa-world-chronicle-2_949/index.html
+2026-07-04 15:05:11,239 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/throwing-rocks-at-the-google-bus-how-growth-became-the-enemy-of-prosperity_948/index.html
+2026-07-04 15:05:11,553 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/throwing-rocks-at-the-google-bus-how-growth-became-the-enemy-of-prosperity_948/index.html
+2026-07-04 15:05:12,262 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/this-one-summer_947/index.html
+2026-07-04 15:05:12,577 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/this-one-summer_947/index.html
+2026-07-04 15:05:13,288 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/thirst_946/index.html
+2026-07-04 15:05:13,690 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/thirst_946/index.html
+2026-07-04 15:05:14,399 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/the-torch-is-passed-a-harding-family-story_945/index.html
+2026-07-04 15:05:14,795 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/the-torch-is-passed-a-harding-family-story_945/index.html
+2026-07-04 15:05:15,512 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/the-secret-of-dreadwillow-carse_944/index.html
+2026-07-04 15:05:15,865 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/the-secret-of-dreadwillow-carse_944/index.html
+2026-07-04 15:05:16,575 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/the-pioneer-woman-cooks-dinnertime-comfort-classics-freezer-food-16-minute-meals-and-other-delicious-ways-to-solve-supper_943/index.html
+2026-07-04 15:05:16,946 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/the-pioneer-woman-cooks-dinnertime-comfort-classics-freezer-food-16-minute-meals-and-other-delicious-ways-to-solve-supper_943/index.html
+2026-07-04 15:05:17,657 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/the-past-never-ends_942/index.html
+2026-07-04 15:05:18,009 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/the-past-never-ends_942/index.html
+2026-07-04 15:05:18,719 | INFO | Fetching URL attempt 1/3: http://books.toscrape.com/catalogue/the-natural-history-of-us-the-fine-art-of-pretending-2_941/index.html
+2026-07-04 15:05:19,072 | INFO | URL fetched successfully: http://books.toscrape.com/catalogue/the-natural-history-of-us-the-fine-art-of-pretending-2_941/index.html
+2026-07-04 15:05:20,525 | INFO | Scraping extraction batch completed successfully: SCRAPING_BATCH_20260704_150413

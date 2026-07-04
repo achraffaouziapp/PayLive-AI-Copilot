@@ -12,3 +12,17 @@
 2026-07-04 02:43:50,121 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\stock_movements_clean.csv
 2026-07-04 02:43:50,124 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\live_events_clean.csv
 2026-07-04 02:43:50,128 | INFO | Data cleaning and standardization pipeline completed successfully.
+2026-07-04 15:15:45,252 | INFO | Starting data cleaning and standardization pipeline.
+2026-07-04 15:15:46,303 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\clean\sellers_clean.csv
+2026-07-04 15:15:46,304 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\clean\customers_clean.csv
+2026-07-04 15:15:46,311 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\clean\products_clean.csv
+2026-07-04 15:15:46,314 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\clean\live_sessions_clean.csv
+2026-07-04 15:15:46,315 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\clean\live_products_clean.csv
+2026-07-04 15:15:46,318 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\clean\live_comments_clean.csv
+2026-07-04 15:15:46,320 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\clean\carts_clean.csv
+2026-07-04 15:15:46,322 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\clean\cart_items_clean.csv
+2026-07-04 15:15:46,324 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\clean\orders_clean.csv
+2026-07-04 15:15:46,325 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\clean\payments_clean.csv
+2026-07-04 15:15:46,327 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\clean\stock_movements_clean.csv
+2026-07-04 15:15:46,331 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\clean\live_events_clean.csv
+2026-07-04 15:15:46,337 | INFO | Data cleaning and standardization pipeline completed successfully.

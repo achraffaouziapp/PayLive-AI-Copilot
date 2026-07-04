@@ -24,12 +24,21 @@ import pandas as pd
 # - invalid statuses;
 # - negative amounts;
 # - broken relationships between files.
+#
+# Reports are saved in data/interim/reports/raw_quality.
 # -------------------------------------------------------------------
 
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 RAW_DIR = BASE_DIR / "data" / "raw"
 INTERIM_DIR = BASE_DIR / "data" / "interim"
+
+INTERIM_REPORTS_DIR = INTERIM_DIR / "reports"
+RAW_QUALITY_REPORTS_DIR = INTERIM_REPORTS_DIR / "raw_quality"
+
+QUALITY_FILE_REPORT_PATH = RAW_QUALITY_REPORTS_DIR / "quality_report_files.csv"
+QUALITY_COLUMN_REPORT_PATH = RAW_QUALITY_REPORTS_DIR / "quality_report_columns.csv"
+QUALITY_BUSINESS_RULE_REPORT_PATH = RAW_QUALITY_REPORTS_DIR / "quality_report_business_rules.csv"
 
 
 PRIMARY_KEYS = {
@@ -250,12 +259,12 @@ REFERENCE_RULES = [
 
 def ensure_directories() -> None:
     """
-    Create the interim data directory if it does not exist.
+    Create the output directory for raw data quality reports.
 
-    The quality reports are saved in `data/interim` because they are
-    intermediate analysis outputs, not final cleaned datasets.
+    Raw quality reports are saved in `data/interim/reports/raw_quality`
+    to keep interim extracts and technical reports separated.
     """
-    INTERIM_DIR.mkdir(parents=True, exist_ok=True)
+    RAW_QUALITY_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def load_raw_csv_files() -> Dict[str, pd.DataFrame]:
@@ -301,7 +310,7 @@ def count_missing_values(df: pd.DataFrame) -> int:
     This function applies the project-specific missing value logic
     to every cell of the dataset.
     """
-    return int(df.map(is_missing_value).sum().sum())
+    return int(df.apply(lambda column: column.map(is_missing_value)).sum().sum())
 
 
 def count_missing_values_in_column(series: pd.Series) -> int:
@@ -943,24 +952,25 @@ def save_reports(
     business_rule_report: pd.DataFrame,
 ) -> None:
     """
-    Save all quality reports as CSV files.
+    Save all raw quality reports as CSV files.
 
-    These files will be used to document the raw data quality analysis.
+    These files are saved under `data/interim/reports/raw_quality`
+    to keep the interim folder organized.
     """
     file_report.to_csv(
-        INTERIM_DIR / "quality_report_files.csv",
+        QUALITY_FILE_REPORT_PATH,
         index=False,
         encoding="utf-8",
     )
 
     column_report.to_csv(
-        INTERIM_DIR / "quality_report_columns.csv",
+        QUALITY_COLUMN_REPORT_PATH,
         index=False,
         encoding="utf-8",
     )
 
     business_rule_report.to_csv(
-        INTERIM_DIR / "quality_report_business_rules.csv",
+        QUALITY_BUSINESS_RULE_REPORT_PATH,
         index=False,
         encoding="utf-8",
     )
@@ -971,7 +981,7 @@ def main() -> None:
     Run the full raw data quality analysis.
 
     The script loads raw data, builds three quality reports,
-    saves them in `data/interim`, and prints a short summary.
+    saves them in `data/interim/reports/raw_quality`, and prints a short summary.
     """
     ensure_directories()
 
@@ -990,12 +1000,10 @@ def main() -> None:
 
     print("Raw data quality analysis completed successfully.")
     print(f"Analyzed files: {len(datasets)}")
-    print(f"File-level report: {INTERIM_DIR / 'quality_report_files.csv'}")
-    print(f"Column-level report: {INTERIM_DIR / 'quality_report_columns.csv'}")
-    print(
-        "Business rule report: "
-        f"{INTERIM_DIR / 'quality_report_business_rules.csv'}"
-    )
+    print(f"Raw quality reports folder: {RAW_QUALITY_REPORTS_DIR}")
+    print(f"File-level report: {QUALITY_FILE_REPORT_PATH}")
+    print(f"Column-level report: {QUALITY_COLUMN_REPORT_PATH}")
+    print(f"Business rule report: {QUALITY_BUSINESS_RULE_REPORT_PATH}")
     print(f"Detected business rule issue groups: {len(business_rule_report)}")
 
 

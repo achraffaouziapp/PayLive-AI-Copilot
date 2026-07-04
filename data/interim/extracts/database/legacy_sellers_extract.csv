@@ -1,0 +1,24 @@
+extraction_batch_id,source_system,query_name,extracted_at,seller_id,shop_name,owner_first_name,owner_last_name,email,country,main_platform,created_at,seller_status
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0001,LiveShop_1,Sofia,Martin,sofia.martin.1@example.com,Maroc,instagram,2025-01-29 04:47:06,deleted
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0002,LiveShop_2,Sofia,Petit,email_invalide,France,tiktok,2025-01-12 06:14:32,ok
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0003,LiveShop_3,Lina,Petit,lina.petit.3@example.com,,Instagram,2025-03-31 17:26:14,actif
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0004,LiveShop_4,Adam,Martin,adam.martin.4@example.com,,insta,2025-02-13 08:09:13,suspended
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0005,LiveShop_5,Sofia,Martin,sofia.martin.5@example.com,France,TikTok,2025-02-14 19:16:51,active
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0005,LiveShop_6,Sarah,Petit,sarah.petit.6@example.com,Espagne,tiktok,2025-03-12 09:53:40,ok
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0007,LiveShop_7,Yanis,Petit,yanis.petit.7@example.com,,tiktok,2025-01-06 21:14:49,suspended
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0008,LiveShop_8,Sofia,Benali,sofia.benali.8@example.com,Espagne,TikTok,invalid_date,inactive
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0009,LiveShop_9,Yanis,Durand,yanis.durand.9@example.com,,TikTok,2025-03-31 21:41:04,ok
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0010,LiveShop_10,Karim,Petit,karim.petit.10@example.com,Belgique,instagram,2025-03-01 12:17:59,deleted
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0011,LiveShop_11,Nora,Robert,nora.robert.11@example.com,France,instagram,2025-01-05 10:25:17,active
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0012,LiveShop_12,Nora,Petit,nora.petit.12@example.com,Maroc,instagram,2025-03-25 15:25:56,deleted
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0013,LiveShop_13,Sarah,Benali,sarah.benali.13@example.com,Belgique,instagram,2025-03-13 17:16:47,ok
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0014,LiveShop_14,Emma,Petit,emma.petit.14@example.com,Maroc,instagram,2025-01-18 16:31:05,active
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0015,LiveShop_15,Sofia,Benali,sofia.benali.15@example.com,Belgique,Instagram,2025-02-24 19:04:24,actif
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0016,LiveShop_16,Sarah,Petit,sarah.petit.16@example.com,Allemagne,tiktok,2025-03-29 23:07:43,ok
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0017,LiveShop_17,Adam,Robert,adam.robert.17@example.com,France,TikTok,2025-02-25 05:29:00,deleted
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0018,LiveShop_18,Adam,Petit,adam.petit.18@example.com,Allemagne,tiktok,2025-03-22 09:53:40,ok
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0019,LiveShop_19,Nora,Benali,nora.benali.19@example.com,Belgique,tik tok,2025-03-09 00:38:20,actif
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0020,LiveShop_20,Lina,Martin,lina.martin.20@example.com,Maroc,instagram,2025-01-08 07:56:36,active
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0001,LiveShop_1,Sofia,Martin,sofia.martin.1@example.com,Maroc,instagram,2025-01-29 04:47:06,deleted
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0018,LiveShop_18,Adam,Petit,adam.petit.18@example.com,Allemagne,tiktok,2025-03-22 09:53:40,ok
+DB_BATCH_20260704_151031,paylive_legacy_sqlite_database,legacy_sellers,2026-07-04 15:10:31,SEL0016,LiveShop_16,Sarah,Petit,sarah.petit.16@example.com,Allemagne,tiktok,2025-03-29 23:07:43,ok

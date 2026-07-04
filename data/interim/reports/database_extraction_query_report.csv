@@ -1,6 +1,0 @@
-query_name,status,row_count,column_count,output_file_path,query_hash_sha256,error_message
-legacy_sellers,success,23,13,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\database_extracts\legacy_sellers_extract.csv,5516395a1948e72240bac32502501b243a4a35acadaae15bec366590a3f83c30,
-legacy_live_sessions,success,38,13,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\database_extracts\legacy_live_sessions_extract.csv,15b2f7f85427a0ff673fa3c79c7e20256654d0ae2e231a7bf8bb7e6d37555099,
-paid_orders_with_payments,success,72,22,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\database_extracts\paid_orders_with_payments_extract.csv,735c811dc089e2d81726d70bb266b5b633443fb7bc26d4393bf21b529ddb1833,
-revenue_by_live,success,32,12,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\database_extracts\revenue_by_live_extract.csv,02db9bc3ff98f02607d515515981960a059ff5f91132229e9e78e020a1d18ed9,
-incomplete_orders,success,35,16,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\database_extracts\incomplete_orders_extract.csv,90b0d6c636c07cb0e12688d6f23257bc4a2adc325ebabd3afa89fe7e29abf3d9,

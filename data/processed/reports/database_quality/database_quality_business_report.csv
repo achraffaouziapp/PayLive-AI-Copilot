@@ -1,0 +1,39 @@
+checked_at,rule_name,schema_name,table_name,table_full_name,column_name,severity,issue_count,status,message
+2026-07-04 15:17:56,allowed_values_check,core,sellers,core.sellers,main_platform,major,0,success,All values belong to the authorized list.
+2026-07-04 15:17:56,allowed_values_check,core,sellers,core.sellers,seller_status,major,0,success,All values belong to the authorized list.
+2026-07-04 15:17:56,allowed_values_check,core,customers,core.customers,platform,major,0,success,All values belong to the authorized list.
+2026-07-04 15:17:56,allowed_values_check,core,products,core.products,product_status,major,0,success,All values belong to the authorized list.
+2026-07-04 15:17:56,allowed_values_check,core,live_sessions,core.live_sessions,platform,major,0,success,All values belong to the authorized list.
+2026-07-04 15:17:56,allowed_values_check,core,live_sessions,core.live_sessions,live_status,major,0,success,All values belong to the authorized list.
+2026-07-04 15:17:56,allowed_values_check,core,live_sessions,core.live_sessions,currency,major,0,success,All values belong to the authorized list.
+2026-07-04 15:17:56,allowed_values_check,core,live_comments,core.live_comments,manual_intent_label,major,0,success,All values belong to the authorized list.
+2026-07-04 15:17:56,allowed_values_check,core,carts,core.carts,cart_status,major,0,success,All values belong to the authorized list.
+2026-07-04 15:17:56,allowed_values_check,core,orders,core.orders,order_status,major,0,success,All values belong to the authorized list.
+2026-07-04 15:17:56,allowed_values_check,core,payments,core.payments,payment_status,major,0,success,All values belong to the authorized list.
+2026-07-04 15:17:56,allowed_values_check,core,live_events,core.live_events,event_type,major,0,success,All values belong to the authorized list.
+2026-07-04 15:17:56,allowed_values_check,analytics,dataset_final_live_sales,analytics.dataset_final_live_sales,final_dataset_status,major,0,success,All values belong to the authorized list.
+2026-07-04 15:17:56,non_negative_numeric_check,core,products,core.products,unit_price,major,0,success,No negative values detected.
+2026-07-04 15:17:56,non_negative_numeric_check,core,products,core.products,stock_quantity,major,0,success,No negative values detected.
+2026-07-04 15:17:56,non_negative_numeric_check,core,live_sessions,core.live_sessions,peak_viewers,major,0,success,No negative values detected.
+2026-07-04 15:17:56,non_negative_numeric_check,core,live_products,core.live_products,special_live_price,major,0,success,No negative values detected.
+2026-07-04 15:17:56,non_negative_numeric_check,core,live_products,core.live_products,initial_stock,major,0,success,No negative values detected.
+2026-07-04 15:17:56,non_negative_numeric_check,core,live_products,core.live_products,remaining_stock,major,0,success,No negative values detected.
+2026-07-04 15:17:56,non_negative_numeric_check,core,carts,core.carts,total_amount,major,0,success,No negative values detected.
+2026-07-04 15:17:56,non_negative_numeric_check,core,cart_items,core.cart_items,quantity,major,0,success,No negative values detected.
+2026-07-04 15:17:56,non_negative_numeric_check,core,cart_items,core.cart_items,unit_price,major,0,success,No negative values detected.
+2026-07-04 15:17:56,non_negative_numeric_check,core,cart_items,core.cart_items,line_total,major,0,success,No negative values detected.
+2026-07-04 15:17:56,non_negative_numeric_check,core,orders,core.orders,order_amount,major,0,success,No negative values detected.
+2026-07-04 15:17:56,non_negative_numeric_check,core,payments,core.payments,payment_amount,major,0,success,No negative values detected.
+2026-07-04 15:17:56,non_negative_numeric_check,analytics,dataset_final_live_sales,analytics.dataset_final_live_sales,peak_viewers,major,0,success,No negative values detected.
+2026-07-04 15:17:56,non_negative_numeric_check,analytics,dataset_final_live_sales,analytics.dataset_final_live_sales,total_comments,major,0,success,No negative values detected.
+2026-07-04 15:17:56,non_negative_numeric_check,analytics,dataset_final_live_sales,analytics.dataset_final_live_sales,total_carts,major,0,success,No negative values detected.
+2026-07-04 15:17:56,non_negative_numeric_check,analytics,dataset_final_live_sales,analytics.dataset_final_live_sales,total_orders,major,0,success,No negative values detected.
+2026-07-04 15:17:56,non_negative_numeric_check,analytics,dataset_final_live_sales,analytics.dataset_final_live_sales,total_revenue,major,0,success,No negative values detected.
+2026-07-04 15:17:56,non_negative_numeric_check,analytics,dataset_final_live_sales,analytics.dataset_final_live_sales,total_events,major,0,success,No negative values detected.
+2026-07-04 15:17:56,rate_between_0_and_1_check,analytics,dataset_final_live_sales,analytics.dataset_final_live_sales,purchase_intent_rate,major,0,success,All rate values are between 0 and 1.
+2026-07-04 15:17:56,rate_between_0_and_1_check,analytics,dataset_final_live_sales,analytics.dataset_final_live_sales,cart_abandonment_rate,major,0,success,All rate values are between 0 and 1.
+2026-07-04 15:17:56,rate_between_0_and_1_check,analytics,dataset_final_live_sales,analytics.dataset_final_live_sales,payment_success_rate,major,0,success,All rate values are between 0 and 1.
+2026-07-04 15:17:56,rate_between_0_and_1_check,analytics,dataset_final_live_sales,analytics.dataset_final_live_sales,conversion_rate,major,0,success,All rate values are between 0 and 1.
+2026-07-04 15:17:56,final_dataset_row_count_check,analytics,dataset_final_live_sales,analytics.dataset_final_live_sales,live_id,critical,0,success,The final AI dataset contains one row per live session.
+2026-07-04 15:17:56,final_dataset_zero_revenue_information,analytics,dataset_final_live_sales,analytics.dataset_final_live_sales,total_revenue,info,0,success,14 live sessions have zero revenue. This can be normal for inactive or unsuccessful lives.
+2026-07-04 15:17:56,latest_import_batch_status_check,audit,import_batches,audit.import_batches,status,major,0,success,The latest import batch has status success.

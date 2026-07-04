@@ -37,3 +37,42 @@
 2026-07-04 02:34:26,705 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\bigdata_extracts\invalid_events_extract_extract.csv with 1048 rows.
 2026-07-04 02:34:26,706 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\bigdata_extracts\payment_funnel_by_live_extract.csv with 35 rows.
 2026-07-04 02:34:27,544 | INFO | Extracted data quality analysis completed successfully.
+2026-07-04 15:15:14,008 | INFO | Starting extracted data quality analysis.
+2026-07-04 15:15:14,015 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\cart_items_raw.csv with 228 rows.
+2026-07-04 15:15:14,017 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\carts_raw.csv with 126 rows.
+2026-07-04 15:15:14,018 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\customers_raw.csv with 85 rows.
+2026-07-04 15:15:14,020 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\live_comments_raw.csv with 365 rows.
+2026-07-04 15:15:14,023 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\live_events_raw.csv with 1020 rows.
+2026-07-04 15:15:14,024 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\live_products_raw.csv with 125 rows.
+2026-07-04 15:15:14,025 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\live_sessions_raw.csv with 38 rows.
+2026-07-04 15:15:14,027 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\orders_raw.csv with 95 rows.
+2026-07-04 15:15:14,028 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\payments_raw.csv with 102 rows.
+2026-07-04 15:15:14,029 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\products_raw.csv with 64 rows.
+2026-07-04 15:15:14,033 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\products_scraped_raw.csv with 60 rows.
+2026-07-04 15:15:14,041 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\sellers_raw.csv with 23 rows.
+2026-07-04 15:15:14,042 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\stock_movements_raw.csv with 166 rows.
+2026-07-04 15:15:14,044 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\files\cart_items_file_extract.csv with 228 rows.
+2026-07-04 15:15:14,046 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\files\carts_file_extract.csv with 126 rows.
+2026-07-04 15:15:14,047 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\files\customers_file_extract.csv with 85 rows.
+2026-07-04 15:15:14,049 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\files\live_comments_file_extract.csv with 365 rows.
+2026-07-04 15:15:14,054 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\files\live_events_file_extract.csv with 1020 rows.
+2026-07-04 15:15:14,055 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\files\live_products_file_extract.csv with 125 rows.
+2026-07-04 15:15:14,057 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\files\live_sessions_file_extract.csv with 38 rows.
+2026-07-04 15:15:14,058 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\files\orders_file_extract.csv with 95 rows.
+2026-07-04 15:15:14,060 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\files\payments_file_extract.csv with 102 rows.
+2026-07-04 15:15:14,062 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\files\products_file_extract.csv with 64 rows.
+2026-07-04 15:15:14,063 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\files\sellers_file_extract.csv with 23 rows.
+2026-07-04 15:15:14,064 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\files\stock_movements_file_extract.csv with 166 rows.
+2026-07-04 15:15:14,067 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\api\products_api_extract.csv with 100 rows.
+2026-07-04 15:15:14,071 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\scraping\products_scraped_extract.csv with 60 rows.
+2026-07-04 15:15:14,072 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\database\incomplete_orders_extract.csv with 35 rows.
+2026-07-04 15:15:14,073 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\database\legacy_live_sessions_extract.csv with 38 rows.
+2026-07-04 15:15:14,075 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\database\legacy_sellers_extract.csv with 23 rows.
+2026-07-04 15:15:14,077 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\database\paid_orders_with_payments_extract.csv with 72 rows.
+2026-07-04 15:15:14,078 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\database\revenue_by_live_extract.csv with 32 rows.
+2026-07-04 15:15:14,079 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\bigdata\api_errors_by_live_extract.csv with 114 rows.
+2026-07-04 15:15:14,080 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\bigdata\events_by_live_extract.csv with 35 rows.
+2026-07-04 15:15:14,083 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\bigdata\hourly_activity_extract.csv with 973 rows.
+2026-07-04 15:15:14,091 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\bigdata\invalid_events_extract_extract.csv with 1048 rows.
+2026-07-04 15:15:14,092 | INFO | Loaded dataset C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\extracts\bigdata\payment_funnel_by_live_extract.csv with 35 rows.
+2026-07-04 15:15:14,919 | INFO | Extracted data quality analysis completed successfully.
