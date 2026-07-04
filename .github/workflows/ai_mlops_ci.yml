@@ -61,9 +61,13 @@ jobs:
         run: |
           python src/ai/monitoring/generate_monitoring_dashboard.py
 
-      - name: Run AI automated tests
+      - name: Run automated tests
         run: |
-          pytest tests/test_ai_dataset.py tests/test_intent_model.py tests/test_ai_api.py -v
+          pytest tests/test_ai_dataset.py tests/test_intent_model.py tests/test_ai_api.py tests/test_frontend_static.py -v
+
+      - name: Validate frontend Docker build
+        run: |
+          docker compose build frontend
 
       - name: Upload AI reports
         uses: actions/upload-artifact@v4

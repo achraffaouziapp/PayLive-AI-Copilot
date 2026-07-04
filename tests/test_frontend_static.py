@@ -97,3 +97,12 @@ def test_frontend_dockerfile_uses_nginx():
     assert "COPY js" in content
     assert "COPY nginx.conf" in content
     assert "EXPOSE 80" in content
+
+def test_api_key_validation_uses_protected_route():
+    js_path = FRONTEND_DIR / "js" / "app.js"
+    content = js_path.read_text(encoding="utf-8")
+
+    assert "/model-info" in content
+    assert "Clé API invalide" in content
+    assert "response.status === 403" in content
+    assert "fetch(\"/health\")" not in content
