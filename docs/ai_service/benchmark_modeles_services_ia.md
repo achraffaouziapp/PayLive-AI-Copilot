@@ -767,7 +767,181 @@ Notation de 1 à 5.
 | Azure AI Language / Azure OpenAI | 4 | 3 | 3 | 3 | 3 | 3 | 19 |
 | AWS Comprehend | 4 | 3 | 3 | 3 | 3 | 3 | 19 |
 
-## 15. Justification du choix final
+## 15. Analyse coût, prérequis et éco-responsabilité
+
+### 15.1. Objectif de l’analyse
+
+En complément du benchmark fonctionnel, une analyse spécifique a été réalisée sur trois critères importants :
+
+```text
+coût
+prérequis techniques
+éco-responsabilité
+```
+
+Cette analyse permet de vérifier que la solution retenue est adaptée au contexte du projet **PayLive AI Copilot**.
+
+Le projet étant une preuve de concept pédagogique locale, la solution choisie doit rester :
+
+- simple à installer ;
+- peu coûteuse ;
+- reproductible ;
+- compatible avec un environnement local ;
+- limitée en dépendances externes ;
+- sobre en ressources.
+
+### 15.2. Analyse des coûts
+
+Les solutions IA étudiées n’ont pas toutes le même modèle économique.
+
+Certaines solutions fonctionnent localement, sans coût d’appel API. D’autres nécessitent un fournisseur cloud, une facturation à l’usage, une clé API ou un endpoint dédié.
+
+| Solution | Type de coût | Analyse |
+|---|---|---|
+| Modèle local scikit-learn | coût local uniquement | Pas d’appel API payant. Le coût correspond uniquement à l’utilisation de la machine locale. |
+| Hugging Face local | coût machine local | Pas de coût API si le modèle est exécuté localement, mais besoin potentiel de plus de ressources CPU/RAM/GPU. |
+| Hugging Face Inference Providers | paiement à l’usage | Coût variable selon le fournisseur d’inférence et le volume d’appels. |
+| OpenAI API | paiement à l’usage | Coût variable selon le modèle utilisé, le nombre de tokens envoyés et reçus, et le volume d’appels. |
+| Google Cloud Natural Language / Vertex AI | paiement cloud | Coût variable selon les caractères traités, les ressources utilisées ou les modèles déployés. |
+| Azure AI Language / Azure OpenAI | paiement cloud | Coût variable selon les ressources Azure, les modèles utilisés, les appels API et le mode de déploiement. |
+| AWS Comprehend | paiement cloud | Coût possible pour l’entraînement, la gestion du modèle personnalisé et l’inférence. |
+
+Pour le projet, le modèle local `TF-IDF + Logistic Regression` est le plus adapté économiquement, car il ne nécessite pas de service payant externe.
+
+### 15.3. Comparaison des prérequis techniques
+
+Chaque solution nécessite des prérequis différents.
+
+| Solution | Prérequis techniques | Niveau de complexité |
+|---|---|---|
+| Modèle local scikit-learn | Python, pandas, scikit-learn, joblib, dataset NLP | faible |
+| Hugging Face local | Python, transformers, torch, modèle pré-entraîné, ressources machine plus importantes | moyen à élevé |
+| Hugging Face Inference Providers | compte Hugging Face, clé API, configuration d’un fournisseur d’inférence | moyen |
+| OpenAI API | compte API, clé API, gestion des prompts, gestion des coûts et quotas | moyen |
+| Google Cloud Natural Language / Vertex AI | compte Google Cloud, projet cloud, facturation, IAM, configuration API | élevé |
+| Azure AI Language / Azure OpenAI | compte Azure, ressource IA, clé API, endpoint, configuration sécurité | élevé |
+| AWS Comprehend | compte AWS, IAM, données labellisées, configuration du service, modèle custom éventuel | élevé |
+
+Le modèle local scikit-learn est donc celui qui présente le moins de prérequis.
+
+Il s’intègre directement dans l’architecture existante :
+
+```text
+data/ai/datasets/
+models/intent_classifier/
+src/ai/inference/intent_predictor.py
+api/routes/ai.py
+```
+
+### 15.4. Analyse de l’éco-responsabilité
+
+L’éco-responsabilité est prise en compte dans le choix du service IA.
+
+L’objectif n’est pas de mesurer précisément l’empreinte carbone du modèle, mais de choisir une solution proportionnée au besoin réel.
+
+Le besoin du projet est simple :
+
+```text
+classifier des commentaires courts en quelques intentions prédéfinies
+```
+
+Pour ce besoin, utiliser un grand modèle externe ou un service cloud complexe serait surdimensionné dans une première version.
+
+| Solution | Impact relatif | Analyse |
+|---|---|---|
+| Modèle local scikit-learn | faible | Modèle léger, entraînement rapide, pas d’appel cloud, pas de grand modèle génératif. |
+| Hugging Face local | moyen | Modèle potentiellement plus lourd selon le transformer utilisé. |
+| Hugging Face Inference Providers | moyen | Infrastructure mutualisée, mais appels externes et dépendance réseau. |
+| OpenAI API | moyen à élevé | Grand modèle externe, appels réseau, consommation liée au volume de tokens. |
+| Google Cloud Natural Language / Vertex AI | moyen | Infrastructure cloud, adaptée à des usages plus industriels. |
+| Azure AI Language / Azure OpenAI | moyen à élevé | Services cloud ou modèles génératifs potentiellement surdimensionnés pour une tâche simple. |
+| AWS Comprehend | moyen | Service cloud managé, utile en production mais plus lourd pour une preuve de concept locale. |
+
+La solution locale est donc retenue car elle applique un principe de sobriété :
+
+```text
+utiliser le modèle le plus simple capable de répondre correctement au besoin
+```
+
+### 15.5. Justification éco-responsable du choix local
+
+Le choix de `TF-IDF + Logistic Regression` est cohérent avec une démarche éco-responsable pour plusieurs raisons :
+
+- le modèle est léger ;
+- l’entraînement est rapide ;
+- l’inférence est rapide ;
+- il n’y a pas d’appel à un grand modèle externe ;
+- il n’y a pas de dépendance à une infrastructure cloud ;
+- les artefacts sauvegardés sont de petite taille ;
+- le modèle est suffisant pour une première classification de commentaires courts ;
+- la solution évite d’utiliser une technologie plus lourde que nécessaire.
+
+Cette approche respecte le principe suivant :
+
+```text
+ne pas utiliser un service IA complexe lorsqu’un modèle local simple répond au besoin
+```
+
+### 15.6. Matrice coût / prérequis / éco-responsabilité
+
+Notation de 1 à 5.
+
+Plus le score est élevé, plus la solution est favorable pour le projet.
+
+| Solution | Coût maîtrisé | Prérequis simples | Sobriété technique | Maîtrise des données | Score total |
+|---|---:|---:|---:|---:|---:|
+| Modèle local scikit-learn | 5 | 5 | 5 | 5 | 20 |
+| Hugging Face local | 4 | 3 | 3 | 5 | 15 |
+| Hugging Face Inference Providers | 3 | 3 | 3 | 3 | 12 |
+| OpenAI API | 3 | 3 | 2 | 2 | 10 |
+| Google Cloud Natural Language / Vertex AI | 3 | 2 | 3 | 3 | 11 |
+| Azure AI Language / Azure OpenAI | 3 | 2 | 2 | 3 | 10 |
+| AWS Comprehend | 3 | 2 | 3 | 3 | 11 |
+
+### 15.7. Décision issue de l’analyse
+
+L’analyse coût, prérequis et éco-responsabilité confirme le choix suivant :
+
+```text
+retenir un modèle local scikit-learn pour la première version
+```
+
+La solution retenue est :
+
+```text
+TF-IDF + Logistic Regression
+```
+
+Elle est privilégiée car elle offre le meilleur équilibre entre :
+
+- coût faible ;
+- simplicité de mise en œuvre ;
+- absence de dépendance cloud obligatoire ;
+- confidentialité ;
+- sobriété technique ;
+- intégration rapide dans FastAPI ;
+- capacité à être testée et monitorée localement.
+
+Les services IA externes sont écartés pour la première version, non pas parce qu’ils sont inadaptés techniquement, mais parce qu’ils sont moins cohérents avec les contraintes du projet local.
+
+### 15.8. Évolutions possibles
+
+Dans une version plus avancée ou en contexte production, les services externes pourraient être réévalués.
+
+Exemples :
+
+| Situation future | Solution envisageable |
+|---|---|
+| besoin de meilleure compréhension du langage | modèle transformer local |
+| besoin de réponses génératives | LLM externe |
+| besoin de forte scalabilité | service cloud IA |
+| besoin d’intégration entreprise | Azure, AWS ou Google Cloud |
+| besoin de monitoring avancé | plateforme MLOps ou cloud monitoring |
+| besoin multilingue avancé | modèle transformer multilingue |
+
+Pour la première version, le choix local reste cependant le plus pertinent.
+
+## 16. Justification du choix final
 
 La solution retenue pour la première version est :
 
@@ -789,7 +963,7 @@ Ce choix est justifié par les éléments suivants :
 - il est cohérent avec une démarche éco-responsable car il évite l’utilisation d’un grand modèle externe pour une tâche simple ;
 - il permet une explication claire en soutenance.
 
-## 16. Services écartés et justification
+## 17. Services écartés et justification
 
 | Service écarté | Justification |
 |---|---|
@@ -800,7 +974,7 @@ Ce choix est justifié par les éléments suivants :
 | Azure AI Language / Azure OpenAI | surdimensionné pour la V1 et dépendance cloud |
 | AWS Comprehend | configuration et coût moins adaptés au contexte étudiant local |
 
-## 17. Modèle final prévu
+## 18. Modèle final prévu
 
 Pipeline prévu :
 
@@ -823,7 +997,7 @@ models/intent_classifier/label_encoder.joblib
 models/intent_classifier/model_metadata.json
 ```
 
-## 18. Intégration prévue dans l’API
+## 19. Intégration prévue dans l’API
 
 Le modèle final est exposé via l’API FastAPI existante.
 
@@ -854,7 +1028,7 @@ Les routes FastAPI sont situées dans :
 api/routes/ai.py
 ```
 
-## 19. Critères de sélection finale
+## 20. Critères de sélection finale
 
 Le modèle final est choisi selon :
 
@@ -872,7 +1046,7 @@ Le modèle final est choisi selon :
 
 Si les performances sont proches, le modèle le plus simple et le plus maîtrisable est privilégié.
 
-## 20. Limites du benchmark
+## 21. Limites du benchmark
 
 Le benchmark présente certaines limites :
 
@@ -888,7 +1062,7 @@ Le benchmark présente certaines limites :
 
 Ces limites sont acceptées car le projet est une preuve de concept pédagogique.
 
-## 21. Évolutions possibles
+## 22. Évolutions possibles
 
 Évolutions futures :
 
@@ -904,7 +1078,7 @@ Ces limites sont acceptées car le projet est une preuve de concept pédagogique
 - ajouter des alertes sur les faibles confiances ;
 - tester une intégration cloud dans une version production.
 
-## 22. Sources utilisées pour le benchmark
+## 23. Sources utilisées pour le benchmark
 
 Sources principales consultées :
 
@@ -952,7 +1126,7 @@ AWS — Amazon Comprehend Pricing
 https://aws.amazon.com/comprehend/pricing/
 ```
 
-## 23. Conclusion
+## 24. Conclusion
 
 Le benchmark montre que plusieurs modèles et services IA auraient pu répondre au besoin fonctionnel.
 
