@@ -1,4 +1,5 @@
 .venv
+.env
 
 # Heavy generated raw files
 # data/raw/scraping_html/

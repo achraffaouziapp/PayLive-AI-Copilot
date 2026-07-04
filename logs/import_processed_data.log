@@ -1,0 +1,30 @@
+2026-07-04 03:53:26,990 | INFO | Loaded environment variables from C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.env.
+2026-07-04 03:53:26,990 | INFO | Connecting to PostgreSQL database paylive_ai_copilot on localhost:5433.
+2026-07-04 03:53:27,503 | INFO | Target tables truncated successfully.
+2026-07-04 03:53:27,542 | INFO | Imported 19 rows into core.sellers.
+2026-07-04 03:53:27,563 | INFO | Imported 79 rows into core.customers.
+2026-07-04 03:53:27,644 | INFO | Imported 219 rows into core.products.
+2026-07-04 03:53:27,668 | INFO | Imported 33 rows into core.live_sessions.
+2026-07-04 03:53:27,694 | INFO | Imported 114 rows into core.live_products.
+2026-07-04 03:53:27,774 | INFO | Imported 308 rows into core.live_comments.
+2026-07-04 03:53:27,847 | INFO | Imported 117 rows into core.carts.
+2026-07-04 03:53:27,924 | INFO | Imported 213 rows into core.cart_items.
+2026-07-04 03:53:27,999 | INFO | Imported 84 rows into core.orders.
+2026-07-04 03:53:28,076 | INFO | Imported 88 rows into core.payments.
+2026-07-04 03:53:28,149 | INFO | Imported 152 rows into core.stock_movements.
+2026-07-04 03:53:28,243 | INFO | Imported 842 rows into core.live_events.
+2026-07-04 03:53:28,283 | ERROR | Failed to import table analytics.dataset_final_live_sales.
+Traceback (most recent call last):
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\src\database\import_processed_data.py", line 556, in import_one_table
+    rows_inserted = copy_dataframe_to_postgres(
+        connection=connection,
+    ...<2 lines>...
+        table_name=table_name,
+    )
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\src\database\import_processed_data.py", line 480, in copy_dataframe_to_postgres
+    cursor.copy_expert(copy_query.as_string(connection), file)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "3.0"
+CONTEXT:  COPY dataset_final_live_sales, line 2, column total_orders: "3.0"
+
+2026-07-04 03:53:28,298 | INFO | Database import completed with status: partial_success.

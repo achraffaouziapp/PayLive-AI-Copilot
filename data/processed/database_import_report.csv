@@ -1,0 +1,16 @@
+import_batch_id,schema_name,table_name,table_full_name,source_file,source_file_exists,rows_read,rows_inserted,table_columns_count,imported_columns_count,skipped_source_columns,missing_source_columns,status,error_message,imported_at,final_table_row_count
+IMPORT_20260704_035326_ac97b1a7,core,sellers,core.sellers,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\sellers_clean.csv,True,19,19,12,12,,,success,,2026-07-04 03:53:27,19.0
+IMPORT_20260704_035326_ac97b1a7,core,customers,core.customers,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\customers_clean.csv,True,79,79,8,8,,,success,,2026-07-04 03:53:27,79.0
+IMPORT_20260704_035326_ac97b1a7,core,products,core.products,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\products_clean.csv,True,219,219,12,12,,,success,,2026-07-04 03:53:27,219.0
+IMPORT_20260704_035326_ac97b1a7,core,live_sessions,core.live_sessions,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\live_sessions_clean.csv,True,33,33,13,13,,,success,,2026-07-04 03:53:27,33.0
+IMPORT_20260704_035326_ac97b1a7,core,live_products,core.live_products,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\live_products_clean.csv,True,114,114,9,9,,,success,,2026-07-04 03:53:27,114.0
+IMPORT_20260704_035326_ac97b1a7,core,live_comments,core.live_comments,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\live_comments_clean.csv,True,308,308,12,12,,,success,,2026-07-04 03:53:27,308.0
+IMPORT_20260704_035326_ac97b1a7,core,carts,core.carts,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\carts_clean.csv,True,117,117,10,10,,,success,,2026-07-04 03:53:27,117.0
+IMPORT_20260704_035326_ac97b1a7,core,cart_items,core.cart_items,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\cart_items_clean.csv,True,213,213,10,10,,,success,,2026-07-04 03:53:27,213.0
+IMPORT_20260704_035326_ac97b1a7,core,orders,core.orders,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\orders_clean.csv,True,84,84,11,11,,,success,,2026-07-04 03:53:27,84.0
+IMPORT_20260704_035326_ac97b1a7,core,payments,core.payments,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\payments_clean.csv,True,88,88,11,11,,,success,,2026-07-04 03:53:28,88.0
+IMPORT_20260704_035326_ac97b1a7,core,stock_movements,core.stock_movements,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\stock_movements_clean.csv,True,152,152,9,9,,,success,,2026-07-04 03:53:28,152.0
+IMPORT_20260704_035326_ac97b1a7,core,live_events,core.live_events,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\live_events_clean.csv,True,842,842,9,9,,,success,,2026-07-04 03:53:28,842.0
+IMPORT_20260704_035326_ac97b1a7,analytics,dataset_final_live_sales,analytics.dataset_final_live_sales,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\dataset_final_live_sales.csv,True,0,0,0,0,,,failed,"invalid input syntax for type integer: ""3.0""
+CONTEXT:  COPY dataset_final_live_sales, line 2, column total_orders: ""3.0""
+",2026-07-04 03:53:28,

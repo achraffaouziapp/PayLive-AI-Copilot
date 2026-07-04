@@ -4,3 +4,5 @@ requests
 beautifulsoup4
 pyspark
 pyarrow
+psycopg2-binary
+python-dotenv
