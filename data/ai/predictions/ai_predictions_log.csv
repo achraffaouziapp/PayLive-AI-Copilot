@@ -6,3 +6,8 @@ d821bbf0-f757-4fa0-8ef6-13d0a60cf73e,2026-07-04 16:35:40,je prends la robe noire
 49bdbe3b-ce7f-4d74-ab6a-f932071962f6,2026-07-04 18:38:29,comment payer ?,payment_question,0.5299,intent_classifier,intent_classifier_v1,0.72,True,0.6,api_batch
 8f014b36-4d6a-41c2-8dfe-ea2798049291,2026-07-04 18:38:29,vous livrez en Belgique ?,shipping_question,0.3223,intent_classifier,intent_classifier_v1,0.66,True,0.6,api_batch
 6c3ad361-aa9a-46fd-a918-3fdf4020e836,2026-07-04 18:38:29,trop beau,shipping_question,0.2214,intent_classifier,intent_classifier_v1,0.99,True,0.6,api_batch
+7d387f0e-0b0f-4a6a-8357-8b52f6e991e2,2026-07-04 23:12:50,je prends la robe noire en M,purchase_intent,0.25,intent_classifier,intent_classifier_v1,1341.29,True,0.6,api_single
+2503adb5-f883-446f-a8a9-c69550545d4a,2026-07-04 23:12:50,je prends la robe noire en M,purchase_intent,0.25,intent_classifier,intent_classifier_v1,1.59,True,0.6,api_single
+cdb9a692-5dbd-42e8-a55c-6f4bed940f3f,2026-07-04 23:13:06,je prends la jupe noire en M,purchase_intent,0.25,intent_classifier,intent_classifier_v1,1.58,True,0.6,api_single
+5b48fa2c-179e-4d3d-ae63-eb5093a5dc91,2026-07-04 23:13:15,je veux la jupe noire en M,purchase_intent,0.2375,intent_classifier,intent_classifier_v1,1.61,True,0.6,api_single
+a2c84374-14b5-4d6d-9fe8-5afa07d56ec2,2026-07-04 23:14:07,je veux la jupe noire en M,purchase_intent,0.2375,intent_classifier,intent_classifier_v1,1.54,True,0.6,api_single

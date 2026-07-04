@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PayLive AI Copilot</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <h1>PayLive AI Copilot</h1>
+      <p>Assistant intelligent pour vendeurs en live shopping</p>
+    </div>
+    <span class="badge">Bloc 3 — Application HTML + JS</span>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Configuration API</h2>
+
+      <div class="form-grid">
+        <div>
+          <label for="apiBaseUrl">URL API</label>
+          <input id="apiBaseUrl" type="text" value="/api/v1/ai" />
+        </div>
+
+        <div>
+          <label for="apiKey">Clé API</label>
+          <input id="apiKey" type="password" value="paylive-dev-api-key" />
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="saveConfigBtn">Enregistrer la configuration</button>
+        <button id="healthBtn" class="secondary">Tester la connexion</button>
+      </div>
+
+      <p id="connectionStatus" class="status-message" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <h2>Prédiction d’intention</h2>
+
+      <label for="commentText">Commentaire de live</label>
+      <textarea
+        id="commentText"
+        rows="4"
+        placeholder="Exemple : je prends la robe noire en M"
+      ></textarea>
+
+      <div class="actions">
+        <button id="predictBtn">Analyser le commentaire</button>
+        <button id="clearBtn" class="secondary">Réinitialiser</button>
+      </div>
+
+      <div id="predictionResult" class="result hidden" aria-live="polite">
+        <h3>Résultat IA</h3>
+
+        <div class="result-grid">
+          <div>
+            <span class="label">Intention prédite</span>
+            <strong id="predictedIntent">-</strong>
+          </div>
+
+          <div>
+            <span class="label">Score de confiance</span>
+            <strong id="confidenceScore">-</strong>
+          </div>
+
+          <div>
+            <span class="label">Temps de réponse</span>
+            <strong id="responseTime">-</strong>
+          </div>
+
+          <div>
+            <span class="label">Version du modèle</span>
+            <strong id="modelVersion">-</strong>
+          </div>
+        </div>
+
+        <p id="lowConfidenceMessage" class="warning hidden">
+          Attention : le score de confiance est faible. Une validation humaine est recommandée.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <article class="card">
+        <h2>Informations modèle</h2>
+        <p>Consulter les métadonnées du modèle IA chargé dans l’API.</p>
+        <button id="modelInfoBtn">Charger les informations</button>
+        <pre id="modelInfoOutput" class="json-output"></pre>
+      </article>
+
+      <article class="card">
+        <h2>Métriques modèle</h2>
+        <p>Consulter les métriques d’évaluation du modèle IA.</p>
+        <button id="modelMetricsBtn">Charger les métriques</button>
+        <pre id="modelMetricsOutput" class="json-output"></pre>
+      </article>
+    </section>
+
+    <section class="card">
+      <h2>Monitoring IA</h2>
+      <p>
+        Le monitoring permet de suivre les prédictions, les scores de confiance,
+        les temps de réponse et les alertes du modèle.
+      </p>
+
+      <div class="actions">
+        <button id="openDashboardBtn">Ouvrir le dashboard</button>
+        <button id="downloadAlertsBtn" class="secondary">Télécharger les alertes CSV</button>
+      </div>
+
+      <p id="monitoringStatus" class="status-message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>PayLive AI Copilot — Projet dossier professionnel — Bloc 3</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,9 +1,14 @@
 generated_at,timestamp,source,comment_text,predicted_intent,confidence_score,response_time_ms,model_version,alert_type,alert_level,alert_message
-2026-07-04T20:59:11,,api_single,je prends la robe noire en M,purchase_intent,0.25,1141.54,intent_classifier_v1,LOW_CONFIDENCE,warning,Score de confiance inférieur au seuil 0.60
-2026-07-04T20:59:11,,api_single,je prends la robe noire en M,purchase_intent,0.25,1141.54,intent_classifier_v1,SLOW_RESPONSE,warning,Temps de réponse supérieur au seuil 1000 ms
-2026-07-04T20:59:11,,api_single,je prends la robe noire en M,purchase_intent,0.25,1.66,intent_classifier_v1,LOW_CONFIDENCE,warning,Score de confiance inférieur au seuil 0.60
-2026-07-04T20:59:11,,api_single,je prends le pull rouge en M,purchase_intent,0.2777,1.53,intent_classifier_v1,LOW_CONFIDENCE,warning,Score de confiance inférieur au seuil 0.60
-2026-07-04T20:59:11,,api_batch,je prends le pull rouge en M,purchase_intent,0.2777,1.19,intent_classifier_v1,LOW_CONFIDENCE,warning,Score de confiance inférieur au seuil 0.60
-2026-07-04T20:59:11,,api_batch,comment payer ?,payment_question,0.5299,0.72,intent_classifier_v1,LOW_CONFIDENCE,warning,Score de confiance inférieur au seuil 0.60
-2026-07-04T20:59:11,,api_batch,vous livrez en Belgique ?,shipping_question,0.3223,0.66,intent_classifier_v1,LOW_CONFIDENCE,warning,Score de confiance inférieur au seuil 0.60
-2026-07-04T20:59:11,,api_batch,trop beau,shipping_question,0.2214,0.99,intent_classifier_v1,LOW_CONFIDENCE,warning,Score de confiance inférieur au seuil 0.60
+2026-07-04T23:13:39,,api_single,je prends la robe noire en M,purchase_intent,0.25,1141.54,intent_classifier_v1,LOW_CONFIDENCE,warning,Score de confiance inférieur au seuil 0.60
+2026-07-04T23:13:39,,api_single,je prends la robe noire en M,purchase_intent,0.25,1141.54,intent_classifier_v1,SLOW_RESPONSE,warning,Temps de réponse supérieur au seuil 1000 ms
+2026-07-04T23:13:39,,api_single,je prends la robe noire en M,purchase_intent,0.25,1.66,intent_classifier_v1,LOW_CONFIDENCE,warning,Score de confiance inférieur au seuil 0.60
+2026-07-04T23:13:39,,api_single,je prends le pull rouge en M,purchase_intent,0.2777,1.53,intent_classifier_v1,LOW_CONFIDENCE,warning,Score de confiance inférieur au seuil 0.60
+2026-07-04T23:13:39,,api_batch,je prends le pull rouge en M,purchase_intent,0.2777,1.19,intent_classifier_v1,LOW_CONFIDENCE,warning,Score de confiance inférieur au seuil 0.60
+2026-07-04T23:13:39,,api_batch,comment payer ?,payment_question,0.5299,0.72,intent_classifier_v1,LOW_CONFIDENCE,warning,Score de confiance inférieur au seuil 0.60
+2026-07-04T23:13:39,,api_batch,vous livrez en Belgique ?,shipping_question,0.3223,0.66,intent_classifier_v1,LOW_CONFIDENCE,warning,Score de confiance inférieur au seuil 0.60
+2026-07-04T23:13:39,,api_batch,trop beau,shipping_question,0.2214,0.99,intent_classifier_v1,LOW_CONFIDENCE,warning,Score de confiance inférieur au seuil 0.60
+2026-07-04T23:13:39,,api_single,je prends la robe noire en M,purchase_intent,0.25,1341.29,intent_classifier_v1,LOW_CONFIDENCE,warning,Score de confiance inférieur au seuil 0.60
+2026-07-04T23:13:39,,api_single,je prends la robe noire en M,purchase_intent,0.25,1341.29,intent_classifier_v1,SLOW_RESPONSE,warning,Temps de réponse supérieur au seuil 1000 ms
+2026-07-04T23:13:39,,api_single,je prends la robe noire en M,purchase_intent,0.25,1.59,intent_classifier_v1,LOW_CONFIDENCE,warning,Score de confiance inférieur au seuil 0.60
+2026-07-04T23:13:39,,api_single,je prends la jupe noire en M,purchase_intent,0.25,1.58,intent_classifier_v1,LOW_CONFIDENCE,warning,Score de confiance inférieur au seuil 0.60
+2026-07-04T23:13:39,,api_single,je veux la jupe noire en M,purchase_intent,0.2375,1.61,intent_classifier_v1,LOW_CONFIDENCE,warning,Score de confiance inférieur au seuil 0.60

@@ -87,25 +87,25 @@
         <h2>État global du service IA</h2>
         <p><strong>À surveiller</strong> — Plus de 50% des prédictions ont une confiance faible.</p>
         <p>Dernière prédiction journalisée : <strong></strong></p>
-        <p>Dashboard généré le : <strong>2026-07-04T20:59:11</strong></p>
+        <p>Dashboard généré le : <strong>2026-07-04T23:13:39</strong></p>
     </div>
 
     <div class="grid">
         <div class="card">
             <div class="card-title">Nombre total de prédictions</div>
-            <div class="card-value">7</div>
+            <div class="card-value">11</div>
         </div>
         <div class="card">
             <div class="card-title">Confiance moyenne</div>
-            <div class="card-value">0.3041</div>
+            <div class="card-value">0.2833</div>
         </div>
         <div class="card">
             <div class="card-title">Prédictions faible confiance</div>
-            <div class="card-value">7</div>
+            <div class="card-value">11</div>
         </div>
         <div class="card">
             <div class="card-title">Alertes générées</div>
-            <div class="card-value">8</div>
+            <div class="card-value">13</div>
         </div>
     </div>
 
@@ -116,7 +116,7 @@
         </div>
         <div class="card">
             <div class="card-title">Temps moyen de réponse</div>
-            <div class="card-value">164.04 ms</div>
+            <div class="card-value">226.76 ms</div>
         </div>
         <div class="card">
             <div class="card-title">Intentions inconnues</div>
@@ -130,17 +130,17 @@
 
     <div class="section">
         <h2>Répartition des intentions prédites</h2>
-        <table><tr><th>predicted_intent</th><th>count</th><th>percentage</th></tr><tr><td>purchase_intent</td><td>4</td><td>57.14</td></tr><tr><td>shipping_question</td><td>2</td><td>28.57</td></tr><tr><td>payment_question</td><td>1</td><td>14.29</td></tr></table>
+        <table><tr><th>predicted_intent</th><th>count</th><th>percentage</th></tr><tr><td>purchase_intent</td><td>8</td><td>72.73</td></tr><tr><td>shipping_question</td><td>2</td><td>18.18</td></tr><tr><td>payment_question</td><td>1</td><td>9.09</td></tr></table>
     </div>
 
     <div class="section">
         <h2>Répartition par source</h2>
-        <table><tr><th>source</th><th>count</th><th>percentage</th></tr><tr><td>api_batch</td><td>4</td><td>57.14</td></tr><tr><td>api_single</td><td>3</td><td>42.86</td></tr></table>
+        <table><tr><th>source</th><th>count</th><th>percentage</th></tr><tr><td>api_single</td><td>7</td><td>63.64</td></tr><tr><td>api_batch</td><td>4</td><td>36.36</td></tr></table>
     </div>
 
     <div class="section">
         <h2>Répartition par version de modèle</h2>
-        <table><tr><th>model_version</th><th>count</th><th>percentage</th></tr><tr><td>intent_classifier_v1</td><td>7</td><td>100.0</td></tr></table>
+        <table><tr><th>model_version</th><th>count</th><th>percentage</th></tr><tr><td>intent_classifier_v1</td><td>11</td><td>100.0</td></tr></table>
     </div>
 
     <div class="section">
@@ -149,17 +149,17 @@
             Les alertes sont aussi exportées dans :
             <code>data/ai/reports/model_monitoring_alerts.csv</code>
         </p>
-        <table><tr><th>generated_at</th><th>timestamp</th><th>source</th><th>comment_text</th><th>predicted_intent</th><th>confidence_score</th><th>response_time_ms</th><th>model_version</th><th>alert_type</th><th>alert_level</th><th>alert_message</th></tr><tr><td>2026-07-04T20:59:11</td><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1141.54</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T20:59:11</td><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1141.54</td><td>intent_classifier_v1</td><td>SLOW_RESPONSE</td><td>warning</td><td>Temps de réponse supérieur au seuil 1000 ms</td></tr><tr><td>2026-07-04T20:59:11</td><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1.66</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T20:59:11</td><td></td><td>api_single</td><td>je prends le pull rouge en M</td><td>purchase_intent</td><td>0.2777</td><td>1.53</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T20:59:11</td><td></td><td>api_batch</td><td>je prends le pull rouge en M</td><td>purchase_intent</td><td>0.2777</td><td>1.19</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T20:59:11</td><td></td><td>api_batch</td><td>comment payer ?</td><td>payment_question</td><td>0.5299</td><td>0.72</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T20:59:11</td><td></td><td>api_batch</td><td>vous livrez en Belgique ?</td><td>shipping_question</td><td>0.3223</td><td>0.66</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T20:59:11</td><td></td><td>api_batch</td><td>trop beau</td><td>shipping_question</td><td>0.2214</td><td>0.99</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr></table>
+        <table><tr><th>generated_at</th><th>timestamp</th><th>source</th><th>comment_text</th><th>predicted_intent</th><th>confidence_score</th><th>response_time_ms</th><th>model_version</th><th>alert_type</th><th>alert_level</th><th>alert_message</th></tr><tr><td>2026-07-04T23:13:39</td><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1141.54</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T23:13:39</td><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1141.54</td><td>intent_classifier_v1</td><td>SLOW_RESPONSE</td><td>warning</td><td>Temps de réponse supérieur au seuil 1000 ms</td></tr><tr><td>2026-07-04T23:13:39</td><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1.66</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T23:13:39</td><td></td><td>api_single</td><td>je prends le pull rouge en M</td><td>purchase_intent</td><td>0.2777</td><td>1.53</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T23:13:39</td><td></td><td>api_batch</td><td>je prends le pull rouge en M</td><td>purchase_intent</td><td>0.2777</td><td>1.19</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T23:13:39</td><td></td><td>api_batch</td><td>comment payer ?</td><td>payment_question</td><td>0.5299</td><td>0.72</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T23:13:39</td><td></td><td>api_batch</td><td>vous livrez en Belgique ?</td><td>shipping_question</td><td>0.3223</td><td>0.66</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T23:13:39</td><td></td><td>api_batch</td><td>trop beau</td><td>shipping_question</td><td>0.2214</td><td>0.99</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T23:13:39</td><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1341.29</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T23:13:39</td><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1341.29</td><td>intent_classifier_v1</td><td>SLOW_RESPONSE</td><td>warning</td><td>Temps de réponse supérieur au seuil 1000 ms</td></tr><tr><td>2026-07-04T23:13:39</td><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1.59</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T23:13:39</td><td></td><td>api_single</td><td>je prends la jupe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1.58</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T23:13:39</td><td></td><td>api_single</td><td>je veux la jupe noire en M</td><td>purchase_intent</td><td>0.2375</td><td>1.61</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr></table>
     </div>
 
     <div class="section">
         <h2>Exemples de prédictions à faible confiance</h2>
-        <table><tr><th>timestamp</th><th>source</th><th>comment_text</th><th>predicted_intent</th><th>confidence_score</th><th>response_time_ms</th><th>model_version</th></tr><tr><td></td><td>api_batch</td><td>trop beau</td><td>shipping_question</td><td>0.2214</td><td>0.99</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1141.54</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1.66</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends le pull rouge en M</td><td>purchase_intent</td><td>0.2777</td><td>1.53</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>je prends le pull rouge en M</td><td>purchase_intent</td><td>0.2777</td><td>1.19</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>vous livrez en Belgique ?</td><td>shipping_question</td><td>0.3223</td><td>0.66</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>comment payer ?</td><td>payment_question</td><td>0.5299</td><td>0.72</td><td>intent_classifier_v1</td></tr></table>
+        <table><tr><th>timestamp</th><th>source</th><th>comment_text</th><th>predicted_intent</th><th>confidence_score</th><th>response_time_ms</th><th>model_version</th></tr><tr><td></td><td>api_batch</td><td>trop beau</td><td>shipping_question</td><td>0.2214</td><td>0.99</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je veux la jupe noire en M</td><td>purchase_intent</td><td>0.2375</td><td>1.61</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1341.29</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1141.54</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1.59</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends la jupe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1.58</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1.66</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>je prends le pull rouge en M</td><td>purchase_intent</td><td>0.2777</td><td>1.19</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends le pull rouge en M</td><td>purchase_intent</td><td>0.2777</td><td>1.53</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>vous livrez en Belgique ?</td><td>shipping_question</td><td>0.3223</td><td>0.66</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>comment payer ?</td><td>payment_question</td><td>0.5299</td><td>0.72</td><td>intent_classifier_v1</td></tr></table>
     </div>
 
     <div class="section">
         <h2>Dernières prédictions journalisées</h2>
-        <table><tr><th>timestamp</th><th>source</th><th>comment_text</th><th>predicted_intent</th><th>confidence_score</th><th>response_time_ms</th><th>model_version</th></tr><tr><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1141.54</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1.66</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends le pull rouge en M</td><td>purchase_intent</td><td>0.2777</td><td>1.53</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>je prends le pull rouge en M</td><td>purchase_intent</td><td>0.2777</td><td>1.19</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>comment payer ?</td><td>payment_question</td><td>0.5299</td><td>0.72</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>vous livrez en Belgique ?</td><td>shipping_question</td><td>0.3223</td><td>0.66</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>trop beau</td><td>shipping_question</td><td>0.2214</td><td>0.99</td><td>intent_classifier_v1</td></tr></table>
+        <table><tr><th>timestamp</th><th>source</th><th>comment_text</th><th>predicted_intent</th><th>confidence_score</th><th>response_time_ms</th><th>model_version</th></tr><tr><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1141.54</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1.66</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends le pull rouge en M</td><td>purchase_intent</td><td>0.2777</td><td>1.53</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>je prends le pull rouge en M</td><td>purchase_intent</td><td>0.2777</td><td>1.19</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>comment payer ?</td><td>payment_question</td><td>0.5299</td><td>0.72</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>vous livrez en Belgique ?</td><td>shipping_question</td><td>0.3223</td><td>0.66</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>trop beau</td><td>shipping_question</td><td>0.2214</td><td>0.99</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1341.29</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1.59</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends la jupe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1.58</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je veux la jupe noire en M</td><td>purchase_intent</td><td>0.2375</td><td>1.61</td><td>intent_classifier_v1</td></tr></table>
     </div>
 
     <div class="footer">
