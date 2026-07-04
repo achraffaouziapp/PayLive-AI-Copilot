@@ -174,6 +174,55 @@ FINAL_COLUMN_ORDER = [
     "final_dataset_status",
 ]
 
+FINAL_INTEGER_COLUMNS = [
+    "peak_viewers",
+    "total_comments",
+    "purchase_intent_comments",
+    "product_question_comments",
+    "payment_question_comments",
+    "shipping_question_comments",
+    "other_comments",
+    "unknown_intent_comments",
+    "unique_comment_customers",
+    "total_carts",
+    "paid_carts",
+    "abandoned_carts",
+    "open_carts",
+    "cancelled_carts",
+    "unique_cart_customers",
+    "total_orders",
+    "paid_orders",
+    "confirmed_orders",
+    "pending_orders",
+    "cancelled_orders",
+    "refunded_orders",
+    "total_payments",
+    "successful_payments",
+    "failed_payments",
+    "pending_payments",
+    "cancelled_payments",
+    "refunded_payments",
+    "total_products_presented",
+    "total_events",
+    "comment_event_count",
+    "cart_opened_events",
+    "payment_clicked_events",
+    "payment_succeeded_events",
+    "api_error_events",
+    "product_view_events",
+    "unique_event_customers",
+]
+
+FINAL_FLOAT_COLUMNS = [
+    "total_order_amount",
+    "average_order_amount",
+    "total_revenue",
+    "total_initial_stock",
+    "total_remaining_stock",
+    "estimated_sold_quantity",
+    "average_live_product_price",
+]
+
 
 def ensure_directories() -> None:
     """
@@ -831,59 +880,32 @@ def merge_aggregation(
 def fill_missing_indicator_columns(final_df: pd.DataFrame) -> pd.DataFrame:
     """
     Fill missing indicator columns with default values.
+
+    Integer indicators are explicitly converted to integers to avoid
+    PostgreSQL COPY errors such as "3.0" for INTEGER columns.
     """
     final_df = final_df.copy()
 
-    numeric_indicator_columns = [
-        "total_comments",
-        "purchase_intent_comments",
-        "product_question_comments",
-        "payment_question_comments",
-        "shipping_question_comments",
-        "other_comments",
-        "unknown_intent_comments",
-        "unique_comment_customers",
-        "total_carts",
-        "paid_carts",
-        "abandoned_carts",
-        "open_carts",
-        "cancelled_carts",
-        "unique_cart_customers",
-        "total_orders",
-        "paid_orders",
-        "confirmed_orders",
-        "pending_orders",
-        "cancelled_orders",
-        "refunded_orders",
-        "total_order_amount",
-        "average_order_amount",
-        "total_payments",
-        "successful_payments",
-        "failed_payments",
-        "pending_payments",
-        "cancelled_payments",
-        "refunded_payments",
-        "total_revenue",
-        "total_products_presented",
-        "total_initial_stock",
-        "total_remaining_stock",
-        "estimated_sold_quantity",
-        "average_live_product_price",
-        "total_events",
-        "comment_event_count",
-        "cart_opened_events",
-        "payment_clicked_events",
-        "payment_succeeded_events",
-        "api_error_events",
-        "product_view_events",
-        "unique_event_customers",
-    ]
-
-    for column in numeric_indicator_columns:
+    for column in FINAL_INTEGER_COLUMNS:
         if column not in final_df.columns:
             final_df[column] = 0
 
-        final_df[column] = to_numeric_series(final_df[column], 0)
+        final_df[column] = (
+            pd.to_numeric(final_df[column], errors="coerce")
+            .fillna(0)
+            .round(0)
+            .astype(int)
+        )
+
+    for column in FINAL_FLOAT_COLUMNS:
+        if column not in final_df.columns:
+            final_df[column] = 0.0
+
+        final_df[column] = (
+            pd.to_numeric(final_df[column], errors="coerce")
+            .fillna(0.0)
+            .round(4)
+        )
 
     if "top_product_category" not in final_df.columns:
         final_df["top_product_category"] = "unknown"

@@ -6,3 +6,8 @@ pyspark
 pyarrow
 psycopg2-binary
 python-dotenv
+fastapi
+uvicorn
+pydantic
+psycopg2-binary
+python-dotenv

@@ -1,14 +1,14 @@
 metric,value
-checked_at,2026-07-04 04:02:30
-global_status,failed
+checked_at,2026-07-04 13:04:22
+global_status,success
 tables_checked,15
 failed_tables,0
-warning_tables,1
+warning_tables,0
 relationships_checked,20
 failed_relationships,0
 business_rules_checked,38
-failed_business_rules,2
-total_rows_in_checked_tables,2282
+failed_business_rules,0
+total_rows_in_checked_tables,2329
 table_report,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\database_quality_table_report.csv
 relationship_report,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\database_quality_relationship_report.csv
 business_report,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\database_quality_business_report.csv

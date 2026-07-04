@@ -1,11 +1,11 @@
 metric,value
-import_batch_id,IMPORT_20260704_035326_ac97b1a7
-started_at,2026-07-04 03:53:26
-ended_at,2026-07-04 03:53:28
-status,partial_success
+import_batch_id,IMPORT_20260704_130404_5482ee3e
+started_at,2026-07-04 13:04:04
+ended_at,2026-07-04 13:04:06
+status,success
 total_tables,13
-successful_tables,12
-failed_tables,1
-total_rows_read,2268
-total_rows_inserted,2268
+successful_tables,13
+failed_tables,0
+total_rows_read,2301
+total_rows_inserted,2301
 source_folder,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed
