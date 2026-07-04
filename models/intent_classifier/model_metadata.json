@@ -1,0 +1,26 @@
+{
+    "model_name": "intent_classifier",
+    "model_version": "intent_classifier_v1",
+    "algorithm": "TF-IDF + Logistic Regression",
+    "training_date": "2026-07-04 16:29:11",
+    "random_state": 42,
+    "text_column": "comment_text",
+    "label_column": "manual_intent_label",
+    "classes": [
+        "other",
+        "payment_question",
+        "product_question",
+        "purchase_intent",
+        "shipping_question",
+        "unknown"
+    ],
+    "train_file": "C:\\Users\\DELL PRO\\Desktop\\EPSI\\Dossier Pro\\PayLive-AI-Copilot\\data\\ai\\datasets\\train.csv",
+    "validation_file": "C:\\Users\\DELL PRO\\Desktop\\EPSI\\Dossier Pro\\PayLive-AI-Copilot\\data\\ai\\datasets\\validation.csv",
+    "test_file": "C:\\Users\\DELL PRO\\Desktop\\EPSI\\Dossier Pro\\PayLive-AI-Copilot\\data\\ai\\datasets\\test.csv",
+    "model_file": "C:\\Users\\DELL PRO\\Desktop\\EPSI\\Dossier Pro\\PayLive-AI-Copilot\\models\\intent_classifier\\model.joblib",
+    "vectorizer_file": "C:\\Users\\DELL PRO\\Desktop\\EPSI\\Dossier Pro\\PayLive-AI-Copilot\\models\\intent_classifier\\vectorizer.joblib",
+    "label_encoder_file": "C:\\Users\\DELL PRO\\Desktop\\EPSI\\Dossier Pro\\PayLive-AI-Copilot\\models\\intent_classifier\\label_encoder.joblib",
+    "test_accuracy": 0.8,
+    "test_macro_f1": 0.6,
+    "test_weighted_f1": 0.72
+}

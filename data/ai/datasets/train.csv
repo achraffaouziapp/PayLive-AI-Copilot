@@ -1,0 +1,23 @@
+comment_id,live_id,customer_id,platform,comment_text,comment_language,manual_intent_label
+COM00002,LIVE0027,CUS0034,tiktok,Dispo en noir taille L ?,unknown,product_question
+synthetic_ai_shipping_question_9,synthetic_live,synthetic_customer,tiktok,combien de temps pour recevoir ?,fr,shipping_question
+COM00017,LIVE0028,CUS0039,instagram,Disponible en rouge ?,unknown,product_question
+COM00005,LIVE0024,CUS0021,tiktok,Réserve-moi le bleu,unknown,purchase_intent
+COM00003,LIVE0026,CUS0050,tiktok,Je veux 2 pièces,ar,purchase_intent
+synthetic_ai_shipping_question_14,synthetic_live,synthetic_customer,tiktok,quel est le délai de livraison ?,fr,shipping_question
+synthetic_ai_other_1,synthetic_live,synthetic_customer,tiktok,coucou,fr,other
+synthetic_ai_other_2,synthetic_live,synthetic_customer,tiktok,merci beaucoup,fr,other
+synthetic_ai_shipping_question_1,synthetic_live,synthetic_customer,tiktok,vous livrez en Belgique ?,fr,shipping_question
+COM00018,LIVE0018,CUS0064,other,Comment payer ?,ar,payment_question
+synthetic_ai_shipping_question_2,synthetic_live,synthetic_customer,tiktok,livraison possible demain ?,fr,shipping_question
+synthetic_ai_shipping_question_5,synthetic_live,synthetic_customer,tiktok,vous livrez en point relais ?,fr,shipping_question
+synthetic_ai_shipping_question_12,synthetic_live,synthetic_customer,tiktok,livraison rapide possible ?,fr,shipping_question
+synthetic_ai_shipping_question_10,synthetic_live,synthetic_customer,tiktok,la livraison est gratuite ?,fr,shipping_question
+COM00013,LIVE0015,CUS0063,instagram,Je veux le même que le précédent,en,unknown
+synthetic_ai_shipping_question_6,synthetic_live,synthetic_customer,tiktok,livraison en France uniquement ?,fr,shipping_question
+COM00021,LIVE0028,CUS0002,tiktok,Tu as la taille medium ?,ar,product_question
+COM00007,LIVE0004,CUS0019,instagram,Je prends le sac noir,fr,purchase_intent
+synthetic_ai_shipping_question_7,synthetic_live,synthetic_customer,tiktok,c'est envoyé quand ?,fr,shipping_question
+synthetic_ai_shipping_question_13,synthetic_live,synthetic_customer,tiktok,vous livrez à domicile ?,fr,shipping_question
+synthetic_ai_shipping_question_4,synthetic_live,synthetic_customer,tiktok,les frais de port sont combien ?,fr,shipping_question
+COM00009,LIVE0013,CUS0056,instagram,Prix ?,unknown,product_question

@@ -1,0 +1,19 @@
+split_name,label,precision,recall,f1_score,support
+validation,other,1.0,1.0,1.0,1
+validation,payment_question,0.0,0.0,0.0,0
+validation,product_question,0.0,0.0,0.0,0
+validation,purchase_intent,0.5,1.0,0.6667,1
+validation,shipping_question,1.0,1.0,1.0,2
+validation,unknown,0.0,0.0,0.0,1
+validation,accuracy,,,0.8,
+validation,macro avg,0.4167,0.5,0.4444,5
+validation,weighted avg,0.7,0.8,0.7333,5
+test,other,0.0,0.0,0.0,0
+test,payment_question,0.0,0.0,0.0,0
+test,product_question,0.0,0.0,0.0,0
+test,purchase_intent,1.0,1.0,1.0,2
+test,shipping_question,0.6667,1.0,0.8,2
+test,unknown,0.0,0.0,0.0,1
+test,accuracy,,,0.8,
+test,macro avg,0.2778,0.3333,0.3,5
+test,weighted avg,0.6667,0.8,0.72,5

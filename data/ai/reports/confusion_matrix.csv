@@ -1,0 +1,13 @@
+split_name,actual_label,other,payment_question,product_question,purchase_intent,shipping_question,unknown
+validation,other,1,0,0,0,0,0
+validation,payment_question,0,0,0,0,0,0
+validation,product_question,0,0,0,0,0,0
+validation,purchase_intent,0,0,0,1,0,0
+validation,shipping_question,0,0,0,0,2,0
+validation,unknown,0,0,0,1,0,0
+test,other,0,0,0,0,0,0
+test,payment_question,0,0,0,0,0,0
+test,product_question,0,0,0,0,0,0
+test,purchase_intent,0,0,0,2,0,0
+test,shipping_question,0,0,0,0,2,0
+test,unknown,0,0,0,0,1,0

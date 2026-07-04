@@ -1,0 +1,6 @@
+comment_id,live_id,customer_id,platform,comment_text,comment_language,manual_intent_label
+COM00011,LIVE0028,CUS0073,instagram,Mets-moi de côté le pull beige,ar,purchase_intent
+synthetic_ai_shipping_question_3,synthetic_live,synthetic_customer,tiktok,combien coûte la livraison ?,fr,shipping_question
+COM00046,LIVE0005,CUS0040,tiktok,Je prends la robe rouge en M,fr,purchase_intent
+COM00039,LIVE0013,CUS0072,tiktok,C’est trop cher,ar,unknown
+synthetic_ai_shipping_question_8,synthetic_live,synthetic_customer,tiktok,vous faites mondial relay ?,fr,shipping_question

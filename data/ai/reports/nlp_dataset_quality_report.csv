@@ -1,0 +1,18 @@
+report_section,metric_name,metric_value,details
+preparation_summary,initial_row_count,308,
+preparation_summary,curated_examples_added,22,
+preparation_summary,final_row_count,32,
+preparation_summary,empty_comment_count,0,
+preparation_summary,missing_label_count,0,
+preparation_summary,invalid_label_count,0,
+preparation_summary,duplicate_rows_removed,298,
+preparation_summary,removed_total_count,298,
+class_distribution,other,3,9.38% of final NLP dataset
+class_distribution,payment_question,1,3.12% of final NLP dataset
+class_distribution,product_question,4,12.5% of final NLP dataset
+class_distribution,purchase_intent,6,18.75% of final NLP dataset
+class_distribution,shipping_question,15,46.88% of final NLP dataset
+class_distribution,unknown,3,9.38% of final NLP dataset
+dataset_status,has_required_columns,1,Required columns are present.
+dataset_status,allowed_labels_only,1,All labels belong to the allowed label list.
+dataset_status,empty_comments_remaining,0,Should be equal to 0.

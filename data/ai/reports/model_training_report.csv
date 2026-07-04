@@ -1,0 +1,32 @@
+report_section,metric_name,metric_value,details
+model,model_name,intent_classifier,
+model,model_version,intent_classifier_v1,
+model,algorithm,TF-IDF + Logistic Regression,
+model,training_date,2026-07-04 16:29:11,
+model,training_duration_seconds,0.0078,
+datasets,train_rows,22,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\ai\datasets\train.csv
+datasets,validation_rows,5,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\ai\datasets\validation.csv
+datasets,test_rows,5,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\ai\datasets\test.csv
+vectorizer,max_features,5000,
+vectorizer,ngram_range,"(1, 2)",
+classifier,class_weight,balanced,
+classifier,max_iter,1000,
+labels,classes,"other, payment_question, product_question, purchase_intent, shipping_question, unknown",
+class_distribution,train_other,2,Number of other rows in train split.
+class_distribution,train_payment_question,1,Number of payment_question rows in train split.
+class_distribution,train_product_question,4,Number of product_question rows in train split.
+class_distribution,train_purchase_intent,3,Number of purchase_intent rows in train split.
+class_distribution,train_shipping_question,11,Number of shipping_question rows in train split.
+class_distribution,train_unknown,1,Number of unknown rows in train split.
+class_distribution,validation_other,1,Number of other rows in validation split.
+class_distribution,validation_payment_question,0,Number of payment_question rows in validation split.
+class_distribution,validation_product_question,0,Number of product_question rows in validation split.
+class_distribution,validation_purchase_intent,1,Number of purchase_intent rows in validation split.
+class_distribution,validation_shipping_question,2,Number of shipping_question rows in validation split.
+class_distribution,validation_unknown,1,Number of unknown rows in validation split.
+class_distribution,test_other,0,Number of other rows in test split.
+class_distribution,test_payment_question,0,Number of payment_question rows in test split.
+class_distribution,test_product_question,0,Number of product_question rows in test split.
+class_distribution,test_purchase_intent,2,Number of purchase_intent rows in test split.
+class_distribution,test_shipping_question,2,Number of shipping_question rows in test split.
+class_distribution,test_unknown,1,Number of unknown rows in test split.

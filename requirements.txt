@@ -13,3 +13,5 @@ psycopg2-binary
 python-dotenv
 pytest
 httpx
+scikit-learn
+joblib

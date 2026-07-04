@@ -1,0 +1,6 @@
+comment_id,live_id,customer_id,platform,comment_text,comment_language,manual_intent_label
+synthetic_ai_shipping_question_11,synthetic_live,synthetic_customer,tiktok,vous expédiez à l'étranger ?,fr,shipping_question
+COM00020,LIVE0011,CUS0002,instagram,Coucou,fr,other
+COM00032,LIVE0006,CUS0025,other,Je prend le rouge en meduim,fr,purchase_intent
+synthetic_ai_shipping_question_15,synthetic_live,synthetic_customer,tiktok,je peux choisir le mode de livraison ?,fr,shipping_question
+COM00084,LIVE0022,CUS0036,tiktok,Je paye maintenant,fr,unknown
