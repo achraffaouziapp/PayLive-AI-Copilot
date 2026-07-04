@@ -1,0 +1,11 @@
+test_name,status,details
+test_ai_dataset_files_exist,passed,All AI dataset files exist.
+test_ai_report_files_exist,passed,NLP quality and split reports exist.
+test_full_dataset_has_required_columns,passed,Required columns are present.
+test_full_dataset_is_not_empty,passed,Dataset rows: 32
+test_comment_texts_are_not_empty,passed,No empty comments found.
+test_labels_are_allowed,passed,All labels are allowed.
+test_expected_classes_are_present,passed,All expected classes are present.
+test_train_validation_test_are_not_empty,passed,"train=22, validation=5, test=5"
+test_split_total_matches_full_dataset,passed,Split total matches full dataset: 32
+test_dataset_report_is_saved,passed,Report saved to C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\ai\reports\ai_dataset_test_report.csv
