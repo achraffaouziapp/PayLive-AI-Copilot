@@ -26,8 +26,8 @@ from bs4 import BeautifulSoup
 # - downloads HTML pages from a scraping practice website;
 # - extracts product information from the HTML structure;
 # - saves the raw HTML pages for traceability;
-# - saves the extracted records as CSV files;
-# - generates extraction reports.
+# - saves extracted records in data/interim/extracts/scraping;
+# - saves reports in data/interim/reports/scraping_collection.
 #
 # Cleaning, normalization, deduplication, and business corrections will
 # be done later in dedicated data processing scripts.
@@ -37,8 +37,14 @@ from bs4 import BeautifulSoup
 BASE_DIR = Path(__file__).resolve().parents[2]
 RAW_DIR = BASE_DIR / "data" / "raw"
 INTERIM_DIR = BASE_DIR / "data" / "interim"
+
+INTERIM_EXTRACTS_DIR = INTERIM_DIR / "extracts"
+INTERIM_REPORTS_DIR = INTERIM_DIR / "reports"
+
 SCRAPING_HTML_DIR = RAW_DIR / "scraping_html"
-SCRAPING_EXTRACT_DIR = INTERIM_DIR / "scraping_extracts"
+SCRAPING_EXTRACT_DIR = INTERIM_EXTRACTS_DIR / "scraping"
+SCRAPING_REPORTS_DIR = INTERIM_REPORTS_DIR / "scraping_collection"
+
 LOG_DIR = BASE_DIR / "logs"
 
 SOURCE_NAME = "books_to_scrape"
@@ -55,6 +61,11 @@ MAX_RETRIES = 3
 
 RAW_OUTPUT_CSV = RAW_DIR / "products_scraped_raw.csv"
 EXTRACT_OUTPUT_CSV = SCRAPING_EXTRACT_DIR / "products_scraped_extract.csv"
+
+SCRAPING_MANIFEST_REPORT_PATH = SCRAPING_REPORTS_DIR / "scraping_extraction_manifest.csv"
+SCRAPING_SCHEMA_REPORT_PATH = SCRAPING_REPORTS_DIR / "scraping_extraction_schema_report.csv"
+SCRAPING_PAGE_REPORT_PATH = SCRAPING_REPORTS_DIR / "scraping_extraction_page_report.csv"
+SCRAPING_ERRORS_REPORT_PATH = SCRAPING_REPORTS_DIR / "scraping_extraction_errors.csv"
 
 EXPECTED_SCRAPED_FIELDS = [
     "scraped_product_id",
@@ -82,14 +93,14 @@ def ensure_directories() -> None:
     Create all folders required by the scraping extraction script.
 
     Raw HTML pages are saved in `data/raw/scraping_html`.
-    Extracted tabular records are saved in `data/raw` and `data/interim`.
-    Reports are saved in `data/interim`.
+    Extracted tabular records are saved in `data/raw` and `data/interim/extracts/scraping`.
+    Reports are saved in `data/interim/reports/scraping_collection`.
     Logs are saved in `logs`.
     """
     RAW_DIR.mkdir(parents=True, exist_ok=True)
-    INTERIM_DIR.mkdir(parents=True, exist_ok=True)
     SCRAPING_HTML_DIR.mkdir(parents=True, exist_ok=True)
     SCRAPING_EXTRACT_DIR.mkdir(parents=True, exist_ok=True)
+    SCRAPING_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -623,31 +634,32 @@ def save_scraping_outputs(
     Save scraped data and scraping reports.
 
     The raw scraped CSV is saved in `data/raw`.
-    The extraction copy and reports are saved in `data/interim`.
+    The extraction copy is saved in `data/interim/extracts/scraping`.
+    The reports are saved in `data/interim/reports/scraping_collection`.
     """
     scraped_df.to_csv(RAW_OUTPUT_CSV, index=False, encoding="utf-8")
     scraped_df.to_csv(EXTRACT_OUTPUT_CSV, index=False, encoding="utf-8")
 
     manifest_df.to_csv(
-        INTERIM_DIR / "scraping_extraction_manifest.csv",
+        SCRAPING_MANIFEST_REPORT_PATH,
         index=False,
         encoding="utf-8",
     )
 
     schema_df.to_csv(
-        INTERIM_DIR / "scraping_extraction_schema_report.csv",
+        SCRAPING_SCHEMA_REPORT_PATH,
         index=False,
         encoding="utf-8",
     )
 
     page_report_df.to_csv(
-        INTERIM_DIR / "scraping_extraction_page_report.csv",
+        SCRAPING_PAGE_REPORT_PATH,
         index=False,
         encoding="utf-8",
     )
 
     error_df.to_csv(
-        INTERIM_DIR / "scraping_extraction_errors.csv",
+        SCRAPING_ERRORS_REPORT_PATH,
         index=False,
         encoding="utf-8",
     )
@@ -772,21 +784,16 @@ def main() -> None:
     setup_logging()
     collect_products_from_scraping()
 
-    manifest_path = INTERIM_DIR / "scraping_extraction_manifest.csv"
-    schema_path = INTERIM_DIR / "scraping_extraction_schema_report.csv"
-    page_report_path = INTERIM_DIR / "scraping_extraction_page_report.csv"
-    errors_path = INTERIM_DIR / "scraping_extraction_errors.csv"
-
-    manifest_df = pd.read_csv(manifest_path)
+    manifest_df = pd.read_csv(SCRAPING_MANIFEST_REPORT_PATH)
 
     print("Web scraping data collection completed successfully.")
     print(f"Raw scraped CSV: {RAW_OUTPUT_CSV}")
     print(f"Scraping extract CSV: {EXTRACT_OUTPUT_CSV}")
     print(f"Raw HTML folder: {SCRAPING_HTML_DIR}")
-    print(f"Manifest report: {manifest_path}")
-    print(f"Schema report: {schema_path}")
-    print(f"Page report: {page_report_path}")
-    print(f"Error report: {errors_path}")
+    print(f"Manifest report: {SCRAPING_MANIFEST_REPORT_PATH}")
+    print(f"Schema report: {SCRAPING_SCHEMA_REPORT_PATH}")
+    print(f"Page report: {SCRAPING_PAGE_REPORT_PATH}")
+    print(f"Error report: {SCRAPING_ERRORS_REPORT_PATH}")
     print("Status summary:")
     print(manifest_df["status"].value_counts().to_string())
 

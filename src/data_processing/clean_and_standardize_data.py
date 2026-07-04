@@ -14,7 +14,8 @@ import pandas as pd
 # PayLive AI Copilot project.
 #
 # It uses the raw datasets and some extracted datasets to produce clean
-# tables in data/processed.
+# tables in data/processed/clean and cleaning reports in
+# data/processed/reports/cleaning.
 #
 # Main operations:
 # - remove rows with missing primary keys;
@@ -34,14 +35,27 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 
 RAW_DIR = BASE_DIR / "data" / "raw"
 INTERIM_DIR = BASE_DIR / "data" / "interim"
+INTERIM_EXTRACTS_DIR = INTERIM_DIR / "extracts"
+
+API_EXTRACT_DIR = INTERIM_EXTRACTS_DIR / "api"
+SCRAPING_EXTRACT_DIR = INTERIM_EXTRACTS_DIR / "scraping"
+
+LEGACY_API_EXTRACT_DIR = INTERIM_DIR / "api_extracts"
+LEGACY_SCRAPING_EXTRACT_DIR = INTERIM_DIR / "scraping_extracts"
+
 PROCESSED_DIR = BASE_DIR / "data" / "processed"
+
+PROCESSED_CLEAN_DIR = PROCESSED_DIR / "clean"
+PROCESSED_REPORTS_DIR = PROCESSED_DIR / "reports"
+CLEANING_REPORTS_DIR = PROCESSED_REPORTS_DIR / "cleaning"
+
 LOG_DIR = BASE_DIR / "logs"
 
 LOG_FILE = LOG_DIR / "clean_and_standardize_data.log"
 
-CLEANING_SUMMARY_PATH = PROCESSED_DIR / "cleaning_summary.csv"
-CLEANING_OPERATIONS_REPORT_PATH = PROCESSED_DIR / "cleaning_operations_report.csv"
-PROCESSED_MANIFEST_PATH = PROCESSED_DIR / "processed_manifest.csv"
+CLEANING_SUMMARY_PATH = CLEANING_REPORTS_DIR / "cleaning_summary.csv"
+CLEANING_OPERATIONS_REPORT_PATH = CLEANING_REPORTS_DIR / "cleaning_operations_report.csv"
+PROCESSED_MANIFEST_PATH = CLEANING_REPORTS_DIR / "processed_manifest.csv"
 
 
 MISSING_VALUES = {
@@ -264,7 +278,8 @@ def ensure_directories() -> None:
     """
     Create required output folders.
     """
-    PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
+    PROCESSED_CLEAN_DIR.mkdir(parents=True, exist_ok=True)
+    CLEANING_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -490,11 +505,29 @@ def read_optional_csv(file_path: Path) -> pd.DataFrame:
     )
 
 
+def resolve_input_path(preferred_path: Path, legacy_path: Path) -> Path:
+    """
+    Return the preferred file path when it exists, otherwise return the legacy path.
+
+    This keeps the script compatible during the transition from the old interim
+    structure to the new structure:
+    - data/interim/extracts/api
+    - data/interim/extracts/scraping
+    """
+    if preferred_path.exists():
+        return preferred_path
+
+    if legacy_path.exists():
+        return legacy_path
+
+    return preferred_path
+
+
 def save_processed_dataset(df: pd.DataFrame, file_name: str) -> None:
     """
-    Save a cleaned dataset in data/processed.
+    Save a cleaned dataset in data/processed/clean.
     """
-    output_path = PROCESSED_DIR / file_name
+    output_path = PROCESSED_CLEAN_DIR / file_name
     df.to_csv(output_path, index=False, encoding="utf-8")
     logging.info("Saved processed dataset: %s", output_path)
 
@@ -708,7 +741,10 @@ def build_api_products_dataframe() -> pd.DataFrame:
     """
     Convert API product extraction to the common product schema.
     """
-    api_path = INTERIM_DIR / "api_extracts" / "products_api_extract.csv"
+    api_path = resolve_input_path(
+        API_EXTRACT_DIR / "products_api_extract.csv",
+        LEGACY_API_EXTRACT_DIR / "products_api_extract.csv",
+    )
     api_df = read_optional_csv(api_path)
 
     if api_df.empty:
@@ -750,7 +786,10 @@ def build_scraped_products_dataframe() -> pd.DataFrame:
     """
     Convert scraped product extraction to the common product schema.
     """
-    scraped_path = INTERIM_DIR / "scraping_extracts" / "products_scraped_extract.csv"
+    scraped_path = resolve_input_path(
+        SCRAPING_EXTRACT_DIR / "products_scraped_extract.csv",
+        LEGACY_SCRAPING_EXTRACT_DIR / "products_scraped_extract.csv",
+    )
     scraped_df = read_optional_csv(scraped_path)
 
     if scraped_df.empty:
@@ -1486,7 +1525,7 @@ def build_processed_manifest(datasets: Dict[str, pd.DataFrame]) -> pd.DataFrame:
             {
                 "processed_at": get_current_timestamp(),
                 "dataset_name": dataset_name,
-                "output_file": str(PROCESSED_DIR / f"{dataset_name}_clean.csv"),
+                "output_file": str(PROCESSED_CLEAN_DIR / f"{dataset_name}_clean.csv"),
                 "row_count": int(len(df)),
                 "column_count": int(len(df.columns)),
                 "status": "created",
@@ -1584,7 +1623,8 @@ def main() -> None:
     operations_df = pd.read_csv(CLEANING_OPERATIONS_REPORT_PATH)
 
     print("Data cleaning and standardization completed successfully.")
-    print(f"Processed folder: {PROCESSED_DIR}")
+    print(f"Processed clean folder: {PROCESSED_CLEAN_DIR}")
+    print(f"Cleaning reports folder: {CLEANING_REPORTS_DIR}")
     print(f"Cleaning summary: {CLEANING_SUMMARY_PATH}")
     print(f"Cleaning operations report: {CLEANING_OPERATIONS_REPORT_PATH}")
     print(f"Processed manifest: {PROCESSED_MANIFEST_PATH}")

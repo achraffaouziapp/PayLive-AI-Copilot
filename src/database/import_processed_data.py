@@ -20,8 +20,8 @@ except ImportError:
 # -------------------------------------------------------------------
 # Processed data import into PostgreSQL
 # -------------------------------------------------------------------
-# This script imports cleaned and aggregated CSV files from data/processed
-# into the PostgreSQL database used by the PayLive AI Copilot project.
+# This script imports cleaned CSV files from data/processed/clean and the
+# final aggregated CSV file from data/processed/final into PostgreSQL.
 #
 # It imports:
 # - cleaned business tables into the core schema;
@@ -36,12 +36,18 @@ except ImportError:
 BASE_DIR = Path(__file__).resolve().parents[2]
 
 PROCESSED_DIR = BASE_DIR / "data" / "processed"
+PROCESSED_CLEAN_DIR = PROCESSED_DIR / "clean"
+PROCESSED_FINAL_DIR = PROCESSED_DIR / "final"
+
+PROCESSED_REPORTS_DIR = PROCESSED_DIR / "reports"
+DATABASE_IMPORT_REPORTS_DIR = PROCESSED_REPORTS_DIR / "database_import"
+
 LOG_DIR = BASE_DIR / "logs"
 
 LOG_FILE = LOG_DIR / "import_processed_data.log"
 
-DATABASE_IMPORT_REPORT_PATH = PROCESSED_DIR / "database_import_report.csv"
-DATABASE_IMPORT_SUMMARY_PATH = PROCESSED_DIR / "database_import_summary.csv"
+DATABASE_IMPORT_REPORT_PATH = DATABASE_IMPORT_REPORTS_DIR / "database_import_report.csv"
+DATABASE_IMPORT_SUMMARY_PATH = DATABASE_IMPORT_REPORTS_DIR / "database_import_summary.csv"
 
 
 IMPORT_TABLES = [
@@ -117,7 +123,9 @@ def ensure_directories() -> None:
     """
     Create required folders.
     """
-    PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
+    PROCESSED_CLEAN_DIR.mkdir(parents=True, exist_ok=True)
+    PROCESSED_FINAL_DIR.mkdir(parents=True, exist_ok=True)
+    DATABASE_IMPORT_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -222,7 +230,7 @@ def create_import_batch(connection, import_batch_id: str) -> None:
                 import_batch_id,
                 get_current_timestamp(),
                 "started",
-                str(PROCESSED_DIR),
+                "clean: " + str(PROCESSED_CLEAN_DIR) + " | final: " + str(PROCESSED_FINAL_DIR),
                 len(IMPORT_TABLES),
                 0,
                 0,
@@ -396,6 +404,24 @@ def read_source_csv(source_file_path: Path) -> pd.DataFrame:
     )
 
 
+def get_import_source_file_path(table_config: Dict[str, str]) -> Path:
+    """
+    Return the CSV source path for one target table.
+
+    Clean business tables are stored in data/processed/clean.
+    The final analytical dataset is stored in data/processed/final.
+    """
+    source_file = table_config["source_file"]
+
+    if (
+        table_config["schema_name"] == "analytics"
+        and table_config["table_name"] == "dataset_final_live_sales"
+    ):
+        return PROCESSED_FINAL_DIR / source_file
+
+    return PROCESSED_CLEAN_DIR / source_file
+
+
 def prepare_dataframe_for_copy(
     dataframe: pd.DataFrame,
     table_columns: List[str],
@@ -499,7 +525,7 @@ def import_one_table(
     schema_name = table_config["schema_name"]
     table_name = table_config["table_name"]
     source_file = table_config["source_file"]
-    source_file_path = PROCESSED_DIR / source_file
+    source_file_path = get_import_source_file_path(table_config)
     table_full_name = f"{schema_name}.{table_name}"
 
     report_row = {
@@ -692,7 +718,7 @@ def build_summary_report(
         },
         {
             "metric": "source_folder",
-            "value": str(PROCESSED_DIR),
+            "value": "clean: " + str(PROCESSED_CLEAN_DIR) + " | final: " + str(PROCESSED_FINAL_DIR),
         },
     ]
 

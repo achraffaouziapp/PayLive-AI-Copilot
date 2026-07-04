@@ -46,9 +46,13 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 
 RAW_DIR = BASE_DIR / "data" / "raw"
 INTERIM_DIR = BASE_DIR / "data" / "interim"
+INTERIM_EXTRACTS_DIR = INTERIM_DIR / "extracts"
+INTERIM_REPORTS_DIR = INTERIM_DIR / "reports"
+
 BIGDATA_RAW_DIR = RAW_DIR / "bigdata"
 BIGDATA_PARQUET_DIR = BIGDATA_RAW_DIR / "live_events_parquet"
-BIGDATA_EXTRACT_DIR = INTERIM_DIR / "bigdata_extracts"
+BIGDATA_EXTRACT_DIR = INTERIM_EXTRACTS_DIR / "bigdata"
+BIGDATA_COLLECTION_REPORTS_DIR = INTERIM_REPORTS_DIR / "bigdata_collection"
 LOG_DIR = BASE_DIR / "logs"
 SQL_DIR = BASE_DIR / "sql"
 
@@ -156,14 +160,16 @@ def ensure_directories() -> None:
     Create all folders required by the big data extraction script.
 
     The partitioned Parquet source is saved in `data/raw/bigdata`.
-    Extracted query results are saved in `data/interim/bigdata_extracts`.
+    Extracted query results are saved in `data/interim/extracts/bigdata`.
     SQL query documentation is saved in `sql`.
     Execution logs are saved in `logs`.
     """
     RAW_DIR.mkdir(parents=True, exist_ok=True)
-    INTERIM_DIR.mkdir(parents=True, exist_ok=True)
+    INTERIM_EXTRACTS_DIR.mkdir(parents=True, exist_ok=True)
+    INTERIM_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     BIGDATA_RAW_DIR.mkdir(parents=True, exist_ok=True)
     BIGDATA_EXTRACT_DIR.mkdir(parents=True, exist_ok=True)
+    BIGDATA_COLLECTION_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     LOG_DIR.mkdir(parents=True, exist_ok=True)
     SQL_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -781,37 +787,37 @@ def save_reports(
     Save all big data extraction reports as CSV files.
     """
     manifest_df.to_csv(
-        INTERIM_DIR / "bigdata_extraction_manifest.csv",
+        BIGDATA_COLLECTION_REPORTS_DIR / "bigdata_extraction_manifest.csv",
         index=False,
         encoding="utf-8",
     )
 
     schema_df.to_csv(
-        INTERIM_DIR / "bigdata_extraction_schema_report.csv",
+        BIGDATA_COLLECTION_REPORTS_DIR / "bigdata_extraction_schema_report.csv",
         index=False,
         encoding="utf-8",
     )
 
     source_profile_df.to_csv(
-        INTERIM_DIR / "bigdata_source_profile_report.csv",
+        BIGDATA_COLLECTION_REPORTS_DIR / "bigdata_source_profile_report.csv",
         index=False,
         encoding="utf-8",
     )
 
     query_report_df.to_csv(
-        INTERIM_DIR / "bigdata_extraction_query_report.csv",
+        BIGDATA_COLLECTION_REPORTS_DIR / "bigdata_extraction_query_report.csv",
         index=False,
         encoding="utf-8",
     )
 
     parquet_creation_report_df.to_csv(
-        INTERIM_DIR / "bigdata_parquet_creation_report.csv",
+        BIGDATA_COLLECTION_REPORTS_DIR / "bigdata_parquet_creation_report.csv",
         index=False,
         encoding="utf-8",
     )
 
     error_df.to_csv(
-        INTERIM_DIR / "bigdata_extraction_errors.csv",
+        BIGDATA_COLLECTION_REPORTS_DIR / "bigdata_extraction_errors.csv",
         index=False,
         encoding="utf-8",
     )
@@ -939,12 +945,12 @@ def main() -> None:
     setup_logging()
     collect_from_bigdata()
 
-    manifest_path = INTERIM_DIR / "bigdata_extraction_manifest.csv"
-    schema_path = INTERIM_DIR / "bigdata_extraction_schema_report.csv"
-    profile_path = INTERIM_DIR / "bigdata_source_profile_report.csv"
-    query_report_path = INTERIM_DIR / "bigdata_extraction_query_report.csv"
-    parquet_report_path = INTERIM_DIR / "bigdata_parquet_creation_report.csv"
-    errors_path = INTERIM_DIR / "bigdata_extraction_errors.csv"
+    manifest_path = BIGDATA_COLLECTION_REPORTS_DIR / "bigdata_extraction_manifest.csv"
+    schema_path = BIGDATA_COLLECTION_REPORTS_DIR / "bigdata_extraction_schema_report.csv"
+    profile_path = BIGDATA_COLLECTION_REPORTS_DIR / "bigdata_source_profile_report.csv"
+    query_report_path = BIGDATA_COLLECTION_REPORTS_DIR / "bigdata_extraction_query_report.csv"
+    parquet_report_path = BIGDATA_COLLECTION_REPORTS_DIR / "bigdata_parquet_creation_report.csv"
+    errors_path = BIGDATA_COLLECTION_REPORTS_DIR / "bigdata_extraction_errors.csv"
 
     manifest_df = pd.read_csv(manifest_path)
     query_report_df = pd.read_csv(query_report_path)

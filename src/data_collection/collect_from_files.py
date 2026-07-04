@@ -30,7 +30,12 @@ import pandas as pd
 BASE_DIR = Path(__file__).resolve().parents[2]
 RAW_DIR = BASE_DIR / "data" / "raw"
 INTERIM_DIR = BASE_DIR / "data" / "interim"
-EXTRACT_DIR = INTERIM_DIR / "file_extracts"
+INTERIM_EXTRACTS_DIR = INTERIM_DIR / "extracts"
+INTERIM_REPORTS_DIR = INTERIM_DIR / "reports"
+
+EXTRACT_DIR = INTERIM_EXTRACTS_DIR / "files"
+FILE_COLLECTION_REPORTS_DIR = INTERIM_REPORTS_DIR / "file_collection"
+
 LOG_DIR = BASE_DIR / "logs"
 
 
@@ -172,11 +177,13 @@ def ensure_directories() -> None:
     """
     Create all folders required by the extraction script.
 
-    The extracted files are saved in `data/interim/file_extracts`.
+    The extracted files are saved in `data/interim/extracts/files`.
     The execution log is saved in `logs`.
     """
-    INTERIM_DIR.mkdir(parents=True, exist_ok=True)
+    INTERIM_EXTRACTS_DIR.mkdir(parents=True, exist_ok=True)
+    INTERIM_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     EXTRACT_DIR.mkdir(parents=True, exist_ok=True)
+    FILE_COLLECTION_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -458,19 +465,19 @@ def build_reports(
     ].copy()
 
     manifest_df.to_csv(
-        INTERIM_DIR / "file_extraction_manifest.csv",
+        FILE_COLLECTION_REPORTS_DIR / "file_extraction_manifest.csv",
         index=False,
         encoding="utf-8",
     )
 
     schema_df.to_csv(
-        INTERIM_DIR / "file_extraction_schema_report.csv",
+        FILE_COLLECTION_REPORTS_DIR / "file_extraction_schema_report.csv",
         index=False,
         encoding="utf-8",
     )
 
     error_df.to_csv(
-        INTERIM_DIR / "file_extraction_errors.csv",
+        FILE_COLLECTION_REPORTS_DIR / "file_extraction_errors.csv",
         index=False,
         encoding="utf-8",
     )
@@ -535,9 +542,9 @@ def main() -> None:
     setup_logging()
     collect_all_files()
 
-    manifest_path = INTERIM_DIR / "file_extraction_manifest.csv"
-    schema_path = INTERIM_DIR / "file_extraction_schema_report.csv"
-    errors_path = INTERIM_DIR / "file_extraction_errors.csv"
+    manifest_path = FILE_COLLECTION_REPORTS_DIR / "file_extraction_manifest.csv"
+    schema_path = FILE_COLLECTION_REPORTS_DIR / "file_extraction_schema_report.csv"
+    errors_path = FILE_COLLECTION_REPORTS_DIR / "file_extraction_errors.csv"
 
     manifest_df = pd.read_csv(manifest_path)
 

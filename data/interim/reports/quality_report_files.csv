@@ -10,6 +10,5 @@ live_sessions_raw.csv,38,11,live_id,3,4,5,1.2,1,0,0,47
 orders_raw.csv,95,9,order_id,5,6,15,1.75,0,0,1,89
 payments_raw.csv,102,9,payment_id,7,8,53,5.77,0,0,1,92
 products_raw.csv,64,10,product_id,4,5,28,4.38,1,0,3,17
-products_scraped_raw.csv,60,22,,0,0,60,4.55,0,0,0,60
 sellers_raw.csv,23,10,seller_id,3,4,5,2.17,1,1,0,16
 stock_movements_raw.csv,166,7,stock_movement_id,6,7,32,2.75,1,0,40,65

@@ -27,7 +27,8 @@ import requests
 # - saves the raw JSON response;
 # - extracts product records into a tabular format;
 # - adds extraction metadata;
-# - generates extraction reports.
+# - saves extracts in data/interim/extracts/api;
+# - saves reports in data/interim/reports/api_collection.
 #
 # Cleaning, normalization, deduplication, and business corrections will
 # be done later in dedicated data processing scripts.
@@ -37,7 +38,13 @@ import requests
 BASE_DIR = Path(__file__).resolve().parents[2]
 RAW_DIR = BASE_DIR / "data" / "raw"
 INTERIM_DIR = BASE_DIR / "data" / "interim"
-API_EXTRACT_DIR = INTERIM_DIR / "api_extracts"
+
+INTERIM_EXTRACTS_DIR = INTERIM_DIR / "extracts"
+INTERIM_REPORTS_DIR = INTERIM_DIR / "reports"
+
+API_EXTRACT_DIR = INTERIM_EXTRACTS_DIR / "api"
+API_REPORTS_DIR = INTERIM_REPORTS_DIR / "api_collection"
+
 LOG_DIR = BASE_DIR / "logs"
 
 API_SOURCE_NAME = "dummyjson_products_api"
@@ -49,6 +56,10 @@ RETRY_SLEEP_SECONDS = 2
 
 RAW_JSON_OUTPUT = RAW_DIR / "products_api_raw.json"
 API_EXTRACT_OUTPUT = API_EXTRACT_DIR / "products_api_extract.csv"
+
+API_MANIFEST_REPORT_PATH = API_REPORTS_DIR / "api_extraction_manifest.csv"
+API_SCHEMA_REPORT_PATH = API_REPORTS_DIR / "api_extraction_schema_report.csv"
+API_ERRORS_REPORT_PATH = API_REPORTS_DIR / "api_extraction_errors.csv"
 
 EXPECTED_API_PRODUCT_FIELDS = [
     "id",
@@ -77,12 +88,13 @@ def ensure_directories() -> None:
     Create all folders required by the API extraction script.
 
     The raw JSON response is saved in `data/raw`.
-    The extracted tabular data and reports are saved in `data/interim`.
+    The extracted tabular data is saved in `data/interim/extracts/api`.
+    Reports are saved in `data/interim/reports/api_collection`.
     The execution log is saved in `logs`.
     """
     RAW_DIR.mkdir(parents=True, exist_ok=True)
-    INTERIM_DIR.mkdir(parents=True, exist_ok=True)
     API_EXTRACT_DIR.mkdir(parents=True, exist_ok=True)
+    API_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -273,7 +285,7 @@ def save_product_extract(df: pd.DataFrame) -> None:
     """
     Save the API product extraction as a CSV file.
 
-    The output is stored in `data/interim/api_extracts`.
+    The output is stored in `data/interim/extracts/api`.
     """
     df.to_csv(API_EXTRACT_OUTPUT, index=False, encoding="utf-8")
 
@@ -411,22 +423,22 @@ def save_reports(
     """
     Save all API extraction reports.
 
-    Reports are saved in `data/interim`.
+    Reports are saved in `data/interim/reports/api_collection`.
     """
     manifest_df.to_csv(
-        INTERIM_DIR / "api_extraction_manifest.csv",
+        API_MANIFEST_REPORT_PATH,
         index=False,
         encoding="utf-8",
     )
 
     schema_df.to_csv(
-        INTERIM_DIR / "api_extraction_schema_report.csv",
+        API_SCHEMA_REPORT_PATH,
         index=False,
         encoding="utf-8",
     )
 
     error_df.to_csv(
-        INTERIM_DIR / "api_extraction_errors.csv",
+        API_ERRORS_REPORT_PATH,
         index=False,
         encoding="utf-8",
     )
@@ -549,18 +561,14 @@ def main() -> None:
     setup_logging()
     collect_products_from_api()
 
-    manifest_path = INTERIM_DIR / "api_extraction_manifest.csv"
-    schema_path = INTERIM_DIR / "api_extraction_schema_report.csv"
-    errors_path = INTERIM_DIR / "api_extraction_errors.csv"
-
-    manifest_df = pd.read_csv(manifest_path)
+    manifest_df = pd.read_csv(API_MANIFEST_REPORT_PATH)
 
     print("API-based data collection completed successfully.")
     print(f"Raw JSON output: {RAW_JSON_OUTPUT}")
     print(f"API extract output: {API_EXTRACT_OUTPUT}")
-    print(f"Manifest report: {manifest_path}")
-    print(f"Schema report: {schema_path}")
-    print(f"Error report: {errors_path}")
+    print(f"Manifest report: {API_MANIFEST_REPORT_PATH}")
+    print(f"Schema report: {API_SCHEMA_REPORT_PATH}")
+    print(f"Error report: {API_ERRORS_REPORT_PATH}")
     print("Status summary:")
     print(manifest_df["status"].value_counts().to_string())
 

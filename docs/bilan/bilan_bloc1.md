@@ -695,30 +695,76 @@ La compétence C5 est couverte car le dataset est exposé via une API REST fonct
 
 ## 13. Documents produits pour le Bloc 1
 
-Les documents principaux sont :
+Les documents du Bloc 1 sont organisés par catégorie.
 
 ```text
-docs/00_contexte_projet.md
-docs/01_specifications_techniques_bloc1.md
-docs/02_sources_donnees.md
-docs/03_dictionnaire_donnees.md
-docs/05_analyse_qualite_donnees_brutes.md
-docs/06_collecte_depuis_fichiers.md
-docs/07_collecte_depuis_api.md
-docs/08_collecte_depuis_scraping.md
-docs/09_collecte_depuis_base_donnees.md
-docs/10_collecte_depuis_bigdata.md
-docs/12_nettoyage_normalisation_donnees.md
-docs/13_aggregation_dataset_final_ia.md
-docs/14_modelisation_base_donnees.md
-docs/15_creation_base_donnees_postgresql.md
-docs/16_import_donnees_postgresql.md
-docs/17_controle_qualite_base_donnees.md
-docs/18_api_rest_mise_a_disposition_donnees.md
-docs/19_registre_rgpd.md
-docs/20_bilan_bloc1.md
-README.md
+docs/
+├── 00_project_overview/
+├── 01_sources_and_collection/
+├── 02_quality_and_processing/
+├── 03_database/
+├── 04_api/
+├── 05_rgpd/
+└── 06_bilan/
 ```
+
+## 13.1. Présentation et cadrage
+
+```text
+docs/00_project_overview/00_contexte_projet.md
+docs/00_project_overview/01_specifications_techniques_bloc1.md
+docs/00_project_overview/02_sources_donnees.md
+docs/00_project_overview/03_dictionnaire_donnees.md
+```
+
+## 13.2. Sources et collecte
+
+```text
+docs/01_sources_and_collection/04_generation_donnees_simulees.md
+docs/01_sources_and_collection/06_collecte_depuis_fichiers.md
+docs/01_sources_and_collection/07_collecte_depuis_api.md
+docs/01_sources_and_collection/08_collecte_depuis_scraping.md
+docs/01_sources_and_collection/09_collecte_depuis_base_donnees.md
+docs/01_sources_and_collection/10_collecte_depuis_bigdata.md
+```
+
+## 13.3. Qualité, nettoyage et agrégation
+
+```text
+docs/02_quality_and_processing/05_analyse_qualite_donnees_brutes.md
+docs/02_quality_and_processing/11_analyse_qualite_donnees_extraites.md
+docs/02_quality_and_processing/12_nettoyage_normalisation_donnees.md
+docs/02_quality_and_processing/13_aggregation_dataset_final_ia.md
+```
+
+## 13.4. Base de données PostgreSQL
+
+```text
+docs/03_database/14_modelisation_base_donnees.md
+docs/03_database/15_creation_base_donnees_postgresql.md
+docs/03_database/16_import_donnees_postgresql.md
+docs/03_database/17_controle_qualite_base_donnees.md
+```
+
+## 13.5. API REST
+
+```text
+docs/04_api/18_api_rest_mise_a_disposition_donnees.md
+```
+
+## 13.6. RGPD
+
+```text
+docs/05_rgpd/19_registre_rgpd.md
+```
+
+## 13.7. Bilan final
+
+```text
+docs/06_bilan/20_bilan_bloc1.md
+```
+
+Le document `README.md` reste à la racine du projet afin de servir de guide principal d’installation, d’exécution et de reproduction du pipeline.
 
 ## 14. Rapports de preuve produits
 

@@ -508,27 +508,151 @@ connexion PostgreSQL
 
 ## 18. Documentation du projet
 
-Les principaux documents du Bloc 1 sont :
+## 18. Documentation du projet
+
+La documentation du Bloc 1 est organisée par catégorie dans le dossier `docs/`.
 
 ```text
-docs/00_contexte_projet.md
-docs/01_specifications_techniques_bloc1.md
-docs/02_sources_donnees.md
-docs/03_dictionnaire_donnees.md
-docs/05_analyse_qualite_donnees_brutes.md
-docs/06_collecte_depuis_fichiers.md
-docs/07_collecte_depuis_api.md
-docs/08_collecte_depuis_scraping.md
-docs/09_collecte_depuis_base_donnees.md
-docs/10_collecte_depuis_bigdata.md
-docs/12_nettoyage_normalisation_donnees.md
-docs/13_aggregation_dataset_final_ia.md
-docs/14_modelisation_base_donnees.md
-docs/15_creation_base_donnees_postgresql.md
-docs/16_import_donnees_postgresql.md
-docs/17_controle_qualite_base_donnees.md
-docs/18_api_rest_mise_a_disposition_donnees.md
-docs/19_registre_rgpd.md
+docs/
+├── 00_project_overview/
+├── 01_sources_and_collection/
+├── 02_quality_and_processing/
+├── 03_database/
+├── 04_api/
+├── 05_rgpd/
+└── 06_bilan/
+```
+
+## 18.1. Présentation et cadrage projet
+
+```text
+docs/00_project_overview/00_contexte_projet.md
+docs/00_project_overview/01_specifications_techniques_bloc1.md
+docs/00_project_overview/02_sources_donnees.md
+docs/00_project_overview/03_dictionnaire_donnees.md
+```
+
+Ces documents décrivent :
+
+```text
+le contexte métier
+le périmètre du Bloc 1
+les sources de données
+le dictionnaire des données
+les règles de qualité attendues
+```
+
+## 18.2. Sources et collecte des données
+
+```text
+docs/01_sources_and_collection/04_generation_donnees_simulees.md
+docs/01_sources_and_collection/06_collecte_depuis_fichiers.md
+docs/01_sources_and_collection/07_collecte_depuis_api.md
+docs/01_sources_and_collection/08_collecte_depuis_scraping.md
+docs/01_sources_and_collection/09_collecte_depuis_base_donnees.md
+docs/01_sources_and_collection/10_collecte_depuis_bigdata.md
+```
+
+Ces documents détaillent :
+
+```text
+la génération des données simulées
+la collecte depuis fichiers CSV
+la collecte depuis API REST externe
+la collecte par scraping autorisé
+la collecte depuis une base SQL simulée
+la collecte depuis une source Big Data Parquet
+```
+
+## 18.3. Qualité, nettoyage et agrégation
+
+```text
+docs/02_quality_and_processing/05_analyse_qualite_donnees_brutes.md
+docs/02_quality_and_processing/11_analyse_qualite_donnees_extraites.md
+docs/02_quality_and_processing/12_nettoyage_normalisation_donnees.md
+docs/02_quality_and_processing/13_aggregation_dataset_final_ia.md
+```
+
+Ces documents expliquent :
+
+```text
+l’analyse qualité des données brutes
+l’analyse qualité des données extraites
+les règles de nettoyage
+la normalisation des formats
+la suppression des doublons
+l’agrégation du dataset final IA
+```
+
+## 18.4. Base de données PostgreSQL
+
+```text
+docs/03_database/14_modelisation_base_donnees.md
+docs/03_database/15_creation_base_donnees_postgresql.md
+docs/03_database/16_import_donnees_postgresql.md
+docs/03_database/17_controle_qualite_base_donnees.md
+```
+
+Ces documents couvrent :
+
+```text
+la modélisation relationnelle
+la création de la base PostgreSQL
+la création des schémas, tables et index
+l’import automatisé des données
+le contrôle qualité en base
+```
+
+## 18.5. API REST
+
+```text
+docs/04_api/18_api_rest_mise_a_disposition_donnees.md
+```
+
+Ce document présente :
+
+```text
+l’API FastAPI
+les routes disponibles
+la sécurité par X-API-Key
+la documentation Swagger
+le schéma OpenAPI
+les tests manuels réalisés
+```
+
+## 18.6. RGPD
+
+```text
+docs/05_rgpd/19_registre_rgpd.md
+```
+
+Ce document présente :
+
+```text
+les données personnelles potentielles
+les traitements documentés
+les mesures de minimisation
+la sécurité des accès
+les durées de conservation
+les procédures de tri et de conformité
+```
+
+## 18.7. Bilan final du Bloc 1
+
+```text
+docs/06_bilan/20_bilan_bloc1.md
+```
+
+Ce document synthétise :
+
+```text
+les réalisations du Bloc 1
+la couverture des compétences C1 à C5
+les preuves produites
+les difficultés rencontrées
+les corrections appliquées
+les limites du Bloc 1
+la préparation du Bloc 2
 ```
 
 ## 19. Rapports générés

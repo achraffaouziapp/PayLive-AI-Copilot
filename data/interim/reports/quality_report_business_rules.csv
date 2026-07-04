@@ -31,7 +31,6 @@ VALUE_001,orders_raw.csv,currency,invalid_allowed_value,64,major,Values must bel
 VALUE_001,payments_raw.csv,payment_status,invalid_allowed_value,26,major,"Values must belong to this list: ['failed', 'pending', 'refunded', 'succeeded']."
 VALUE_001,payments_raw.csv,currency,invalid_allowed_value,66,major,Values must belong to this list: ['EUR'].
 VALUE_001,products_raw.csv,product_status,invalid_allowed_value,17,major,"Values must belong to this list: ['active', 'inactive', 'out_of_stock']."
-VALUE_001,products_scraped_raw.csv,product_status,invalid_allowed_value,60,major,"Values must belong to this list: ['active', 'inactive', 'out_of_stock']."
 VALUE_001,sellers_raw.csv,seller_status,invalid_allowed_value,16,major,"Values must belong to this list: ['active', 'inactive', 'suspended']."
 VALUE_001,stock_movements_raw.csv,movement_type,invalid_allowed_value,65,major,"Values must belong to this list: ['adjustment', 'restock', 'return', 'sale']."
 NUM_002,products_raw.csv,unit_price,negative_numeric_value,2,major,Negative numeric values must be reviewed.

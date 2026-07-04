@@ -30,7 +30,7 @@ import pandas as pd
 # - temporal consistency issues;
 # - calculated amount inconsistencies.
 #
-# Outputs are saved in data/interim.
+# Outputs are saved in data/interim/reports/extracted_quality.
 # -------------------------------------------------------------------
 
 
@@ -38,12 +38,29 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 
 RAW_DIR = BASE_DIR / "data" / "raw"
 INTERIM_DIR = BASE_DIR / "data" / "interim"
+
+INTERIM_EXTRACTS_DIR = INTERIM_DIR / "extracts"
+INTERIM_REPORTS_DIR = INTERIM_DIR / "reports"
+EXTRACTED_QUALITY_REPORTS_DIR = INTERIM_REPORTS_DIR / "extracted_quality"
+
+FILE_EXTRACT_DIR = INTERIM_EXTRACTS_DIR / "files"
+API_EXTRACT_DIR = INTERIM_EXTRACTS_DIR / "api"
+SCRAPING_EXTRACT_DIR = INTERIM_EXTRACTS_DIR / "scraping"
+DATABASE_EXTRACT_DIR = INTERIM_EXTRACTS_DIR / "database"
+BIGDATA_EXTRACT_DIR = INTERIM_EXTRACTS_DIR / "bigdata"
+
+LEGACY_FILE_EXTRACT_DIR = INTERIM_DIR / "file_extracts"
+LEGACY_API_EXTRACT_DIR = INTERIM_DIR / "api_extracts"
+LEGACY_SCRAPING_EXTRACT_DIR = INTERIM_DIR / "scraping_extracts"
+LEGACY_DATABASE_EXTRACT_DIR = INTERIM_DIR / "database_extracts"
+LEGACY_BIGDATA_EXTRACT_DIR = INTERIM_DIR / "bigdata_extracts"
+
 LOG_DIR = BASE_DIR / "logs"
 
-OUTPUT_FILE_REPORT = INTERIM_DIR / "extracted_quality_file_report.csv"
-OUTPUT_COLUMN_REPORT = INTERIM_DIR / "extracted_quality_column_report.csv"
-OUTPUT_BUSINESS_RULES_REPORT = INTERIM_DIR / "extracted_quality_business_rules_report.csv"
-OUTPUT_SUMMARY = INTERIM_DIR / "extracted_quality_summary.csv"
+OUTPUT_FILE_REPORT = EXTRACTED_QUALITY_REPORTS_DIR / "extracted_quality_file_report.csv"
+OUTPUT_COLUMN_REPORT = EXTRACTED_QUALITY_REPORTS_DIR / "extracted_quality_column_report.csv"
+OUTPUT_BUSINESS_RULES_REPORT = EXTRACTED_QUALITY_REPORTS_DIR / "extracted_quality_business_rules_report.csv"
+OUTPUT_SUMMARY = EXTRACTED_QUALITY_REPORTS_DIR / "extracted_quality_summary.csv"
 
 LOG_FILE = LOG_DIR / "analyze_extracted_data_quality.log"
 
@@ -77,6 +94,23 @@ EXCLUDED_RAW_FILES = {
 }
 
 
+def resolve_existing_extract_folder(preferred_folder: Path, legacy_folder: Path) -> Path:
+    """
+    Return the preferred extract folder when it exists and contains CSV files.
+
+    If the new folder is empty during migration, the legacy folder is used
+    as a fallback. This prevents the quality analysis from missing extracts
+    generated before the folder reorganization.
+    """
+    if preferred_folder.exists() and any(preferred_folder.glob("*.csv")):
+        return preferred_folder
+
+    if legacy_folder.exists() and any(legacy_folder.glob("*.csv")):
+        return legacy_folder
+
+    return preferred_folder
+
+
 # Folders containing datasets to analyze.
 DATASET_LOCATIONS = [
     {
@@ -86,27 +120,27 @@ DATASET_LOCATIONS = [
     },
     {
         "source_category": "file_extracts",
-        "folder": INTERIM_DIR / "file_extracts",
+        "folder": resolve_existing_extract_folder(FILE_EXTRACT_DIR, LEGACY_FILE_EXTRACT_DIR),
         "pattern": "*.csv",
     },
     {
         "source_category": "api_extracts",
-        "folder": INTERIM_DIR / "api_extracts",
+        "folder": resolve_existing_extract_folder(API_EXTRACT_DIR, LEGACY_API_EXTRACT_DIR),
         "pattern": "*.csv",
     },
     {
         "source_category": "scraping_extracts",
-        "folder": INTERIM_DIR / "scraping_extracts",
+        "folder": resolve_existing_extract_folder(SCRAPING_EXTRACT_DIR, LEGACY_SCRAPING_EXTRACT_DIR),
         "pattern": "*.csv",
     },
     {
         "source_category": "database_extracts",
-        "folder": INTERIM_DIR / "database_extracts",
+        "folder": resolve_existing_extract_folder(DATABASE_EXTRACT_DIR, LEGACY_DATABASE_EXTRACT_DIR),
         "pattern": "*.csv",
     },
     {
         "source_category": "bigdata_extracts",
-        "folder": INTERIM_DIR / "bigdata_extracts",
+        "folder": resolve_existing_extract_folder(BIGDATA_EXTRACT_DIR, LEGACY_BIGDATA_EXTRACT_DIR),
         "pattern": "*.csv",
     },
 ]
@@ -320,7 +354,7 @@ def ensure_directories() -> None:
     """
     Create required folders for reports and logs.
     """
-    INTERIM_DIR.mkdir(parents=True, exist_ok=True)
+    EXTRACTED_QUALITY_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 

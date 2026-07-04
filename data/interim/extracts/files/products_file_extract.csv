@@ -1,0 +1,65 @@
+extraction_batch_id,source_file_name,extracted_at,product_id,product_name,category,brand,description,unit_price,stock_quantity,product_status,source,created_at
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0001,Palette maquillage,beauty,PayLive Demo,Produit de démonstration numéro 1,-15.0,64,available,simulation,2025-07-02 02:36:40
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0002,Jean slim,Clothes,PayLive Demo,Produit de démonstration numéro 2,92.27,38,inactive,simulation,2025-05-16 17:48:26
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0003,T-shirt blanc,,BeautyLab,Produit de démonstration numéro 3,82.66,158,available,simulation,2025-06-08 18:27:19
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0004,Chemise bleue,beauty,UrbanStyle,Produit de démonstration numéro 4,78.14,-4,inactive,simulation,2025-06-03 21:05:10
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0005,Sac noir,accessories,PayLive Demo,Produit de démonstration numéro 5,38.68,141,available,simulation,2025-06-27 22:38:30
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0006,Veste beige,,,Produit de démonstration numéro 6,44.85,59,available,simulation,2025-05-10 21:14:59
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0007,Chemise bleue,home,BeautyLab,Produit de démonstration numéro 7,41.65,160,active,simulation,2025-07-09 07:41:09
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0008,CHEMISE BLEUE,clothing,UrbanStyle,Produit de démonstration numéro 8,118.91,36,out_of_stock,simulation,2025-07-16 23:52:36
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0009,Sac noir,cosmetics,,Produit de démonstration numéro 9,120.44,112,out_of_stock,simulation,2025-07-29 12:17:32
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0010,Sac noir,clothing,BeautyLab,Produit de démonstration numéro 10,74.7,112,out_of_stock,simulation,not_a_date
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0011,Chemise bleue,clothing,,Produit de démonstration numéro 11,37.37,172,out_of_stock,simulation,2025-07-13 01:48:48
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0012,Palette maquillage,Clothes,UrbanStyle,Produit de démonstration numéro 12,30.92,132,ok,simulation,2025-06-25 20:52:31
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0012,Sneakers,,ModaPlus,Produit de démonstration numéro 13,126.19,120,out_of_stock,simulation,2025-07-25 03:54:10
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0014,Palette maquillage,Clothes,,Produit de démonstration numéro 14,49.48,177,available,simulation,2025-07-10 01:29:05
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0015,Sac noir,,NoBrand,Produit de démonstration numéro 15,47.64,82,active,simulation,2025-07-24 17:29:26
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0016,Sneakers,cosmetics,,Produit de démonstration numéro 16,16.4,132,available,simulation,2025-05-07 06:17:35
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0017,Palette maquillage,cosmetics,PayLive Demo,Produit de démonstration numéro 17,25.62,73,active,simulation,2025-07-20 19:51:15
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0018,Pull oversize,clothing,NoBrand,Produit de démonstration numéro 18,95.07,79,available,simulation,2025-05-12 07:53:58
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0019,Jean slim,cosmetics,,Produit de démonstration numéro 19,23.52,30,out_of_stock,simulation,2025-07-05 22:17:26
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0020,T-shirt blanc,cosmetics,NoBrand,Produit de démonstration numéro 20,110.07,120,inactive,simulation,2025-06-19 06:58:38
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0021,Sac noir,Clothes,BeautyLab,Produit de démonstration numéro 21,70.89,34,out_of_stock,simulation,2025-07-04 08:52:00
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0022,Chemise bleue,cosmetics,UrbanStyle,Produit de démonstration numéro 22,43.84,76,available,simulation,2025-07-08 15:22:21
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0023,Montre dorée,cosmetics,ModaPlus,Produit de démonstration numéro 23,76.13,139,inactive,simulation,2025-07-29 07:36:24
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0024,Montre dorée,clothing,ModaPlus,Produit de démonstration numéro 24,37.93,198,available,simulation,2025-07-30 12:24:42
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0025,Jean slim,cosmetics,PayLive Demo,Produit de démonstration numéro 25,104.99,166,inactive,simulation,2025-07-04 18:21:55
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0026,Sac noir,cosmetics,PayLive Demo,Produit de démonstration numéro 26,21.94,112,inactive,simulation,2025-06-22 20:09:04
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0027,Sneakers,,,Produit de démonstration numéro 27,66.24,67,active,simulation,2025-06-12 21:54:34
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0028,Palette maquillage,clothing,NoBrand,Produit de démonstration numéro 28,55.5,81,active,simulation,2025-05-31 20:43:58
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0029,Sac noir,,PayLive Demo,Produit de démonstration numéro 29,44.39,58,active,simulation,2025-06-26 05:44:19
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0030,Sneakers,clothing,ModaPlus,Produit de démonstration numéro 30,118.31,11,out_of_stock,simulation,2025-06-17 13:09:15
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0031,Jean slim,accessories,UrbanStyle,Produit de démonstration numéro 31,73.64,144,active,simulation,2025-07-18 12:39:43
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0032,Jean slim,home,BeautyLab,Produit de démonstration numéro 32,38.8,149,out_of_stock,simulation,2025-06-28 08:42:00
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0033,Veste beige,accessories,PayLive Demo,Produit de démonstration numéro 33,117.77,119,available,simulation,2025-06-14 18:19:40
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0034,Veste beige,cosmetics,ModaPlus,Produit de démonstration numéro 34,125.34,176,inactive,simulation,2025-06-19 15:06:15
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0035,Chemise bleue,Clothes,,Produit de démonstration numéro 35,55.66,91,out_of_stock,simulation,2025-05-03 21:25:17
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0036,Robe rouge,cosmetics,ModaPlus,Produit de démonstration numéro 36,10.87,175,inactive,simulation,2025-07-17 11:14:40
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0037,Jean slim,beauty,,Produit de démonstration numéro 37,32.72,64,active,simulation,2025-06-09 14:02:37
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0038,Sac noir,Clothes,ModaPlus,Produit de démonstration numéro 38,53.68,33,available,simulation,2025-05-23 06:08:50
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0039,Pull oversize,Clothes,UrbanStyle,Produit de démonstration numéro 39,74.63,93,out_of_stock,simulation,2025-07-01 09:47:55
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0040,Palette maquillage,beauty,UrbanStyle,Produit de démonstration numéro 40,50.55,29,inactive,simulation,2025-07-26 23:43:25
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0041,Sneakers,beauty,BeautyLab,Produit de démonstration numéro 41,125.97,142,active,simulation,2025-06-03 17:07:29
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0042,Veste beige,,,Produit de démonstration numéro 42,54.13,191,out_of_stock,simulation,2025-05-14 21:14:30
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0043,Sneakers,home,,Produit de démonstration numéro 43,12.9,143,active,simulation,2025-07-21 14:58:44
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0044,Sac noir,accessories,PayLive Demo,Produit de démonstration numéro 44,46.16,104,active,simulation,2025-06-08 15:07:06
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0045,Jean slim,,BeautyLab,Produit de démonstration numéro 45,38.08,137,out_of_stock,simulation,2025-07-25 23:44:34
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0046,Jean slim,,,Produit de démonstration numéro 46,60.2,190,active,simulation,2025-07-02 19:26:17
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0047,T-shirt blanc,cosmetics,BeautyLab,Produit de démonstration numéro 47,13.83,94,inactive,simulation,2025-06-16 03:43:23
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0048,Sneakers,clothing,BeautyLab,Produit de démonstration numéro 48,75.24,165,out_of_stock,simulation,2025-05-25 03:54:52
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0049,T-shirt blanc,clothing,PayLive Demo,Produit de démonstration numéro 49,64.47,169,out_of_stock,simulation,2025-06-01 04:50:36
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0050,Pull oversize,home,NoBrand,Produit de démonstration numéro 50,34.52,195,inactive,simulation,2025-05-30 10:49:09
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0051,Robe rouge,Clothes,UrbanStyle,Produit de démonstration numéro 51,104.54,152,inactive,simulation,2025-07-09 08:51:11
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0052,Jean slim,clothing,ModaPlus,Produit de démonstration numéro 52,23.09,6,inactive,simulation,2025-07-15 10:01:11
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0053,Montre dorée,beauty,,Produit de démonstration numéro 53,41.74,32,active,simulation,2025-06-30 14:49:23
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0054,Palette maquillage,home,NoBrand,Produit de démonstration numéro 54,71.49,27,active,simulation,2025-07-24 16:19:29
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0055,Robe rouge,cosmetics,BeautyLab,Produit de démonstration numéro 55,87.1,7,available,simulation,2025-07-27 03:31:45
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0056,Sac noir,mode,NoBrand,Produit de démonstration numéro 56,119.06,18,inactive,simulation,2025-05-09 04:17:39
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0057,Sneakers,,NoBrand,Produit de démonstration numéro 57,85.87,140,ok,simulation,2025-06-07 14:32:38
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0058,Sac noir,home,BeautyLab,Produit de démonstration numéro 58,61.52,179,available,simulation,2025-05-30 13:21:52
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0059,Sac noir,mode,BeautyLab,Produit de démonstration numéro 59,64.32,106,out_of_stock,simulation,2025-07-25 08:23:09
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0060,Sac noir,beauty,PayLive Demo,Produit de démonstration numéro 60,92.32,121,active,simulation,2025-06-25 03:47:47
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0001,Palette maquillage,beauty,PayLive Demo,Produit de démonstration numéro 1,-15.0,64,available,simulation,2025-07-02 02:36:40
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0006,Veste beige,,,Produit de démonstration numéro 6,44.85,59,available,simulation,2025-05-10 21:14:59
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0037,Jean slim,beauty,,Produit de démonstration numéro 37,32.72,64,active,simulation,2025-06-09 14:02:37
+FILE_BATCH_20260704_145556,products_raw.csv,2026-07-04 14:55:56,PROD0046,Jean slim,,,Produit de démonstration numéro 46,60.2,190,active,simulation,2025-07-02 19:26:17

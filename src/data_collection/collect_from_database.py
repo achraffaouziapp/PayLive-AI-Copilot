@@ -37,7 +37,12 @@ import pandas as pd
 BASE_DIR = Path(__file__).resolve().parents[2]
 RAW_DIR = BASE_DIR / "data" / "raw"
 INTERIM_DIR = BASE_DIR / "data" / "interim"
-DATABASE_EXTRACT_DIR = INTERIM_DIR / "database_extracts"
+INTERIM_EXTRACTS_DIR = INTERIM_DIR / "extracts"
+INTERIM_REPORTS_DIR = INTERIM_DIR / "reports"
+
+DATABASE_EXTRACT_DIR = INTERIM_EXTRACTS_DIR / "database"
+DATABASE_COLLECTION_REPORTS_DIR = INTERIM_REPORTS_DIR / "database_collection"
+
 LEGACY_DATABASE_DIR = RAW_DIR / "legacy_database"
 LOG_DIR = BASE_DIR / "logs"
 SQL_DIR = BASE_DIR / "sql"
@@ -207,13 +212,15 @@ def ensure_directories() -> None:
     Create all folders required by the database extraction script.
 
     The simulated legacy database is saved in `data/raw/legacy_database`.
-    Extracted query results are saved in `data/interim/database_extracts`.
+    Extracted query results are saved in `data/interim/extracts/database`.
     SQL query documentation is saved in `sql`.
     Execution logs are saved in `logs`.
     """
     RAW_DIR.mkdir(parents=True, exist_ok=True)
-    INTERIM_DIR.mkdir(parents=True, exist_ok=True)
+    INTERIM_EXTRACTS_DIR.mkdir(parents=True, exist_ok=True)
+    INTERIM_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     DATABASE_EXTRACT_DIR.mkdir(parents=True, exist_ok=True)
+    DATABASE_COLLECTION_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     LEGACY_DATABASE_DIR.mkdir(parents=True, exist_ok=True)
     SQL_DIR.mkdir(parents=True, exist_ok=True)
     LOG_DIR.mkdir(parents=True, exist_ok=True)
@@ -592,31 +599,31 @@ def save_reports(
     Save all database extraction reports as CSV files.
     """
     manifest_df.to_csv(
-        INTERIM_DIR / "database_extraction_manifest.csv",
+        DATABASE_COLLECTION_REPORTS_DIR / "database_extraction_manifest.csv",
         index=False,
         encoding="utf-8",
     )
 
     schema_df.to_csv(
-        INTERIM_DIR / "database_extraction_schema_report.csv",
+        DATABASE_COLLECTION_REPORTS_DIR / "database_extraction_schema_report.csv",
         index=False,
         encoding="utf-8",
     )
 
     query_report_df.to_csv(
-        INTERIM_DIR / "database_extraction_query_report.csv",
+        DATABASE_COLLECTION_REPORTS_DIR / "database_extraction_query_report.csv",
         index=False,
         encoding="utf-8",
     )
 
     import_report_df.to_csv(
-        INTERIM_DIR / "database_import_report.csv",
+        DATABASE_COLLECTION_REPORTS_DIR / "database_import_report.csv",
         index=False,
         encoding="utf-8",
     )
 
     error_df.to_csv(
-        INTERIM_DIR / "database_extraction_errors.csv",
+        DATABASE_COLLECTION_REPORTS_DIR / "database_extraction_errors.csv",
         index=False,
         encoding="utf-8",
     )
@@ -733,11 +740,11 @@ def main() -> None:
     setup_logging()
     collect_from_database()
 
-    manifest_path = INTERIM_DIR / "database_extraction_manifest.csv"
-    schema_path = INTERIM_DIR / "database_extraction_schema_report.csv"
-    query_report_path = INTERIM_DIR / "database_extraction_query_report.csv"
-    import_report_path = INTERIM_DIR / "database_import_report.csv"
-    errors_path = INTERIM_DIR / "database_extraction_errors.csv"
+    manifest_path = DATABASE_COLLECTION_REPORTS_DIR / "database_extraction_manifest.csv"
+    schema_path = DATABASE_COLLECTION_REPORTS_DIR / "database_extraction_schema_report.csv"
+    query_report_path = DATABASE_COLLECTION_REPORTS_DIR / "database_extraction_query_report.csv"
+    import_report_path = DATABASE_COLLECTION_REPORTS_DIR / "database_import_report.csv"
+    errors_path = DATABASE_COLLECTION_REPORTS_DIR / "database_extraction_errors.csv"
 
     manifest_df = pd.read_csv(manifest_path)
     query_report_df = pd.read_csv(query_report_path)

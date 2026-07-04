@@ -13,8 +13,8 @@ import pandas as pd
 # This script builds the final analytical dataset for the PayLive AI
 # Copilot project.
 #
-# It reads cleaned datasets from data/processed and creates one final
-# dataset with one row per live session.
+# It reads cleaned datasets from data/processed/clean and creates one
+# final dataset in data/processed/final with one row per live session.
 #
 # The final dataset contains:
 # - live information;
@@ -35,14 +35,20 @@ import pandas as pd
 BASE_DIR = Path(__file__).resolve().parents[2]
 
 PROCESSED_DIR = BASE_DIR / "data" / "processed"
+PROCESSED_CLEAN_DIR = PROCESSED_DIR / "clean"
+PROCESSED_FINAL_DIR = PROCESSED_DIR / "final"
+
+PROCESSED_REPORTS_DIR = PROCESSED_DIR / "reports"
+FINAL_DATASET_REPORTS_DIR = PROCESSED_REPORTS_DIR / "final_dataset"
+
 LOG_DIR = BASE_DIR / "logs"
 
 LOG_FILE = LOG_DIR / "build_final_ai_dataset.log"
 
-FINAL_DATASET_PATH = PROCESSED_DIR / "dataset_final_live_sales.csv"
-FINAL_MANIFEST_PATH = PROCESSED_DIR / "final_dataset_manifest.csv"
-FINAL_QUALITY_REPORT_PATH = PROCESSED_DIR / "final_dataset_quality_report.csv"
-FINAL_AGGREGATION_REPORT_PATH = PROCESSED_DIR / "final_dataset_aggregation_report.csv"
+FINAL_DATASET_PATH = PROCESSED_FINAL_DIR / "dataset_final_live_sales.csv"
+FINAL_MANIFEST_PATH = FINAL_DATASET_REPORTS_DIR / "final_dataset_manifest.csv"
+FINAL_QUALITY_REPORT_PATH = FINAL_DATASET_REPORTS_DIR / "final_dataset_quality_report.csv"
+FINAL_AGGREGATION_REPORT_PATH = FINAL_DATASET_REPORTS_DIR / "final_dataset_aggregation_report.csv"
 
 
 CLEAN_DATASETS = {
@@ -228,7 +234,9 @@ def ensure_directories() -> None:
     """
     Create required folders.
     """
-    PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
+    PROCESSED_CLEAN_DIR.mkdir(parents=True, exist_ok=True)
+    PROCESSED_FINAL_DIR.mkdir(parents=True, exist_ok=True)
+    FINAL_DATASET_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -269,9 +277,9 @@ def calculate_file_hash(file_path: Path) -> str:
 
 def read_clean_dataset(file_name: str) -> pd.DataFrame:
     """
-    Read a cleaned dataset from data/processed.
+    Read a cleaned dataset from data/processed/clean.
     """
-    file_path = PROCESSED_DIR / file_name
+    file_path = PROCESSED_CLEAN_DIR / file_name
 
     if not file_path.exists():
         logging.warning("Clean dataset not found: %s", file_path)
@@ -1136,7 +1144,7 @@ def build_manifest(final_df: pd.DataFrame) -> pd.DataFrame:
     Build the final dataset manifest.
     """
     source_files = [
-        str(PROCESSED_DIR / file_name)
+        str(PROCESSED_CLEAN_DIR / file_name)
         for file_name in CLEAN_DATASETS.values()
     ]
 

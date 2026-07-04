@@ -24,13 +24,16 @@ from fastapi.testclient import TestClient
 # - analytics routes;
 # - OpenAPI documentation availability.
 #
-# The tests generate a CSV report in data/processed/api_test_report.csv.
+# The tests generate a CSV report in data/processed/reports/api_tests/api_test_report.csv.
 # -------------------------------------------------------------------
 
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 PROCESSED_DIR = BASE_DIR / "data" / "processed"
-API_TEST_REPORT_PATH = PROCESSED_DIR / "api_test_report.csv"
+PROCESSED_REPORTS_DIR = PROCESSED_DIR / "reports"
+API_TEST_REPORTS_DIR = PROCESSED_REPORTS_DIR / "api_tests"
+
+API_TEST_REPORT_PATH = API_TEST_REPORTS_DIR / "api_test_report.csv"
 
 sys.path.insert(0, str(BASE_DIR))
 
@@ -74,7 +77,7 @@ def ensure_output_directory() -> None:
     """
     Create the output directory for the test report.
     """
-    PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
+    API_TEST_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def safe_json(response) -> Any:

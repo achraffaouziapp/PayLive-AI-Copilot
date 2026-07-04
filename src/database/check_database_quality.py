@@ -32,21 +32,25 @@ except ImportError:
 # - final AI dataset availability;
 # - audit import status.
 #
-# Reports are generated in data/processed.
+# Reports are generated in data/processed/reports/database_quality.
 # -------------------------------------------------------------------
 
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 
 PROCESSED_DIR = BASE_DIR / "data" / "processed"
+
+PROCESSED_REPORTS_DIR = PROCESSED_DIR / "reports"
+DATABASE_QUALITY_REPORTS_DIR = PROCESSED_REPORTS_DIR / "database_quality"
+
 LOG_DIR = BASE_DIR / "logs"
 
 LOG_FILE = LOG_DIR / "check_database_quality.log"
 
-TABLE_REPORT_PATH = PROCESSED_DIR / "database_quality_table_report.csv"
-RELATIONSHIP_REPORT_PATH = PROCESSED_DIR / "database_quality_relationship_report.csv"
-BUSINESS_REPORT_PATH = PROCESSED_DIR / "database_quality_business_report.csv"
-SUMMARY_REPORT_PATH = PROCESSED_DIR / "database_quality_summary.csv"
+TABLE_REPORT_PATH = DATABASE_QUALITY_REPORTS_DIR / "database_quality_table_report.csv"
+RELATIONSHIP_REPORT_PATH = DATABASE_QUALITY_REPORTS_DIR / "database_quality_relationship_report.csv"
+BUSINESS_REPORT_PATH = DATABASE_QUALITY_REPORTS_DIR / "database_quality_business_report.csv"
+SUMMARY_REPORT_PATH = DATABASE_QUALITY_REPORTS_DIR / "database_quality_summary.csv"
 
 
 TABLES_TO_CHECK = [
@@ -198,7 +202,7 @@ def ensure_directories() -> None:
     """
     Create required folders.
     """
-    PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
+    DATABASE_QUALITY_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 
