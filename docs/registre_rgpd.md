@@ -263,7 +263,10 @@ Pandas
 PostgreSQL
 Docker
 pgAdmin
-FastAPI plus tard pour l’API
+FastAPI
+Uvicorn
+Swagger / OpenAPI
+Pytest
 fichiers CSV
 ```
 
@@ -472,7 +475,7 @@ Les accès prévus dans le projet sont simples :
 
 ```text
 postgres : administration locale
-future API : accès lecture contrôlé
+API REST FastAPI : accès lecture contrôlé par X-API-Key
 analytics : accès lecture pour les futurs traitements IA
 ```
 
@@ -690,7 +693,226 @@ docs/17_controle_qualite_base_donnees.md
 
 Il justifie la prise en compte de la protection des données dans la conception, l’import et l’exploitation de la base PostgreSQL.
 
-## 28. Conclusion
+
+## 28. Mise à jour après développement de l’API REST
+
+Depuis la mise en place de l’API REST FastAPI, les accès aux données sont contrôlés par une clé API.
+
+L’API est disponible localement à l’adresse :
+
+```text
+http://127.0.0.1:8000
+```
+
+La documentation Swagger est disponible à l’adresse :
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+Le schéma OpenAPI est disponible à l’adresse :
+
+```text
+http://127.0.0.1:8000/openapi.json
+```
+
+Les routes métier sont protégées par le header HTTP :
+
+```text
+X-API-Key
+```
+
+La clé utilisée en environnement local de développement est définie dans le fichier `.env` :
+
+```text
+API_KEY=paylive-dev-api-key
+```
+
+Le fichier `.env` ne doit pas être versionné dans Git, car il contient des paramètres sensibles comme la clé API et les identifiants de connexion PostgreSQL.
+
+En cas de clé API absente, l’API retourne :
+
+```text
+401 Unauthorized
+```
+
+En cas de clé API invalide, l’API retourne :
+
+```text
+403 Forbidden
+```
+
+Ces comportements ont été vérifiés avec les tests automatisés de l’API.
+
+Rapport de preuve généré :
+
+```text
+data/processed/api_test_report.csv
+```
+
+Les tests automatisés valident notamment :
+
+```text
+l’accès public à la route /
+l’accès public à la route /health
+la disponibilité de la documentation OpenAPI
+le refus d’accès sans clé API
+le refus d’accès avec une clé API invalide
+l’accès aux routes protégées avec une clé API valide
+le bon fonctionnement des routes sellers
+le bon fonctionnement des routes lives
+le bon fonctionnement des routes analytics
+la connexion entre l’API et PostgreSQL
+```
+
+## 29. Données exposées par l’API REST
+
+L’API expose volontairement un périmètre limité de données.
+
+| Route | Données exposées | Données personnelles directes exposées |
+|---|---|---:|
+| `/api/v1/sellers` | identifiant vendeur, boutique, pays, plateforme, statut | non |
+| `/api/v1/lives` | indicateurs agrégés par live | non |
+| `/api/v1/lives/{live_id}` | détail agrégé d’un live | non |
+| `/api/v1/sellers/{seller_id}/lives` | performances agrégées d’un vendeur | non |
+| `/api/v1/sellers/summary/performance` | synthèse de performance vendeur | non |
+| `/api/v1/analytics/top-lives` | classement analytique des lives | non |
+| `/api/v1/analytics/platform-summary` | agrégation par plateforme | non |
+| `/api/v1/analytics/conversion-insights` | indicateurs de conversion | non |
+
+Les routes API ne retournent pas :
+
+```text
+email vendeur
+téléphone vendeur
+email client
+username client
+commentaire brut
+référence de transaction détaillée
+donnée bancaire réelle
+```
+
+L’API expose principalement des données agrégées issues de la table :
+
+```text
+analytics.dataset_final_live_sales
+```
+
+Cette table contient une ligne par live et non une ligne par personne.
+
+Les indicateurs exposés sont principalement :
+
+```text
+total_comments
+purchase_intent_comments
+total_carts
+paid_carts
+total_orders
+total_revenue
+payment_success_rate
+conversion_rate
+top_product_category
+api_error_events
+```
+
+Cette approche limite l’exposition des données personnelles potentielles, car les informations sensibles restent absentes des réponses API.
+
+## 30. Procédures de tri et de conformité RGPD
+
+Les procédures suivantes sont définies pour limiter les risques liés aux données personnelles.
+
+| Procédure | Données concernées | Traitement appliqué | Script ou support | Fréquence |
+|---|---|---|---|---|
+| Détection des emails invalides | `sellers.email`, `customers.email` | Identification des formats invalides | `analyze_raw_data_quality.py`, `analyze_extracted_data_quality.py` | À chaque génération ou extraction |
+| Suppression des doublons | vendeurs, clients, commentaires, commandes, paiements | Déduplication sur les clés techniques | `clean_and_standardize_data.py` | À chaque nettoyage |
+| Contrôle des références invalides | `seller_id`, `customer_id`, `live_id`, `cart_id`, `order_id` | Suppression ou exclusion des lignes non rattachables | `clean_and_standardize_data.py` | À chaque nettoyage |
+| Normalisation des valeurs | plateformes, statuts, dates, devises | Homogénéisation des formats | `clean_and_standardize_data.py` | À chaque nettoyage |
+| Contrôle qualité en base | tables `core`, `analytics`, `audit` | Vérification des clés, relations, formats et volumes | `check_database_quality.py` | Après chaque import |
+| Vérification des routes API | routes publiques et protégées | Tests 200, 401, 403 et 404 | `tests/test_api.py` | Après chaque évolution de l’API |
+| Non-exposition des champs sensibles | emails, téléphones, commentaires bruts | Exclusion des réponses API | requêtes SQL dans `api/routes/` | À chaque nouvelle route |
+| Revue du fichier `.env` | identifiants et clé API | Vérification du non-versionnement | `.gitignore` | Avant chaque commit |
+| Purge des données brutes anciennes | `data/raw`, HTML scrapé, fichiers intermédiaires | Suppression ou archivage | procédure manuelle projet | Mensuelle ou avant livraison finale |
+
+Ces procédures permettent de répondre aux principes suivants :
+
+```text
+minimisation des données
+exactitude des données
+limitation de conservation
+sécurité des accès
+traçabilité des traitements
+réduction de l’exposition des données personnelles
+```
+
+## 31. Durées de conservation prévues
+
+Les durées suivantes sont retenues dans le cadre du projet académique.
+
+| Catégorie | Exemple | Durée de conservation projet |
+|---|---|---:|
+| Données brutes | `data/raw/*.csv`, HTML scrapé, Parquet brut | 90 jours après évaluation |
+| Données intermédiaires | `data/interim/*.csv` | 90 jours après évaluation |
+| Données nettoyées | `data/processed/*_clean.csv` | durée du projet et de l’évaluation |
+| Dataset final agrégé | `dataset_final_live_sales.csv` | durée du projet et de l’évaluation |
+| Base PostgreSQL locale | schémas `core`, `analytics`, `audit` | durée du projet et de l’évaluation |
+| Logs techniques | `logs/*.log` | 6 mois maximum en contexte projet |
+| Rapports qualité | rapports CSV dans `data/interim` et `data/processed` | durée du projet et de l’évaluation |
+| Fichier `.env` | identifiants locaux et clé API | uniquement en local, non versionné |
+
+Dans un contexte réel, ces durées devraient être validées par le responsable de traitement ou par le DPO.
+
+Les données agrégées pourraient être conservées plus longtemps que les données détaillées si elles ne permettent plus d’identifier directement ou indirectement une personne.
+
+## 32. Preuves techniques associées
+
+Les preuves techniques de conformité, de contrôle et de traçabilité sont les suivantes :
+
+```text
+data/interim/quality_report_files.csv
+data/interim/quality_report_columns.csv
+data/interim/quality_report_business_rules.csv
+data/interim/extracted_quality_file_report.csv
+data/interim/extracted_quality_column_report.csv
+data/interim/extracted_quality_business_rules_report.csv
+data/processed/cleaning_summary.csv
+data/processed/cleaning_operations_report.csv
+data/processed/final_dataset_quality_report.csv
+data/processed/database_import_report.csv
+data/processed/database_import_summary.csv
+data/processed/database_quality_summary.csv
+data/processed/api_test_report.csv
+```
+
+Ces fichiers permettent de justifier :
+
+```text
+les anomalies détectées
+les nettoyages réalisés
+les suppressions ou corrections appliquées
+la qualité des données importées
+le bon fonctionnement de l’API
+la restriction d’accès aux routes protégées
+la traçabilité des imports en base PostgreSQL
+```
+
+Les tables d’audit en base PostgreSQL complètent cette traçabilité :
+
+```text
+audit.import_batches
+audit.import_logs
+```
+
+Elles permettent de suivre :
+
+```text
+les lots d’import
+les fichiers importés
+le nombre de lignes traitées
+le statut de chaque import
+les éventuelles erreurs rencontrées
+```
+
+## 33. Conclusion
 
 La prise en compte du RGPD dans le projet PayLive AI Copilot repose sur une approche de minimisation et de simulation.
 
