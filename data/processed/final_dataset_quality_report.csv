@@ -1,0 +1,15 @@
+metric,value
+generated_at,2026-07-04 02:57:14
+row_count,33
+column_count,64
+total_cells,2112
+missing_cells,0
+blank_cells,8
+duplicate_live_id_count,0
+lives_without_comments,0
+lives_without_carts,0
+lives_without_orders,5
+lives_without_revenue,14
+lives_with_zero_peak_viewers,0
+negative_revenue_rows,0
+dataset_status,ready_for_ai
