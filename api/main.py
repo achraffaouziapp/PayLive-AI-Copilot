@@ -1,7 +1,7 @@
 from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from api.routes import analytics, health, lives, sellers
+from api.routes import health, lives, sellers, analytics, ai
 from api.security import require_api_key
 
 
@@ -79,6 +79,8 @@ app.include_router(
     prefix="/api/v1",
     dependencies=[Depends(require_api_key)],
 )
+
+app.include_router(ai.router, prefix="/api/v1/ai", tags=["AI service"])
 
 
 @app.get("/", tags=["Health"])
