@@ -1,0 +1,2 @@
+source_name,total_rows,distinct_lives,distinct_customers,distinct_event_types,invalid_timestamp_count,parquet_folder
+paylive_bigdata_live_events,8160,35,79,8,8,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\bigdata\live_events_parquet

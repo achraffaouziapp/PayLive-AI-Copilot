@@ -1,0 +1,547 @@
+2026-07-04 01:27:26,486 | INFO | Starting big data extraction batch: BIGDATA_BATCH_20260704_012726
+2026-07-04 01:27:26,817 | ERROR | Big data extraction batch failed: BIGDATA_BATCH_20260704_012726
+Traceback (most recent call last):
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\src\data_collection\collect_from_bigdata.py", line 722, in collect_from_bigdata
+    spark = create_spark_session()
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\src\data_collection\collect_from_bigdata.py", line 227, in create_spark_session
+    .getOrCreate()
+     ~~~~~~~~~~~^^
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\pyspark\sql\session.py", line 557, in getOrCreate
+    sc = SparkContext.getOrCreate(sparkConf)
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\pyspark\core\context.py", line 542, in getOrCreate
+    SparkContext(conf=conf or SparkConf())
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\pyspark\core\context.py", line 206, in __init__
+    SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\pyspark\core\context.py", line 463, in _ensure_initialized
+    SparkContext._gateway = gateway or launch_gateway(conf)
+                                       ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\pyspark\java_gateway.py", line 111, in launch_gateway
+    raise PySparkRuntimeError(
+    ...<2 lines>...
+    )
+pyspark.errors.exceptions.base.PySparkRuntimeError: [JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.
+2026-07-04 01:53:50,438 | INFO | Starting big data extraction batch: BIGDATA_BATCH_20260704_015350
+2026-07-04 01:53:50,754 | ERROR | Big data extraction batch failed: BIGDATA_BATCH_20260704_015350
+Traceback (most recent call last):
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\src\data_collection\collect_from_bigdata.py", line 722, in collect_from_bigdata
+    spark = create_spark_session()
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\src\data_collection\collect_from_bigdata.py", line 227, in create_spark_session
+    .getOrCreate()
+     ~~~~~~~~~~~^^
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\pyspark\sql\session.py", line 557, in getOrCreate
+    sc = SparkContext.getOrCreate(sparkConf)
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\pyspark\core\context.py", line 542, in getOrCreate
+    SparkContext(conf=conf or SparkConf())
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\pyspark\core\context.py", line 206, in __init__
+    SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\pyspark\core\context.py", line 463, in _ensure_initialized
+    SparkContext._gateway = gateway or launch_gateway(conf)
+                                       ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\pyspark\java_gateway.py", line 111, in launch_gateway
+    raise PySparkRuntimeError(
+    ...<2 lines>...
+    )
+pyspark.errors.exceptions.base.PySparkRuntimeError: [JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.
+2026-07-04 01:58:21,687 | INFO | Starting big data extraction batch: BIGDATA_BATCH_20260704_015821
+2026-07-04 01:58:31,189 | ERROR | Big data extraction batch failed: BIGDATA_BATCH_20260704_015821
+Traceback (most recent call last):
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\src\data_collection\collect_from_bigdata.py", line 724, in collect_from_bigdata
+    parquet_creation_report_df = create_partitioned_parquet_source(spark)
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\src\data_collection\collect_from_bigdata.py", line 364, in create_partitioned_parquet_source
+    .parquet(str(BIGDATA_PARQUET_DIR))
+     ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\pyspark\sql\readwriter.py", line 2003, in parquet
+    self._jwrite.parquet(path)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\py4j\java_gateway.py", line 1362, in __call__
+    return_value = get_return_value(
+        answer, self.gateway_client, self.target_id, self.name)
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\pyspark\errors\exceptions\captured.py", line 263, in deco
+    return f(*a, **kw)
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\py4j\protocol.py", line 327, in get_return_value
+    raise Py4JJavaError(
+        "An error occurred while calling {0}{1}{2}.\n".
+        format(target_id, ".", name), value)
+py4j.protocol.Py4JJavaError: An error occurred while calling o82.parquet.
+: java.lang.RuntimeException: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:789)
+	at org.apache.hadoop.util.Shell.getSetPermissionCommand(Shell.java:298)
+	at org.apache.hadoop.util.Shell.getSetPermissionCommand(Shell.java:314)
+	at org.apache.hadoop.fs.RawLocalFileSystem.setPermission(RawLocalFileSystem.java:1179)
+	at org.apache.hadoop.fs.RawLocalFileSystem.mkOneDirWithMode(RawLocalFileSystem.java:861)
+	at org.apache.hadoop.fs.RawLocalFileSystem.mkdirsWithOptionalPermission(RawLocalFileSystem.java:901)
+	at org.apache.hadoop.fs.RawLocalFileSystem.mkdirs(RawLocalFileSystem.java:873)
+	at org.apache.hadoop.fs.RawLocalFileSystem.mkdirsWithOptionalPermission(RawLocalFileSystem.java:900)
+	at org.apache.hadoop.fs.RawLocalFileSystem.mkdirs(RawLocalFileSystem.java:873)
+	at org.apache.hadoop.fs.RawLocalFileSystem.mkdirsWithOptionalPermission(RawLocalFileSystem.java:900)
+	at org.apache.hadoop.fs.RawLocalFileSystem.mkdirs(RawLocalFileSystem.java:873)
+	at org.apache.hadoop.fs.ChecksumFileSystem.mkdirs(ChecksumFileSystem.java:1047)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.setupJob(FileOutputCommitter.java:356)
+	at org.apache.spark.internal.io.HadoopMapReduceCommitProtocol.setupJob(HadoopMapReduceCommitProtocol.scala:180)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.writeAndCommit(FileFormatWriter.scala:268)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeWrite(FileFormatWriter.scala:306)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:189)
+	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:195)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:117)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:115)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.executeCollect(commands.scala:129)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.$anonfun$executeCollect$1(AdaptiveSparkPlanExec.scala:396)
+	at org.apache.spark.sql.execution.adaptive.ResultQueryStageExec.$anonfun$doMaterialize$1(QueryStageExec.scala:328)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withThreadLocalCaptured$4(SQLExecution.scala:335)
+	at org.apache.spark.sql.execution.SQLExecution$.withSessionTagsApplied(SQLExecution.scala:285)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withThreadLocalCaptured$3(SQLExecution.scala:333)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withThreadLocalCaptured$2(SQLExecution.scala:329)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.spark.util.Utils$.getTryWithCallerStacktrace(Utils.scala:1453)
+	at org.apache.spark.util.LazyTry.get(LazyTry.scala:58)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:160)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:239)
+	at org.apache.spark.sql.classic.DataFrameWriter.runCommand(DataFrameWriter.scala:592)
+	at org.apache.spark.sql.classic.DataFrameWriter.save(DataFrameWriter.scala:115)
+	at org.apache.spark.sql.DataFrameWriter.parquet(DataFrameWriter.scala:369)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:184)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+	Suppressed: org.apache.spark.util.Utils$OriginalTryStackTraceException: Full stacktrace of original doTryWithCallerStacktrace caller
+		at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:789)
+		at org.apache.hadoop.util.Shell.getSetPermissionCommand(Shell.java:298)
+		at org.apache.hadoop.util.Shell.getSetPermissionCommand(Shell.java:314)
+		at org.apache.hadoop.fs.RawLocalFileSystem.setPermission(RawLocalFileSystem.java:1179)
+		at org.apache.hadoop.fs.RawLocalFileSystem.mkOneDirWithMode(RawLocalFileSystem.java:861)
+		at org.apache.hadoop.fs.RawLocalFileSystem.mkdirsWithOptionalPermission(RawLocalFileSystem.java:901)
+		at org.apache.hadoop.fs.RawLocalFileSystem.mkdirs(RawLocalFileSystem.java:873)
+		at org.apache.hadoop.fs.RawLocalFileSystem.mkdirsWithOptionalPermission(RawLocalFileSystem.java:900)
+		at org.apache.hadoop.fs.RawLocalFileSystem.mkdirs(RawLocalFileSystem.java:873)
+		at org.apache.hadoop.fs.RawLocalFileSystem.mkdirsWithOptionalPermission(RawLocalFileSystem.java:900)
+		at org.apache.hadoop.fs.RawLocalFileSystem.mkdirs(RawLocalFileSystem.java:873)
+		at org.apache.hadoop.fs.ChecksumFileSystem.mkdirs(ChecksumFileSystem.java:1047)
+		at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.setupJob(FileOutputCommitter.java:356)
+		at org.apache.spark.internal.io.HadoopMapReduceCommitProtocol.setupJob(HadoopMapReduceCommitProtocol.scala:180)
+		at org.apache.spark.sql.execution.datasources.FileFormatWriter$.writeAndCommit(FileFormatWriter.scala:268)
+		at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeWrite(FileFormatWriter.scala:306)
+		at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:189)
+		at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:195)
+		at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:117)
+		at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:115)
+		at org.apache.spark.sql.execution.command.DataWritingCommandExec.executeCollect(commands.scala:129)
+		at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.$anonfun$executeCollect$1(AdaptiveSparkPlanExec.scala:396)
+		at org.apache.spark.sql.execution.adaptive.ResultQueryStageExec.$anonfun$doMaterialize$1(QueryStageExec.scala:328)
+		at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withThreadLocalCaptured$4(SQLExecution.scala:335)
+		at org.apache.spark.sql.execution.SQLExecution$.withSessionTagsApplied(SQLExecution.scala:285)
+		at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withThreadLocalCaptured$3(SQLExecution.scala:333)
+		at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+		at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withThreadLocalCaptured$2(SQLExecution.scala:329)
+		at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		... 1 more
+Caused by: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems
+	at org.apache.hadoop.util.Shell.fileNotFoundException(Shell.java:601)
+	at org.apache.hadoop.util.Shell.getHadoopHomeDir(Shell.java:622)
+	at org.apache.hadoop.util.Shell.getQualifiedBin(Shell.java:645)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:742)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:80)
+	at org.apache.hadoop.conf.Configuration.getTimeDurationHelper(Configuration.java:1954)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1912)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1885)
+	at org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:183)
+	at org.apache.hadoop.util.ShutdownHookManager$HookEntry.<init>(ShutdownHookManager.java:207)
+	at org.apache.hadoop.util.ShutdownHookManager.addShutdownHook(ShutdownHookManager.java:304)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$install$1(ShutdownHookManager.scala:194)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at scala.Option.fold(Option.scala:263)
+	at org.apache.spark.util.SparkShutdownHookManager.install(ShutdownHookManager.scala:195)
+	at org.apache.spark.util.ShutdownHookManager$.shutdownHooks$lzycompute(ShutdownHookManager.scala:55)
+	at org.apache.spark.util.ShutdownHookManager$.shutdownHooks(ShutdownHookManager.scala:53)
+	at org.apache.spark.util.ShutdownHookManager$.addShutdownHook(ShutdownHookManager.scala:159)
+	at org.apache.spark.util.ShutdownHookManager$.<clinit>(ShutdownHookManager.scala:63)
+	at org.apache.spark.util.Utils$.createTempDir(Utils.scala:249)
+	at org.apache.spark.util.SparkFileUtils.createTempDir(SparkFileUtils.scala:125)
+	at org.apache.spark.util.SparkFileUtils.createTempDir$(SparkFileUtils.scala:124)
+	at org.apache.spark.util.Utils$.createTempDir(Utils.scala:97)
+	at org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:378)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:962)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:203)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:226)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:95)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1168)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1177)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Caused by: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset.
+	at org.apache.hadoop.util.Shell.checkHadoopHomeInner(Shell.java:521)
+	at org.apache.hadoop.util.Shell.checkHadoopHome(Shell.java:492)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:569)
+	... 27 more
+
+2026-07-04 01:58:31,736 | INFO | Closing down clientserver connection
+2026-07-04 02:02:36,609 | INFO | Starting big data extraction batch: BIGDATA_BATCH_20260704_020236
+2026-07-04 02:02:42,699 | INFO | Partitioned Parquet source created with pandas/pyarrow at C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\bigdata\live_events_parquet with 8160 rows.
+2026-07-04 02:02:43,338 | ERROR | Big data extraction batch failed: BIGDATA_BATCH_20260704_020236
+Traceback (most recent call last):
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\src\data_collection\collect_from_bigdata.py", line 758, in collect_from_bigdata
+    events_df = read_parquet_source(spark)
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\src\data_collection\collect_from_bigdata.py", line 427, in read_parquet_source
+    return spark.read.parquet(str(BIGDATA_PARQUET_DIR))
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\pyspark\sql\readwriter.py", line 642, in parquet
+    return self._df(self._jreader.parquet(_to_seq(self._spark._sc, paths)))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\py4j\java_gateway.py", line 1362, in __call__
+    return_value = get_return_value(
+        answer, self.gateway_client, self.target_id, self.name)
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\pyspark\errors\exceptions\captured.py", line 263, in deco
+    return f(*a, **kw)
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\py4j\protocol.py", line 327, in get_return_value
+    raise Py4JJavaError(
+        "An error occurred while calling {0}{1}{2}.\n".
+        format(target_id, ".", name), value)
+py4j.protocol.Py4JJavaError: An error occurred while calling o32.parquet.
+: java.lang.UnsatisfiedLinkError: 'boolean org.apache.hadoop.io.nativeio.NativeIO$Windows.access0(java.lang.String, int)'
+	at org.apache.hadoop.io.nativeio.NativeIO$Windows.access0(Native Method)
+	at org.apache.hadoop.io.nativeio.NativeIO$Windows.access(NativeIO.java:817)
+	at org.apache.hadoop.fs.FileUtil.canRead(FileUtil.java:1415)
+	at org.apache.hadoop.fs.FileUtil.list(FileUtil.java:1620)
+	at org.apache.hadoop.fs.RawLocalFileSystem.listStatus(RawLocalFileSystem.java:802)
+	at org.apache.hadoop.fs.FileSystem.listStatus(FileSystem.java:2078)
+	at org.apache.hadoop.fs.FileSystem.listStatus(FileSystem.java:2122)
+	at org.apache.hadoop.fs.ChecksumFileSystem.listStatus(ChecksumFileSystem.java:1020)
+	at org.apache.spark.util.HadoopFSUtils$.listLeafFiles(HadoopFSUtils.scala:218)
+	at org.apache.spark.util.HadoopFSUtils$.$anonfun$parallelListLeafFilesInternal$1(HadoopFSUtils.scala:132)
+	at scala.collection.immutable.List.map(List.scala:236)
+	at scala.collection.immutable.List.map(List.scala:79)
+	at org.apache.spark.util.HadoopFSUtils$.parallelListLeafFilesInternal(HadoopFSUtils.scala:122)
+	at org.apache.spark.util.HadoopFSUtils$.parallelListLeafFiles(HadoopFSUtils.scala:72)
+	at org.apache.spark.sql.execution.datasources.InMemoryFileIndex$.bulkListLeafFiles(InMemoryFileIndex.scala:179)
+	at org.apache.spark.sql.execution.datasources.InMemoryFileIndex.listLeafFiles(InMemoryFileIndex.scala:135)
+	at org.apache.spark.sql.execution.datasources.InMemoryFileIndex.refresh0(InMemoryFileIndex.scala:98)
+	at org.apache.spark.sql.execution.datasources.InMemoryFileIndex.<init>(InMemoryFileIndex.scala:70)
+	at org.apache.spark.sql.execution.datasources.DataSource.createInMemoryFileIndex(DataSource.scala:568)
+	at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:423)
+	at org.apache.spark.sql.catalyst.analysis.ResolveDataSource.org$apache$spark$sql$catalyst$analysis$ResolveDataSource$$loadV1BatchSource(ResolveDataSource.scala:143)
+	at org.apache.spark.sql.catalyst.analysis.ResolveDataSource$$anonfun$apply$1.$anonfun$applyOrElse$2(ResolveDataSource.scala:61)
+	at scala.Option.getOrElse(Option.scala:201)
+	at org.apache.spark.sql.catalyst.analysis.ResolveDataSource$$anonfun$apply$1.applyOrElse(ResolveDataSource.scala:61)
+	at org.apache.spark.sql.catalyst.analysis.ResolveDataSource$$anonfun$apply$1.applyOrElse(ResolveDataSource.scala:45)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.$anonfun$resolveOperatorsUpWithPruning$3(AnalysisHelper.scala:139)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:107)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.$anonfun$resolveOperatorsUpWithPruning$1(AnalysisHelper.scala:139)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.allowInvokingTransformsInAnalyzer(AnalysisHelper.scala:416)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsUpWithPruning(AnalysisHelper.scala:135)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsUpWithPruning$(AnalysisHelper.scala:131)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperatorsUpWithPruning(LogicalPlan.scala:37)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsUp(AnalysisHelper.scala:112)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.resolveOperatorsUp$(AnalysisHelper.scala:111)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperatorsUp(LogicalPlan.scala:37)
+	at org.apache.spark.sql.catalyst.analysis.ResolveDataSource.apply(ResolveDataSource.scala:45)
+	at org.apache.spark.sql.catalyst.analysis.ResolveDataSource.apply(ResolveDataSource.scala:43)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$2(RuleExecutor.scala:248)
+	at scala.collection.LinearSeqOps.foldLeft(LinearSeq.scala:183)
+	at scala.collection.LinearSeqOps.foldLeft$(LinearSeq.scala:179)
+	at scala.collection.immutable.List.foldLeft(List.scala:79)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$1(RuleExecutor.scala:245)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$execute$1$adapted(RuleExecutor.scala:237)
+	at scala.collection.immutable.List.foreach(List.scala:323)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.execute(RuleExecutor.scala:237)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.org$apache$spark$sql$catalyst$analysis$Analyzer$$executeSameContext(Analyzer.scala:343)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.$anonfun$execute$1(Analyzer.scala:339)
+	at org.apache.spark.sql.catalyst.analysis.AnalysisContext$.withNewAnalysisContext(Analyzer.scala:224)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.execute(Analyzer.scala:339)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.execute(Analyzer.scala:289)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.$anonfun$executeAndTrack$1(RuleExecutor.scala:207)
+	at org.apache.spark.sql.catalyst.QueryPlanningTracker$.withTracker(QueryPlanningTracker.scala:89)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.executeAndTrack(RuleExecutor.scala:207)
+	at org.apache.spark.sql.catalyst.analysis.resolver.HybridAnalyzer.resolveInFixedPoint(HybridAnalyzer.scala:236)
+	at org.apache.spark.sql.catalyst.analysis.resolver.HybridAnalyzer.$anonfun$apply$1(HybridAnalyzer.scala:91)
+	at org.apache.spark.sql.catalyst.analysis.resolver.HybridAnalyzer.withTrackedAnalyzerBridgeState(HybridAnalyzer.scala:122)
+	at org.apache.spark.sql.catalyst.analysis.resolver.HybridAnalyzer.apply(HybridAnalyzer.scala:84)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.$anonfun$executeAndCheck$1(Analyzer.scala:322)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.markInAnalyzer(AnalysisHelper.scala:423)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.executeAndCheck(Analyzer.scala:322)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$lazyAnalyzed$2(QueryExecution.scala:139)
+	at org.apache.spark.sql.catalyst.QueryPlanningTracker.measurePhase(QueryPlanningTracker.scala:148)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$2(QueryExecution.scala:330)
+	at org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:717)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$1(QueryExecution.scala:330)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:804)
+	at org.apache.spark.sql.execution.QueryExecution.executePhase(QueryExecution.scala:329)
+	at org.apache.spark.sql.execution.QueryExecution.$anonfun$lazyAnalyzed$1(QueryExecution.scala:139)
+	at scala.util.Try$.apply(Try.scala:217)
+	at org.apache.spark.util.Utils$.doTryWithCallerStacktrace(Utils.scala:1392)
+	at org.apache.spark.util.LazyTry.tryT$lzycompute(LazyTry.scala:46)
+	at org.apache.spark.util.LazyTry.tryT(LazyTry.scala:46)
+	at org.apache.spark.util.LazyTry.get(LazyTry.scala:58)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed(QueryExecution.scala:150)
+	at org.apache.spark.sql.execution.QueryExecution.assertAnalyzed(QueryExecution.scala:90)
+	at org.apache.spark.sql.classic.Dataset$.$anonfun$ofRows$1(Dataset.scala:114)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:804)
+	at org.apache.spark.sql.classic.Dataset$.ofRows(Dataset.scala:112)
+	at org.apache.spark.sql.classic.DataFrameReader.load(DataFrameReader.scala:108)
+	at org.apache.spark.sql.classic.DataFrameReader.load(DataFrameReader.scala:57)
+	at org.apache.spark.sql.DataFrameReader.parquet(DataFrameReader.scala:457)
+	at org.apache.spark.sql.classic.DataFrameReader.parquet(DataFrameReader.scala:305)
+	at org.apache.spark.sql.classic.DataFrameReader.parquet(DataFrameReader.scala:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:184)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2026-07-04 02:02:43,767 | INFO | Closing down clientserver connection
+2026-07-04 02:05:16,282 | INFO | Starting big data extraction batch: BIGDATA_BATCH_20260704_020516
+2026-07-04 02:05:21,725 | INFO | Partitioned Parquet source created with pandas/pyarrow at C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\bigdata\live_events_parquet with 8160 rows.
+2026-07-04 02:05:35,766 | ERROR | Big data extraction batch failed: BIGDATA_BATCH_20260704_020516
+Traceback (most recent call last):
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\src\data_collection\collect_from_bigdata.py", line 781, in collect_from_bigdata
+    source_row_count = events_df.count()
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\pyspark\sql\classic\dataframe.py", line 439, in count
+    return int(self._jdf.count())
+               ~~~~~~~~~~~~~~~^^
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\py4j\java_gateway.py", line 1362, in __call__
+    return_value = get_return_value(
+        answer, self.gateway_client, self.target_id, self.name)
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\pyspark\errors\exceptions\captured.py", line 263, in deco
+    return f(*a, **kw)
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\py4j\protocol.py", line 327, in get_return_value
+    raise Py4JJavaError(
+        "An error occurred while calling {0}{1}{2}.\n".
+        format(target_id, ".", name), value)
+py4j.protocol.Py4JJavaError: An error occurred while calling o55.count.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 3 in stage 0.0 failed 1 times, most recent failure: Lost task 3.0 in stage 0.0 (TID 3) (DESKTOP-CRAI5EA.mshome.net executor driver): org.apache.spark.SparkException: Python worker failed to connect back.
+	at org.apache.spark.api.python.PythonWorkerFactory.createSimpleWorker(PythonWorkerFactory.scala:281)
+	at org.apache.spark.api.python.PythonWorkerFactory.create(PythonWorkerFactory.scala:154)
+	at org.apache.spark.SparkEnv.createPythonWorker(SparkEnv.scala:158)
+	at org.apache.spark.api.python.BasePythonRunner.compute(PythonRunner.scala:309)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:72)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:107)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:180)
+	at org.apache.spark.scheduler.Task.run(Task.scala:147)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:873)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:86)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:83)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:97)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:876)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.net.SocketTimeoutException: Timed out while waiting for the Python worker to connect back
+	at org.apache.spark.api.python.PythonWorkerFactory.createSimpleWorker(PythonWorkerFactory.scala:263)
+	... 33 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$3(DAGScheduler.scala:3122)
+	at scala.Option.getOrElse(Option.scala:201)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:3122)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:3114)
+	at scala.collection.immutable.List.foreach(List.scala:323)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:3114)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1303)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1303)
+	at scala.Option.foreach(Option.scala:437)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1303)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3397)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:3328)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:3317)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:50)
+Caused by: org.apache.spark.SparkException: Python worker failed to connect back.
+	at org.apache.spark.api.python.PythonWorkerFactory.createSimpleWorker(PythonWorkerFactory.scala:281)
+	at org.apache.spark.api.python.PythonWorkerFactory.create(PythonWorkerFactory.scala:154)
+	at org.apache.spark.SparkEnv.createPythonWorker(SparkEnv.scala:158)
+	at org.apache.spark.api.python.BasePythonRunner.compute(PythonRunner.scala:309)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:72)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:107)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:180)
+	at org.apache.spark.scheduler.Task.run(Task.scala:147)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:873)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:86)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:83)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:97)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:876)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.net.SocketTimeoutException: Timed out while waiting for the Python worker to connect back
+	at org.apache.spark.api.python.PythonWorkerFactory.createSimpleWorker(PythonWorkerFactory.scala:263)
+	... 33 more
+
+2026-07-04 02:05:36,196 | INFO | Closing down clientserver connection
+2026-07-04 02:06:34,067 | INFO | Starting big data extraction batch: BIGDATA_BATCH_20260704_020634
+2026-07-04 02:06:39,584 | INFO | Partitioned Parquet source created with pandas/pyarrow at C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\bigdata\live_events_parquet with 8160 rows.
+2026-07-04 02:06:54,575 | ERROR | Big data extraction batch failed: BIGDATA_BATCH_20260704_020634
+Traceback (most recent call last):
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\src\data_collection\collect_from_bigdata.py", line 818, in collect_from_bigdata
+    source_row_count = events_df.count()
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\pyspark\sql\classic\dataframe.py", line 439, in count
+    return int(self._jdf.count())
+               ~~~~~~~~~~~~~~~^^
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\py4j\java_gateway.py", line 1362, in __call__
+    return_value = get_return_value(
+        answer, self.gateway_client, self.target_id, self.name)
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\pyspark\errors\exceptions\captured.py", line 263, in deco
+    return f(*a, **kw)
+  File "C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\.venv\Lib\site-packages\py4j\protocol.py", line 327, in get_return_value
+    raise Py4JJavaError(
+        "An error occurred while calling {0}{1}{2}.\n".
+        format(target_id, ".", name), value)
+py4j.protocol.Py4JJavaError: An error occurred while calling o55.count.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 2 in stage 0.0 failed 1 times, most recent failure: Lost task 2.0 in stage 0.0 (TID 2) (DESKTOP-CRAI5EA.mshome.net executor driver): org.apache.spark.SparkException: Python worker failed to connect back.
+	at org.apache.spark.api.python.PythonWorkerFactory.createSimpleWorker(PythonWorkerFactory.scala:281)
+	at org.apache.spark.api.python.PythonWorkerFactory.create(PythonWorkerFactory.scala:154)
+	at org.apache.spark.SparkEnv.createPythonWorker(SparkEnv.scala:158)
+	at org.apache.spark.api.python.BasePythonRunner.compute(PythonRunner.scala:309)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:72)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:107)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:180)
+	at org.apache.spark.scheduler.Task.run(Task.scala:147)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:873)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:86)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:83)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:97)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:876)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.net.SocketTimeoutException: Timed out while waiting for the Python worker to connect back
+	at org.apache.spark.api.python.PythonWorkerFactory.createSimpleWorker(PythonWorkerFactory.scala:263)
+	... 33 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$3(DAGScheduler.scala:3122)
+	at scala.Option.getOrElse(Option.scala:201)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:3122)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:3114)
+	at scala.collection.immutable.List.foreach(List.scala:323)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:3114)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1303)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1303)
+	at scala.Option.foreach(Option.scala:437)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1303)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3397)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:3328)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:3317)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:50)
+Caused by: org.apache.spark.SparkException: Python worker failed to connect back.
+	at org.apache.spark.api.python.PythonWorkerFactory.createSimpleWorker(PythonWorkerFactory.scala:281)
+	at org.apache.spark.api.python.PythonWorkerFactory.create(PythonWorkerFactory.scala:154)
+	at org.apache.spark.SparkEnv.createPythonWorker(SparkEnv.scala:158)
+	at org.apache.spark.api.python.BasePythonRunner.compute(PythonRunner.scala:309)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:72)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:374)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:338)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:107)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:180)
+	at org.apache.spark.scheduler.Task.run(Task.scala:147)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:873)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:86)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:83)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:97)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:876)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.net.SocketTimeoutException: Timed out while waiting for the Python worker to connect back
+	at org.apache.spark.api.python.PythonWorkerFactory.createSimpleWorker(PythonWorkerFactory.scala:263)
+	... 33 more
+
+2026-07-04 02:06:54,969 | INFO | Closing down clientserver connection
+2026-07-04 02:09:41,711 | INFO | Starting big data extraction batch: BIGDATA_BATCH_20260704_020941
+2026-07-04 02:09:47,085 | INFO | Partitioned Parquet source created with pandas/pyarrow at C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\bigdata\live_events_parquet with 8160 rows.
+2026-07-04 02:10:01,584 | INFO | Spark SQL query events_by_live executed successfully with 35 rows.
+2026-07-04 02:10:04,204 | INFO | Spark SQL query payment_funnel_by_live executed successfully with 35 rows.
+2026-07-04 02:10:06,754 | INFO | Spark SQL query api_errors_by_live executed successfully with 114 rows.
+2026-07-04 02:10:09,517 | INFO | Spark SQL query hourly_activity executed successfully with 973 rows.
+2026-07-04 02:10:12,891 | INFO | Spark SQL query invalid_events_extract executed successfully with 1048 rows.
+2026-07-04 02:10:12,900 | INFO | Big data extraction batch completed successfully: BIGDATA_BATCH_20260704_020941
+2026-07-04 02:10:13,889 | INFO | Closing down clientserver connection

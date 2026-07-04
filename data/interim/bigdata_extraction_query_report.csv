@@ -1,0 +1,6 @@
+query_name,status,row_count,column_count,output_file_path,query_hash_sha256,error_message
+events_by_live,success,35,12,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\bigdata_extracts\events_by_live_extract.csv,34e828d2d14727645d0c14a154b1a4b9d5bf6e2f8f0054a3fc9ca2573c7ca82b,
+payment_funnel_by_live,success,35,9,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\bigdata_extracts\payment_funnel_by_live_extract.csv,55fc59f27d2c00c35e59b93259013125b0b228bbc3bbb5ce7b4c60ae87554a28,
+api_errors_by_live,success,114,6,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\bigdata_extracts\api_errors_by_live_extract.csv,2eff66584223188464f0d024b0eeef94a8b362e79c3897bce6941dbc977c9540,
+hourly_activity,success,973,8,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\bigdata_extracts\hourly_activity_extract.csv,d0bb2f50be81d8e33b0da7fd120a892e8878bb0dfdb247f8b2441e8e25253e34,
+invalid_events_extract,success,1048,14,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\interim\bigdata_extracts\invalid_events_extract_extract.csv,6c135a090d6b175956764e0fa1e6be0e38c18a04eaef5c782af51d3de87649d6,

@@ -1,0 +1,2 @@
+source_name,raw_input_file,parquet_output_folder,simulation_multiplier,row_count,column_count,partition_column,status
+paylive_bigdata_live_events,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\live_events_raw.csv,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\raw\bigdata\live_events_parquet,8,8160,13,event_date_partition,created_with_pandas_pyarrow
