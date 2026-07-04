@@ -1,7 +1,7 @@
 test_name,status,details
 test_ai_predict_without_api_key_returns_401,passed,Missing API key returns 401.
 test_ai_predict_with_invalid_api_key_returns_403,passed,Invalid API key returns 403.
-test_ai_predict_with_valid_api_key_returns_prediction,passed,"Prediction payload: {'comment_text': 'je prends le pull rouge en M', 'predicted_intent': 'purchase_intent', 'confidence_score': 0.2777, 'model_name': 'intent_classifier', 'model_version': 'intent_classifier_v1', 'response_time_ms': 1.25, 'is_low_confidence': True, 'low_confidence_threshold': 0.6}"
+test_ai_predict_with_valid_api_key_returns_prediction,passed,"Prediction payload: {'comment_text': 'je prends le pull rouge en M', 'predicted_intent': 'purchase_intent', 'confidence_score': 0.2777, 'model_name': 'intent_classifier', 'model_version': 'intent_classifier_v1', 'response_time_ms': 1.53, 'is_low_confidence': True, 'low_confidence_threshold': 0.6}"
 test_ai_predict_empty_comment_returns_400,passed,Empty comment returns 400.
 test_ai_batch_prediction_returns_predictions,passed,Batch prediction count: 4
 test_ai_batch_empty_list_returns_400,passed,Empty batch returns 400.

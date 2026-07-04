@@ -1,0 +1,8 @@
+prediction_id,predicted_at,comment_text,predicted_intent,confidence_score,model_name,model_version,response_time_ms,is_low_confidence,low_confidence_threshold,source
+d821bbf0-f757-4fa0-8ef6-13d0a60cf73e,2026-07-04 16:35:40,je prends la robe noire en M,purchase_intent,0.25,intent_classifier,intent_classifier_v1,1141.54,True,0.6,api_single
+476d48a9-c01a-4e91-86c6-b9c5792f324c,2026-07-04 16:35:45,je prends la robe noire en M,purchase_intent,0.25,intent_classifier,intent_classifier_v1,1.66,True,0.6,api_single
+6153486b-9755-467b-84f7-5a5f93b8a5f5,2026-07-04 18:38:29,je prends le pull rouge en M,purchase_intent,0.2777,intent_classifier,intent_classifier_v1,1.53,True,0.6,api_single
+7601ccab-28d2-471e-8a1b-3191e6480e7e,2026-07-04 18:38:29,je prends le pull rouge en M,purchase_intent,0.2777,intent_classifier,intent_classifier_v1,1.19,True,0.6,api_batch
+49bdbe3b-ce7f-4d74-ab6a-f932071962f6,2026-07-04 18:38:29,comment payer ?,payment_question,0.5299,intent_classifier,intent_classifier_v1,0.72,True,0.6,api_batch
+8f014b36-4d6a-41c2-8dfe-ea2798049291,2026-07-04 18:38:29,vous livrez en Belgique ?,shipping_question,0.3223,intent_classifier,intent_classifier_v1,0.66,True,0.6,api_batch
+6c3ad361-aa9a-46fd-a918-3fdf4020e836,2026-07-04 18:38:29,trop beau,shipping_question,0.2214,intent_classifier,intent_classifier_v1,0.99,True,0.6,api_batch

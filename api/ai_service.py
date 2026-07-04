@@ -1,5 +1,9 @@
 from typing import Any, Dict, List
 from pathlib import Path
+from src.ai.monitoring.monitor_predictions import (
+    log_prediction,
+    log_batch_predictions,
+)
 
 import pandas as pd
 
@@ -45,16 +49,23 @@ def add_prediction_status(prediction: Dict[str, Any]) -> Dict[str, Any]:
 
 def predict_single_comment(comment_text: str) -> Dict[str, Any]:
     """
-    Predict the intent of a single comment.
+    Predict the intent of a single comment and log the prediction.
     """
     prediction = predict_intent(comment_text)
 
-    return add_prediction_status(prediction)
+    prediction = add_prediction_status(prediction)
+
+    log_prediction(
+        prediction=prediction,
+        source="api_single",
+    )
+
+    return prediction
 
 
 def predict_multiple_comments(comments: List[str]) -> Dict[str, Any]:
     """
-    Predict intents for several comments.
+    Predict intents for several comments and log predictions.
     """
     batch_result = predict_batch(comments)
 
@@ -68,6 +79,11 @@ def predict_multiple_comments(comments: List[str]) -> Dict[str, Any]:
     batch_result["low_confidence_count"] = sum(
         1 for prediction in enriched_predictions
         if prediction.get("is_low_confidence") is True
+    )
+
+    log_batch_predictions(
+        batch_result=batch_result,
+        source="api_batch",
     )
 
     return batch_result

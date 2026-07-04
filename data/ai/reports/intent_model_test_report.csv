@@ -2,7 +2,7 @@ test_name,status,details
 test_model_artifacts_exist,passed,All model artifacts exist.
 test_model_reports_exist,passed,All model reports exist.
 test_model_artifacts_can_be_loaded,passed,"Model, vectorizer, label encoder and metadata loaded."
-test_single_prediction_format,passed,"Prediction: {'comment_text': 'je prends la robe noire en M', 'predicted_intent': 'purchase_intent', 'confidence_score': 0.25, 'model_name': 'intent_classifier', 'model_version': 'intent_classifier_v1', 'response_time_ms': 1.78}"
+test_single_prediction_format,passed,"Prediction: {'comment_text': 'je prends la robe noire en M', 'predicted_intent': 'purchase_intent', 'confidence_score': 0.25, 'model_name': 'intent_classifier', 'model_version': 'intent_classifier_v1', 'response_time_ms': 1.61}"
 test_purchase_intent_prediction,passed,Predicted intent: purchase_intent
 test_payment_question_prediction,passed,Predicted intent: payment_question
 test_empty_comment_raises_value_error,passed,Empty comment raises ValueError.

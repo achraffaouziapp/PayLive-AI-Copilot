@@ -1,0 +1,14 @@
+report_date,report_section,metric_name,metric_value,details
+2026-07-04 18:36:34,global_summary,prediction_count,2,Total number of logged predictions.
+2026-07-04 18:36:34,global_summary,average_confidence_score,0.25,Average confidence score across predictions.
+2026-07-04 18:36:34,global_summary,minimum_confidence_score,0.25,Minimum confidence score observed.
+2026-07-04 18:36:34,global_summary,maximum_confidence_score,0.25,Maximum confidence score observed.
+2026-07-04 18:36:34,global_summary,low_confidence_count,2,Number of predictions below the confidence threshold.
+2026-07-04 18:36:34,global_summary,low_confidence_rate_percent,100.0,Share of predictions below the confidence threshold.
+2026-07-04 18:36:34,global_summary,average_response_time_ms,571.6,Average prediction response time in milliseconds.
+2026-07-04 18:36:34,global_summary,maximum_response_time_ms,1141.54,Maximum prediction response time in milliseconds.
+2026-07-04 18:36:34,predicted_intent_distribution,purchase_intent,2,100.0% of logged predictions.
+2026-07-04 18:36:34,model_version_distribution,intent_classifier_v1,2,Number of predictions using this model version.
+2026-07-04 18:36:34,prediction_source_distribution,api_single,2,Number of predictions from this source.
+2026-07-04 18:36:34,low_confidence_examples,purchase_intent,0.25,je prends la robe noire en M
+2026-07-04 18:36:34,low_confidence_examples,purchase_intent,0.25,je prends la robe noire en M
