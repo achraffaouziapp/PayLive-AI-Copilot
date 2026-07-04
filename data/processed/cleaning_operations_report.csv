@@ -1,0 +1,45 @@
+operation_timestamp,dataset_name,operation_name,rows_affected,description
+2026-07-04 02:43:49,sellers,duplicate_rows_removed,4,Removed duplicated rows based on primary key: seller_id.
+2026-07-04 02:43:49,sellers,values_standardized,8,Normalized seller main platform values.
+2026-07-04 02:43:49,sellers,values_standardized,12,Normalized seller status values.
+2026-07-04 02:43:49,sellers,values_standardized,1,Invalid seller emails were set to empty values.
+2026-07-04 02:43:49,customers,duplicate_rows_removed,6,Removed duplicated rows based on primary key: customer_id.
+2026-07-04 02:43:49,customers,values_standardized,55,Normalized customer platform values.
+2026-07-04 02:43:49,customers,values_standardized,1,Missing usernames were replaced by anonymous_user.
+2026-07-04 02:43:49,customers,values_standardized,22,Invalid customer emails were set to empty values.
+2026-07-04 02:43:49,products,duplicate_rows_removed,5,Removed duplicated rows based on primary key: product_id.
+2026-07-04 02:43:49,products,values_standardized,62,Standardized product prices and stock quantities.
+2026-07-04 02:43:49,products,values_standardized,16,Normalized product status values.
+2026-07-04 02:43:49,live_sessions,duplicate_rows_removed,4,Removed duplicated rows based on primary key: live_id.
+2026-07-04 02:43:49,live_sessions,values_standardized,17,Normalized live platform values.
+2026-07-04 02:43:49,live_sessions,values_standardized,10,Normalized live status values.
+2026-07-04 02:43:49,live_products,duplicate_rows_removed,5,Removed duplicated rows based on primary key: live_product_id.
+2026-07-04 02:43:49,live_comments,duplicate_rows_removed,16,Removed duplicated rows based on primary key: comment_id.
+2026-07-04 02:43:49,live_comments,invalid_business_rows_removed,30,Removed comments with empty comment text.
+2026-07-04 02:43:49,carts,duplicate_rows_removed,7,Removed duplicated rows based on primary key: cart_id.
+2026-07-04 02:43:49,cart_items,duplicate_rows_removed,9,Removed duplicated rows based on primary key: cart_item_id.
+2026-07-04 02:43:49,cart_items,financial_values_recalculated,3,Recalculated inconsistent cart item line totals.
+2026-07-04 02:43:49,orders,duplicate_rows_removed,6,Removed duplicated rows based on primary key: order_id.
+2026-07-04 02:43:49,payments,duplicate_rows_removed,8,Removed duplicated rows based on primary key: payment_id.
+2026-07-04 02:43:49,stock_movements,duplicate_rows_removed,7,Removed duplicated rows based on primary key: stock_movement_id.
+2026-07-04 02:43:49,live_events,duplicate_rows_removed,21,Removed duplicated rows based on primary key: event_id.
+2026-07-04 02:43:49,live_events,invalid_business_rows_removed,129,Removed live events with invalid event types.
+2026-07-04 02:43:50,live_events,invalid_business_rows_removed,1,Removed live events with invalid timestamps.
+2026-07-04 02:43:50,live_sessions,invalid_reference_removed,1,Removed rows with invalid reference in column: seller_id.
+2026-07-04 02:43:50,live_products,invalid_reference_removed,5,Removed rows with invalid reference in column: live_id.
+2026-07-04 02:43:50,live_products,invalid_reference_removed,1,Removed rows with invalid reference in column: product_id.
+2026-07-04 02:43:50,live_comments,invalid_reference_removed,10,Removed rows with invalid reference in column: live_id.
+2026-07-04 02:43:50,live_comments,invalid_reference_removed,1,Removed rows with invalid reference in column: customer_id.
+2026-07-04 02:43:50,carts,invalid_reference_removed,1,Removed rows with invalid reference in column: live_id.
+2026-07-04 02:43:50,carts,invalid_reference_removed,1,Removed rows with invalid reference in column: customer_id.
+2026-07-04 02:43:50,cart_items,invalid_reference_removed,5,Removed rows with invalid reference in column: cart_id.
+2026-07-04 02:43:50,cart_items,invalid_reference_removed,1,Removed rows with invalid reference in column: product_id.
+2026-07-04 02:43:50,orders,invalid_reference_removed,2,Removed rows with invalid reference in column: cart_id.
+2026-07-04 02:43:50,orders,invalid_reference_removed,3,Removed rows with invalid reference in column: customer_id.
+2026-07-04 02:43:50,payments,invalid_reference_removed,6,Removed rows with invalid reference in column: order_id.
+2026-07-04 02:43:50,stock_movements,invalid_reference_removed,1,Removed rows with invalid reference in column: product_id.
+2026-07-04 02:43:50,stock_movements,invalid_reference_removed,6,Removed rows with invalid reference in column: live_id.
+2026-07-04 02:43:50,live_events,invalid_reference_removed,27,Removed rows with invalid reference in column: live_id.
+2026-07-04 02:43:50,carts,financial_values_recalculated,117,Recalculated cart total amounts from cart items.
+2026-07-04 02:43:50,orders,financial_values_recalculated,84,Recalculated order amounts from related cart totals.
+2026-07-04 02:43:50,payments,financial_values_recalculated,1,Recalculated successful payment amounts from related orders when missing or zero.

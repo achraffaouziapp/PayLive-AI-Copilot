@@ -1,0 +1,309 @@
+comment_id,live_id,customer_id,platform,username,comment_text,commented_at,comment_language,manual_intent_label,extracted_product_keyword,data_quality_status,cleaned_at
+COM00002,LIVE0027,CUS0034,tiktok,lina_5060,Dispo en noir taille L ?,2026-03-28 09:46:01,unknown,other,,cleaned,2026-07-04 02:43:49
+COM00003,LIVE0026,CUS0050,tiktok,nora_7501,Je veux 2 pièces,2026-04-25 00:00:00,ar,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00005,LIVE0024,CUS0021,tiktok,nora_732,Réserve-moi le bleu,2026-02-18 07:15:29,unknown,purchase_intent,sac,cleaned,2026-07-04 02:43:49
+COM00007,LIVE0004,CUS0019,instagram,shop_5977,Je prends le sac noir,2026-01-30 00:00:00,fr,other,veste,cleaned,2026-07-04 02:43:49
+COM00008,LIVE0017,CUS0040,instagram,nora_7501,Je prends le sac noir,,ar,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00009,LIVE0013,CUS0056,instagram,lina_5121,Prix ?,2026-03-13 18:56:00,unknown,other,,cleaned,2026-07-04 02:43:49
+COM00010,LIVE0026,CUS0025,instagram,anonymous_user,Je prends le sac noir,2026-02-23 13:09:19,ar,unknown,,cleaned,2026-07-04 02:43:49
+COM00011,LIVE0028,CUS0073,instagram,adam_4282,Mets-moi de côté le pull beige,2026-03-01 01:35:26,ar,payment_question,pull,cleaned,2026-07-04 02:43:49
+COM00013,LIVE0015,CUS0063,instagram,mode_1399,Je veux le même que le précédent,2026-01-10 06:51:48,en,payment_question,,cleaned,2026-07-04 02:43:49
+COM00014,LIVE0017,CUS0079,tiktok,shop_4509,Je prends le sac noir,2026-01-16 00:00:00,ar,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00016,LIVE0025,CUS0042,other,adam_1170,Je prends le sac noir,2026-04-18 00:00:00,en,purchase_intent,pull,cleaned,2026-07-04 02:43:49
+COM00017,LIVE0028,CUS0039,instagram,livefan_9048,Disponible en rouge ?,2026-03-12 18:37:46,unknown,payment_question,jean,cleaned,2026-07-04 02:43:49
+COM00018,LIVE0018,CUS0064,other,adam_3477,Comment payer ?,2026-03-12 00:00:00,ar,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00019,LIVE0004,CUS0069,tiktok,livefan_2306,Prix ?,2026-04-03 17:31:11,unknown,unknown,,cleaned,2026-07-04 02:43:49
+COM00020,LIVE0011,CUS0002,instagram,shop_1679,Coucou,2026-03-22 07:04:00,fr,unknown,,cleaned,2026-07-04 02:43:49
+COM00021,LIVE0028,CUS0002,tiktok,client_2895,Tu as la taille medium ?,2026-03-04 00:00:00,ar,purchase_intent,veste,cleaned,2026-07-04 02:43:49
+COM00022,LIVE0013,CUS0015,tiktok,client_2895,Je veux 2 pièces,2026-04-15 22:43:27,en,unknown,,cleaned,2026-07-04 02:43:49
+COM00023,LIVE0006,CUS0049,other,adam_3477,Je prends le sac noir,2026-02-15 00:00:00,en,unknown,,cleaned,2026-07-04 02:43:49
+COM00024,LIVE0003,CUS0013,other,livefan_8280,Mets-moi de côté le pull beige,2026-04-16 00:00:00,unknown,purchase_intent,,cleaned,2026-07-04 02:43:49
+COM00025,LIVE0033,CUS0057,tiktok,shop_1412,Réserve-moi le bleu,2026-01-02 00:00:00,fr,payment_question,sac,cleaned,2026-07-04 02:43:49
+COM00026,LIVE0032,CUS0036,tiktok,livefan_2306,Tu as la taille medium ?,2026-04-26 00:00:00,fr,purchase_intent,sac,cleaned,2026-07-04 02:43:49
+COM00027,LIVE0011,CUS0052,tiktok,sarah_4930,Comment payer ?,2026-04-29 00:00:00,en,unknown,,cleaned,2026-07-04 02:43:49
+COM00028,LIVE0010,CUS0012,instagram,sarah_7471,Prix ?,2026-04-25 17:21:24,unknown,payment_question,,cleaned,2026-07-04 02:43:49
+COM00029,LIVE0027,CUS0043,tiktok,sarah_7972,Tu as la taille medium ?,2026-10-01 10:38:00,unknown,payment_question,pull,cleaned,2026-07-04 02:43:49
+COM00030,LIVE0026,CUS0012,instagram,shop_5977,Je prends le sac noir,2026-03-12 00:00:00,fr,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00031,LIVE0011,CUS0051,tiktok,shop_2891,Réserve-moi le bleu,2026-01-20 12:45:50,fr,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00032,LIVE0006,CUS0025,other,lina_1385,Je prend le rouge en meduim,2026-02-16 08:06:08,fr,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00033,LIVE0022,CUS0051,tiktok,shop_5977,Je prend le rouge en meduim,2026-12-03 02:38:00,fr,payment_question,veste,cleaned,2026-07-04 02:43:49
+COM00034,LIVE0012,CUS0019,tiktok,sarah_4930,Tu as la taille medium ?,2026-08-03 05:43:00,en,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00035,LIVE0032,CUS0011,tiktok,shop_3662,Je prends le sac noir,2026-02-25 00:00:00,unknown,payment_question,jean,cleaned,2026-07-04 02:43:49
+COM00036,LIVE0027,CUS0044,instagram,livefan_8280,Disponible en rouge ?,2026-01-14 04:19:00,ar,unknown,,cleaned,2026-07-04 02:43:49
+COM00038,LIVE0033,CUS0075,instagram,adam_7628,Mets-moi de côté le pull beige,2026-07-02 23:44:00,unknown,other,robe,cleaned,2026-07-04 02:43:49
+COM00039,LIVE0013,CUS0072,tiktok,sarah_7715,C’est trop cher,2026-04-30 18:12:00,ar,unknown,,cleaned,2026-07-04 02:43:49
+COM00040,LIVE0010,CUS0040,instagram,shop_3662,Je veux 2 pièces,2026-04-19 00:00:00,unknown,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00041,LIVE0027,CUS0070,instagram,client_9579,Prix ?,2026-02-27 19:30:00,fr,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00042,LIVE0024,CUS0023,instagram,adam_1170,Mets-moi de côté le pull beige,2026-09-04 07:42:00,unknown,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00043,LIVE0035,CUS0073,instagram,livefan_7352,Je prends le sac noir,2026-01-13 08:14:00,ar,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00046,LIVE0005,CUS0040,tiktok,adam_946,Je prends la robe rouge en M,2026-03-04 22:28:00,fr,unknown,,cleaned,2026-07-04 02:43:49
+COM00047,LIVE0012,CUS0044,instagram,nora_6399,Coucou,2026-02-01 16:11:35,unknown,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00049,LIVE0005,CUS0075,tiktok,livefan_7626,Comment payer ?,2026-05-02 22:51:00,ar,payment_question,jean,cleaned,2026-07-04 02:43:49
+COM00050,LIVE0033,CUS0069,tiktok,mode_3148,Mets-moi de côté le pull beige,2026-01-15 00:00:00,unknown,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00051,LIVE0021,CUS0080,instagram,sarah_838,Je veux 2 pièces,2026-02-15 14:39:00,fr,payment_question,pull,cleaned,2026-07-04 02:43:49
+COM00052,LIVE0011,CUS0067,other,client_9579,Je veux 2 pièces,2026-01-15 00:00:00,unknown,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00053,LIVE0013,CUS0073,instagram,mode_9936,Je veux le même que le précédent,2026-03-04 20:34:44,en,other,,cleaned,2026-07-04 02:43:49
+COM00054,LIVE0024,CUS0002,other,adam_4282,C’est trop cher,2026-02-27 19:03:00,fr,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00055,LIVE0030,CUS0064,instagram,sarah_838,Je prends la robe rouge en M,2026-03-29 15:26:45,ar,purchase_intent,pull,cleaned,2026-07-04 02:43:49
+COM00056,LIVE0031,CUS0074,other,adam_480,Réserve-moi le bleu,2026-01-29 00:00:00,fr,unknown,,cleaned,2026-07-04 02:43:49
+COM00057,LIVE0003,CUS0058,instagram,lina_5060,Je prend le rouge en meduim,2026-03-11 11:34:52,en,unknown,,cleaned,2026-07-04 02:43:49
+COM00058,LIVE0006,CUS0058,tiktok,client_4075,C’est trop cher,2026-01-05 00:00:00,fr,other,,cleaned,2026-07-04 02:43:49
+COM00059,LIVE0012,CUS0080,instagram,mode_8948,C’est trop cher,2026-04-01 19:40:27,fr,other,veste,cleaned,2026-07-04 02:43:49
+COM00060,LIVE0022,CUS0039,tiktok,livefan_7352,Tu as la taille medium ?,2026-02-05 00:00:00,fr,unknown,,cleaned,2026-07-04 02:43:49
+COM00061,LIVE0019,CUS0018,instagram,livefan_3654,Je veux 2 pièces,2026-04-11 00:00:00,ar,payment_question,,cleaned,2026-07-04 02:43:49
+COM00062,LIVE0011,CUS0075,tiktok,client_4075,Je prend le rouge en meduim,2026-04-18 21:25:00,unknown,unknown,,cleaned,2026-07-04 02:43:49
+COM00063,LIVE0019,CUS0049,other,mode_9936,Disponible en rouge ?,2026-04-12 00:00:00,fr,unknown,,cleaned,2026-07-04 02:43:49
+COM00064,LIVE0024,CUS0010,instagram,shop_4509,C’est trop cher,2026-02-28 20:42:00,en,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00065,LIVE0010,CUS0074,other,shop_5095,Prix ?,2026-02-11 09:21:35,fr,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00066,LIVE0001,CUS0056,instagram,shop_9495,Je veux le même que le précédent,2026-01-16 05:28:29,ar,unknown,,cleaned,2026-07-04 02:43:49
+COM00067,LIVE0012,CUS0007,other,client_4075,Je veux le même que le précédent,2026-02-16 00:00:00,en,unknown,,cleaned,2026-07-04 02:43:49
+COM00068,LIVE0015,CUS0063,tiktok,shop_9495,Je prends le sac noir,2026-01-12 00:00:00,unknown,purchase_intent,robe,cleaned,2026-07-04 02:43:49
+COM00069,LIVE0029,CUS0018,other,livefan_2306,Je prends le sac noir,2026-03-31 10:52:00,fr,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00070,LIVE0010,CUS0050,instagram,sarah_9074,Je veux 2 pièces,2026-02-10 11:56:19,fr,purchase_intent,veste,cleaned,2026-07-04 02:43:49
+COM00071,LIVE0015,CUS0021,other,mode_4504,Coucou,2026-03-25 05:28:22,fr,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00072,LIVE0026,CUS0046,other,nora_6663,Je veux 2 pièces,2026-04-07 03:37:46,ar,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00073,LIVE0020,CUS0004,tiktok,mode_8948,C’est trop cher,2026-03-12 00:00:00,unknown,unknown,,cleaned,2026-07-04 02:43:49
+COM00074,LIVE0009,CUS0032,other,sarah_7972,Dispo en noir taille L ?,2026-01-07 00:00:00,fr,other,pull,cleaned,2026-07-04 02:43:49
+COM00076,LIVE0004,CUS0052,instagram,shop_4183,Je prend le rouge en meduim,2026-03-02 06:02:00,unknown,unknown,,cleaned,2026-07-04 02:43:49
+COM00077,LIVE0019,CUS0012,tiktok,sarah_838,C’est trop cher,2026-03-10 17:39:09,fr,other,jean,cleaned,2026-07-04 02:43:49
+COM00078,LIVE0005,CUS0041,other,client_4075,Prix ?,2026-03-17 20:48:53,fr,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00079,LIVE0021,CUS0024,tiktok,mode_4352,Je veux 2 pièces,2026-02-28 00:00:00,fr,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00080,LIVE0018,CUS0023,tiktok,shop_9495,Tu as la taille medium ?,2026-02-14 00:00:00,fr,purchase_intent,pull,cleaned,2026-07-04 02:43:49
+COM00081,LIVE0005,CUS0035,instagram,client_4075,Dispo en noir taille L ?,2026-04-14 13:17:00,unknown,other,robe,cleaned,2026-07-04 02:43:49
+COM00082,LIVE0012,CUS0034,tiktok,livefan_7352,Réserve-moi le bleu,2026-03-05 18:10:23,fr,purchase_intent,robe,cleaned,2026-07-04 02:43:49
+COM00083,LIVE0032,CUS0048,other,sarah_1210,Comment payer ?,2026-04-20 00:15:02,fr,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00084,LIVE0022,CUS0036,tiktok,livefan_7352,Je paye maintenant,2026-02-11 07:26:58,fr,purchase_intent,sac,cleaned,2026-07-04 02:43:49
+COM00085,LIVE0005,CUS0061,tiktok,mode_3153,Disponible en rouge ?,2026-01-29 16:02:25,fr,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00087,LIVE0024,CUS0002,tiktok,sarah_7972,Mets-moi de côté le pull beige,2026-01-01 00:00:00,ar,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00088,LIVE0004,CUS0020,tiktok,livefan_7896,Prix ?,2026-03-09 07:26:31,fr,unknown,,cleaned,2026-07-04 02:43:49
+COM00089,LIVE0006,CUS0076,tiktok,shop_1679,Je veux 2 pièces,2026-04-25 00:00:00,unknown,unknown,veste,cleaned,2026-07-04 02:43:49
+COM00090,LIVE0010,CUS0032,tiktok,nora_5763,Disponible en rouge ?,2026-03-14 01:27:00,ar,other,jean,cleaned,2026-07-04 02:43:49
+COM00091,LIVE0010,CUS0076,tiktok,sarah_1210,Réserve-moi le bleu,2026-02-04 07:04:12,unknown,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00092,LIVE0015,CUS0059,tiktok,sarah_7715,Tu as la taille medium ?,2026-02-22 03:34:22,fr,unknown,,cleaned,2026-07-04 02:43:49
+COM00093,LIVE0003,CUS0029,tiktok,nora_7501,Dispo en noir taille L ?,2026-03-29 00:00:00,en,other,jean,cleaned,2026-07-04 02:43:49
+COM00094,LIVE0018,CUS0024,tiktok,sarah_2277,Coucou,2026-03-07 00:00:00,fr,payment_question,robe,cleaned,2026-07-04 02:43:49
+COM00095,LIVE0010,CUS0017,tiktok,adam_6949,Je prends le sac noir,2026-03-01 03:51:50,en,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00096,LIVE0018,CUS0011,tiktok,sarah_1003,C’est trop cher,2026-03-29 00:00:00,unknown,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00097,LIVE0031,CUS0007,instagram,livefan_7352,Je prend le rouge en meduim,2026-04-26 00:00:00,unknown,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00098,LIVE0024,CUS0029,instagram,adam_5149,Tu as la taille medium ?,2026-02-18 21:27:00,en,purchase_intent,veste,cleaned,2026-07-04 02:43:49
+COM00100,LIVE0035,CUS0033,instagram,anonymous_user,Mets-moi de côté le pull beige,2026-01-18 00:00:00,ar,unknown,veste,cleaned,2026-07-04 02:43:49
+COM00101,LIVE0034,CUS0043,other,nora_2935,Comment payer ?,2026-04-11 15:22:58,ar,payment_question,robe,cleaned,2026-07-04 02:43:49
+COM00102,LIVE0032,CUS0069,tiktok,adam_7763,Je prends le sac noir,2026-04-25 08:03:51,fr,payment_question,,cleaned,2026-07-04 02:43:49
+COM00103,LIVE0004,CUS0030,instagram,livefan_7383,Je paye maintenant,2026-01-31 08:34:52,en,payment_question,veste,cleaned,2026-07-04 02:43:49
+COM00105,LIVE0006,CUS0008,instagram,sarah_3190,Je prends le sac noir,2026-02-09 05:31:02,fr,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00106,LIVE0010,CUS0045,instagram,adam_7628,Prix ?,2026-02-12 19:12:51,en,unknown,,cleaned,2026-07-04 02:43:49
+COM00107,LIVE0005,CUS0049,other,livefan_4448,Réserve-moi le bleu,2026-01-15 16:55:00,ar,other,sac,cleaned,2026-07-04 02:43:49
+COM00108,LIVE0033,CUS0042,instagram,nora_5586,Je paye maintenant,2026-01-21 23:27:50,fr,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00109,LIVE0010,CUS0024,tiktok,livefan_7352,Mets-moi de côté le pull beige,2026-02-09 00:00:00,fr,unknown,veste,cleaned,2026-07-04 02:43:49
+COM00110,LIVE0007,CUS0065,instagram,mode_1399,Dispo en noir taille L ?,2026-02-10 19:14:40,ar,other,sac,cleaned,2026-07-04 02:43:49
+COM00111,LIVE0023,CUS0059,tiktok,nora_5763,C’est trop cher,2026-03-23 02:52:45,fr,other,pull,cleaned,2026-07-04 02:43:49
+COM00112,LIVE0004,CUS0051,other,client_9579,Comment payer ?,2026-11-04 03:46:00,unknown,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00113,LIVE0032,CUS0075,instagram,shop_6064,Coucou,2026-03-11 12:06:53,fr,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00114,LIVE0023,CUS0023,other,shop_6064,Dispo en noir taille L ?,2026-02-10 00:00:00,fr,other,veste,cleaned,2026-07-04 02:43:49
+COM00115,LIVE0029,CUS0023,instagram,livefan_3605,Comment payer ?,2026-03-20 15:45:01,fr,other,sac,cleaned,2026-07-04 02:43:49
+COM00116,LIVE0018,CUS0038,tiktok,client_4075,Réserve-moi le bleu,2026-01-25 13:44:35,unknown,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00117,LIVE0006,CUS0039,instagram,livefan_1884,C’est trop cher,2026-01-07 11:00:27,fr,payment_question,sac,cleaned,2026-07-04 02:43:49
+COM00119,LIVE0026,CUS0049,instagram,lina_1385,Prix ?,2026-11-03 12:11:00,unknown,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00120,LIVE0011,CUS0014,tiktok,sarah_7471,Je prend le rouge en meduim,2026-01-29 00:00:00,en,purchase_intent,,cleaned,2026-07-04 02:43:49
+COM00121,LIVE0032,CUS0075,instagram,lina_518,Je veux le même que le précédent,2026-02-19 16:26:34,unknown,purchase_intent,veste,cleaned,2026-07-04 02:43:49
+COM00122,LIVE0011,CUS0017,other,sarah_9074,Comment payer ?,2026-03-15 16:51:36,en,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00123,LIVE0014,CUS0020,instagram,nora_5763,Disponible en rouge ?,2026-02-24 00:00:00,fr,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00124,LIVE0019,CUS0068,other,mode_4352,Je prend le rouge en meduim,2026-03-13 12:35:20,unknown,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00125,LIVE0007,CUS0015,instagram,nora_7464,Je veux le même que le précédent,2026-03-14 00:00:00,ar,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00126,LIVE0032,CUS0005,instagram,adam_5149,Mets-moi de côté le pull beige,2026-02-19 20:31:36,fr,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00127,LIVE0004,CUS0062,tiktok,sarah_7488,Je prends la robe rouge en M,2026-02-20 10:44:00,ar,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00128,LIVE0007,CUS0031,instagram,sarah_4930,Coucou,2026-04-18 15:54:00,ar,unknown,veste,cleaned,2026-07-04 02:43:49
+COM00129,LIVE0015,CUS0054,other,lina_6892,Je paye maintenant,2026-03-24 02:12:28,fr,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00130,LIVE0010,CUS0069,instagram,livefan_1992,Comment payer ?,2026-02-09 22:32:25,en,purchase_intent,sac,cleaned,2026-07-04 02:43:49
+COM00131,LIVE0025,CUS0027,tiktok,sarah_7488,Coucou,2026-01-05 00:00:00,unknown,unknown,,cleaned,2026-07-04 02:43:49
+COM00132,LIVE0030,CUS0024,other,livefan_4448,Je paye maintenant,2026-04-01 07:23:00,en,unknown,,cleaned,2026-07-04 02:43:49
+COM00134,LIVE0001,CUS0062,instagram,sarah_9074,Comment payer ?,2026-03-25 00:00:00,fr,payment_question,pull,cleaned,2026-07-04 02:43:49
+COM00135,LIVE0019,CUS0056,other,sarah_7471,Coucou,2026-03-19 09:45:00,en,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00136,LIVE0027,CUS0076,tiktok,sarah_7972,Je paye maintenant,2026-03-28 00:00:00,fr,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00137,LIVE0023,CUS0037,tiktok,adam_5149,Tu as la taille medium ?,2026-03-29 00:00:00,ar,payment_question,sac,cleaned,2026-07-04 02:43:49
+COM00140,LIVE0013,CUS0039,tiktok,lina_518,Je veux 2 pièces,2026-01-22 00:00:00,ar,unknown,,cleaned,2026-07-04 02:43:49
+COM00141,LIVE0016,CUS0047,instagram,mode_3153,Je prend le rouge en meduim,2026-04-26 10:41:00,ar,unknown,veste,cleaned,2026-07-04 02:43:49
+COM00142,LIVE0032,CUS0007,instagram,adam_7763,Dispo en noir taille L ?,2026-07-02 14:54:00,en,unknown,,cleaned,2026-07-04 02:43:49
+COM00143,LIVE0028,CUS0007,instagram,adam_4282,C’est trop cher,2026-03-29 12:33:00,unknown,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00144,LIVE0006,CUS0064,tiktok,client_4075,Comment payer ?,2026-10-02 22:11:00,fr,purchase_intent,jean,cleaned,2026-07-04 02:43:49
+COM00145,LIVE0012,CUS0075,instagram,mode_9936,Dispo en noir taille L ?,2026-02-05 06:48:49,fr,unknown,,cleaned,2026-07-04 02:43:49
+COM00146,LIVE0026,CUS0001,tiktok,livefan_7626,C’est trop cher,2026-02-24 00:00:00,ar,purchase_intent,pull,cleaned,2026-07-04 02:43:49
+COM00147,LIVE0001,CUS0033,instagram,sarah_7471,Je veux le même que le précédent,2026-04-07 16:12:01,fr,unknown,veste,cleaned,2026-07-04 02:43:49
+COM00148,LIVE0003,CUS0040,tiktok,adam_3477,Disponible en rouge ?,2026-03-17 09:10:00,en,other,jean,cleaned,2026-07-04 02:43:49
+COM00149,LIVE0027,CUS0003,instagram,sarah_5804,Je veux 2 pièces,2026-02-15 06:10:58,fr,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00150,LIVE0003,CUS0050,tiktok,livefan_7626,Prix ?,2026-02-16 00:00:00,fr,unknown,,cleaned,2026-07-04 02:43:49
+COM00151,LIVE0009,CUS0055,other,livefan_8280,Réserve-moi le bleu,2026-04-18 00:00:00,ar,unknown,,cleaned,2026-07-04 02:43:49
+COM00152,LIVE0001,CUS0040,other,nora_7501,Réserve-moi le bleu,2026-01-20 00:00:00,fr,unknown,veste,cleaned,2026-07-04 02:43:49
+COM00153,LIVE0007,CUS0067,instagram,sarah_3054,Je veux le même que le précédent,2026-03-19 22:08:26,fr,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00154,LIVE0035,CUS0027,tiktok,client_6688,Je veux le même que le précédent,2026-03-19 06:49:16,fr,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00156,LIVE0016,CUS0060,tiktok,nora_5763,Coucou,2026-04-03 03:57:16,fr,unknown,,cleaned,2026-07-04 02:43:49
+COM00157,LIVE0022,CUS0056,tiktok,nora_7464,Prix ?,2026-01-06 09:23:51,en,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00158,LIVE0006,CUS0049,tiktok,nora_8290,Réserve-moi le bleu,2026-02-15 14:39:00,unknown,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00159,LIVE0032,CUS0055,instagram,adam_946,Je veux 2 pièces,2026-04-17 00:00:00,fr,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00160,LIVE0030,CUS0025,instagram,livefan_8280,Je paye maintenant,2026-02-23 00:00:00,fr,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00161,LIVE0028,CUS0058,tiktok,sarah_1003,Tu as la taille medium ?,2026-04-28 00:00:00,ar,purchase_intent,,cleaned,2026-07-04 02:43:49
+COM00162,LIVE0016,CUS0045,instagram,lina_6892,Réserve-moi le bleu,2026-04-22 21:33:00,en,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00163,LIVE0011,CUS0073,instagram,livefan_3991,Je prends la robe rouge en M,2026-03-26 00:00:00,en,unknown,,cleaned,2026-07-04 02:43:49
+COM00164,LIVE0033,CUS0043,instagram,mode_1399,Tu as la taille medium ?,2026-03-05 05:04:48,fr,payment_question,veste,cleaned,2026-07-04 02:43:49
+COM00165,LIVE0017,CUS0012,other,client_2714,Coucou,2026-03-24 12:25:52,unknown,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00167,LIVE0021,CUS0067,instagram,mode_8948,Coucou,2026-12-01 19:39:00,ar,purchase_intent,,cleaned,2026-07-04 02:43:49
+COM00168,LIVE0032,CUS0048,other,adam_946,Réserve-moi le bleu,2026-01-29 00:00:00,en,purchase_intent,pull,cleaned,2026-07-04 02:43:49
+COM00169,LIVE0035,CUS0049,tiktok,adam_1170,Comment payer ?,2026-02-15 20:51:00,en,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00170,LIVE0009,CUS0052,instagram,adam_3477,C’est trop cher,2026-02-02 00:00:00,ar,unknown,,cleaned,2026-07-04 02:43:49
+COM00171,LIVE0009,CUS0059,other,nora_7501,Je veux 2 pièces,2026-02-23 01:59:00,fr,purchase_intent,veste,cleaned,2026-07-04 02:43:49
+COM00172,LIVE0032,CUS0067,instagram,adam_7763,Comment payer ?,2026-04-30 00:00:00,en,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00173,LIVE0022,CUS0066,other,client_9579,Je prends le sac noir,2026-03-26 19:38:00,unknown,other,pull,cleaned,2026-07-04 02:43:49
+COM00174,LIVE0034,CUS0040,instagram,nora_6663,C’est trop cher,2026-02-27 04:08:26,en,unknown,,cleaned,2026-07-04 02:43:49
+COM00175,LIVE0013,CUS0066,instagram,sarah_7972,Disponible en rouge ?,2026-02-14 00:00:00,fr,other,veste,cleaned,2026-07-04 02:43:49
+COM00176,LIVE0028,CUS0070,tiktok,nora_6399,Je prends la robe rouge en M,2026-03-03 00:00:00,fr,purchase_intent,jean,cleaned,2026-07-04 02:43:49
+COM00177,LIVE0014,CUS0036,instagram,shop_4183,Tu as la taille medium ?,2026-01-19 01:42:03,fr,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00178,LIVE0030,CUS0015,instagram,nora_5586,Je prends le sac noir,2026-04-07 00:00:00,fr,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00179,LIVE0004,CUS0050,other,client_9579,Disponible en rouge ?,2026-03-07 00:00:00,fr,purchase_intent,,cleaned,2026-07-04 02:43:49
+COM00180,LIVE0030,CUS0030,tiktok,livefan_4448,C’est trop cher,2026-02-02 00:00:00,en,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00181,LIVE0013,CUS0067,tiktok,livefan_8280,Prix ?,2026-01-23 21:04:00,ar,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00182,LIVE0001,CUS0044,other,sarah_1210,Prix ?,2026-01-21 18:54:16,ar,purchase_intent,,cleaned,2026-07-04 02:43:49
+COM00183,LIVE0021,CUS0064,instagram,adam_480,Je paye maintenant,2026-04-30 20:39:53,ar,payment_question,sac,cleaned,2026-07-04 02:43:49
+COM00184,LIVE0012,CUS0055,instagram,livefan_7626,Mets-moi de côté le pull beige,2026-03-08 02:50:32,ar,payment_question,sac,cleaned,2026-07-04 02:43:49
+COM00186,LIVE0017,CUS0006,tiktok,livefan_8280,Réserve-moi le bleu,2026-02-14 14:15:00,ar,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00188,LIVE0001,CUS0010,instagram,client_4075,C’est trop cher,2026-03-07 00:00:00,unknown,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00189,LIVE0029,CUS0011,instagram,livefan_1992,Coucou,2026-03-10 00:00:00,ar,purchase_intent,robe,cleaned,2026-07-04 02:43:49
+COM00190,LIVE0018,CUS0073,tiktok,livefan_7352,Je prends le sac noir,2026-10-01 01:11:00,unknown,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00192,LIVE0005,CUS0047,instagram,mode_3121,Je veux le même que le précédent,2026-04-06 00:00:00,ar,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00194,LIVE0025,CUS0002,instagram,nora_5586,Je veux 2 pièces,2026-01-19 09:43:56,fr,purchase_intent,veste,cleaned,2026-07-04 02:43:49
+COM00195,LIVE0006,CUS0041,instagram,sarah_7471,C’est trop cher,2026-03-18 12:34:00,fr,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00196,LIVE0018,CUS0026,tiktok,nora_8290,Prix ?,2026-01-24 00:00:00,unknown,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00197,LIVE0014,CUS0076,other,mode_1399,Je paye maintenant,2026-03-27 02:16:06,en,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00198,LIVE0022,CUS0064,other,mode_1399,Je veux le même que le précédent,2026-03-21 00:00:00,fr,unknown,veste,cleaned,2026-07-04 02:43:49
+COM00199,LIVE0029,CUS0023,tiktok,nora_6663,Je prends le sac noir,2026-03-14 11:51:20,unknown,unknown,,cleaned,2026-07-04 02:43:49
+COM00200,LIVE0023,CUS0063,other,lina_1385,Je paye maintenant,2026-02-16 04:43:00,unknown,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00201,LIVE0019,CUS0019,instagram,livefan_9048,Tu as la taille medium ?,2026-03-24 00:00:00,fr,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00202,LIVE0027,CUS0077,instagram,shop_127,Tu as la taille medium ?,2026-04-19 00:00:00,fr,unknown,,cleaned,2026-07-04 02:43:49
+COM00203,LIVE0016,CUS0077,tiktok,adam_4282,Coucou,2026-04-10 00:00:00,fr,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00204,LIVE0017,CUS0080,instagram,lina_5698,Je veux 2 pièces,2026-02-16 16:00:00,en,unknown,veste,cleaned,2026-07-04 02:43:49
+COM00206,LIVE0035,CUS0048,other,lina_518,Coucou,2026-01-30 01:42:13,fr,other,robe,cleaned,2026-07-04 02:43:49
+COM00207,LIVE0019,CUS0035,instagram,sarah_4579,Comment payer ?,2026-01-04 16:40:00,unknown,other,veste,cleaned,2026-07-04 02:43:49
+COM00208,LIVE0026,CUS0030,instagram,sarah_2277,Je paye maintenant,2026-03-25 02:33:00,unknown,unknown,veste,cleaned,2026-07-04 02:43:49
+COM00209,LIVE0030,CUS0023,instagram,livefan_2306,Tu as la taille medium ?,2026-01-01 16:56:08,en,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00210,LIVE0009,CUS0031,other,mode_1399,Réserve-moi le bleu,2026-02-16 19:45:00,unknown,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00211,LIVE0028,CUS0003,instagram,adam_1170,Je veux 2 pièces,2026-03-17 00:00:00,fr,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00212,LIVE0011,CUS0008,instagram,nora_5763,Comment payer ?,2026-03-22 00:00:00,unknown,purchase_intent,,cleaned,2026-07-04 02:43:49
+COM00214,LIVE0013,CUS0067,tiktok,lina_9096,Disponible en rouge ?,2026-02-22 19:09:00,fr,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00216,LIVE0034,CUS0017,tiktok,livefan_1884,Je veux 2 pièces,2026-03-02 00:00:00,fr,purchase_intent,,cleaned,2026-07-04 02:43:49
+COM00217,LIVE0028,CUS0049,tiktok,client_2895,Je prend le rouge en meduim,2026-03-28 20:27:33,unknown,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00219,LIVE0014,CUS0001,tiktok,livefan_7352,Réserve-moi le bleu,2026-04-23 00:00:00,fr,unknown,,cleaned,2026-07-04 02:43:49
+COM00220,LIVE0028,CUS0048,tiktok,sarah_1210,Je prend le rouge en meduim,2026-01-27 00:00:00,fr,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00221,LIVE0025,CUS0080,tiktok,shop_4509,C’est trop cher,2026-04-20 17:27:00,fr,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00222,LIVE0018,CUS0041,instagram,sarah_7471,Mets-moi de côté le pull beige,2026-02-17 00:00:00,en,unknown,,cleaned,2026-07-04 02:43:49
+COM00223,LIVE0012,CUS0014,instagram,lina_5698,Mets-moi de côté le pull beige,2026-01-30 14:50:00,fr,purchase_intent,sac,cleaned,2026-07-04 02:43:49
+COM00224,LIVE0006,CUS0020,other,mode_3148,Je prend le rouge en meduim,2026-02-19 20:00:51,fr,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00225,LIVE0026,CUS0053,instagram,livefan_3654,Je veux le même que le précédent,2026-02-17 00:00:00,fr,purchase_intent,,cleaned,2026-07-04 02:43:49
+COM00226,LIVE0030,CUS0002,instagram,nora_7501,Je veux le même que le précédent,2026-04-15 05:40:31,fr,payment_question,veste,cleaned,2026-07-04 02:43:49
+COM00227,LIVE0017,CUS0001,instagram,livefan_7896,Tu as la taille medium ?,2026-01-22 21:02:00,ar,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00228,LIVE0005,CUS0013,instagram,shop_4183,Je paye maintenant,2026-03-17 06:33:00,ar,payment_question,veste,cleaned,2026-07-04 02:43:49
+COM00229,LIVE0001,CUS0035,instagram,client_6688,Réserve-moi le bleu,2026-01-25 00:00:00,fr,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00231,LIVE0032,CUS0016,tiktok,sarah_1003,Mets-moi de côté le pull beige,2026-02-28 00:00:00,en,payment_question,,cleaned,2026-07-04 02:43:49
+COM00232,LIVE0001,CUS0035,instagram,shop_4183,Dispo en noir taille L ?,2026-10-02 13:22:00,ar,unknown,veste,cleaned,2026-07-04 02:43:49
+COM00233,LIVE0024,CUS0029,instagram,nora_2935,Comment payer ?,2026-04-30 00:00:00,en,unknown,,cleaned,2026-07-04 02:43:49
+COM00234,LIVE0018,CUS0028,instagram,livefan_9048,Je prends le sac noir,2026-01-26 00:00:00,ar,unknown,,cleaned,2026-07-04 02:43:49
+COM00235,LIVE0033,CUS0080,tiktok,sarah_4579,Prix ?,2026-01-14 03:58:00,ar,other,jean,cleaned,2026-07-04 02:43:49
+COM00236,LIVE0033,CUS0025,instagram,adam_5149,Mets-moi de côté le pull beige,2026-04-25 18:55:17,fr,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00237,LIVE0003,CUS0066,tiktok,shop_4509,Comment payer ?,2026-09-03 13:30:00,fr,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00238,LIVE0015,CUS0050,instagram,nora_7464,Disponible en rouge ?,2026-03-30 00:00:00,fr,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00239,LIVE0032,CUS0080,tiktok,shop_2891,Comment payer ?,2026-12-03 08:15:00,unknown,payment_question,jean,cleaned,2026-07-04 02:43:49
+COM00240,LIVE0027,CUS0037,other,nora_8290,Je veux 2 pièces,2026-03-31 00:00:00,en,unknown,,cleaned,2026-07-04 02:43:49
+COM00242,LIVE0022,CUS0064,tiktok,shop_3662,Prix ?,2026-01-18 20:33:00,fr,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00243,LIVE0007,CUS0059,tiktok,nora_5763,Je paye maintenant,2026-01-28 08:30:00,fr,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00244,LIVE0014,CUS0075,instagram,livefan_3654,Comment payer ?,2026-03-01 13:07:00,ar,other,,cleaned,2026-07-04 02:43:49
+COM00245,LIVE0030,CUS0012,other,mode_4504,Je veux le même que le précédent,2026-07-03 15:49:00,en,unknown,,cleaned,2026-07-04 02:43:49
+COM00246,LIVE0027,CUS0011,tiktok,shop_6064,Disponible en rouge ?,2026-04-14 10:26:40,ar,other,,cleaned,2026-07-04 02:43:49
+COM00247,LIVE0027,CUS0036,other,shop_2891,Coucou,2026-07-02 22:17:00,en,unknown,,cleaned,2026-07-04 02:43:49
+COM00248,LIVE0018,CUS0012,instagram,lina_9096,Mets-moi de côté le pull beige,2026-01-03 04:46:15,fr,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00249,LIVE0027,CUS0069,tiktok,mode_3121,Tu as la taille medium ?,2026-03-12 00:00:00,en,unknown,,cleaned,2026-07-04 02:43:49
+COM00250,LIVE0017,CUS0038,other,client_4075,Je veux 2 pièces,2026-04-30 12:19:14,fr,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00251,LIVE0022,CUS0062,other,sarah_4579,Tu as la taille medium ?,2026-01-05 00:00:00,unknown,unknown,,cleaned,2026-07-04 02:43:49
+COM00252,LIVE0031,CUS0074,other,client_2895,Je veux le même que le précédent,2026-11-03 05:37:00,unknown,payment_question,,cleaned,2026-07-04 02:43:49
+COM00253,LIVE0028,CUS0035,instagram,sarah_4930,Je prends la robe rouge en M,2026-01-12 14:19:23,fr,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00254,LIVE0033,CUS0063,tiktok,mode_4352,Je prend le rouge en meduim,2026-06-02 15:34:00,fr,payment_question,,cleaned,2026-07-04 02:43:49
+COM00255,LIVE0028,CUS0073,other,shop_4509,Je prends le sac noir,2026-01-01 17:23:12,unknown,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00256,LIVE0017,CUS0068,instagram,nora_2935,Je veux le même que le précédent,2026-02-03 00:00:00,fr,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00257,LIVE0020,CUS0016,other,livefan_1690,Coucou,2026-01-25 02:11:00,fr,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00260,LIVE0027,CUS0011,instagram,lina_518,Comment payer ?,2026-01-11 04:03:17,ar,unknown,,cleaned,2026-07-04 02:43:49
+COM00261,LIVE0017,CUS0051,other,livefan_3654,Prix ?,2026-01-02 03:49:45,unknown,unknown,veste,cleaned,2026-07-04 02:43:49
+COM00262,LIVE0021,CUS0043,instagram,client_4075,Prix ?,2026-03-27 00:00:00,fr,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00263,LIVE0025,CUS0007,instagram,adam_946,Je prends le sac noir,2026-03-03 00:00:00,unknown,other,robe,cleaned,2026-07-04 02:43:49
+COM00265,LIVE0033,CUS0013,instagram,shop_5095,Prix ?,2026-04-09 02:15:10,ar,unknown,,cleaned,2026-07-04 02:43:49
+COM00266,LIVE0016,CUS0042,instagram,sarah_9074,Je paye maintenant,2026-10-03 03:08:00,en,purchase_intent,,cleaned,2026-07-04 02:43:49
+COM00267,LIVE0018,CUS0006,other,client_2714,Je veux le même que le précédent,2026-02-18 00:00:00,unknown,payment_question,veste,cleaned,2026-07-04 02:43:49
+COM00268,LIVE0031,CUS0037,instagram,adam_480,Comment payer ?,2026-01-24 17:22:20,fr,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00269,LIVE0031,CUS0001,instagram,livefan_8280,Comment payer ?,2026-02-07 08:34:23,fr,other,,cleaned,2026-07-04 02:43:49
+COM00271,LIVE0007,CUS0068,tiktok,adam_1170,Je veux 2 pièces,2026-02-22 20:20:07,fr,payment_question,robe,cleaned,2026-07-04 02:43:49
+COM00272,LIVE0026,CUS0064,instagram,livefan_1690,Tu as la taille medium ?,2026-03-04 06:06:02,ar,payment_question,veste,cleaned,2026-07-04 02:43:49
+COM00273,LIVE0015,CUS0064,tiktok,sarah_7715,Prix ?,2026-02-04 02:00:00,fr,unknown,,cleaned,2026-07-04 02:43:49
+COM00274,LIVE0019,CUS0069,tiktok,livefan_2306,Je veux le même que le précédent,2026-02-17 22:03:52,en,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00275,LIVE0014,CUS0026,instagram,nora_7501,Je prends le sac noir,2026-04-03 00:00:00,en,unknown,,cleaned,2026-07-04 02:43:49
+COM00276,LIVE0031,CUS0056,tiktok,lina_9096,Comment payer ?,2026-01-14 00:00:00,unknown,other,,cleaned,2026-07-04 02:43:49
+COM00277,LIVE0024,CUS0042,instagram,adam_7628,Je paye maintenant,2026-01-21 17:38:00,unknown,other,veste,cleaned,2026-07-04 02:43:49
+COM00278,LIVE0026,CUS0072,tiktok,shop_2891,Coucou,2026-01-31 18:34:00,unknown,purchase_intent,,cleaned,2026-07-04 02:43:49
+COM00279,LIVE0035,CUS0019,tiktok,sarah_7972,Je veux le même que le précédent,2026-01-05 09:38:01,en,other,robe,cleaned,2026-07-04 02:43:49
+COM00280,LIVE0034,CUS0073,instagram,livefan_7352,Je veux 2 pièces,2026-04-09 22:52:17,fr,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00281,LIVE0017,CUS0031,tiktok,sarah_4930,Dispo en noir taille L ?,2026-01-20 00:00:00,unknown,payment_question,,cleaned,2026-07-04 02:43:49
+COM00282,LIVE0032,CUS0024,other,livefan_7352,Réserve-moi le bleu,2026-01-10 00:00:00,ar,purchase_intent,,cleaned,2026-07-04 02:43:49
+COM00283,LIVE0004,CUS0044,tiktok,livefan_3605,Je prend le rouge en meduim,2026-04-14 18:24:05,en,purchase_intent,,cleaned,2026-07-04 02:43:49
+COM00284,LIVE0021,CUS0069,tiktok,nora_6663,Je veux 2 pièces,2026-10-04 20:24:00,fr,payment_question,sac,cleaned,2026-07-04 02:43:49
+COM00285,LIVE0030,CUS0078,instagram,shop_1679,Dispo en noir taille L ?,2026-01-07 21:46:25,unknown,unknown,,cleaned,2026-07-04 02:43:49
+COM00286,LIVE0006,CUS0062,instagram,livefan_3991,Mets-moi de côté le pull beige,2026-02-20 04:08:00,fr,unknown,veste,cleaned,2026-07-04 02:43:49
+COM00288,LIVE0017,CUS0011,tiktok,livefan_3605,Disponible en rouge ?,2026-03-20 00:00:00,fr,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00289,LIVE0024,CUS0026,tiktok,sarah_7471,Je prends la robe rouge en M,2026-03-27 13:27:00,en,other,veste,cleaned,2026-07-04 02:43:49
+COM00290,LIVE0030,CUS0006,instagram,livefan_9048,Je paye maintenant,2026-04-16 14:39:09,fr,unknown,,cleaned,2026-07-04 02:43:49
+COM00291,LIVE0011,CUS0038,tiktok,shop_5095,Réserve-moi le bleu,2026-07-01 07:39:00,unknown,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00292,LIVE0015,CUS0028,instagram,lina_6892,Tu as la taille medium ?,2026-02-12 00:00:00,unknown,unknown,,cleaned,2026-07-04 02:43:49
+COM00293,LIVE0035,CUS0006,tiktok,lina_9096,Prix ?,2026-03-31 21:01:00,en,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00294,LIVE0026,CUS0036,tiktok,mode_3121,Je prends la robe rouge en M,2026-01-03 20:00:00,unknown,payment_question,jean,cleaned,2026-07-04 02:43:49
+COM00295,LIVE0022,CUS0064,instagram,livefan_7626,Dispo en noir taille L ?,2026-03-07 22:06:57,en,unknown,veste,cleaned,2026-07-04 02:43:49
+COM00297,LIVE0021,CUS0032,instagram,adam_5149,Prix ?,2026-03-29 00:00:00,ar,unknown,,cleaned,2026-07-04 02:43:49
+COM00298,LIVE0011,CUS0045,other,nora_7501,Je veux 2 pièces,2026-01-04 17:17:14,unknown,payment_question,jean,cleaned,2026-07-04 02:43:49
+COM00299,LIVE0021,CUS0079,tiktok,lina_1385,Je veux 2 pièces,2026-01-31 18:09:27,en,payment_question,,cleaned,2026-07-04 02:43:49
+COM00300,LIVE0035,CUS0019,other,nora_7501,Comment payer ?,2026-01-18 09:44:00,fr,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00301,LIVE0022,CUS0054,other,sarah_4930,Coucou,2026-02-10 00:00:00,ar,unknown,,cleaned,2026-07-04 02:43:49
+COM00304,LIVE0012,CUS0026,instagram,shop_127,Je prend le rouge en meduim,2026-02-19 15:30:08,ar,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00306,LIVE0026,CUS0042,other,mode_4504,Prix ?,2026-02-24 00:00:00,fr,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00307,LIVE0035,CUS0070,other,adam_1170,Mets-moi de côté le pull beige,2026-04-16 00:00:00,fr,payment_question,pull,cleaned,2026-07-04 02:43:49
+COM00308,LIVE0020,CUS0061,instagram,nora_6399,Je veux le même que le précédent,2026-02-26 00:00:00,fr,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00309,LIVE0034,CUS0016,instagram,adam_7763,Je veux 2 pièces,2026-04-17 20:28:00,unknown,other,jean,cleaned,2026-07-04 02:43:49
+COM00310,LIVE0014,CUS0060,tiktok,shop_3662,Disponible en rouge ?,2026-01-04 00:00:00,en,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00311,LIVE0025,CUS0012,instagram,livefan_7383,Comment payer ?,2026-01-15 22:28:00,fr,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00312,LIVE0011,CUS0022,instagram,sarah_9074,Prix ?,2026-09-04 05:58:00,ar,unknown,,cleaned,2026-07-04 02:43:49
+COM00313,LIVE0013,CUS0017,instagram,livefan_9048,Je prends la robe rouge en M,2026-04-09 00:00:00,ar,purchase_intent,jean,cleaned,2026-07-04 02:43:49
+COM00314,LIVE0001,CUS0079,other,client_4075,C’est trop cher,2026-03-05 00:00:00,unknown,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00315,LIVE0001,CUS0033,instagram,adam_5149,C’est trop cher,2026-02-26 02:38:38,en,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00316,LIVE0003,CUS0075,instagram,sarah_4930,Disponible en rouge ?,2026-03-25 11:02:09,fr,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00317,LIVE0013,CUS0060,instagram,shop_2891,Prix ?,2026-01-23 05:43:18,ar,other,pull,cleaned,2026-07-04 02:43:49
+COM00319,LIVE0015,CUS0080,tiktok,mode_3121,Dispo en noir taille L ?,2026-09-03 13:33:00,fr,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00321,LIVE0020,CUS0026,tiktok,sarah_3054,Je prends la robe rouge en M,2026-01-24 19:14:00,fr,payment_question,,cleaned,2026-07-04 02:43:49
+COM00322,LIVE0023,CUS0046,instagram,sarah_7972,C’est trop cher,2026-03-20 13:26:02,en,unknown,pull,cleaned,2026-07-04 02:43:49
+COM00323,LIVE0034,CUS0072,tiktok,sarah_7972,Réserve-moi le bleu,2026-04-12 00:00:00,ar,other,jean,cleaned,2026-07-04 02:43:49
+COM00325,LIVE0023,CUS0061,other,adam_6949,Je veux le même que le précédent,2026-01-20 00:00:00,ar,purchase_intent,sac,cleaned,2026-07-04 02:43:49
+COM00326,LIVE0024,CUS0010,instagram,adam_5149,Je prends la robe rouge en M,2026-03-15 21:21:00,unknown,unknown,veste,cleaned,2026-07-04 02:43:49
+COM00327,LIVE0009,CUS0041,tiktok,shop_127,Tu as la taille medium ?,2026-03-19 12:11:00,fr,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00328,LIVE0015,CUS0069,tiktok,sarah_9074,Réserve-moi le bleu,2026-02-17 14:53:00,fr,payment_question,robe,cleaned,2026-07-04 02:43:49
+COM00329,LIVE0032,CUS0066,instagram,nora_732,Disponible en rouge ?,2026-02-26 16:01:00,fr,unknown,,cleaned,2026-07-04 02:43:49
+COM00330,LIVE0007,CUS0068,instagram,mode_8948,Prix ?,2026-11-02 04:49:00,unknown,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00331,LIVE0006,CUS0044,other,adam_1170,Réserve-moi le bleu,2026-02-09 00:00:00,ar,purchase_intent,veste,cleaned,2026-07-04 02:43:49
+COM00332,LIVE0015,CUS0043,instagram,nora_732,Je veux le même que le précédent,2026-08-04 09:40:00,fr,other,,cleaned,2026-07-04 02:43:49
+COM00333,LIVE0011,CUS0022,tiktok,adam_946,Je prends la robe rouge en M,2026-02-26 00:00:00,fr,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00334,LIVE0019,CUS0020,tiktok,livefan_7352,Je prends le sac noir,2026-03-11 11:35:20,fr,unknown,veste,cleaned,2026-07-04 02:43:49
+COM00335,LIVE0004,CUS0018,tiktok,lina_518,Prix ?,2026-04-25 10:34:28,unknown,purchase_intent,robe,cleaned,2026-07-04 02:43:49
+COM00336,LIVE0030,CUS0080,tiktok,mode_3153,Disponible en rouge ?,2026-02-24 12:11:45,fr,unknown,,cleaned,2026-07-04 02:43:49
+COM00337,LIVE0006,CUS0061,tiktok,adam_3477,Je veux le même que le précédent,2026-04-08 00:00:00,unknown,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00338,LIVE0018,CUS0048,other,nora_8290,Disponible en rouge ?,2026-01-29 04:55:00,unknown,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00339,LIVE0032,CUS0061,instagram,shop_4183,Je paye maintenant,2026-01-09 00:00:00,fr,unknown,veste,cleaned,2026-07-04 02:43:49
+COM00340,LIVE0007,CUS0043,instagram,livefan_3654,Dispo en noir taille L ?,2026-01-14 12:52:00,fr,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00341,LIVE0017,CUS0072,instagram,livefan_1884,Mets-moi de côté le pull beige,2026-03-17 13:15:39,ar,payment_question,,cleaned,2026-07-04 02:43:49
+COM00342,LIVE0029,CUS0074,tiktok,sarah_4579,Je prends le sac noir,2026-03-30 18:27:50,fr,unknown,robe,cleaned,2026-07-04 02:43:49
+COM00343,LIVE0007,CUS0058,instagram,mode_3153,Mets-moi de côté le pull beige,2026-03-17 19:29:20,fr,unknown,,cleaned,2026-07-04 02:43:49
+COM00344,LIVE0026,CUS0043,other,sarah_9074,Prix ?,2026-04-15 19:49:52,en,unknown,veste,cleaned,2026-07-04 02:43:49
+COM00345,LIVE0011,CUS0021,other,livefan_7626,Je veux le même que le précédent,2026-04-26 20:51:00,fr,unknown,sac,cleaned,2026-07-04 02:43:49
+COM00346,LIVE0021,CUS0074,tiktok,livefan_3605,Je paye maintenant,2026-01-27 21:56:20,fr,purchase_intent,veste,cleaned,2026-07-04 02:43:49
+COM00347,LIVE0020,CUS0008,tiktok,adam_480,Prix ?,2026-03-07 12:54:08,fr,other,robe,cleaned,2026-07-04 02:43:49
+COM00348,LIVE0017,CUS0057,instagram,shop_4509,Disponible en rouge ?,2026-04-21 00:00:00,unknown,unknown,jean,cleaned,2026-07-04 02:43:49
+COM00349,LIVE0013,CUS0062,instagram,nora_732,Mets-moi de côté le pull beige,2026-02-25 17:13:00,unknown,unknown,pull,cleaned,2026-07-04 02:43:49

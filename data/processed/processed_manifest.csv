@@ -1,0 +1,15 @@
+processed_at,dataset_name,output_file,row_count,column_count,status
+2026-07-04 02:43:50,sellers,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\sellers_clean.csv,19,12,created
+2026-07-04 02:43:50,customers,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\customers_clean.csv,79,8,created
+2026-07-04 02:43:50,products,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\products_clean.csv,219,12,created
+2026-07-04 02:43:50,live_sessions,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\live_sessions_clean.csv,33,13,created
+2026-07-04 02:43:50,live_products,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\live_products_clean.csv,114,9,created
+2026-07-04 02:43:50,live_comments,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\live_comments_clean.csv,308,12,created
+2026-07-04 02:43:50,carts,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\carts_clean.csv,117,10,created
+2026-07-04 02:43:50,cart_items,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\cart_items_clean.csv,213,10,created
+2026-07-04 02:43:50,orders,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\orders_clean.csv,84,11,created
+2026-07-04 02:43:50,payments,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\payments_clean.csv,88,11,created
+2026-07-04 02:43:50,stock_movements,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\stock_movements_clean.csv,152,9,created
+2026-07-04 02:43:50,live_events,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\live_events_clean.csv,842,9,created
+2026-07-04 02:43:50,cleaning_summary,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\cleaning_summary.csv,0,0,created
+2026-07-04 02:43:50,cleaning_operations_report,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\cleaning_operations_report.csv,0,0,created

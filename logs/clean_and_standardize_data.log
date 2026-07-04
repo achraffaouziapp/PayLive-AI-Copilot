@@ -1,0 +1,14 @@
+2026-07-04 02:43:49,282 | INFO | Starting data cleaning and standardization pipeline.
+2026-07-04 02:43:50,094 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\sellers_clean.csv
+2026-07-04 02:43:50,096 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\customers_clean.csv
+2026-07-04 02:43:50,109 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\products_clean.csv
+2026-07-04 02:43:50,110 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\live_sessions_clean.csv
+2026-07-04 02:43:50,111 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\live_products_clean.csv
+2026-07-04 02:43:50,114 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\live_comments_clean.csv
+2026-07-04 02:43:50,115 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\carts_clean.csv
+2026-07-04 02:43:50,117 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\cart_items_clean.csv
+2026-07-04 02:43:50,118 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\orders_clean.csv
+2026-07-04 02:43:50,119 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\payments_clean.csv
+2026-07-04 02:43:50,121 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\stock_movements_clean.csv
+2026-07-04 02:43:50,124 | INFO | Saved processed dataset: C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\processed\live_events_clean.csv
+2026-07-04 02:43:50,128 | INFO | Data cleaning and standardization pipeline completed successfully.

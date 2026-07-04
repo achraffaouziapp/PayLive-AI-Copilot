@@ -1,0 +1,13 @@
+dataset_name,input_rows,output_rows,removed_rows,missing_primary_key_removed,duplicate_rows_removed,invalid_reference_removed,invalid_business_rows_removed,values_standardized,financial_values_recalculated
+sellers,23,19,4,0,4,0,0,21,0
+customers,85,79,6,0,6,0,0,78,0
+products,224,219,5,0,5,0,0,78,0
+live_sessions,38,33,5,0,4,1,0,27,0
+live_products,125,114,11,0,5,6,0,0,0
+live_comments,365,308,57,0,16,11,30,0,0
+carts,126,117,9,0,7,2,0,0,117
+cart_items,228,213,15,0,9,6,0,0,3
+orders,95,84,11,0,6,5,0,0,84
+payments,102,88,14,0,8,6,0,0,1
+stock_movements,166,152,14,0,7,7,0,0,0
+live_events,1020,842,178,0,21,27,130,0,0
