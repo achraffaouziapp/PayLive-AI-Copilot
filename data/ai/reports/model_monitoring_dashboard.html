@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Monitoring IA — PayLive AI Copilot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 32px;
+            background: #f6f8fa;
+            color: #1f2937;
+        }
+        h1, h2 {
+            color: #111827;
+        }
+        .subtitle {
+            color: #4b5563;
+            margin-bottom: 24px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 18px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+        .card-title {
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+        .card-value {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .status {
+            background: white;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+        th, td {
+            border: 1px solid #e5e7eb;
+            padding: 8px;
+            text-align: left;
+            font-size: 13px;
+        }
+        th {
+            background: #eef2f7;
+        }
+        .section {
+            margin-top: 32px;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #6b7280;
+        }
+        code {
+            background: #eef2f7;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dashboard Monitoring IA — PayLive AI Copilot</h1>
+    <p class="subtitle">
+        Dashboard généré automatiquement à partir de <code>ai_predictions_log.csv</code>.
+    </p>
+
+    <div class="status">
+        <h2>État global du service IA</h2>
+        <p><strong>À surveiller</strong> — Plus de 50% des prédictions ont une confiance faible.</p>
+        <p>Dernière prédiction journalisée : <strong></strong></p>
+        <p>Dashboard généré le : <strong>2026-07-04T20:59:11</strong></p>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <div class="card-title">Nombre total de prédictions</div>
+            <div class="card-value">7</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Confiance moyenne</div>
+            <div class="card-value">0.3041</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Prédictions faible confiance</div>
+            <div class="card-value">7</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Alertes générées</div>
+            <div class="card-value">8</div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <div class="card-title">Taux faible confiance</div>
+            <div class="card-value">100.0%</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Temps moyen de réponse</div>
+            <div class="card-value">164.04 ms</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Intentions inconnues</div>
+            <div class="card-value">0</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Seuil faible confiance</div>
+            <div class="card-value">0.6</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Répartition des intentions prédites</h2>
+        <table><tr><th>predicted_intent</th><th>count</th><th>percentage</th></tr><tr><td>purchase_intent</td><td>4</td><td>57.14</td></tr><tr><td>shipping_question</td><td>2</td><td>28.57</td></tr><tr><td>payment_question</td><td>1</td><td>14.29</td></tr></table>
+    </div>
+
+    <div class="section">
+        <h2>Répartition par source</h2>
+        <table><tr><th>source</th><th>count</th><th>percentage</th></tr><tr><td>api_batch</td><td>4</td><td>57.14</td></tr><tr><td>api_single</td><td>3</td><td>42.86</td></tr></table>
+    </div>
+
+    <div class="section">
+        <h2>Répartition par version de modèle</h2>
+        <table><tr><th>model_version</th><th>count</th><th>percentage</th></tr><tr><td>intent_classifier_v1</td><td>7</td><td>100.0</td></tr></table>
+    </div>
+
+    <div class="section">
+        <h2>Alertes générées</h2>
+        <p>
+            Les alertes sont aussi exportées dans :
+            <code>data/ai/reports/model_monitoring_alerts.csv</code>
+        </p>
+        <table><tr><th>generated_at</th><th>timestamp</th><th>source</th><th>comment_text</th><th>predicted_intent</th><th>confidence_score</th><th>response_time_ms</th><th>model_version</th><th>alert_type</th><th>alert_level</th><th>alert_message</th></tr><tr><td>2026-07-04T20:59:11</td><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1141.54</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T20:59:11</td><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1141.54</td><td>intent_classifier_v1</td><td>SLOW_RESPONSE</td><td>warning</td><td>Temps de réponse supérieur au seuil 1000 ms</td></tr><tr><td>2026-07-04T20:59:11</td><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1.66</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T20:59:11</td><td></td><td>api_single</td><td>je prends le pull rouge en M</td><td>purchase_intent</td><td>0.2777</td><td>1.53</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T20:59:11</td><td></td><td>api_batch</td><td>je prends le pull rouge en M</td><td>purchase_intent</td><td>0.2777</td><td>1.19</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T20:59:11</td><td></td><td>api_batch</td><td>comment payer ?</td><td>payment_question</td><td>0.5299</td><td>0.72</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T20:59:11</td><td></td><td>api_batch</td><td>vous livrez en Belgique ?</td><td>shipping_question</td><td>0.3223</td><td>0.66</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr><tr><td>2026-07-04T20:59:11</td><td></td><td>api_batch</td><td>trop beau</td><td>shipping_question</td><td>0.2214</td><td>0.99</td><td>intent_classifier_v1</td><td>LOW_CONFIDENCE</td><td>warning</td><td>Score de confiance inférieur au seuil 0.60</td></tr></table>
+    </div>
+
+    <div class="section">
+        <h2>Exemples de prédictions à faible confiance</h2>
+        <table><tr><th>timestamp</th><th>source</th><th>comment_text</th><th>predicted_intent</th><th>confidence_score</th><th>response_time_ms</th><th>model_version</th></tr><tr><td></td><td>api_batch</td><td>trop beau</td><td>shipping_question</td><td>0.2214</td><td>0.99</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1141.54</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1.66</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends le pull rouge en M</td><td>purchase_intent</td><td>0.2777</td><td>1.53</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>je prends le pull rouge en M</td><td>purchase_intent</td><td>0.2777</td><td>1.19</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>vous livrez en Belgique ?</td><td>shipping_question</td><td>0.3223</td><td>0.66</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>comment payer ?</td><td>payment_question</td><td>0.5299</td><td>0.72</td><td>intent_classifier_v1</td></tr></table>
+    </div>
+
+    <div class="section">
+        <h2>Dernières prédictions journalisées</h2>
+        <table><tr><th>timestamp</th><th>source</th><th>comment_text</th><th>predicted_intent</th><th>confidence_score</th><th>response_time_ms</th><th>model_version</th></tr><tr><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1141.54</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends la robe noire en M</td><td>purchase_intent</td><td>0.25</td><td>1.66</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_single</td><td>je prends le pull rouge en M</td><td>purchase_intent</td><td>0.2777</td><td>1.53</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>je prends le pull rouge en M</td><td>purchase_intent</td><td>0.2777</td><td>1.19</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>comment payer ?</td><td>payment_question</td><td>0.5299</td><td>0.72</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>vous livrez en Belgique ?</td><td>shipping_question</td><td>0.3223</td><td>0.66</td><td>intent_classifier_v1</td></tr><tr><td></td><td>api_batch</td><td>trop beau</td><td>shipping_question</td><td>0.2214</td><td>0.99</td><td>intent_classifier_v1</td></tr></table>
+    </div>
+
+    <div class="footer">
+        <p>
+            Ce dashboard correspond à un monitoring IA léger.
+            Il permet de suivre les prédictions, les scores de confiance,
+            les temps de réponse et les alertes principales du service IA.
+        </p>
+    </div>
+</body>
+</html>

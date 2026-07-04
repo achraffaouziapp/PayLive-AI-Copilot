@@ -1,0 +1,75 @@
+name: AI MLOps CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  ai-mlops-pipeline:
+    name: Run AI MLOps pipeline
+    runs-on: ubuntu-latest
+
+    env:
+      PYTHONPATH: ${{ github.workspace }}
+      API_KEY: paylive-dev-api-key
+      POSTGRES_HOST: localhost
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: paylive_ai_copilot
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest
+
+      - name: Prepare AI dataset
+        run: |
+          python src/ai/data_preparation/prepare_nlp_dataset.py
+
+      - name: Train intent classifier
+        run: |
+          python src/ai/training/train_intent_classifier.py
+
+      - name: Run model benchmark
+        run: |
+          python src/ai/training/benchmark_intent_models.py
+
+      - name: Generate monitoring report
+        run: |
+          python src/ai/monitoring/monitor_predictions.py
+
+      - name: Generate monitoring dashboard and alerts
+        run: |
+          python src/ai/monitoring/generate_monitoring_dashboard.py
+
+      - name: Run AI automated tests
+        run: |
+          pytest tests/test_ai_dataset.py tests/test_intent_model.py tests/test_ai_api.py -v
+
+      - name: Upload AI reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-mlops-reports
+          path: |
+            data/ai/reports/
+            models/intent_classifier/model_metadata.json
+          if-no-files-found: warn

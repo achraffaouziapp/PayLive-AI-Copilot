@@ -1,18 +1,25 @@
 from typing import Any, Dict, List
-
 import os
-
+from pathlib import Path
+from fastapi.responses import FileResponse
+from src.ai.monitoring.generate_monitoring_dashboard import main as generate_monitoring_dashboard
 from dotenv import load_dotenv
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import APIKeyHeader
 from pydantic import BaseModel, Field
-
 from api.ai_service import (
     predict_single_comment,
     predict_multiple_comments,
     get_ai_model_information,
     get_ai_model_metrics,
 )
+
+
+BASE_DIR = Path(__file__).resolve().parents[2]
+
+AI_REPORTS_DIR = BASE_DIR / "data" / "ai" / "reports"
+DASHBOARD_PATH = AI_REPORTS_DIR / "model_monitoring_dashboard.html"
+ALERTS_PATH = AI_REPORTS_DIR / "model_monitoring_alerts.csv"
 
 
 # -------------------------------------------------------------------
@@ -245,3 +252,50 @@ def model_metrics_route(
             status_code=500,
             detail=f"Unable to load model metrics: {error}",
         ) from error
+
+
+@router.get("/monitoring/dashboard")
+def get_ai_monitoring_dashboard(
+    _: str = Depends(require_api_key),
+):
+    """
+    Retourne le dashboard HTML de monitoring IA.
+
+    Le dashboard est régénéré à chaque appel afin d'afficher les dernières
+    prédictions journalisées dans ai_predictions_log.csv.
+    """
+    generate_monitoring_dashboard()
+
+    if not DASHBOARD_PATH.exists():
+        raise HTTPException(
+            status_code=404,
+            detail="Dashboard de monitoring IA introuvable.",
+        )
+
+    return FileResponse(
+        path=str(DASHBOARD_PATH),
+        media_type="text/html",
+        filename="model_monitoring_dashboard.html",
+    )
+
+
+@router.get("/monitoring/alerts")
+def get_ai_monitoring_alerts(
+    _: str = Depends(require_api_key),
+):
+    """
+    Retourne le fichier CSV des alertes de monitoring IA.
+    """
+    generate_monitoring_dashboard()
+
+    if not ALERTS_PATH.exists():
+        raise HTTPException(
+            status_code=404,
+            detail="Fichier d'alertes de monitoring IA introuvable.",
+        )
+
+    return FileResponse(
+        path=str(ALERTS_PATH),
+        media_type="text/csv",
+        filename="model_monitoring_alerts.csv",
+    )        
