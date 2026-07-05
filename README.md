@@ -14,14 +14,17 @@ suivre les paniers et les commandes
 analyser la performance commerciale des lives
 préparer des données exploitables pour des fonctionnalités IA
 exposer les données et les prédictions via une API REST
+intégrer le service IA dans une application web
 monitorer le service IA
+suivre les alertes et les métriques du modèle
 ```
 
-Le projet couvre deux blocs :
+Le projet couvre trois blocs :
 
 ```text
 Bloc 1 — Collecte, préparation, stockage et mise à disposition des données
 Bloc 2 — Intégration d’un service IA, API, tests, monitoring et MLOps
+Bloc 3 — Application web HTML/CSS/JS conteneurisée intégrant le service IA
 ```
 
 ## 2. Données utilisées
@@ -101,6 +104,42 @@ alertes CSV
 pipeline GitHub Actions MLOps
 ```
 
+### 3.3. Bloc 3 — Application web
+
+Le Bloc 3 couvre :
+
+```text
+analyse du besoin applicatif
+spécifications fonctionnelles et user stories
+critères d’acceptation
+architecture applicative
+parcours utilisateurs
+objectifs d’accessibilité
+développement d’une interface HTML/CSS/JavaScript
+intégration de l’API IA
+conteneurisation Docker/Nginx
+sécurisation des appels par X-API-Key
+tests frontend statiques
+intégration des tests frontend dans GitHub Actions
+pilotage avec Jira
+documentation des incidents et de la maintenance
+```
+
+L’application web permet de :
+
+```text
+saisir un commentaire de live
+tester la clé API sur une route protégée
+envoyer un commentaire au modèle IA
+afficher l’intention prédite
+afficher le score de confiance
+afficher une alerte en cas de faible confiance
+charger les informations du modèle
+charger les métriques du modèle
+ouvrir le dashboard monitoring
+télécharger les alertes CSV
+```
+
 ## 4. Architecture du projet
 
 ```text
@@ -126,6 +165,14 @@ PayLive-AI-Copilot/
 │       ├── health.py
 │       ├── lives.py
 │       └── sellers.py
+├── frontend/
+│   ├── Dockerfile
+│   ├── nginx.conf
+│   ├── index.html
+│   ├── css/
+│   │   └── styles.css
+│   └── js/
+│       └── app.js
 ├── data/
 │   ├── raw/
 │   ├── interim/
@@ -143,7 +190,8 @@ PayLive-AI-Copilot/
 │   ├── 04_api/
 │   ├── 05_rgpd/
 │   ├── 06_bilan/
-│   └── 07_ai_service/
+│   ├── 07_ai_service/
+│   └── 08_application/
 ├── models/
 │   └── intent_classifier/
 ├── notebooks/
@@ -176,6 +224,7 @@ PostgreSQL via Docker
 pgAdmin via Docker
 Git
 GitHub Actions pour la CI MLOps
+un compte Jira pour le suivi des tâches Bloc 3
 ```
 
 Bibliothèques Python principales :
@@ -196,6 +245,16 @@ pytest
 httpx
 scikit-learn
 joblib
+```
+
+Côté frontend :
+
+```text
+HTML
+CSS
+JavaScript natif
+Nginx
+Docker
 ```
 
 ## 6. Installation du projet
@@ -248,7 +307,7 @@ Le fichier `.env` ne doit pas être versionné.
 Démarrer les services :
 
 ```bash
-docker compose up -d
+docker compose up -d --build
 ```
 
 Vérifier les conteneurs :
@@ -263,6 +322,13 @@ Conteneurs attendus :
 paylive_postgres
 paylive_pgadmin
 paylive_api
+paylive_frontend
+```
+
+Accès frontend :
+
+```text
+http://127.0.0.1:8080
 ```
 
 Accès API :
@@ -486,7 +552,88 @@ Ouvrir le dashboard localement sous Windows :
 start data\ai\reports\model_monitoring_dashboard.html
 ```
 
-## 12. API REST
+## 12. Application Bloc 3 — Frontend HTML/CSS/JS
+
+Le frontend est situé dans :
+
+```text
+frontend/
+```
+
+Il est servi par Nginx et exposé sur :
+
+```text
+http://127.0.0.1:8080
+```
+
+### 12.1. Fonctions disponibles dans l’interface
+
+L’interface permet de :
+
+```text
+tester la connexion sécurisée à l’API IA
+saisir un commentaire de live
+appeler le modèle IA
+afficher l’intention prédite
+afficher le score de confiance
+afficher le temps de réponse
+afficher la version du modèle
+afficher une alerte de faible confiance
+charger les informations modèle
+charger les métriques modèle
+ouvrir le dashboard de monitoring
+télécharger les alertes CSV
+```
+
+### 12.2. Proxy Nginx
+
+Le fichier :
+
+```text
+frontend/nginx.conf
+```
+
+sert l’application et proxifie :
+
+```text
+/health → http://api:8000/health
+/api/   → http://api:8000/api/
+```
+
+Cela permet au JavaScript d’utiliser des URLs relatives :
+
+```text
+/health
+/api/v1/ai
+```
+
+### 12.3. Commandes frontend
+
+Construire uniquement le frontend :
+
+```bash
+docker compose build frontend
+```
+
+Lancer le frontend :
+
+```bash
+docker compose up -d frontend
+```
+
+Consulter les logs :
+
+```bash
+docker logs --tail 80 paylive_frontend
+```
+
+Tester le frontend :
+
+```bash
+curl http://127.0.0.1:8080
+```
+
+## 13. API REST
 
 L’API est développée avec FastAPI.
 
@@ -499,7 +646,7 @@ python -m uvicorn api.main:app --reload
 Lancement Docker :
 
 ```bash
-docker compose up -d
+docker compose up -d --build
 ```
 
 URL API :
@@ -520,7 +667,7 @@ OpenAPI :
 http://127.0.0.1:8000/openapi.json
 ```
 
-## 13. Sécurité API
+## 14. Sécurité API
 
 Les routes métier et IA sont protégées par clé API.
 
@@ -538,9 +685,11 @@ clé invalide  → 403 Forbidden
 clé valide    → 200 OK
 ```
 
-## 14. Routes principales
+Dans le frontend, le bouton de test de connexion vérifie une route protégée afin de valider réellement la clé API.
 
-### 14.1. Routes publiques
+## 15. Routes principales
+
+### 15.1. Routes publiques
 
 ```text
 GET /
@@ -548,7 +697,7 @@ GET /health
 GET /openapi.json
 ```
 
-### 14.2. Routes métier Bloc 1
+### 15.2. Routes métier Bloc 1
 
 ```text
 GET /api/v1/sellers
@@ -561,7 +710,7 @@ GET /api/v1/analytics/platform-summary
 GET /api/v1/analytics/conversion-insights
 ```
 
-### 14.3. Routes IA Bloc 2
+### 15.3. Routes IA Bloc 2 et utilisées par le Bloc 3
 
 ```text
 POST /api/v1/ai/predict-intent
@@ -572,15 +721,15 @@ GET  /api/v1/ai/monitoring/dashboard
 GET  /api/v1/ai/monitoring/alerts
 ```
 
-## 15. Exemples d’appels API
+## 16. Exemples d’appels API
 
-### 15.1. Test santé
+### 16.1. Test santé
 
 ```bash
 curl http://127.0.0.1:8000/health
 ```
 
-### 15.2. Prédiction d’intention
+### 16.2. Prédiction d’intention
 
 Commande Windows CMD :
 
@@ -588,22 +737,22 @@ Commande Windows CMD :
 curl -H "X-API-Key: paylive-dev-api-key" -H "Content-Type: application/json" -X POST http://127.0.0.1:8000/api/v1/ai/predict-intent -d "{\"comment_text\":\"je prends la robe noire en M\"}"
 ```
 
-### 15.3. Télécharger le dashboard de monitoring IA
+### 16.3. Télécharger le dashboard de monitoring IA
 
 ```cmd
 curl -H "X-API-Key: paylive-dev-api-key" -o dashboard.html http://127.0.0.1:8000/api/v1/ai/monitoring/dashboard
 start dashboard.html
 ```
 
-### 15.4. Télécharger les alertes de monitoring IA
+### 16.4. Télécharger les alertes de monitoring IA
 
 ```cmd
 curl -H "X-API-Key: paylive-dev-api-key" -o alerts.csv http://127.0.0.1:8000/api/v1/ai/monitoring/alerts
 ```
 
-## 16. Tests automatisés
+## 17. Tests automatisés
 
-### 16.1. Tests Bloc 1
+### 17.1. Tests Bloc 1
 
 ```bash
 pytest tests/test_api.py -v
@@ -621,7 +770,7 @@ connexion PostgreSQL
 documentation OpenAPI
 ```
 
-### 16.2. Tests Bloc 2
+### 17.2. Tests Bloc 2
 
 ```bash
 pytest tests/test_ai_dataset.py tests/test_intent_model.py tests/test_ai_api.py -v
@@ -639,15 +788,34 @@ authentification IA
 réponses JSON
 ```
 
-### 16.3. Test complet
+### 17.3. Tests Bloc 3
 
 ```bash
-pytest tests/test_api.py tests/test_ai_dataset.py tests/test_intent_model.py tests/test_ai_api.py -v
+pytest tests/test_frontend_static.py -v
 ```
 
-## 17. Pipeline MLOps GitHub Actions
+Tests couverts :
 
-Un workflow GitHub Actions automatise la chaîne IA.
+```text
+présence des fichiers frontend
+présence des sections principales dans index.html
+présence des routes API dans app.js
+présence du header X-API-Key
+validation de la clé API sur une route protégée
+règles CSS responsive
+configuration Nginx
+Dockerfile frontend
+```
+
+### 17.4. Test complet
+
+```bash
+pytest tests/test_api.py tests/test_ai_dataset.py tests/test_intent_model.py tests/test_ai_api.py tests/test_frontend_static.py -v
+```
+
+## 18. Pipeline MLOps et CI/CD GitHub Actions
+
+Un workflow GitHub Actions automatise la chaîne IA et application.
 
 Fichier :
 
@@ -672,14 +840,46 @@ benchmark des modèles
 génération du monitoring
 génération du dashboard et des alertes
 tests automatisés IA/API
+tests frontend statiques
+build Docker du frontend
 publication des rapports en artefacts
 ```
 
 Le pipeline passe en vert sur GitHub Actions.
 
-## 18. Documentation du projet
+## 19. Pilotage avec Jira
 
-### 18.1. Documentation Bloc 1
+Le suivi du Bloc 3 est documenté dans :
+
+```text
+docs/08_application/39_pilotage_jira_bloc3.md
+```
+
+Jira est utilisé pour suivre :
+
+```text
+les user stories
+les tâches techniques
+les bugs
+les corrections
+les critères d’acceptation
+l’état d’avancement
+les preuves de réalisation
+```
+
+Types de tickets utilisés :
+
+```text
+Epic
+Story
+Task
+Bug
+Improvement
+```
+
+## 20. Documentation du projet
+
+### 20.1. Documentation Bloc 1
 
 ```text
 docs/00_project_overview/00_contexte_projet.md
@@ -709,7 +909,7 @@ docs/05_rgpd/19_registre_rgpd.md
 docs/06_bilan/20_bilan_bloc1.md
 ```
 
-### 18.2. Documentation Bloc 2
+### 20.2. Documentation Bloc 2
 
 ```text
 docs/07_ai_service/21_cadrage_bloc2_ia.md
@@ -724,9 +924,24 @@ docs/07_ai_service/29_monitoring_modele_ia.md
 docs/07_ai_service/30_bilan_bloc2.md
 ```
 
-## 19. Rapports générés
+### 20.3. Documentation Bloc 3
 
-### 19.1. Rapports Bloc 1
+```text
+docs/08_application/31_cadrage_application_bloc3.md
+docs/08_application/32_specifications_fonctionnelles.md
+docs/08_application/33_architecture_application.md
+docs/08_application/34_user_stories_accessibilite.md
+docs/08_application/35_developpement_interface.md
+docs/08_application/36_tests_application.md
+docs/08_application/37_bilan_bloc3.md
+docs/08_application/38_checklist_captures_bloc3.md
+docs/08_application/39_pilotage_jira_bloc3.md
+docs/08_application/40_incidents_maintenance_bloc3.md
+```
+
+## 21. Rapports générés
+
+### 21.1. Rapports Bloc 1
 
 ```text
 data/interim/reports/raw_quality/
@@ -744,7 +959,7 @@ data/processed/reports/database_quality/
 data/processed/reports/api_tests/
 ```
 
-### 19.2. Rapports Bloc 2
+### 21.2. Rapports Bloc 2
 
 ```text
 data/ai/reports/nlp_dataset_quality_report.csv
@@ -764,7 +979,22 @@ data/ai/reports/model_monitoring_dashboard.html
 data/ai/reports/model_monitoring_alerts.csv
 ```
 
-## 20. RGPD et sécurité
+### 21.3. Preuves Bloc 3
+
+```text
+frontend/
+tests/test_frontend_static.py
+.github/workflows/ai_mlops_ci.yml
+docs/08_application/
+captures d’écran Jira
+captures d’écran frontend
+captures d’écran prédiction IA
+captures d’écran dashboard monitoring
+captures d’écran GitHub Actions
+captures d’écran Docker Compose
+```
+
+## 22. RGPD, sécurité et OWASP
 
 Le projet prend en compte le RGPD par :
 
@@ -785,7 +1015,49 @@ Document principal :
 docs/05_rgpd/19_registre_rgpd.md
 ```
 
-## 21. Fichiers à ne pas versionner
+Mesures de sécurité appliquées :
+
+```text
+routes protégées par X-API-Key
+validation des entrées côté API
+gestion des erreurs 401 et 403
+proxy Nginx vers l’API Docker
+absence d’appel à un fournisseur IA externe
+absence de données réelles
+logs Docker consultables
+monitoring IA avec dashboard et alertes
+documentation des incidents et procédures de maintenance
+```
+
+## 23. Incidents et maintenance
+
+Les incidents et corrections du Bloc 3 sont documentés dans :
+
+```text
+docs/08_application/40_incidents_maintenance_bloc3.md
+```
+
+Exemples d’incidents corrigés :
+
+```text
+mise en page JSON trop large dans le frontend
+sections informations modèle et métriques modèle affichées sur la même ligne
+test de clé API basé sur /health alors que /health est public
+correction du test de clé API sur une route protégée
+```
+
+Commandes utiles de diagnostic :
+
+```bash
+docker compose ps
+docker logs --tail 80 paylive_frontend
+docker logs --tail 80 paylive_api
+curl http://127.0.0.1:8080
+curl http://127.0.0.1:8000/health
+pytest tests/test_frontend_static.py -v
+```
+
+## 24. Fichiers à ne pas versionner
 
 Le fichier `.env` ne doit pas être versionné.
 
@@ -805,9 +1077,9 @@ data/raw/legacy_database/
 
 Selon la stratégie du dossier, certains fichiers CSV de preuve peuvent être versionnés temporairement pour l’évaluation.
 
-## 22. Commandes de vérification finale
+## 25. Commandes de vérification finale
 
-### 22.1. Vérification Bloc 1
+### 25.1. Vérification Bloc 1
 
 ```bash
 python src/data_processing/clean_and_standardize_data.py
@@ -817,7 +1089,7 @@ python src/database/check_database_quality.py
 pytest tests/test_api.py -v
 ```
 
-### 22.2. Vérification Bloc 2
+### 25.2. Vérification Bloc 2
 
 ```bash
 python src/ai/data_preparation/prepare_nlp_dataset.py
@@ -828,22 +1100,39 @@ python src/ai/monitoring/generate_monitoring_dashboard.py
 pytest tests/test_ai_dataset.py tests/test_intent_model.py tests/test_ai_api.py -v
 ```
 
-### 22.3. Vérification Docker
+### 25.3. Vérification Bloc 3
 
 ```bash
-docker compose up -d
+docker compose up -d --build
+pytest tests/test_frontend_static.py -v
+curl http://127.0.0.1:8080
 curl http://127.0.0.1:8000/health
 ```
 
-### 22.4. Vérification complète des tests
+### 25.4. Vérification complète
 
 ```bash
-pytest tests/test_api.py tests/test_ai_dataset.py tests/test_intent_model.py tests/test_ai_api.py -v
+pytest tests/test_api.py tests/test_ai_dataset.py tests/test_intent_model.py tests/test_ai_api.py tests/test_frontend_static.py -v
 ```
 
-## 23. Résultat final
+### 25.5. Vérification Docker complète
 
-À la fin des deux blocs, le projet dispose :
+```bash
+docker compose up -d --build
+docker compose ps
+```
+
+Vérifier ensuite :
+
+```text
+http://127.0.0.1:8080
+http://127.0.0.1:8000/docs
+http://127.0.0.1:5050
+```
+
+## 26. Résultat final
+
+À la fin des trois blocs, le projet dispose :
 
 ```text
 d’un pipeline complet de collecte multi-sources
@@ -858,20 +1147,27 @@ d’un modèle entraîné localement
 d’un benchmark modèles et services IA
 d’un module d’inférence
 de routes API IA
-de tests automatisés Bloc 1 et Bloc 2
+de tests automatisés Bloc 1, Bloc 2 et Bloc 3
 d’un monitoring IA
 d’un dashboard HTML
 d’alertes CSV
-d’un pipeline CI MLOps GitHub Actions
+d’un frontend HTML/CSS/JavaScript
+d’un frontend conteneurisé avec Docker et Nginx
+d’une intégration frontend → API IA
+d’un suivi Jira du Bloc 3
+d’une documentation des incidents et de la maintenance
+d’un pipeline CI/CD GitHub Actions
 d’une documentation technique complète
 ```
 
-## 24. Conclusion
+## 27. Conclusion
 
-Le projet **PayLive AI Copilot** met en place une chaîne complète allant de la collecte des données jusqu’à l’intégration d’un service IA monitoré.
+Le projet **PayLive AI Copilot** met en place une chaîne complète allant de la collecte des données jusqu’à l’intégration d’un service IA dans une application web.
 
 Le Bloc 1 démontre la capacité à collecter, nettoyer, structurer, stocker et exposer des données via une API REST sécurisée.
 
 Le Bloc 2 démontre la capacité à réaliser une veille IA, benchmarker des solutions, entraîner un modèle, l’exposer via API, le tester, le monitorer et l’intégrer dans une chaîne MLOps légère.
 
-La solution finale reste volontairement locale, explicable et sobre, ce qui correspond au contexte pédagogique et aux contraintes du projet.
+Le Bloc 3 démontre la capacité à analyser un besoin applicatif, spécifier des user stories, concevoir une architecture technique, développer une interface web, intégrer un service IA, sécuriser les accès, tester l’application, suivre les tâches avec Jira et automatiser la validation dans une chaîne CI/CD.
+
+La solution finale reste volontairement locale, explicable, sobre et conteneurisée, ce qui correspond au contexte pédagogique, aux contraintes du projet et aux attendus du dossier professionnel.
