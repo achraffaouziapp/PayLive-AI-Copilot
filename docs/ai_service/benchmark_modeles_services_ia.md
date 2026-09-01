@@ -537,6 +537,43 @@ Ce benchmark permet de justifier pourquoi la première version du projet utilise
 | Azure AI Language / Azure OpenAI | service cloud IA | services Microsoft pour NLP ou modèles génératifs |
 | AWS Comprehend | service cloud NLP | service AWS pour analyse NLP et classification personnalisée |
 
+## 12.2.1. Services identifiés mais non étudiés en profondeur
+
+En complément des solutions étudiées en détail, plusieurs services ont été identifiés pendant la phase de présélection mais n'ont pas été intégrés au benchmark approfondi. Le fait de ne pas les étudier en détail ne signifie pas qu'ils sont techniquement inadaptés : ils ont été écartés parce qu'ils apportaient peu de valeur discriminante supplémentaire par rapport aux familles de solutions déjà représentées, ou parce qu'ils étaient disproportionnés au regard du besoin actuel.
+
+| Solution | Statut | Motif de non-étude approfondie | Réévaluation possible si |
+|---|---|---|---|
+| Anthropic API | identifié, non étudié en profondeur | redondance avec la catégorie des LLM généralistes déjà représentée par OpenAI ; coût et dépendance externe comparables | besoin de génération avancée, compréhension contextuelle renforcée ou diversification fournisseur |
+| Cohere | identifié, non étudié en profondeur | solution NLP/LLM pertinente mais faible valeur discriminante supplémentaire par rapport à Hugging Face et aux API IA externes déjà étudiées | besoin d'embeddings, de recherche sémantique ou de services NLP spécialisés |
+| IBM watsonx / services NLP IBM | identifié, non étudié en profondeur | quatrième grande plateforme entreprise après AWS, Azure et Google Cloud ; étude supplémentaire peu utile pour le POC | contexte d'entreprise déjà équipé IBM ou contrainte contractuelle spécifique |
+| Mistral API | identifié, non étudié individuellement | famille des LLM externes déjà couverte dans le benchmark ; pas nécessaire pour une classification locale simple | besoin de souveraineté, de modèles européens ou d'une fonctionnalité générative |
+| Autres fournisseurs de LLM accessibles par API | identifiés, non étudiés individuellement | le benchmark vise à comparer les grandes familles de solutions et non l'ensemble des fournisseurs existants | changement important de coût, de conformité, de performance ou de besoin métier |
+
+### Justification de cette présélection
+
+Le benchmark a volontairement été limité à un ensemble représentatif de familles techniques :
+
+1. modèle ML classique local ;
+2. modèle NLP avancé local ;
+3. inférence NLP hébergée ;
+4. LLM externe généraliste ;
+5. grandes plateformes cloud IA.
+
+Cette stratégie évite de multiplier les fournisseurs présentant des contraintes très proches sans apporter de nouvelle information utile à la décision. Les services non étudiés en profondeur restent documentés afin de pouvoir être réévalués si les besoins évoluent.
+
+## 12.2.2. Solutions volontairement hors périmètre
+
+Certaines familles de services ont été écartées avant le benchmark détaillé car elles ne correspondent pas au besoin fonctionnel actuel.
+
+| Famille de solution | Motif d'exclusion |
+|---|---|
+| services principalement orientés vision par ordinateur | le projet traite principalement des commentaires texte ; aucune analyse d'image n'est nécessaire dans la V1 |
+| services principalement orientés reconnaissance ou synthèse vocale | aucun flux audio n'est traité dans le POC actuel |
+| solutions nécessitant une infrastructure GPU lourde ou un cluster dédié | disproportionnées pour une classification de commentaires courts et incompatibles avec l'objectif de sobriété de la V1 |
+| plateformes nécessitant une architecture d'entreprise complexe uniquement pour la classification | complexité, coût et maintenance supérieurs au besoin actuel |
+
+Ces familles pourraient être réintégrées dans le benchmark si le périmètre évolue vers l'analyse vidéo des lives, la transcription audio, des modèles multimodaux ou un déploiement industriel à grande échelle.
+
 ## 12.3. Critères de comparaison des services IA
 
 Les services IA sont comparés selon les critères suivants :
@@ -963,17 +1000,48 @@ Ce choix est justifié par les éléments suivants :
 - il est cohérent avec une démarche éco-responsable car il évite l’utilisation d’un grand modèle externe pour une tâche simple ;
 - il permet une explication claire en soutenance.
 
-## 17. Services écartés et justification
+## 17. Services écartés, non étudiés et justification
 
-| Service écarté | Justification |
-|---|---|
-| Hugging Face local | intéressant mais plus lourd pour une première version |
-| Hugging Face Inference Providers | dépendance externe et coût d’usage |
-| OpenAI API | très performant mais coût, dépendance API et confidentialité à prendre en compte |
-| Google Cloud Natural Language / Vertex AI | configuration cloud plus lourde que nécessaire |
-| Azure AI Language / Azure OpenAI | surdimensionné pour la V1 et dépendance cloud |
-| AWS Comprehend | configuration et coût moins adaptés au contexte étudiant local |
+Le choix final ne repose pas uniquement sur les solutions retenues. Le benchmark documente également les solutions étudiées mais écartées ainsi que les services identifiés sans analyse approfondie. Cette distinction permet de rendre la décision traçable et d'expliquer pourquoi certaines solutions n'ont pas été poursuivies dans la première version.
 
+### 17.1. Solutions étudiées puis écartées pour la V1
+
+| Service / solution | Niveau d'étude | Justification de l'écartement |
+|---|---|---|
+| Hugging Face local | étudié en détail | intéressant pour une meilleure compréhension du langage, mais plus lourd en dépendances et ressources pour une première version |
+| Hugging Face Inference Providers | étudié en détail | dépendance externe, coût potentiel, gestion de clé API et transfert possible des commentaires vers un tiers |
+| OpenAI API | étudié en détail | très performant mais coût récurrent, dépendance API, latence réseau et solution surdimensionnée pour une classification simple |
+| Google Cloud Natural Language / Vertex AI | étudié en détail | configuration cloud, IAM, facturation et complexité supérieurs au besoin du POC |
+| Azure AI Language / Azure OpenAI | étudié en détail | solution adaptée à un SI Azure mais plus complexe et coûteuse qu'une solution locale |
+| AWS Comprehend | étudié en détail | service NLP adapté à la production AWS, mais configuration et coûts disproportionnés pour le contexte local |
+
+### 17.2. Services identifiés mais non étudiés en profondeur
+
+| Service | Statut | Raisons de non-étude approfondie |
+|---|---|---|
+| Anthropic API | non étudié en profondeur | redondance fonctionnelle avec la catégorie LLM externe déjà représentée par OpenAI |
+| Cohere | non étudié en profondeur | faible valeur discriminante supplémentaire pour la décision actuelle ; catégories NLP cloud déjà représentées |
+| IBM watsonx / services NLP IBM | non étudié en profondeur | redondance avec AWS, Azure et Google Cloud pour la comparaison des plateformes entreprise |
+| Mistral API | non étudié individuellement | autre LLM externe ; à réévaluer si souveraineté, coût ou fonctions génératives deviennent prioritaires |
+| autres API génératives | non étudiées individuellement | benchmark non exhaustif, volontairement centré sur les familles de solutions utiles à la décision |
+
+### 17.3. Solutions hors périmètre
+
+Les solutions principalement orientées vision, audio ou nécessitant une infrastructure GPU lourde n'ont pas été retenues car le besoin actuel porte sur la classification de commentaires texte courts.
+
+### 17.4. Principe de décision
+
+Une solution est écartée de la V1 lorsqu'au moins un des constats suivants s'applique :
+
+- le besoin est déjà couvert par une solution plus simple ;
+- son ajout au benchmark serait redondant ;
+- le coût ou les prérequis sont disproportionnés ;
+- elle augmente inutilement la dépendance à un fournisseur ;
+- elle implique davantage de transferts de données ;
+- elle ne correspond pas au périmètre fonctionnel actuel ;
+- son impact en ressources est supérieur sans bénéfice suffisant.
+
+Les solutions écartées ne sont pas définitivement rejetées. Elles pourront être réévaluées en cas d'évolution du besoin, notamment pour le multilingue, l'extraction d'entités, la génération de réponses, la scalabilité ou l'intégration directe à une plateforme de production.
 ## 18. Modèle final prévu
 
 Pipeline prévu :
@@ -1125,6 +1193,16 @@ https://learn.microsoft.com/en-us/azure/ai-services/language-service/concepts/mo
 AWS — Amazon Comprehend Pricing
 https://aws.amazon.com/comprehend/pricing/
 ```
+
+## 23.1. Traçabilité de la présélection des services
+
+Pour assurer la traçabilité du benchmark, les solutions sont classées selon trois statuts :
+
+- **étudiée en détail** : solution analysée selon les critères fonctionnels, techniques, économiques, de confidentialité et d'éco-responsabilité ;
+- **identifiée mais non étudiée en profondeur** : solution connue et considérée, mais non approfondie pour une raison explicitée ;
+- **hors périmètre** : famille de solution ne répondant pas au besoin actuel.
+
+Cette classification permet de justifier non seulement la solution retenue, mais également les raisons ayant conduit à ne pas poursuivre certaines alternatives.
 
 ## 24. Conclusion
 
