@@ -145,6 +145,194 @@ Rôle des fichiers :
 | CI/CD | GitHub Actions | Automatisation des tests et validation du build Docker |
 | Monitoring | Dashboard HTML + alertes CSV | Solution légère et adaptée au projet |
 
+## 6.1. Éco-conception de l’application
+
+L’éco-conception est prise en compte dans les choix techniques afin de limiter la quantité de ressources utilisées, le poids du frontend, les transferts réseau et les traitements inutiles.
+
+Les bonnes pratiques retenues s’inspirent notamment des recommandations **GreenIT** et de l’approche d’évaluation proposée par **EcoIndex**.
+
+### 6.1.1. Frontend natif et dépendances limitées
+
+L’interface repose sur **HTML, CSS et JavaScript natifs**, sans framework frontend lourd.
+
+Ce choix permet notamment de :
+
+- réduire le nombre de dépendances ;
+- limiter le poids des ressources téléchargées ;
+- éviter l’exécution de JavaScript non nécessaire ;
+- simplifier la maintenance ;
+- conserver une architecture proportionnée au périmètre du POC.
+
+Aucune librairie frontend supplémentaire n’est ajoutée lorsqu’une fonctionnalité peut être réalisée avec les fonctions natives du navigateur.
+
+### 6.1.2. Modèle IA local et léger
+
+Le service IA repose sur :
+
+```text
+TF-IDF + Logistic Regression
+```
+
+Ce modèle est proportionné au besoin de classification d’intentions. Il évite de mobiliser un modèle beaucoup plus lourd pour une tâche ciblée.
+
+Les bénéfices recherchés sont :
+
+- temps d’inférence faible ;
+- consommation mémoire limitée ;
+- absence de GPU obligatoire ;
+- artefacts de modèle de taille réduite ;
+- exécution locale dans le service applicatif ;
+- absence d’appel à un fournisseur IA externe pour chaque prédiction.
+
+### 6.1.3. Limitation des images et contenus lourds
+
+La structure actuelle du frontend est volontairement simple :
+
+```text
+index.html
+css/styles.css
+js/app.js
+```
+
+L’interface repose principalement sur du texte, des formulaires, des boutons et des résultats dynamiques.
+
+Les images et médias lourds sont limités lorsqu’ils n’apportent pas de valeur fonctionnelle directe, afin de réduire :
+
+- le poids de la page ;
+- la quantité de données transférées ;
+- le temps de chargement ;
+- la consommation réseau côté utilisateur.
+
+### 6.1.4. Utilisation de Nginx Alpine
+
+Le frontend est construit à partir de :
+
+```dockerfile
+FROM nginx:1.27-alpine
+```
+
+Cette variante légère contribue à réduire la taille de l’image Docker et l’espace de stockage utilisé par rapport à une image système plus complète lorsque les fonctionnalités supplémentaires ne sont pas nécessaires.
+
+### 6.1.5. Limitation des appels réseau
+
+Les appels réseau correspondent aux actions fonctionnelles de l’utilisateur :
+
+```text
+test de connexion
+prédiction d’intention
+consultation des informations modèle
+consultation des métriques
+consultation du monitoring
+téléchargement des alertes
+```
+
+Les traitements et appels API sont donc déclenchés en fonction du besoin fonctionnel, ce qui permet de limiter les requêtes et les traitements IA inutiles.
+
+### 6.1.6. Cache des ressources statiques
+
+La mise en cache des ressources statiques constitue une optimisation recommandée pour le frontend Nginx.
+
+Les ressources concernées sont principalement :
+
+```text
+CSS
+JavaScript
+images éventuelles
+ressources statiques
+```
+
+Une évolution de la configuration Nginx peut ajouter des en-têtes de cache, par exemple :
+
+```nginx
+location ~* \.(css|js|png|jpg|jpeg|gif|svg|ico)$ {
+    expires 7d;
+    add_header Cache-Control "public, max-age=604800";
+}
+```
+
+Cette configuration est présentée comme une **optimisation à mettre en œuvre et à valider**. Elle ne doit pas être considérée comme déjà active tant que la configuration Nginx réelle n’a pas été modifiée et testée.
+
+### 6.1.7. Références GreenIT et EcoIndex
+
+Les choix techniques sont rapprochés de bonnes pratiques de sobriété numérique issues notamment de :
+
+```text
+GreenIT
+EcoIndex
+```
+
+Ces références permettent d’évaluer notamment :
+
+- la taille des pages ;
+- le nombre de requêtes ;
+- la complexité du DOM ;
+- la quantité de données transférées ;
+- la sobriété des choix techniques.
+
+L’objectif du projet n’est pas de revendiquer une certification environnementale, mais d’intégrer des critères d’éco-conception dans les décisions techniques.
+
+### 6.1.8. Évaluation EcoIndex de la pré-production
+
+Une mesure EcoIndex réelle sera réalisée lorsque l’URL publique définitive de pré-production sera disponible.
+
+Les valeurs suivantes sont uniquement des **estimations provisoires** basées sur l’architecture légère du frontend. Elles ne constituent pas une preuve de mesure réelle.
+
+```text
+Environnement :
+Pré-production
+
+URL testée :
+À renseigner avec l’URL Render réellement déployée
+
+Date du test :
+À renseigner lors du test réel
+
+Score EcoIndex :
+≈ 78 / 100 — estimation provisoire
+
+Classe / note :
+B — estimation provisoire
+
+Poids de page :
+≈ 180 Ko — estimation provisoire
+
+Nombre de requêtes :
+≈ 6 à 10 — estimation provisoire
+
+Complexité DOM :
+≈ 200 à 300 éléments — estimation provisoire
+```
+
+Principaux points positifs identifiés :
+
+- HTML/CSS/JavaScript natifs ;
+- absence de framework frontend lourd ;
+- peu de dépendances côté navigateur ;
+- interface principalement textuelle ;
+- Nginx Alpine ;
+- modèle IA local et léger ;
+- appels API déclenchés selon les besoins fonctionnels.
+
+
+### 6.1.9. Synthèse des bonnes pratiques d’éco-conception
+
+| Bonne pratique | Mise en œuvre / statut |
+|---|---|
+| Frontend léger | HTML/CSS/JavaScript natifs |
+| Framework lourd évité | Oui |
+| Librairies frontend inutiles | Limitées |
+| Modèle proportionné au besoin | TF-IDF + Logistic Regression |
+| GPU requis | Non pour le modèle retenu |
+| Appels IA externes | Non pour l’inférence |
+| Images et médias lourds | Limités |
+| Conteneur frontend léger | `nginx:1.27-alpine` |
+| Appels réseau | Déclenchés selon les actions utilisateur |
+| Cache statique | Optimisation recommandée à valider |
+| Références | GreenIT / EcoIndex |
+| Test EcoIndex | À réaliser sur la pré-production réelle |
+
+Cette approche vise à répondre au besoin fonctionnel avec une architecture sobre, sans ajouter de complexité ou de consommation de ressources non justifiée.
+
 ## 7. Routes API exploitées par l’application
 
 L’application frontend consomme les routes suivantes :
