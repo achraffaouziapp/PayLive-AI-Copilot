@@ -6,9 +6,24 @@ Ce document présente les user stories de l’application web du Bloc 3 et les o
 
 L’objectif est de relier chaque besoin utilisateur à des critères d’acceptation vérifiables, en intégrant l’accessibilité dès la conception.
 
-## 2. Personas
+## 2. Référentiel d’accessibilité retenu
 
-## 2.1. Persona 1 — Vendeur live
+**Référentiel retenu : WCAG 2.2 niveau AA / RGAA.**
+
+Les objectifs d’accessibilité sont intégrés directement dans les critères d’acceptation des user stories afin d’être vérifiables pendant le développement et les tests.
+
+Les quatre critères transverses utilisés sont :
+
+- **AC-A11Y-01 — Navigation clavier :** la fonctionnalité doit être utilisable entièrement au clavier, avec un ordre de tabulation logique et un focus visible.
+- **AC-A11Y-02 — Labels :** tout champ de formulaire présent dans la fonctionnalité doit posséder un label explicite et correctement associé.
+- **AC-A11Y-03 — Contraste :** les textes, composants interactifs et informations visuelles doivent respecter les exigences de contraste du **WCAG 2.2 niveau AA**.
+- **AC-A11Y-04 — Messages dynamiques :** tout résultat, changement de statut ou message d’erreur affiché dynamiquement doit être annoncé aux technologies d’assistance, notamment avec `aria-live` lorsque cela est pertinent.
+
+Ces critères sont complétés par les principes du RGAA concernant notamment la structure sémantique, les formulaires, la navigation au clavier, les tableaux, les contrastes et les contenus dynamiques.
+
+## 3. Personas
+
+### 3.1. Persona 1 — Vendeur live
 
 | Élément | Description |
 |---|---|
@@ -18,7 +33,7 @@ L’objectif est de relier chaque besoin utilisateur à des critères d’accept
 | Besoin | Savoir si un commentaire correspond à une intention d’achat |
 | Difficulté | Peu de temps pour lire tous les commentaires |
 
-## 2.2. Persona 2 — Responsable commercial
+### 3.2. Persona 2 — Responsable commercial
 
 | Élément | Description |
 |---|---|
@@ -28,7 +43,7 @@ L’objectif est de relier chaque besoin utilisateur à des critères d’accept
 | Besoin | Consulter les métriques, alertes et résultats du modèle |
 | Difficulté | Comprendre les limites du modèle IA |
 
-## 2.3. Persona 3 — Développeur IA
+### 3.3. Persona 3 — Développeur IA
 
 | Élément | Description |
 |---|---|
@@ -38,7 +53,7 @@ L’objectif est de relier chaque besoin utilisateur à des critères d’accept
 | Besoin | Observer les appels API et les réponses |
 | Difficulté | Identifier rapidement les erreurs d’intégration |
 
-## 3. User stories fonctionnelles
+## 4. User stories fonctionnelles
 
 ## US-01 — Configurer la clé API
 
@@ -53,12 +68,15 @@ L’objectif est de relier chaque besoin utilisateur à des critères d’accept
 - La clé est envoyée dans le header `X-API-Key`.
 - Si la clé est absente, un message explicite est affiché.
 - Le champ est accessible au clavier.
+- **AC-A11Y-01 :** le champ et les actions associées sont entièrement utilisables au clavier, avec un focus visible.
+- **AC-A11Y-02 :** le champ de clé API possède un label explicite et correctement associé.
+- **AC-A11Y-03 :** le contraste du champ, du label, du focus et des messages respecte le **WCAG 2.2 niveau AA**.
+- **AC-A11Y-04 :** les messages de validation ou d’erreur sont annoncés via une zone dynamique adaptée, notamment `aria-live`.
 
-### Critères d’accessibilité
+### Critères d’accessibilité complémentaires
 
-- Le champ est associé à un élément `<label>`.
 - Le message d’erreur est visible et lisible.
-- Le focus clavier est visible.
+- Le focus clavier est clairement perceptible.
 
 ## US-02 — Analyser un commentaire
 
@@ -74,13 +92,15 @@ L’objectif est de relier chaque besoin utilisateur à des critères d’accept
 - Le résultat affiche l’intention prédite.
 - Le résultat affiche le score de confiance.
 - Le résultat affiche un message si la confiance est faible.
+- **AC-A11Y-01 :** la saisie et le lancement de l’analyse sont entièrement utilisables au clavier.
+- **AC-A11Y-02 :** le champ commentaire possède un label explicite et correctement associé.
+- **AC-A11Y-03 :** les textes, boutons, états de focus et messages respectent le **WCAG 2.2 niveau AA**.
+- **AC-A11Y-04 :** le résultat de prédiction et les éventuels messages d’erreur sont annoncés avec `aria-live`.
 
-### Critères d’accessibilité
+### Critères d’accessibilité complémentaires
 
-- Le champ commentaire possède un label.
-- Le bouton est activable au clavier.
-- Le résultat est annoncé dans une zone `aria-live`.
 - Le résultat ne dépend pas uniquement d’une couleur.
+- Le score de confiance reste disponible sous forme textuelle.
 
 ## US-03 — Comprendre le résultat IA
 
@@ -99,7 +119,12 @@ L’objectif est de relier chaque besoin utilisateur à des critères d’accept
 | `other` | Autre message |
 | `unknown` | Intention inconnue |
 
-### Critères d’accessibilité
+- **AC-A11Y-01 :** les informations et actions associées au résultat restent accessibles au clavier.
+- **AC-A11Y-02 :** tout champ éventuellement associé au résultat possède un label explicite et correctement associé.
+- **AC-A11Y-03 :** les libellés, badges et états visuels respectent le contraste **WCAG 2.2 niveau AA**.
+- **AC-A11Y-04 :** lorsqu’un résultat est mis à jour dynamiquement, sa nouvelle valeur est annoncée avec `aria-live`.
+
+### Critères d’accessibilité complémentaires
 
 - Les libellés sont textuels.
 - Les badges sont accompagnés d’un texte explicite.
@@ -118,8 +143,12 @@ L’objectif est de relier chaque besoin utilisateur à des critères d’accept
 - Les lignes vides sont ignorées.
 - L’application appelle `POST /api/v1/ai/batch-predict-intents`.
 - Les résultats sont affichés dans un tableau.
+- **AC-A11Y-01 :** la zone de saisie, le bouton d’analyse et le tableau de résultat sont navigables au clavier.
+- **AC-A11Y-02 :** la zone de texte possède un label explicite et correctement associé.
+- **AC-A11Y-03 :** le champ, les boutons, le tableau et les états de focus respectent le **WCAG 2.2 niveau AA**.
+- **AC-A11Y-04 :** la disponibilité des résultats du batch ou les erreurs sont annoncées avec `aria-live`.
 
-### Critères d’accessibilité
+### Critères d’accessibilité complémentaires
 
 - Le tableau possède des en-têtes explicites.
 - La zone de texte possède une consigne visible.
@@ -137,8 +166,12 @@ L’objectif est de relier chaque besoin utilisateur à des critères d’accept
 - L’application appelle `GET /api/v1/ai/model-info`.
 - Les classes disponibles sont affichées.
 - La version ou les métadonnées du modèle sont affichées si disponibles.
+- **AC-A11Y-01 :** le bouton et les informations affichées sont accessibles au clavier.
+- **AC-A11Y-02 :** tout champ éventuellement présent possède un label explicite et correctement associé.
+- **AC-A11Y-03 :** les textes, boutons et états de focus respectent le **WCAG 2.2 niveau AA**.
+- **AC-A11Y-04 :** les messages de chargement, de succès ou d’erreur sont annoncés avec `aria-live`.
 
-### Critères d’accessibilité
+### Critères d’accessibilité complémentaires
 
 - Les informations sont structurées avec des titres.
 - Les messages de chargement et d’erreur sont lisibles.
@@ -155,8 +188,12 @@ L’objectif est de relier chaque besoin utilisateur à des critères d’accept
 - L’application appelle `GET /api/v1/ai/model-metrics`.
 - Les métriques principales sont affichées.
 - Les limites du modèle sont rappelées.
+- **AC-A11Y-01 :** le chargement et la consultation des métriques sont entièrement utilisables au clavier.
+- **AC-A11Y-02 :** tout champ présent dans cette fonctionnalité possède un label correctement associé.
+- **AC-A11Y-03 :** les valeurs, libellés et composants respectent le contraste **WCAG 2.2 niveau AA**.
+- **AC-A11Y-04 :** le chargement, la mise à jour ou les erreurs liés aux métriques sont annoncés avec `aria-live`.
 
-### Critères d’accessibilité
+### Critères d’accessibilité complémentaires
 
 - Les métriques ne sont pas uniquement représentées par une couleur.
 - Les valeurs numériques sont accompagnées d’un libellé.
@@ -173,12 +210,15 @@ L’objectif est de relier chaque besoin utilisateur à des critères d’accept
 - L’application appelle `GET /api/v1/ai/monitoring/dashboard`.
 - Si la clé API est valide, le dashboard est accessible.
 - En cas d’erreur, un message est affiché.
+- **AC-A11Y-01 :** l’accès au dashboard est entièrement réalisable au clavier.
+- **AC-A11Y-02 :** tout champ éventuellement utilisé pour la consultation possède un label correctement associé.
+- **AC-A11Y-03 :** les textes, boutons et informations graphiques respectent le **WCAG 2.2 niveau AA**.
+- **AC-A11Y-04 :** les messages de chargement, d’ouverture ou d’erreur sont annoncés avec `aria-live`.
 
-### Critères d’accessibilité
+### Critères d’accessibilité complémentaires
 
 - Le bouton possède un intitulé clair.
-- Le chargement du dashboard est annoncé.
-- Le lien ou bouton est utilisable au clavier.
+- Les données essentielles du dashboard restent disponibles sous forme textuelle ou tabulaire.
 
 ## US-08 — Consulter les alertes IA
 
@@ -191,12 +231,16 @@ L’objectif est de relier chaque besoin utilisateur à des critères d’accept
 - Un bouton permet de télécharger ou afficher les alertes.
 - L’application appelle `GET /api/v1/ai/monitoring/alerts`.
 - Les alertes sont affichées ou téléchargées.
+- **AC-A11Y-01 :** le bouton de consultation ou de téléchargement est entièrement utilisable au clavier.
+- **AC-A11Y-02 :** tout champ éventuellement présent possède un label explicite et correctement associé.
+- **AC-A11Y-03 :** les alertes, boutons et états visuels respectent le **WCAG 2.2 niveau AA**.
+- **AC-A11Y-04 :** le succès, l’échec ou la disponibilité du téléchargement sont annoncés avec `aria-live`.
 
-### Critères d’accessibilité
+### Critères d’accessibilité complémentaires
 
-- Le bouton est accessible au clavier.
 - Le format CSV est signalé clairement.
 - Une alternative textuelle explique le contenu du fichier.
+- Le niveau d’alerte ne dépend pas uniquement de la couleur.
 
 ## US-09 — Gérer les erreurs API
 
@@ -214,11 +258,16 @@ L’objectif est de relier chaque besoin utilisateur à des critères d’accept
 | 500 | Erreur serveur |
 | Erreur réseau | API inaccessible |
 
-### Critères d’accessibilité
+- **AC-A11Y-01 :** l’utilisateur peut atteindre les éléments concernés et poursuivre la navigation entièrement au clavier après une erreur.
+- **AC-A11Y-02 :** lorsqu’une erreur concerne un champ, celui-ci conserve un label explicite et correctement associé.
+- **AC-A11Y-03 :** les messages d’erreur respectent le contraste **WCAG 2.2 niveau AA** et ne reposent pas uniquement sur la couleur.
+- **AC-A11Y-04 :** les erreurs sont annoncées dans une zone `aria-live`.
+
+### Critères d’accessibilité complémentaires
 
 - Les erreurs sont affichées dans une zone dédiée.
-- Les erreurs sont annoncées avec `aria-live`.
 - Les erreurs ne disparaissent pas trop vite.
+- Le texte indique clairement l’action corrective attendue lorsque celle-ci est connue.
 
 ## US-10 — Utiliser l’application au clavier
 
@@ -232,13 +281,20 @@ L’objectif est de relier chaque besoin utilisateur à des critères d’accept
 - Tous les boutons sont activables avec Entrée ou Espace.
 - L’ordre de tabulation est logique.
 - Le focus est visible.
+- **AC-A11Y-01 :** l’ensemble des fonctionnalités principales est utilisable complètement au clavier.
+- **AC-A11Y-02 :** chaque champ atteint au clavier possède un label explicite et correctement associé.
+- **AC-A11Y-03 :** le focus, les textes et les composants interactifs respectent les exigences de contraste du **WCAG 2.2 niveau AA**.
+- **AC-A11Y-04 :** les changements de statut, résultats et erreurs déclenchés au clavier sont annoncés avec `aria-live`.
 
-### Critères d’accessibilité
+### Critères d’accessibilité complémentaires
 
 - Aucun élément interactif n’est inaccessible au clavier.
 - Les zones dynamiques sont annoncées.
+- Aucun piège au clavier ne bloque la navigation.
 
-## 4. Objectifs techniques d’accessibilité
+## 5. Objectifs techniques d’accessibilité
+
+**Référentiel retenu : WCAG 2.2 niveau AA / RGAA.**
 
 Les objectifs d’accessibilité retenus sont :
 
@@ -248,14 +304,14 @@ Les objectifs d’accessibilité retenus sont :
 | Labels explicites | Associer chaque champ à un `<label>` |
 | Navigation clavier | Utiliser des boutons natifs et liens natifs |
 | Focus visible | Style CSS de focus clair |
-| Contraste suffisant | Couleurs sobres et lisibles |
-| Messages dynamiques | Zones `aria-live` pour résultats et erreurs |
+| Contraste suffisant | Vérifier les contrastes selon WCAG 2.2 niveau AA |
+| Messages dynamiques | Zones `aria-live` pour résultats, statuts et erreurs |
 | Langue de page | Attribut `lang="fr"` |
 | Tableaux lisibles | En-têtes `<th>` et structure correcte |
 | Responsive | Interface utilisable sur écran réduit |
-| Pas de couleur seule | Ajouter texte et icônes textuelles |
+| Pas de couleur seule | Ajouter du texte ou un indicateur explicite en complément |
 
-## 5. Wireframe textuel
+## 6. Wireframe textuel
 
 ```text
 +--------------------------------------------------+
@@ -284,23 +340,54 @@ Les objectifs d’accessibilité retenus sont :
 +--------------------------------------------------+
 ```
 
-## 6. Grille de validation accessibilité
+## 7. Grille de validation accessibilité
 
-| Contrôle | Statut attendu |
-|---|---|
-| Page avec `lang="fr"` | OK |
-| Champs avec labels | OK |
-| Boutons natifs | OK |
-| Navigation clavier complète | OK |
-| Focus visible | OK |
-| Messages d’erreur visibles | OK |
-| Résultats annoncés | OK |
-| Tableaux structurés | OK |
-| Contrastes lisibles | OK |
-| Interface responsive | OK |
+| Contrôle | Référence | Statut attendu |
+|---|---|---|
+| Page avec `lang="fr"` | RGAA / WCAG | OK |
+| Champs avec labels correctement associés | AC-A11Y-02 | OK |
+| Boutons natifs | RGAA / WCAG | OK |
+| Navigation clavier complète | AC-A11Y-01 | OK |
+| Focus visible | AC-A11Y-01 | OK |
+| Messages d’erreur visibles | RGAA / WCAG | OK |
+| Résultats et statuts dynamiques annoncés | AC-A11Y-04 | OK |
+| Tableaux structurés | RGAA / WCAG | OK |
+| Contrastes conformes WCAG 2.2 niveau AA | AC-A11Y-03 | OK |
+| Interface responsive | objectif d’utilisabilité | OK |
+| Information non transmise uniquement par couleur | WCAG / RGAA | OK |
 
-## 7. Conclusion
+## 8. Preuves de validation recommandées
 
-Les user stories définissent un périmètre clair pour l’application du Bloc 3.
+Pour démontrer la prise en compte des critères d’acceptation, les preuves suivantes peuvent être conservées :
 
-Les critères d’accessibilité sont intégrés directement dans les critères d’acceptation, ce qui permet de vérifier l’utilisabilité de l’interface pendant le développement et les tests.
+```text
+preuve_c14_navigation_clavier.png
+preuve_c14_focus_visible.png
+preuve_c14_labels_formulaire.png
+preuve_c14_contraste_wcag_aa.png
+preuve_c14_aria_live_resultat.png
+preuve_c14_aria_live_erreur.png
+```
+
+Il est également possible de conserver :
+
+- une capture du code HTML montrant les associations `<label for="...">` / `id` ;
+- une capture du focus clavier sur les principaux boutons ;
+- une capture du résultat d’un outil de vérification de contraste ;
+- une capture du code contenant `aria-live` sur les zones dynamiques ;
+- une capture des tickets Jira contenant les critères d’acceptation d’accessibilité.
+
+## 9. Conclusion
+
+Les user stories définissent un périmètre clair pour l’application et intègrent désormais explicitement les objectifs d’accessibilité dans leurs critères d’acceptation.
+
+Le **référentiel retenu est WCAG 2.2 niveau AA / RGAA**.
+
+Les critères transverses `AC-A11Y-01` à `AC-A11Y-04` permettent de vérifier :
+
+- l’utilisation complète au clavier ;
+- l’association correcte des labels aux champs ;
+- la conformité des contrastes au niveau AA ;
+- l’annonce des messages dynamiques avec `aria-live`.
+
+L’accessibilité peut ainsi être contrôlée au même titre que les autres exigences fonctionnelles pendant le développement, les tests et la validation de l’application.
