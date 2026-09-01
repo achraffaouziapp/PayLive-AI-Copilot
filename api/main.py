@@ -1,3 +1,5 @@
+import os
+
 from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -19,6 +21,30 @@ from api.security import require_api_key
 # - /api/v1/sellers
 # - /api/v1/analytics
 # -------------------------------------------------------------------
+
+
+def get_allowed_origins() -> list[str]:
+    """
+    Return the list of frontend origins allowed to call the API.
+
+    In development, the local frontend origins are allowed by default.
+    In staging/pre-production, ALLOWED_ORIGINS must contain the public
+    frontend URL, for example:
+    https://paylive-ai-preprod.onrender.com
+    """
+    raw_origins = os.getenv(
+        "ALLOWED_ORIGINS",
+        "http://127.0.0.1:8080,http://localhost:8080",
+    )
+
+    return [
+        origin.strip().rstrip("/")
+        for origin in raw_origins.split(",")
+        if origin.strip()
+    ]
+
+
+ALLOWED_ORIGINS = get_allowed_origins()
 
 
 app = FastAPI(
@@ -53,10 +79,10 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["GET"],
-    allow_headers=["*"],
+    allow_origins=ALLOWED_ORIGINS,
+    allow_credentials=False,
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["Content-Type", "X-API-Key"],
 )
 
 
