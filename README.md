@@ -183,15 +183,15 @@ PayLive-AI-Copilot/
 │       ├── predictions/
 │       └── reports/
 ├── docs/
-│   ├── 00_project_overview/
-│   ├── 01_sources_and_collection/
-│   ├── 02_quality_and_processing/
-│   ├── 03_database/
-│   ├── 04_api/
-│   ├── 05_rgpd/
-│   ├── 06_bilan/
-│   ├── 07_ai_service/
-│   └── 08_application/
+│   ├── project_overview/
+│   ├── sources_and_collection/
+│   ├── quality_and_processing/
+│   ├── database/
+│   ├── api/
+│   ├── rgpd/
+│   ├── bilan/
+│   ├── ai_service/
+│   └── application/
 ├── models/
 │   └── intent_classifier/
 ├── notebooks/

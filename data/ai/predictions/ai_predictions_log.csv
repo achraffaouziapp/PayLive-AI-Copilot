@@ -16,3 +16,4 @@ f1dc05b9-98fc-480c-8158-485895d29dca,2026-07-05 01:32:39,je prends le pull rouge
 a34d264a-bb2f-40d7-bfff-5e7c614d4f2c,2026-07-05 01:32:39,comment payer ?,payment_question,0.5299,intent_classifier,intent_classifier_v1,0.88,True,0.6,api_batch
 052549c8-f3e9-4d4f-9cf2-341d6b9845d8,2026-07-05 01:32:39,vous livrez en Belgique ?,shipping_question,0.3223,intent_classifier,intent_classifier_v1,0.83,True,0.6,api_batch
 bbffd416-1201-4fca-bc4b-ad79d212b78c,2026-07-05 01:32:39,trop beau,shipping_question,0.2214,intent_classifier,intent_classifier_v1,0.79,True,0.6,api_batch
+458203a8-9caa-43e9-89a6-5ba71ae7416e,2026-09-01 19:51:31,je prends la robe noire en M,purchase_intent,0.25,intent_classifier,intent_classifier_v1,4.49,True,0.6,api_single
