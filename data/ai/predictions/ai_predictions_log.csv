@@ -17,3 +17,13 @@ a34d264a-bb2f-40d7-bfff-5e7c614d4f2c,2026-07-05 01:32:39,comment payer ?,payment
 052549c8-f3e9-4d4f-9cf2-341d6b9845d8,2026-07-05 01:32:39,vous livrez en Belgique ?,shipping_question,0.3223,intent_classifier,intent_classifier_v1,0.83,True,0.6,api_batch
 bbffd416-1201-4fca-bc4b-ad79d212b78c,2026-07-05 01:32:39,trop beau,shipping_question,0.2214,intent_classifier,intent_classifier_v1,0.79,True,0.6,api_batch
 458203a8-9caa-43e9-89a6-5ba71ae7416e,2026-09-01 19:51:31,je prends la robe noire en M,purchase_intent,0.25,intent_classifier,intent_classifier_v1,4.49,True,0.6,api_single
+08743d6e-dfc7-49f5-87fd-f8ee814e1a4a,2026-09-01 22:14:38,je prends le pull rouge en M,purchase_intent,0.2777,intent_classifier,intent_classifier_v1,1.51,True,0.6,api_single
+bec69a49-eed3-46f5-a611-20e78e76ee27,2026-09-01 22:14:38,je prends le pull rouge en M,purchase_intent,0.2777,intent_classifier,intent_classifier_v1,1.45,True,0.6,api_batch
+0a391a2c-4c58-4a7a-a465-64d3ca6fa701,2026-09-01 22:14:38,comment payer ?,payment_question,0.5299,intent_classifier,intent_classifier_v1,0.87,True,0.6,api_batch
+1b5579ae-7bf0-4c65-9ed3-2cefaa34e107,2026-09-01 22:14:38,vous livrez en Belgique ?,shipping_question,0.3223,intent_classifier,intent_classifier_v1,0.98,True,0.6,api_batch
+0d1423ef-5731-49f7-861b-5d0725093db4,2026-09-01 22:14:38,trop beau,shipping_question,0.2214,intent_classifier,intent_classifier_v1,0.9,True,0.6,api_batch
+47d48765-d97e-40d9-89ab-5bf8df2f46c3,2026-09-01 22:14:53,je prends le pull rouge en M,purchase_intent,0.2777,intent_classifier,intent_classifier_v1,1.85,True,0.6,api_single
+a35cc306-8414-449e-aab7-6a1314f81358,2026-09-01 22:14:53,je prends le pull rouge en M,purchase_intent,0.2777,intent_classifier,intent_classifier_v1,1.53,True,0.6,api_batch
+a17876bd-2f18-4a15-839a-ba3cca9908e7,2026-09-01 22:14:53,comment payer ?,payment_question,0.5299,intent_classifier,intent_classifier_v1,0.91,True,0.6,api_batch
+61b1d3d3-e848-4fe5-a56e-374fba3e7a0b,2026-09-01 22:14:53,vous livrez en Belgique ?,shipping_question,0.3223,intent_classifier,intent_classifier_v1,0.82,True,0.6,api_batch
+e399c3e9-cca2-4dd1-8169-bf6a3b87dd32,2026-09-01 22:14:53,trop beau,shipping_question,0.2214,intent_classifier,intent_classifier_v1,0.88,True,0.6,api_batch

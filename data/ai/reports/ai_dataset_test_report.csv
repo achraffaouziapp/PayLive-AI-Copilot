@@ -8,4 +8,4 @@ test_labels_are_allowed,passed,All labels are allowed.
 test_expected_classes_are_present,passed,All expected classes are present.
 test_train_validation_test_are_not_empty,passed,"train=22, validation=5, test=5"
 test_split_total_matches_full_dataset,passed,Split total matches full dataset: 32
-test_dataset_report_is_saved,passed,Report saved to C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\ai\reports\ai_dataset_test_report.csv
+test_dataset_report_is_saved,passed,Report saved to C:\Users\DELL\Desktop\EPSI\Bachelor\Dossier Pro\Last projet\PayLive-AI-Copilot\data\ai\reports\ai_dataset_test_report.csv
