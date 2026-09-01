@@ -11,6 +11,10 @@ on:
       - master
   workflow_dispatch:
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   ai-mlops-pipeline:
     name: Run AI MLOps pipeline
@@ -24,6 +28,7 @@ jobs:
       POSTGRES_DB: paylive_ai_copilot
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
+      LOCAL_AI_IMAGE: paylive-ai-api:ci
 
     steps:
       - name: Checkout repository
@@ -69,6 +74,203 @@ jobs:
         run: |
           docker compose build frontend
 
+      # ------------------------------------------------------------------
+      # C13 — Packaging et livraison continue du modèle IA
+      # ------------------------------------------------------------------
+
+      - name: Verify trained model artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          test -f models/intent_classifier/model.joblib
+          test -f models/intent_classifier/vectorizer.joblib
+          test -f models/intent_classifier/label_encoder.joblib
+          test -f models/intent_classifier/model_metadata.json
+
+          echo "All trained model artifacts are present."
+
+      - name: Define GHCR image name
+        shell: bash
+        run: |
+          set -euo pipefail
+          OWNER_LOWER="${GITHUB_REPOSITORY_OWNER,,}"
+          echo "GHCR_IMAGE=ghcr.io/${OWNER_LOWER}/paylive-ai-api" >> "$GITHUB_ENV"
+
+      - name: Build API image with packaged model
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          docker build \
+            --label "org.opencontainers.image.source=https://github.com/${GITHUB_REPOSITORY}" \
+            --label "org.opencontainers.image.revision=${GITHUB_SHA}" \
+            -t "$LOCAL_AI_IMAGE" \
+            .
+
+      - name: Verify model is packaged in Docker image
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          docker run --rm \
+            --entrypoint sh \
+            "$LOCAL_AI_IMAGE" \
+            -c '
+              test -f /app/models/intent_classifier/model.joblib &&
+              test -f /app/models/intent_classifier/vectorizer.joblib &&
+              test -f /app/models/intent_classifier/label_encoder.joblib &&
+              test -f /app/models/intent_classifier/model_metadata.json
+            '
+
+          echo "Model artifacts are present inside the packaged API image."
+
+      - name: Smoke test packaged image locally
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          CONTAINER_NAME="paylive-ai-smoke-local"
+
+          cleanup() {
+            docker logs "$CONTAINER_NAME" || true
+            docker rm -f "$CONTAINER_NAME" || true
+          }
+
+          trap cleanup EXIT
+
+          docker run -d \
+            --name "$CONTAINER_NAME" \
+            -p 8000:8000 \
+            -e API_KEY="$API_KEY" \
+            -e POSTGRES_HOST="$POSTGRES_HOST" \
+            -e POSTGRES_PORT="$POSTGRES_PORT" \
+            -e POSTGRES_DB="$POSTGRES_DB" \
+            -e POSTGRES_USER="$POSTGRES_USER" \
+            -e POSTGRES_PASSWORD="$POSTGRES_PASSWORD" \
+            "$LOCAL_AI_IMAGE" \
+            python -m uvicorn api.main:app --host 0.0.0.0 --port 8000
+
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:8000/health > /dev/null; then
+              break
+            fi
+            echo "Waiting for API startup... attempt ${attempt}/30"
+            sleep 2
+          done
+
+          curl -fsS http://127.0.0.1:8000/health
+
+          curl -fsS \
+            -H "X-API-Key: $API_KEY" \
+            http://127.0.0.1:8000/api/v1/ai/model-info \
+            | tee model_info_smoke_local.json
+
+      - name: Decide whether GHCR publication is allowed
+        id: publish
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ "$GITHUB_EVENT_NAME" == "push" ]]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+            echo "GHCR publication enabled for push on the protected workflow branch."
+          elif [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" ]] && \
+               [[ "$GITHUB_REF" == "refs/heads/main" || "$GITHUB_REF" == "refs/heads/master" ]]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+            echo "GHCR publication enabled for manual run on main/master."
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "GHCR publication disabled for this run."
+          fi
+
+      - name: Log in to GitHub Container Registry
+        if: steps.publish.outputs.enabled == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "${{ secrets.GITHUB_TOKEN }}" \
+            | docker login ghcr.io \
+                -u "${{ github.actor }}" \
+                --password-stdin
+
+      - name: Tag API image for GHCR
+        if: steps.publish.outputs.enabled == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          docker tag "$LOCAL_AI_IMAGE" "$GHCR_IMAGE:latest"
+          docker tag "$LOCAL_AI_IMAGE" "$GHCR_IMAGE:${GITHUB_SHA}"
+
+          echo "Created tags:"
+          echo "  $GHCR_IMAGE:latest"
+          echo "  $GHCR_IMAGE:${GITHUB_SHA}"
+
+      - name: Push API image to GHCR
+        if: steps.publish.outputs.enabled == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          docker push "$GHCR_IMAGE:latest"
+          docker push "$GHCR_IMAGE:${GITHUB_SHA}"
+
+      - name: Pull published image from GHCR
+        if: steps.publish.outputs.enabled == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # Remove the registry tags locally so the next step explicitly
+          # resolves the published package from GHCR.
+          docker image rm "$GHCR_IMAGE:latest" || true
+          docker image rm "$GHCR_IMAGE:${GITHUB_SHA}" || true
+
+          docker pull "$GHCR_IMAGE:${GITHUB_SHA}"
+
+      - name: Smoke test published GHCR image
+        if: steps.publish.outputs.enabled == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          CONTAINER_NAME="paylive-ai-smoke-ghcr"
+
+          cleanup() {
+            docker logs "$CONTAINER_NAME" || true
+            docker rm -f "$CONTAINER_NAME" || true
+          }
+
+          trap cleanup EXIT
+
+          docker run -d \
+            --name "$CONTAINER_NAME" \
+            -p 8000:8000 \
+            -e API_KEY="$API_KEY" \
+            -e POSTGRES_HOST="$POSTGRES_HOST" \
+            -e POSTGRES_PORT="$POSTGRES_PORT" \
+            -e POSTGRES_DB="$POSTGRES_DB" \
+            -e POSTGRES_USER="$POSTGRES_USER" \
+            -e POSTGRES_PASSWORD="$POSTGRES_PASSWORD" \
+            "$GHCR_IMAGE:${GITHUB_SHA}" \
+            python -m uvicorn api.main:app --host 0.0.0.0 --port 8000
+
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:8000/health > /dev/null; then
+              break
+            fi
+            echo "Waiting for published image startup... attempt ${attempt}/30"
+            sleep 2
+          done
+
+          curl -fsS http://127.0.0.1:8000/health
+
+          curl -fsS \
+            -H "X-API-Key: $API_KEY" \
+            http://127.0.0.1:8000/api/v1/ai/model-info \
+            | tee model_info_smoke_ghcr.json
+
       - name: Upload AI reports
         uses: actions/upload-artifact@v4
         with:
@@ -76,4 +278,6 @@ jobs:
           path: |
             data/ai/reports/
             models/intent_classifier/model_metadata.json
+            model_info_smoke_local.json
+            model_info_smoke_ghcr.json
           if-no-files-found: warn

@@ -2,11 +2,11 @@ report_section,metric_name,metric_value,details
 model,model_name,intent_classifier,
 model,model_version,intent_classifier_v1,
 model,algorithm,TF-IDF + Logistic Regression,
-model,training_date,2026-07-04 16:29:11,
-model,training_duration_seconds,0.0078,
-datasets,train_rows,22,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\ai\datasets\train.csv
-datasets,validation_rows,5,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\ai\datasets\validation.csv
-datasets,test_rows,5,C:\Users\DELL PRO\Desktop\EPSI\Dossier Pro\PayLive-AI-Copilot\data\ai\datasets\test.csv
+model,training_date,2026-09-01 22:47:14,
+model,training_duration_seconds,0.0112,
+datasets,train_rows,22,C:\Users\DELL\Desktop\EPSI\Bachelor\Dossier Pro\Last projet\PayLive-AI-Copilot\data\ai\datasets\train.csv
+datasets,validation_rows,5,C:\Users\DELL\Desktop\EPSI\Bachelor\Dossier Pro\Last projet\PayLive-AI-Copilot\data\ai\datasets\validation.csv
+datasets,test_rows,5,C:\Users\DELL\Desktop\EPSI\Bachelor\Dossier Pro\Last projet\PayLive-AI-Copilot\data\ai\datasets\test.csv
 vectorizer,max_features,5000,
 vectorizer,ngram_range,"(1, 2)",
 classifier,class_weight,balanced,
