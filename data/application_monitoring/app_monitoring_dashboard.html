@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monitoring applicatif</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 1100px; margin: 0 auto; padding: 1rem; line-height: 1.5; }
+    .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+    .metric { border: 1px solid #bbb; border-radius: 6px; padding: 1rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #bbb; padding: 0.6rem; text-align: left; vertical-align: top; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Monitoring applicatif</h1>
+    <p>Généré le 2026-09-02T00:22:32.871312+00:00</p>
+
+    <section aria-labelledby="summary-title">
+      <h2 id="summary-title">Synthèse</h2>
+      <div class="metrics">
+        <div class="metric"><strong>Disponibilité API</strong><br>Disponible</div>
+        <div class="metric"><strong>Disponibilité frontend</strong><br>Disponible</div>
+        <div class="metric"><strong>Nombre de requêtes</strong><br>3</div>
+        <div class="metric"><strong>HTTP 5xx</strong><br>0</div>
+        <div class="metric"><strong>Taux HTTP 5xx</strong><br>0.0 %</div>
+        <div class="metric"><strong>Latence HTTP moyenne</strong><br>384.33 ms</div>
+        <div class="metric"><strong>Latence HTTP maximale</strong><br>1128.2 ms</div>
+        <div class="metric"><strong>Erreurs API</strong><br>0</div>
+      </div>
+    </section>
+
+    <section aria-labelledby="alerts-title">
+      <h2 id="alerts-title">Alertes actives</h2>
+      <table>
+        <caption>Alertes du monitoring applicatif</caption>
+        <thead>
+          <tr>
+            <th scope="col">Horodatage</th>
+            <th scope="col">Sévérité</th>
+            <th scope="col">Type</th>
+            <th scope="col">Valeur</th>
+            <th scope="col">Seuil</th>
+            <th scope="col">Message</th>
+          </tr>
+        </thead>
+        <tbody><tr><td colspan="6">Aucune alerte active.</td></tr></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

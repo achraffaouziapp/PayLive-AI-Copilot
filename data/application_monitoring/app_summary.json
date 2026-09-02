@@ -1,0 +1,14 @@
+{
+  "request_count": 3,
+  "average_latency_ms": 384.33,
+  "max_latency_ms": 1128.2,
+  "http_5xx_count": 0,
+  "http_5xx_rate_percent": 0.0,
+  "api_error_count": 0,
+  "api_available": true,
+  "frontend_available": true,
+  "api_url": "http://127.0.0.1:8000/health",
+  "frontend_url": "http://127.0.0.1:8080/",
+  "alerts": [],
+  "generated_at": "2026-09-02T00:22:32.871312+00:00"
+}

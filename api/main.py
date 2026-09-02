@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from api.routes import health, lives, sellers, analytics, ai
 from api.security import require_api_key
+from api.application_monitoring import application_monitoring_middleware
 
 
 # -------------------------------------------------------------------
@@ -75,7 +76,10 @@ app = FastAPI(
             "description": "Aggregated analytics endpoints for live commerce performance.",
         },
     ],
+    
 )
+
+app.middleware("http")(application_monitoring_middleware)
 
 app.add_middleware(
     CORSMiddleware,
