@@ -1,0 +1,234 @@
+name: Frontend Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+  packages: write
+
+env:
+  FRONTEND_IMAGE_LOCAL: paylive-frontend:release
+  FRONTEND_CONTAINER_NAME: paylive_frontend_release_smoke
+  FRONTEND_SMOKE_PORT: "8085"
+
+jobs:
+  test-build-package-deliver:
+    name: Test, build, package and deliver frontend
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout tagged revision
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest
+
+      - name: Run frontend validation tests
+        run: |
+          python -m pytest tests/test_frontend_static.py -v
+
+      - name: Validate release tag
+        shell: bash
+        run: |
+          if [[ ! "${GITHUB_REF_NAME}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Invalid release tag: ${GITHUB_REF_NAME}"
+            echo "Expected format: vMAJOR.MINOR.PATCH"
+            exit 1
+          fi
+
+      - name: Prepare release metadata
+        id: meta
+        shell: bash
+        run: |
+          OWNER_LOWER="$(echo "${GITHUB_REPOSITORY_OWNER}" | tr '[:upper:]' '[:lower:]')"
+          GHCR_IMAGE="ghcr.io/${OWNER_LOWER}/paylive-frontend"
+          SHORT_SHA="${GITHUB_SHA::12}"
+          VERSION="${GITHUB_REF_NAME}"
+
+          echo "owner_lower=${OWNER_LOWER}" >> "${GITHUB_OUTPUT}"
+          echo "ghcr_image=${GHCR_IMAGE}" >> "${GITHUB_OUTPUT}"
+          echo "short_sha=${SHORT_SHA}" >> "${GITHUB_OUTPUT}"
+          echo "version=${VERSION}" >> "${GITHUB_OUTPUT}"
+
+      - name: Build frontend Docker image
+        run: |
+          docker build \
+            --label "org.opencontainers.image.source=https://github.com/${GITHUB_REPOSITORY}" \
+            --label "org.opencontainers.image.revision=${GITHUB_SHA}" \
+            --label "org.opencontainers.image.version=${GITHUB_REF_NAME}" \
+            -t "${FRONTEND_IMAGE_LOCAL}" \
+            ./frontend
+
+      - name: Start packaged frontend for smoke test
+        run: |
+          docker rm -f "${FRONTEND_CONTAINER_NAME}" 2>/dev/null || true
+          docker run -d \
+            --name "${FRONTEND_CONTAINER_NAME}" \
+            -p "${FRONTEND_SMOKE_PORT}:80" \
+            "${FRONTEND_IMAGE_LOCAL}"
+
+      - name: Smoke test packaged frontend
+        shell: bash
+        run: |
+          set -e
+
+          for attempt in $(seq 1 15); do
+            if curl --fail --silent --show-error \
+              "http://127.0.0.1:${FRONTEND_SMOKE_PORT}/" \
+              > /tmp/paylive_frontend_release_index.html; then
+              echo "Frontend smoke test passed."
+              break
+            fi
+
+            if [ "${attempt}" -eq 15 ]; then
+              echo "Frontend smoke test failed after 15 attempts."
+              docker logs "${FRONTEND_CONTAINER_NAME}" || true
+              exit 1
+            fi
+
+            sleep 2
+          done
+
+          grep -qi "<html" /tmp/paylive_frontend_release_index.html
+
+      - name: Stop smoke-test container
+        if: always()
+        run: |
+          docker rm -f "${FRONTEND_CONTAINER_NAME}" 2>/dev/null || true
+
+      - name: Create release package
+        shell: bash
+        run: |
+          mkdir -p dist
+
+          docker save "${FRONTEND_IMAGE_LOCAL}" \
+            | gzip \
+            > "dist/paylive-frontend-${GITHUB_REF_NAME}.tar.gz"
+
+          cp docker-compose.preprod.yml dist/docker-compose.preprod.yml
+          cp .env.preprod.example dist/env.preprod.example
+
+          cat > dist/RELEASE_MANIFEST.txt <<EOF
+          Application: PayLive frontend
+          Version: ${GITHUB_REF_NAME}
+          Commit: ${GITHUB_SHA}
+          Image: ${{ steps.meta.outputs.ghcr_image }}:${GITHUB_REF_NAME}
+          Image SHA tag: ${{ steps.meta.outputs.ghcr_image }}:sha-${{ steps.meta.outputs.short_sha }}
+          Workflow run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}
+          EOF
+
+          (
+            cd dist
+            sha256sum \
+              "paylive-frontend-${GITHUB_REF_NAME}.tar.gz" \
+              docker-compose.preprod.yml \
+              env.preprod.example \
+              RELEASE_MANIFEST.txt \
+              > SHA256SUMS.txt
+          )
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Tag validated image for GHCR
+        shell: bash
+        run: |
+          GHCR_IMAGE="${{ steps.meta.outputs.ghcr_image }}"
+          VERSION="${{ steps.meta.outputs.version }}"
+          SHORT_SHA="${{ steps.meta.outputs.short_sha }}"
+
+          docker tag "${FRONTEND_IMAGE_LOCAL}" "${GHCR_IMAGE}:${VERSION}"
+          docker tag "${FRONTEND_IMAGE_LOCAL}" "${GHCR_IMAGE}:sha-${SHORT_SHA}"
+
+      - name: Push validated image to GHCR
+        shell: bash
+        run: |
+          GHCR_IMAGE="${{ steps.meta.outputs.ghcr_image }}"
+          VERSION="${{ steps.meta.outputs.version }}"
+          SHORT_SHA="${{ steps.meta.outputs.short_sha }}"
+
+          docker push "${GHCR_IMAGE}:${VERSION}"
+          docker push "${GHCR_IMAGE}:sha-${SHORT_SHA}"
+
+      - name: Generate GitHub Release notes
+        shell: bash
+        run: |
+          cat > dist/RELEASE_NOTES.md <<EOF
+          ## PayLive frontend ${GITHUB_REF_NAME}
+
+          Automated delivery generated from commit:
+
+          \`${GITHUB_SHA}\`
+
+          ### Validated delivery chain
+
+          \`\`\`text
+          test
+          ↓
+          docker build
+          ↓
+          smoke test
+          ↓
+          docker package
+          ↓
+          SHA-256 checksum
+          ↓
+          GHCR
+          ↓
+          GitHub Release
+          \`\`\`
+
+          ### Container image
+
+          \`\`\`text
+          ${{ steps.meta.outputs.ghcr_image }}:${GITHUB_REF_NAME}
+          ${{ steps.meta.outputs.ghcr_image }}:sha-${{ steps.meta.outputs.short_sha }}
+          \`\`\`
+
+          ### Release assets
+
+          - \`paylive-frontend-${GITHUB_REF_NAME}.tar.gz\`
+          - \`SHA256SUMS.txt\`
+          - \`RELEASE_MANIFEST.txt\`
+          - \`docker-compose.preprod.yml\`
+          - \`env.preprod.example\`
+
+          ### Install the packaged image
+
+          \`\`\`bash
+          docker load -i paylive-frontend-${GITHUB_REF_NAME}.tar.gz
+          \`\`\`
+
+          The pre-production configuration and validation process are documented separately in C15.
+          EOF
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          gh release create "${GITHUB_REF_NAME}" \
+            --title "PayLive frontend ${GITHUB_REF_NAME}" \
+            --notes-file dist/RELEASE_NOTES.md \
+            "dist/paylive-frontend-${GITHUB_REF_NAME}.tar.gz" \
+            "dist/SHA256SUMS.txt" \
+            "dist/RELEASE_MANIFEST.txt" \
+            "dist/docker-compose.preprod.yml" \
+            "dist/env.preprod.example"
