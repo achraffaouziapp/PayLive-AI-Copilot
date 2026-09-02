@@ -3,3 +3,7 @@ timestamp,method,path,status_code,response_time_ms,is_5xx,error_type
 2026-09-02T00:22:11.271054+00:00,GET,/health,200,23.70,false,
 2026-09-02T00:22:14.315884+00:00,GET,/api/v1/ai/model-info,200,1128.20,false,
 2026-09-02T00:22:32.864446+00:00,GET,/health,200,11.72,false,
+2026-09-02T12:04:56.579180+00:00,GET,/model-info,404,12.54,false,
+2026-09-02T12:04:56.613176+00:00,GET,/favicon.ico,404,0.38,false,
+2026-09-02T12:05:01.263940+00:00,GET,/docs,200,0.32,false,
+2026-09-02T12:05:01.763275+00:00,GET,/openapi.json,200,73.86,false,

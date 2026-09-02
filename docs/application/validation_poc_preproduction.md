@@ -1,450 +1,378 @@
 # 35 — Validation du POC en environnement de pré-production
 
-## 1. Objectif
+## 1. Environnement validé
 
-Cette fiche formalise la validation de la preuve de concept dans un environnement de pré-production réellement hébergé.
+```text
+Environnement :
+Pré-production locale conteneurisée
 
-L'objectif est de vérifier que l'application est accessible depuis Internet, que le frontend communique avec l'API déployée, que le modèle IA est chargé dans l'image publiée et que les fonctionnalités principales sont utilisables hors de l'environnement local de développement.
+Frontend :
+http://127.0.0.1:8081
 
-Aucune valeur de validation ne doit être renseignée avant l'exécution réelle des tests.
+API :
+http://127.0.0.1:8001
+
+Documentation OpenAPI :
+http://127.0.0.1:8001/docs
+
+Version applicative :
+1.0.0
+
+Version modèle :
+intent_classifier_v1
+
+Base PostgreSQL :
+paylive_ai_copilot_preprod
+
+Date de validation :
+02/09/2026
+```
+
+La pré-production est distincte de l’environnement de développement grâce à :
+
+- `docker-compose.preprod.yml` ;
+- `.env.preprod` ;
+- ports dédiés ;
+- base PostgreSQL dédiée ;
+- volume PostgreSQL dédié ;
+- lancement Uvicorn sans `--reload` ;
+- absence de bind mount applicatif ;
+- health checks Docker pour PostgreSQL, API et frontend.
 
 ---
 
-## 2. Identification de l'environnement
-
-| Élément | Valeur |
-|---|---|
-| Environnement | Pré-production / Staging |
-| Hébergeur | Render |
-| URL frontend | À renseigner après déploiement |
-| URL API | À renseigner après déploiement |
-| Branche | main / master |
-| Commit Git validé | À renseigner |
-| Image GHCR | À renseigner |
-| Tag / SHA image | À renseigner |
-| Version applicative | À renseigner |
-| Version du modèle | À renseigner à partir de `/api/v1/ai/model-info` |
-| Date de validation | À renseigner après test |
-
----
-
-## 3. Architecture de pré-production
+## 2. Architecture de pré-production
 
 ```text
-GitHub
+Navigateur
    ↓
-GitHub Actions / MLOps
+Frontend Nginx
+http://127.0.0.1:8081
    ↓
-GHCR — image API + modèle
+API FastAPI
+http://127.0.0.1:8001
    ↓
-Render Web Service
+Service IA
    ↓
-API FastAPI publique HTTPS
-
-GitHub
+TF-IDF + Logistic Regression
    ↓
-Render Static Site
-   ↓
-Frontend HTML / CSS / JavaScript public HTTPS
-   ↓
-API de pré-production
+PostgreSQL
+paylive_ai_copilot_preprod
 ```
 
-Le frontend et l'API utilisent deux URLs publiques distinctes. Le domaine du frontend est autorisé explicitement dans la configuration CORS de l'API avec la variable :
+Services Docker :
 
 ```text
-ALLOWED_ORIGINS=<URL_FRONTEND_PREPROD>
+paylive_preprod_postgres
+paylive_preprod_api
+paylive_preprod_frontend
 ```
 
 ---
 
-## 4. Configuration API de pré-production
+## 3. Résultats des smoke tests
 
-Variables minimales :
-
-```text
-ENVIRONMENT=preproduction
-API_KEY=<SECRET_PREPROD>
-ALLOWED_ORIGINS=<URL_FRONTEND_PREPROD>
-```
-
-La clé API est définie dans l'hébergeur et n'est pas stockée en clair dans le dépôt Git.
-
-Commande de démarrage recommandée pour le conteneur :
-
-```text
-python -m uvicorn api.main:app --host 0.0.0.0 --port $PORT
-```
-
-Image :
-
-```text
-ghcr.io/<github-owner>/paylive-ai-api:<commit-sha>
-```
-
-L'utilisation du SHA Git permet d'associer précisément l'environnement validé à une version du code et de l'image.
+| ID | Test | Résultat | Preuve / observation |
+|---|---|---|---|
+| ST-01 | Services Docker | **PASS** | PostgreSQL, API et frontend en état `healthy` |
+| ST-02 | Frontend accessible | **PASS** | `HTTP 200` sur `http://127.0.0.1:8081/` |
+| ST-03 | API accessible | **PASS** | `HTTP 200` sur `http://127.0.0.1:8001/` |
+| ST-04 | Health check | **PASS** | `HTTP 200`, `status: ok`, base `paylive_ai_copilot_preprod` disponible |
+| ST-05 | Route protégée sans clé | **PASS** | `HTTP 401 Unauthorized` |
+| ST-06 | Clé API invalide | **PASS** | `HTTP 403 Forbidden` |
+| ST-07 | Clé valide / model-info | **PASS** | `HTTP 200`, modèle `intent_classifier_v1` chargé |
+| ST-08 | Prédiction IA | **PASS** | prédiction retournée avec intention, confiance, temps de réponse et version modèle |
+| ST-09 | Frontend → API | **PASS** | prédiction réussie depuis le frontend de pré-production |
+| ST-10 | CORS | **PASS** | `HTTP 200`, origine `http://127.0.0.1:8081`, POST et `X-API-Key` autorisés |
 
 ---
 
-## 5. Configuration frontend de pré-production
+## 4. Détail des validations observées
 
-Le frontend statique est déployé depuis :
+### Frontend
 
-```text
-frontend/
-```
-
-L'URL de base de l'API configurée dans l'interface doit être :
+Le frontend de pré-production répond correctement :
 
 ```text
-https://<URL_API_PREPROD>/api/v1/ai
+HTTP/1.1 200 OK
+Server: nginx/1.27.5
 ```
 
-La clé utilisée pendant la validation doit être la clé API de pré-production.
-
----
-
-## 6. Smoke tests
-
-### ST-01 — Frontend accessible
-
-Action :
+URL :
 
 ```text
-ouvrir l'URL publique du frontend
+http://127.0.0.1:8081
 ```
 
-Résultat attendu :
+### API
+
+La racine de l’API répond correctement :
 
 ```text
-HTTP 200 et interface affichée
+HTTP/1.1 200 OK
 ```
 
-Résultat réel :
+avec notamment :
+
+```json
+{
+  "application": "PayLive AI Copilot API",
+  "version": "1.0.0",
+  "documentation_url": "/docs",
+  "health_url": "/health"
+}
+```
+
+### Health check
+
+Le health check confirme la disponibilité de l’API et de la base de pré-production :
 
 ```text
-À renseigner : PASS / FAIL
+HTTP 200
+status: ok
+database_available: true
+database_name: paylive_ai_copilot_preprod
 ```
 
-### ST-02 — API accessible
+### Sécurité
 
-Commande :
+Sans clé API :
 
-```cmd
-curl -i https://<URL_API_PREPROD>/
+```text
+HTTP 401 Unauthorized
 ```
 
-Résultat attendu :
+Avec une clé invalide :
+
+```text
+HTTP 403 Forbidden
+```
+
+Avec une clé valide :
+
+```text
+HTTP 200 OK
+```
+
+La valeur réelle de la clé n’est pas consignée dans ce document.
+
+### Modèle IA
+
+Le service retourne les informations du modèle :
+
+```text
+model_name:
+intent_classifier
+
+model_version:
+intent_classifier_v1
+
+algorithm:
+TF-IDF + Logistic Regression
+
+test_accuracy:
+0.8
+
+test_macro_f1:
+0.6
+
+test_weighted_f1:
+0.72
+```
+
+### Prédiction IA
+
+Une prédiction a été exécutée avec succès.
+
+Exemple observé :
+
+```text
+comment_text:
+je prends la robe noire en M
+
+predicted_intent:
+purchase_intent
+
+confidence_score:
+0.25
+
+model_version:
+intent_classifier_v1
+
+response_time_ms:
+5.52
+
+is_low_confidence:
+true
+
+low_confidence_threshold:
+0.6
+```
+
+### CORS
+
+Le preflight CORS de la pré-production répond :
 
 ```text
 HTTP 200
 ```
 
-Résultat réel :
+avec :
 
 ```text
-À renseigner : PASS / FAIL
+access-control-allow-methods:
+GET, POST, OPTIONS
+
+access-control-allow-headers:
+Content-Type, X-API-Key
+
+access-control-allow-origin:
+http://127.0.0.1:8081
 ```
 
-### ST-03 — Health check
+### Validation frontend → API
 
-Commande :
-
-```cmd
-curl -i https://<URL_API_PREPROD>/health
-```
-
-Résultat attendu :
+Une prédiction a également été réalisée avec succès depuis l’interface disponible sur :
 
 ```text
-HTTP 200
+http://127.0.0.1:8081
 ```
 
-Résultat réel :
+Cela valide la chaîne fonctionnelle :
 
 ```text
-À renseigner : PASS / FAIL
-```
-
-### ST-04 — Sécurité sans clé API
-
-Commande :
-
-```cmd
-curl -i https://<URL_API_PREPROD>/api/v1/ai/model-info
-```
-
-Résultat attendu :
-
-```text
-HTTP 401
-```
-
-Résultat réel :
-
-```text
-À renseigner : PASS / FAIL
-```
-
-### ST-05 — Sécurité avec clé invalide
-
-Commande :
-
-```cmd
-curl -i -H "X-API-Key: invalid-preprod-key" https://<URL_API_PREPROD>/api/v1/ai/model-info
-```
-
-Résultat attendu :
-
-```text
-HTTP 403
-```
-
-Résultat réel :
-
-```text
-À renseigner : PASS / FAIL
-```
-
-### ST-06 — Chargement du modèle
-
-Commande :
-
-```cmd
-curl -i -H "X-API-Key: <CLE_PREPROD>" https://<URL_API_PREPROD>/api/v1/ai/model-info
-```
-
-Résultat attendu :
-
-```text
-HTTP 200
-```
-
-La réponse doit permettre d'identifier le modèle ou sa version.
-
-Résultat réel :
-
-```text
-À renseigner : PASS / FAIL
-```
-
-### ST-07 — Prédiction IA
-
-Commande :
-
-```cmd
-curl -X POST https://<URL_API_PREPROD>/api/v1/ai/predict-intent -H "Content-Type: application/json" -H "X-API-Key: <CLE_PREPROD>" -d "{\"comment_text\":\"je prends la robe noire en M\"}"
-```
-
-Résultat attendu :
-
-```text
-HTTP 200
-predicted_intent présent
-confidence_score présent
-response_time_ms présent
-model_version présent
-```
-
-Résultat réel :
-
-```text
-À renseigner : PASS / FAIL
-```
-
-### ST-08 — Métriques du modèle
-
-Commande :
-
-```cmd
-curl -i -H "X-API-Key: <CLE_PREPROD>" https://<URL_API_PREPROD>/api/v1/ai/model-metrics
-```
-
-Résultat attendu :
-
-```text
-HTTP 200
-```
-
-Résultat réel :
-
-```text
-À renseigner : PASS / FAIL
-```
-
-### ST-09 — Test frontend → API
-
-Depuis l'interface de pré-production :
-
-```text
-1. renseigner l'URL API de pré-production ;
-2. renseigner la clé API de pré-production ;
-3. tester la connexion ;
-4. saisir un commentaire ;
-5. lancer une prédiction ;
-6. consulter le résultat ;
-7. charger les informations du modèle ;
-8. charger les métriques.
-```
-
-Résultat attendu :
-
-```text
-aucune erreur CORS ;
-connexion API réussie ;
-prédiction affichée ;
-informations du modèle affichées.
-```
-
-Résultat réel :
-
-```text
-À renseigner : PASS / FAIL
-```
-
-### ST-10 — Monitoring
-
-Depuis l'interface ou l'API :
-
-```text
-dashboard monitoring
-alertes monitoring
-```
-
-Résultat attendu :
-
-```text
-les ressources de monitoring sont accessibles avec une clé valide.
-```
-
-Résultat réel :
-
-```text
-À renseigner : PASS / FAIL
+Frontend
+↓
+API
+↓
+Service IA
+↓
+Modèle
+↓
+Résultat affiché
 ```
 
 ---
 
-## 7. Tableau de synthèse
+## 5. Version Git validée
 
-| Test | Résultat |
-|---|---|
-| Frontend public accessible | À renseigner |
-| API publique accessible | À renseigner |
-| Health check | À renseigner |
-| Authentification sans clé | À renseigner |
-| Authentification clé invalide | À renseigner |
-| `model-info` | À renseigner |
-| Prédiction IA | À renseigner |
-| Métriques modèle | À renseigner |
-| Frontend → API sans erreur CORS | À renseigner |
-| Monitoring | À renseigner |
+À renseigner avec :
+
+```cmd
+git rev-parse HEAD
+```
+
+```text
+Commit Git :
+3edd0d0d97542fcc0dd35332e9bac57b1160bf2e
+```
 
 ---
 
-## 8. Preuves à conserver
+## 6. Preuves à conserver
 
 Captures recommandées :
 
 ```text
-preuve_c15_render_frontend.png
-preuve_c15_render_api.png
-preuve_c15_url_frontend.png
-preuve_c15_url_api.png
-preuve_c15_smoke_health.png
-preuve_c15_smoke_model_info.png
-preuve_c15_smoke_predict.png
-preuve_c15_frontend_prediction.png
-preuve_c15_version_sha.png
-preuve_c15_validation_complete.png
+preuve_c15_preprod_compose_ps.png
+preuve_c15_preprod_frontend_200.png
+preuve_c15_preprod_api_200.png
+preuve_c15_preprod_health.png
+preuve_c15_preprod_auth_401.png
+preuve_c15_preprod_auth_403.png
+preuve_c15_preprod_model_info.png
+preuve_c15_preprod_prediction_api.png
+preuve_c15_preprod_prediction_frontend.png
+preuve_c15_preprod_cors.png
+preuve_c15_preprod_commit.png
 ```
 
-Conserver également :
+Fichiers de configuration à conserver :
 
-- capture Render montrant le service API déployé ;
-- capture Render montrant le Static Site déployé ;
-- commit Git validé ;
-- URL ou référence de l'image GHCR ;
-- résultat des smoke tests ;
-- version du modèle retournée par `model-info`.
+```text
+docker-compose.preprod.yml
+.env.preprod.example
+docs/08_application/35_validation_poc_preproduction.md
+```
+
+Le fichier réel `.env.preprod` ne doit pas être publié s’il contient des secrets.
 
 ---
 
-## 9. Anomalies rencontrées
-
-| ID | Anomalie | Impact | Correction | Retest |
-|---|---|---|---|---|
-| PREPROD-01 | À renseigner si nécessaire | À renseigner | À renseigner | PASS / FAIL |
-
-Si aucune anomalie n'est observée :
+## 7. Conclusion POC
 
 ```text
-Aucune anomalie bloquante observée pendant la validation.
+Conclusion POC :
+GO
 ```
+
+La preuve de concept est considérée comme **validée dans l’environnement de pré-production locale conteneurisée**.
+
+Les fonctionnalités principales ont été vérifiées :
+
+- démarrage isolé des services ;
+- disponibilité du frontend ;
+- disponibilité de l’API ;
+- connexion PostgreSQL ;
+- sécurité par clé API ;
+- chargement du modèle ;
+- prédiction IA ;
+- communication frontend/API ;
+- politique CORS adaptée à la pré-production.
+
+La décision `GO` signifie ici :
+
+```text
+GO pour la validation du POC dans l’environnement de pré-production.
+```
+
+Elle ne constitue pas une décision de mise en production publique.
 
 ---
 
-## 10. Conclusion POC
+## 8. Limites avant une production réelle
 
-### Décision
+Les améliorations suivantes resteraient nécessaires pour une mise en production publique :
 
-```text
-GO / NO GO / GO SOUS CONDITIONS
-```
-
-### Justification
-
-À rédiger uniquement après l'exécution des tests.
-
-Exemple de structure :
-
-```text
-La preuve de concept a été déployée et testée dans un environnement
-de pré-production accessible publiquement.
-
-X/X smoke tests sont concluants.
-
-Les fonctionnalités principales frontend → API → modèle IA sont
-fonctionnelles / présentent les anomalies suivantes : ...
-
-Décision : GO / NO GO / GO sous conditions.
-```
-
-### Conditions éventuelles avant production
-
-Selon les résultats, les points suivants peuvent être retenus :
-
-- renforcer la gestion des secrets ;
-- augmenter la couverture de tests ;
-- industrialiser le monitoring ;
-- ajouter un environnement PostgreSQL si les fonctionnalités métier correspondantes doivent être validées ;
-- prévoir une stratégie de rollback ;
-- configurer un domaine et une politique HTTPS de production ;
-- effectuer une nouvelle validation avec des données autorisées représentatives.
+- hébergement distant avec URL publique ;
+- gestion des secrets par un gestionnaire dédié ;
+- authentification plus avancée si nécessaire ;
+- supervision applicative centralisée ;
+- stratégie de sauvegarde et restauration ;
+- stratégie de rollback ;
+- contrôle de charge ;
+- durcissement de la configuration réseau ;
+- utilisation d’une clé API spécifiquement dédiée à la pré-production et à la production.
 
 ---
 
-## 11. Résultat final à compléter
+## 9. Synthèse finale
 
 ```text
-Environnement : Pré-production / Staging Render
+Environnement :
+Pré-production locale conteneurisée
 
 URL frontend :
-URL API :
+http://127.0.0.1:8081
 
-Version applicative :
-Commit Git :
-Image GHCR :
+URL API :
+http://127.0.0.1:8001
+
+Version :
+1.0.0
+
 Version modèle :
+intent_classifier_v1
 
 Date de validation :
+02/09/2026
 
-Nombre de smoke tests :
-Tests PASS :
-Tests FAIL :
+Tests smoke :
+10 / 10 PASS
 
 Conclusion POC :
-GO / NO GO / GO SOUS CONDITIONS
+GO
 
-Commentaire final :
+Périmètre du GO :
+validation du POC en pré-production locale, hors mise en production publique
 ```
